@@ -560,7 +560,7 @@ but feel free to choose some parameters yourself.
 ...
 ```
 
-<summary> click [here](./solutions.md) for a possible solution </summary>
+<summary> click [here](solutions.md) for a possible solution </summary>
 
 Once done, open the output files and calculate the derived allele frequency by counting genotypes.
 What is the derived allele frequency for each population?
