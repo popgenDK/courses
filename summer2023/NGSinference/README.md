@@ -1,3 +1,6 @@
+# exercises in estimating from NGS data
+
+Exercises are based on [Matteo Fumagilli's exercises](https://github.com/mfumagalli/Copenhagen)
 
 In this session you will learn how to do:
 * genotype calling
@@ -11,19 +14,27 @@ According to its website *ANGSD is a software for analyzing next generation sequ
 
 Please make sure to follow these preparatory instructions below before running these examples. 
 Briefly, you need to set the path to the software and various data that will be used.
-Also, you will have to create two folders on your working directory, one for your results and one for your intermediate data.
 
 ```bash
-NGS=/ricco/data/matteo/Software/ngsTools
 
-DIR=/home/matteo/Copenhagen
-DATA=/ricco/data/matteo/Data
-REF=$DATA/ref.fa.gz
-ANC=$DATA/anc.fa.gz
+DIR=/course/popgen23/anders/ngsInference
+REF=$DIR/data/ref.fa.gz
+ANC=$DIR/data/anc.fa.gz
 
+## see paths of used programs
+which angsd
+```
+
+Also, you will have to create two folders on your working directory, one for your results and one for your intermediate data.
+
+
+```bash
+mkdir ~/NGSexercise
+cd ~/NGSexercise
 mkdir Results
 mkdir Data
 ```
+
 
 --------------------------------------------------
 
