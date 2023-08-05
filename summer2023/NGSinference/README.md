@@ -12,20 +12,6 @@ As an illustration, we will use 40 BAM files of human samples (of African, Europ
 We will also use 10 BAM files of Latinos in one example.
 *To make things more interesting, we have downsampled our data to an average mean depth of 2X!*.
 
-We will also use VCF files for 120 individuals from the same populations.
-The human data represents a small genomic region (1MB on chromosome 2) extracted from the [1000 Genomes Project](http://www.internationalgenome.org/home).
-
-## Preparation
-
-For each day there will be indications on which software and scripts you will be using.
-However, before doing anything else, please create a folder where you will put all the results and some temporary data.
-```
-mkdir Results
-mkdir Data
-```
-That's it.
-
-## Case study
 
 *MOTIVATION*
 
@@ -546,10 +532,7 @@ We need to use a different file for each population, with a different list of BA
 ```bash
 ls *.bams
 ```
-```
-/ricco/data/matteo/Data/AFR.bams  /ricco/data/matteo/Data/EAS.bams  /ricco/data/matteo/Data/LAT.bams
-/ricco/data/matteo/Data/ALL.bams  /ricco/data/matteo/Data/EUR.bams  /ricco/data/matteo/Data/NAM.bams
-```
+
 We retain only these populations: AFR (Africans), EUR (Europeans), EAS (East Asians), LAT (Latinos), NAM (Native Americans).
 
 Back to our example of functional variants in EDAR, we want to assign individual genotypes by first computing genotype posterior probabilities for all samples.
@@ -577,7 +560,7 @@ but feel free to choose some parameters yourself.
 ...
 ```
 
-<summary> click ![here](./solutions.md) for a possible solution </summary>
+<summary> click [here](./solutions.md) for a possible solution </summary>
 
 Once done, open the output files and calculate the derived allele frequency by counting genotypes.
 What is the derived allele frequency for each population?
