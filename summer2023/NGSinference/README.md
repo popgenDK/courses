@@ -774,7 +774,39 @@ Which frequencies are more difficult to estimate and therefore affect SNP callin
 **EXERCISE 2**
 
 Estimate derived allele frequencies for all populations of interest using a likelihood approach, without relying on genotype calls.
+
+<details>
+
+<summary> click for a possible solution </summary>
+
+
+```
+for POP in AFR EUR EAS LAT NAM
+do
+        echo $POP
+        angsd -b $POP.bams -ref $REF -anc $ANC -out Results/$POP \
+                -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
+                -minMapQ 20 -minQ 20 -minInd 1 -setMinDepth 1 -setMaxDepth 100 -doCounts 1 \
+                -GL 1 -doMajorMinor 5 -doMaf 1 -skipTriallelic 1 \
+                -doGeno 3 -doPost 1 -postCutoff 0.50 \
+                -r 2:109513601
+done
+```
+and print the results to the screen
+```
+#print header
+paste <(echo POP) <(zcat Results/EUR.mafs.gz  | head -n1 )
+#print maf for each pop
+for POP in AFR EUR EAS LAT NAM
+do
+	 paste <(echo $POP) <(zcat Results/$POP.mafs.gz | tail -1)
+done
+```
 What is the difference compared to what previously estimated?
+
+</details>
+
+
 
 ---------------------------
 
