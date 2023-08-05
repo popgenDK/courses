@@ -562,7 +562,7 @@ In this example, I suppress filtering to ensure all genotypes are assigned
 for POP in AFR EUR EAS LAT NAM
 do
         echo $POP
-        angsd -b $POP.bams -ref $REF -anc $ANC -out Results/$POP \
+        angsd -b $POP.bams -ref $REF -anc $ANC -out Results/$POP.EDAR \
                 -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
                 -minMapQ 20 -minQ 20 -minInd 1 -setMinDepth 1 -setMaxDepth 100 -doCounts 1 \
                 -GL 1 -doMajorMinor 5 -doMaf 1 -skipTriallelic 1 \
@@ -570,16 +570,7 @@ do
                 -r 2:109513601
 done
 ```
-and print the results to the screen
-```
-#print header
-paste <(echo POP) <(zcat Results/EUR.mafs.gz  | head -n1 )
-#print maf for each pop
-for POP in AFR EUR EAS LAT NAM
-do
-	 paste <(echo $POP) <(zcat Results/$POP.mafs.gz | tail -1)
-done
-```
+
 
 you can view the genotype calls with       
 
@@ -587,7 +578,7 @@ you can view the genotype calls with
 for POP in AFR EUR EAS LAT NAM
 do
 	 echo $POP
-        zcat Results/$POP.geno.gz
+        zcat Results/$POP.EDAR.geno.gz
 done
 ```
 
@@ -784,7 +775,7 @@ Estimate derived allele frequencies for all populations of interest using a like
 for POP in AFR EUR EAS LAT NAM
 do
         echo $POP
-        angsd -b $POP.bams -ref $REF -anc $ANC -out Results/$POP \
+        angsd -b $POP.bams -ref $REF -anc $ANC -out Results/$POP.EDAR \
                 -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
                 -minMapQ 20 -minQ 20 -minInd 1 -setMinDepth 1 -setMaxDepth 100 -doCounts 1 \
                 -GL 1 -doMajorMinor 5 -doMaf 1 -skipTriallelic 1 \
@@ -795,14 +786,21 @@ done
 and print the results to the screen
 ```
 #print header
-paste <(echo POP) <(zcat Results/EUR.mafs.gz  | head -n1 )
+paste <(echo POP) <(zcat Results/EUR.EDAR.mafs.gz  | head -n1 )
 #print maf for each pop
 for POP in AFR EUR EAS LAT NAM
 do
-	 paste <(echo $POP) <(zcat Results/$POP.mafs.gz | tail -1)
+	 paste <(echo $POP) <(zcat Results/$POP.EDAR.mafs.gz | tail -1)
 done
 ```
 What is the difference compared to what previously estimated?
+
+An assessment of the deviation from HWE will be print out in files with extension `.hwe.gz`.
+You can inspect the results.
+```
+zcat Results/AFR.mafs.gz Results/EUR.mafs.gz Results/EAS.mafs.gz Results/LAT.mafs.gz Results/NAM.mafs.gz
+```
+
 
 </details>
 
