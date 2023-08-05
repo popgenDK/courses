@@ -516,15 +516,7 @@ Our SNP of interest is located in EDAR gene.
 According to the reference [paper](http://www.nature.com/ncomms/2016/160519/ncomms11616/full/ncomms11616.html), *The derived G allele at the index SNP in this region (rs3827760) encodes a functional substitution in the intracellular death domain of EDAR (370A) and is associated with reduced chin protrusion*.
 The genomic location of this SNP is `chr2:109513601-109513601`.
 
-In ANGSD we can restrict our analyses on a subset of positions of interest using the `-sites` option.
-The file with these positions need to be formatted as (chromosome positions).
-```bash
-echo 2 109513601 > Data/snp.txt
-```
-We need to index this file in order for ANGSD to process it.
-```bash
-angsd sites index Data/snp.txt
-```
+In ANGSD we can restrict our analyses on single region using the option `-r 2:109513601`
 
 We are interested in calculating the derived allele frequencies, so are using the ancestral sequence to polarise the alleles.
 We also want to compute the allele frequencies for each population separately.
@@ -553,7 +545,7 @@ As an indication, you can follow these guidelines:
 - do not set any filtering based on min and max depth
 - use -doMajorMinor 1 and -doMaf 1 options
 - set genotypes as missing if the highest genotype probability is less than 0.50
-- use option `-sites Data/snp.txt` to restrict the analysis only on selected sites
+- use option `-r 2:109513601` to restrict the analysis only to that site
 but feel free to choose some parameters yourself.
 
 ```bash
@@ -575,14 +567,26 @@ do
                 -minMapQ 20 -minQ 20 -minInd 1 -setMinDepth 1 -setMaxDepth 100 -doCounts 1 \
                 -GL 1 -doMajorMinor 5 -doMaf 1 -skipTriallelic 1 \
                 -doGeno 3 -doPost 1 -postCutoff 0.50 \
-                -sites Data/snp.txt
+                -r 2:109513601
+done
+```
+and print the results to the screen
+```
+#print header
+paste <(echo POP) <(zcat Results/EUR.mafs.gz  | head -n1 )
+#print maf for each pop
+for POP in AFR EUR EAS LAT NAM
+do
+	 paste <(echo $POP) <(zcat Results/$POP.mafs.gz | tail -1)
 done
 ```
 
-```
+you can view the genotype calls with       
+
+```bash 
 for POP in AFR EUR EAS LAT NAM
 do
-        echo $POP
+	 echo $POP
         zcat Results/$POP.geno.gz
 done
 ```
@@ -592,7 +596,7 @@ Note that we have previously estimated a minor allele frequency of 0.84% in NAM 
 
 
 
-<details>
+</details>
 
 Once done, open the output files and calculate the derived allele frequency by counting genotypes.
 What is the derived allele frequency for each population?
