@@ -559,8 +559,40 @@ but feel free to choose some parameters yourself.
 ```bash
 ...
 ```
+</details>
 
 <summary> click [here](solutions.md) for a possible solution </summary>
+
+
+In this example, I suppress filtering to ensure all genotypes are assigned
+
+```
+for POP in AFR EUR EAS LAT NAM
+do
+        echo $POP
+        angsd -b $POP.bams -ref $REF -anc $ANC -out Results/$POP \
+                -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
+                -minMapQ 20 -minQ 20 -minInd 1 -setMinDepth 1 -setMaxDepth 100 -doCounts 1 \
+                -GL 1 -doMajorMinor 5 -doMaf 1 -skipTriallelic 1 \
+                -doGeno 3 -doPost 1 -postCutoff 0.50 \
+                -sites Data/snp.txt
+done
+```
+
+```
+for POP in AFR EUR EAS LAT NAM
+do
+        echo $POP
+        zcat Results/$POP.geno.gz
+done
+```
+
+For instance, you may have 0/20 in AFR and EUR, 20/20 in EAS, while there are only 4 called genotypes in NAM.
+Note that we have previously estimated a minor allele frequency of 0.84% in NAM without assigning individual genotypes.
+
+
+
+<details>
 
 Once done, open the output files and calculate the derived allele frequency by counting genotypes.
 What is the derived allele frequency for each population?
