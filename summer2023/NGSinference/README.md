@@ -559,9 +559,9 @@ but feel free to choose some parameters yourself.
 ```bash
 ...
 ```
-</details>
+<details>
 
-<summary> click [here](solutions.md) for a possible solution </summary>
+<summary> click for a possible solution </summary>
 
 
 In this example, I suppress filtering to ensure all genotypes are assigned
