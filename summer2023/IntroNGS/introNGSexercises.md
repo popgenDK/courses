@@ -30,6 +30,18 @@ which bwa
 which samtools
 ```
 
+<details>
+<summary>cilck here to see the output</summary>
+
+```text
+/usr/bin/TrimmomaticPE
+/usr/bin/fastqc
+/usr/bin/bwa
+/usr/bin/samtools
+```
+
+</details>
+
 ## `############### EXERCISE 1 ###############`
 
 
@@ -50,8 +62,7 @@ unzip read1_fastqc.zip
 cd read1_fastqc
 
 #use your favorite text editor to visualize this file
-# if you're using nano, press Ctrl+X to quit the file.
-nano fastqc_data.txt
+gedit fastqc_data.txt
 
 #go back
 cd ..
@@ -79,7 +90,7 @@ more 0-rm-adapt-clean-trimmomatic
 ./0-rm-adapt-clean-trimmomatic read1.fastq.gz read2.fastq.gz  
 
 #Join the unpaired reads into a single file:
-cat read1_u.fq.gz read2_u.fq.gz > read_u.fq.gz
+cat read1_u.fq.gz read2_u.fq.gz > read_u.fq.gzbwa mem -M -R $readGroup $ref $introNGS/NA19238.fastq.gz > NA19238.sam
 
 #And remove the redundant files:
 rm read1_u.fq.gz read2_u.fq.gz 
@@ -268,11 +279,21 @@ samtools mpileup NA19238.q30.bam| head -n 1000000 |cut -f4 | sort -n | uniq -c >
 #Open R studio to plot depth distribution:
 ```
 
-In R studio, please type-in and run the following codes,
+In [R studio](cloud.popgen.dk:3838), please type-in and run the following codes,
 
 ```R
 #In R:
+# save the path to old working directory
+od <- getwd()
+
+# change working directory to where we did previous analysis
+setwd("~/MATERIAL")
+
+# Visualize the depth distribution
 d<-read.table("dep1")
 barplot(d[2:20,1],names=1:19,xlab="depth") #ignores invariable sites
+
+# go back to old working directory
+setwd(od)
 ```
 
