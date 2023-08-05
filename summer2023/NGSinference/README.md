@@ -64,7 +64,7 @@ First, we will learn **how to build a command line in ANGSD**.
 
 To see a full list of options in ANGSD type:
 ```bash
-$NGS/angsd/angsd
+angsd
 ```
 
 <details>
@@ -126,14 +126,14 @@ These filters are based on:
 <summary> click here to have a look at our list of BAM files </summary>
 
 ```bash
-cat $DATA/ALL.bams
-wc -l $DATA/ALL.bams
-ls $DATA/*.bams
+cat $DIR/data/ALL.bams
+wc -l $DIR/data/ALL.bams
+ls $DIR/data/*.bams
 ```
 
 </details>
 
-If the input file is in BAM format, the possible options are visible with `$NGS/angsd/angsd -bam`.
+If the input file is in BAM format, the possible options are visible with `angsd -bam`.
 
 <details>
 
@@ -177,7 +177,7 @@ Examples for region specification:
 
 First we need to define input and output files (please note that here we do not run these intermediate steps, as you can see thare is a ```#``` in the front):
 ```bash
-# $NGS/angsd/angsd -b ALL.bams -ref $REF -out Results/ALL \
+# angsd -b ALL.bams -ref $REF -out Results/ALL \
 ...
 ```
 with `-b` we give the file including paths to all BAM files we need to analyse.
@@ -187,7 +187,7 @@ with `-b` we give the file including paths to all BAM files we need to analyse.
 Next we need to define some basic filtering options.
 First we define filters based on reads quality.
 ```bash
-# $NGS/angsd/angsd -b ALL.bams -ref $REF -out Results/ALL \
+# angsd -b ALL.bams -ref $REF -out Results/ALL \
 #        -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
 ...
 ```
@@ -201,7 +201,7 @@ This is achieved by the ```-minInd``` option.
 
 In order to understan which filter to use, it is important to visualise the distribution of quality scores and depth.
 ```bash
-$NGS/angsd/angsd -b $DATA/EUR.bams -ref $REF -out Results/EUR \
+angsd -b $DIR/data/EUR.bams -ref $REF -out Results/EUR \
         -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
         -minMapQ 20 \
 	-doQsDist 1 -doDepth 1 -doCounts 1 -maxDepth 40 &> /dev/null
@@ -221,7 +221,7 @@ evince Results/EUR.pdf
 A possible command line would contain the following filtering:
 ```bash
 ...
-# $NGS/angsd/angsd -b ALL.bams -ref $REF -out Results/ALL \
+# angsd -b ALL.bams -ref $REF -out Results/ALL \
 #        -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
 #        -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
 ...
@@ -246,7 +246,7 @@ We now wish to calculate the ***genotype likelihoods*** for each site at each in
 
 To do so you need to specify which genotype likelihood model to use.
 ```bash
-$NGS/angsd/angsd -GL
+angsd -GL
 ```
 
 <details>
@@ -283,7 +283,7 @@ For most applications and data, GATK and SAMtools models should give similar res
 Let's assume to analyse European (Italian, of course) samples only.
 A possible command line to estimate allele frequencies might be:
 ```bash
-$NGS/angsd/angsd -b $DATA/EUR.bams -ref $REF -out Results/EUR \
+angsd -b $DIR/data/EUR.bams -ref $REF -out Results/EUR \
         -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
         -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
         -GL 2 -doGlf 4 2> /dev/null
@@ -332,7 +332,7 @@ We will also calculate genotypes probabilities to each site for each individual.
 
 In ANGSD, the option to call genotypes is `-doGeno`:
 ```bash
-$NGS/angsd/angsd -doGeno
+angsd -doGeno
 ```
 
 <details>
@@ -365,7 +365,7 @@ If we want to print the major and minor alleles as well then we set `-doGeno 3`.
 
 To calculate the posterior probability of genotypes we need to define a model.
 ```bash
-$NGS/angsd/angsd -doPost
+angsd -doPost
 ```
 
 <details>
@@ -384,7 +384,7 @@ Therefore, `-doPost 2` uses a uniform prior.
 
 Furthermore, this calculation requires the specification of how to assign the major and minor alleles (if biallelic).
 ```bash
-$NGS/angsd/angsd -doMajorMinor
+angsd -doMajorMinor
 ```
 
 <details>
@@ -405,12 +405,12 @@ $NGS/angsd/angsd -doMajorMinor
 
 A typical command for genotype calling is (assuming we analyse our EUR samples):
 ```bash
-$NGS/angsd/angsd -b $DATA/EUR.bams -ref $REF -out Results/EUR \
+angsd -b $DIR/data/EUR.bams -ref $REF -out Results/EUR \
 	-uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
         -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
 	-GL 2 -doGlf 1
 
-$NGS/angsd/angsd -glf Results/EUR.glf.gz -fai $REF.fai -nInd 10 -out Results/EUR \
+angsd -glf Results/EUR.glf.gz -fai $REF.fai -nInd 10 -out Results/EUR \
 	-doMajorMinor 1 -doGeno 3 -doPost 2 -doMaf 1
 ```
 Let's ignore the `-doMaf` option now.
@@ -450,7 +450,7 @@ We will show later how to accurately estimate summary statistics with low-depth 
 If we assume HWE, then we can use this information as prior probability to calculate genotype posterior probabilities.
 The command line would be:
 ```bash
-$NGS/angsd/angsd -glf Results/EUR.glf.gz -fai $REF.fai -nInd 10 -out Results/EUR \
+angsd -glf Results/EUR.glf.gz -fai $REF.fai -nInd 10 -out Results/EUR \
         -doMajorMinor 1 -doGeno 3 -doPost 1 -doMaf 1
 ```
 using the option `-doPost 1`.
@@ -469,14 +469,14 @@ echo 2 109513601 > Data/snp.txt
 ```
 We need to index this file in order for ANGSD to process it.
 ```bash
-$NGS/angsd/angsd sites index Data/snp.txt
+angsd sites index Data/snp.txt
 ```
 
 We are interested in calculating the derived allele frequencies, so are using the ancestral sequence to polarise the alleles.
 We also want to compute the allele frequencies for each population separately.
 We need to use a different file for each population, with a different list of BAM files, as provided:
 ```bash
-ls $DATA/*.bams
+ls $DIR/data/*.bams
 ```
 ```
 /ricco/data/matteo/Data/AFR.bams  /ricco/data/matteo/Data/EAS.bams  /ricco/data/matteo/Data/LAT.bams
@@ -534,7 +534,7 @@ However with low depth data direct counting of individually assigned genotypes c
 
 ANGSD has an option to estimate **allele frequencies** taking into account data uncertainty from genotype likelihoods:
 ```
-$NGS/angsd/angsd -doMaf
+angsd -doMaf
 ...
 -doMaf  0 (Calculate persite frequencies '.mafs.gz')
         1: Frequency (fixed major and minor)
@@ -563,7 +563,7 @@ NB These frequency estimators requires major/minor -doMajorMinor
 
 Therefore, the estimation of allele frequencies requires the specification of how to assign the major and minor alleles (if biallelic).
 ```
-$NGS/angsd/angsd -doMajorMinor
+angsd -doMajorMinor
 ...
         -doMajorMinor   0
         1: Infer major and minor from GL
@@ -577,7 +577,7 @@ $NGS/angsd/angsd -doMajorMinor
 
 A possible command line to estimate allele frequencies might be (this may take 1 min to run):
 ```
-$NGS/angsd/angsd -b $DATA/EUR.bams -ref $REF -out Results/EUR \
+angsd -b $DIR/data/EUR.bams -ref $REF -out Results/EUR \
         -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
         -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
         -GL 1 -doGlf 1 \
@@ -657,7 +657,7 @@ Use the previously calculated genotype likelihoods as input file (use ```-glf ? 
 for PV in 0.05 1e-2 1e-4 1e-6
 do
         if [ $PV == 0.05 ]; then echo SNP_pval NR_SNPs; fi
-        $NGS/angsd/angsd -glf Results/EUR.glf.gz -nInd 10 -fai $REF.fai -out Results/EUR.$PV \
+        angsd -glf Results/EUR.glf.gz -nInd 10 -fai $REF.fai -out Results/EUR.$PV \
                 -doMajorMinor 1 -doMaf 1 -skipTriallelic 1 \
                 -SNP_pval $PV &> /dev/null
         echo $PV `zcat Results/EUR.$PV.mafs.gz | tail -n+2 | wc -l`
