@@ -6,6 +6,54 @@ In this session you will learn how to do:
 * genotype calling
 * allele frequency estimation
 * variant (or SNP) calling
+### Data
+
+As an illustration, we will use 40 BAM files of human samples (of African, European, East Asian, and Native American descent), a reference genome, and putative ancestral sequence.
+We will also use 10 BAM files of Latinos in one example.
+*To make things more interesting, we have downsampled our data to an average mean depth of 2X!*.
+
+We will also use VCF files for 120 individuals from the same populations.
+The human data represents a small genomic region (1MB on chromosome 2) extracted from the [1000 Genomes Project](http://www.internationalgenome.org/home).
+
+## Preparation
+
+For each day there will be indications on which software and scripts you will be using.
+However, before doing anything else, please create a folder where you will put all the results and some temporary data.
+```
+mkdir Results
+mkdir Data
+```
+That's it.
+
+## Case study
+
+*MOTIVATION*
+
+Detecting signatures of natural selection in the genome has the twofold meaning of (i) understanding which adaptive processes shaped genetic variation and (ii) identifying putative functional variants.
+In case of humans, biological pathways enriched with selection signatures include pigmentation, immune-system regulation and metabolic processes.
+The latter may be related to human adaptation to different diet regimes, depending on local food availability (e.g. the case of lactase persistence in dairy-practicing populations).
+
+The human Ectodysplasin A receptor gene, or EDAR, is part of the EDA signalling pathway which specifies prenatally the location, size and shape of ectodermal appendages (such as hair follicles, teeth and glands).
+EDAR is a textbook example of positive selection in East Asians (Sabeti et al. 2007 Nature) with tested phenotypic effects (using transgenic mice).
+
+Recently, a genome-wide association study found the same functional variant in EDAR associated to several human facial traits (ear shape, chin protusion, ...) in Native American populations (Adhikari et al. Nat Commun 2016).
+
+![](practical.png)
+
+
+*HYPOTHESIS*
+
+- Is the functional allele in East Asian at high frequency in other human populations (e.g. Native Americans)?
+- Can we identify signatures of natural selection on EDAR in Native Americans?
+- Is selection targeting the same functional variant?
+
+*CHALLENGES*
+- Admixed population
+- Low-depth sequencing data
+- Effect of genetif drift
+- ...
+
+
 
 We are using the program [ANGSD](http://popgen.dk/wiki/index.php/ANGSD) (Analysis of Next Generation Sequencing Data).
 More information about its rationale and implemented methods can be found [here](http://www.ncbi.nlm.nih.gov/pubmed/25420514).
@@ -123,12 +171,30 @@ These filters are based on:
 
 <details>
 
+
+### make list of bam files
+We have alignment file from four populations. Lets make file list with bam file for each population seperately and one list of all samples. 
+
+```bash
+ ls $DIR/data/CHB.BAMs/*bam > EAS.bams
+ ls $DIR/data/TSI.BAMs/*bam > EUR.bams
+ ls $DIR/data/NAM.BAMs/*bam > NAM.bams
+ ls $DIR/data/PEL.BAMs/*bam > LAT.bams
+ ls $DIR/data/LWK.BAMs/*bam > AFR.bams
+ cat EAS.bams EUR.bams NAM.bams LAT.bams AFR.bams > ALL.bams
+
+```
+
+
 <summary> click here to have a look at our list of BAM files </summary>
 
 ```bash
-cat $DIR/data/ALL.bams
-wc -l $DIR/data/ALL.bams
-ls $DIR/data/*.bams
+## print path of all bam files
+cat ALL.bams
+echo \# count number of bam files
+wc -l ALL.bams
+echo \# show the bam file lists
+ls *.bams
 ```
 
 </details>
@@ -201,24 +267,26 @@ This is achieved by the ```-minInd``` option.
 
 In order to understan which filter to use, it is important to visualise the distribution of quality scores and depth.
 ```bash
-angsd -b $DIR/data/EUR.bams -ref $REF -out Results/EUR \
+angsd -b EUR.bams -ref $REF -out Results/EUR \
         -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
         -minMapQ 20 \
-	-doQsDist 1 -doDepth 1 -doCounts 1 -maxDepth 40 &> /dev/null
+	-doQsDist 1 -doDepth 1 -doCounts 1 -maxDepth 40 
 
-Rscript $NGS/Scripts/plotQC.R Results/EUR 2> /dev/null
+## make a plot of the results
+Rscript $DIR/scripts/plotQC.R Results/EUR 2> /dev/null
 ```
+Angsd will give a warning that the bam files do not contain data for the whole genome. 
+
 
 Let's visuale the results.
 ```bash
-
-less -S Results/EUR.info
 evince Results/EUR.pdf
 ```
+You can also see that statistics in the file Results/EUR.info
 
 ![stage0A](./stage0A.png)
 
-A possible command line would contain the following filtering:
+Based on the plots one could keep sites with a least 7 reads accross sample and with less than 30 reads. A possible command line would contain the following filtering:
 ```bash
 ...
 # angsd -b ALL.bams -ref $REF -out Results/ALL \
@@ -283,10 +351,10 @@ For most applications and data, GATK and SAMtools models should give similar res
 Let's assume to analyse European (Italian, of course) samples only.
 A possible command line to estimate allele frequencies might be:
 ```bash
-angsd -b $DIR/data/EUR.bams -ref $REF -out Results/EUR \
+angsd -b EUR.bams -ref $REF -out Results/EUR \
         -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
         -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
-        -GL 2 -doGlf 4 2> /dev/null
+        -GL 2 -doGlf 4 
 ```
 where we specify:
 * -GL 2: genotype likelihood model as in GATK
@@ -405,7 +473,7 @@ angsd -doMajorMinor
 
 A typical command for genotype calling is (assuming we analyse our EUR samples):
 ```bash
-angsd -b $DIR/data/EUR.bams -ref $REF -out Results/EUR \
+angsd -b EUR.bams -ref $REF -out Results/EUR \
 	-uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
         -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
 	-GL 2 -doGlf 1
@@ -476,7 +544,7 @@ We are interested in calculating the derived allele frequencies, so are using th
 We also want to compute the allele frequencies for each population separately.
 We need to use a different file for each population, with a different list of BAM files, as provided:
 ```bash
-ls $DIR/data/*.bams
+ls *.bams
 ```
 ```
 /ricco/data/matteo/Data/AFR.bams  /ricco/data/matteo/Data/EAS.bams  /ricco/data/matteo/Data/LAT.bams
@@ -577,7 +645,7 @@ angsd -doMajorMinor
 
 A possible command line to estimate allele frequencies might be (this may take 1 min to run):
 ```
-angsd -b $DIR/data/EUR.bams -ref $REF -out Results/EUR \
+angsd -b EUR.bams -ref $REF -out Results/EUR \
         -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
         -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
         -GL 1 -doGlf 1 \
