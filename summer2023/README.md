@@ -7,14 +7,14 @@
 
 ## Notes for Exercises
 
-For Exercise IV and Exercise V, we have to first copy the prepared notebook to our own Jupyter folder.
+For Exercise of lecture IV and lecture V, we have to first copy the prepared notebook to our own Jupyter folder.
 
 Please open jupyter, arbitrarily create (click `New`) a Calysto Bash Notebook, or start a terminal, and run following commands:
 
 ```bash
-# Exercise IV
+# Exercise for lecture IV
 cp /course/popgen23/ida/admixexercise/admixExercise_popgen23.ipynb ~/
 
-# Exercise V
+# Exercise for lecture V
 cp /course/popgen23/anders/popstructureII/populationStructureII.ipynb ~/
 ```
