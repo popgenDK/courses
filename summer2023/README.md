@@ -9,7 +9,7 @@
 
 For Exercise of lecture IV and lecture V, we have to first copy the prepared notebook to our own Jupyter folder.
 
-Please open jupyter, arbitrarily create (click `New`) a Calysto Bash Notebook, or start a terminal, and run following commands:
+Please open jupyter, create (click `New`) a Calysto Bash Notebook, or start a terminal, and run following commands:
 
 ```bash
 # Exercise for lecture IV
