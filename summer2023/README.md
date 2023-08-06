@@ -13,10 +13,10 @@ Please open jupyter, create (click `New`) a Calysto Bash Notebook, or start a te
 
 ```bash
 # Exercise for lecture IV
-cp /course/popgen23/nodebooks/admixExercise_popgen23.ipynb ~/
+cp /course/popgen23/notebooks/admixExercise_popgen23.ipynb ~/
 
 # Exercise for lecture V
-cp /course/popgen23/nodebooks/populationStructureII.ipynb ~/
+cp /course/popgen23/notebooks/populationStructureII.ipynb ~/
 ```
 
 After copying files, please refresh your Jupyter homepage, and you will find these two new notebooks.
