@@ -18,3 +18,5 @@ cp /course/popgen23/ida/admixexercise/admixExercise_popgen23.ipynb ~/
 # Exercise for lecture V
 cp /course/popgen23/anders/popstructureII/populationStructureII.ipynb ~/
 ```
+
+After copying files, please refresh your Jupyter homepage, and you will find these two new notebooks.
