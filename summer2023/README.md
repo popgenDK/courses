@@ -13,10 +13,20 @@ Please open jupyter, create (click `New`) a Calysto Bash Notebook, or start a te
 
 ```bash
 # Exercise for lecture IV
-cp /course/popgen23/ida/admixexercise/admixExercise_popgen23.ipynb ~/
+cp /course/popgen23/nodebooks/admixExercise_popgen23.ipynb ~/
 
 # Exercise for lecture V
-cp /course/popgen23/anders/popstructureII/populationStructureII.ipynb ~/
+cp /course/popgen23/nodebooks/populationStructureII.ipynb ~/
 ```
 
 After copying files, please refresh your Jupyter homepage, and you will find these two new notebooks.
+
+## FAQ
+
+- When I run bash command in Jupyter notebook (SOS notebook), I have this error:
+
+    ```text
+    No subkernel named Bash is found. Please use magic "%use" without option to see a list of available kernels and language modules.
+    ```
+
+    On the top right corner of current code block, you may see a frame/label called `Bash` . Please click on it and then choose the "Calysto Bash".
