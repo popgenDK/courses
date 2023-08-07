@@ -1,4 +1,4 @@
-# exercises in estimating from NGS data
+# Exercises in estimating from NGS data
 
 Exercises are based on [Matteo Fumagilli's exercises](https://github.com/mfumagalli/Copenhagen)
 
