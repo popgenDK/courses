@@ -583,7 +583,7 @@ done
 ```
 
 For instance, you may have 0/20 in AFR and EUR, 20/20 in EAS, while there are only 4 called genotypes in NAM.
-Note that we have previously estimated a minor allele frequency of 0.84% in NAM without assigning individual genotypes.
+Note that we have previously estimated a minor allele frequency of 0.84 in NAM without assigning individual genotypes.
 
 
 
