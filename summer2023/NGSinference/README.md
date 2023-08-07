@@ -155,7 +155,6 @@ These filters are based on:
 * SNP quality, see [here](http://popgen.dk/angsd/index.php/SnpFilters)
 * sites, see [here](http://popgen.dk/angsd/index.php/Sites)
 
-<details>
 
 
 ### Make list of bam files
