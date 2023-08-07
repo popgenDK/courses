@@ -47,7 +47,7 @@ More information about its rationale and implemented methods can be found [here]
 According to its website *ANGSD is a software for analyzing next generation sequencing data. The software can handle a number of different input types from mapped reads to imputed genotype probabilities. Most methods take genotype uncertainty into account instead of basing the analysis on called genotypes. This is especially useful for low and medium depth data.*
 
 Please make sure to follow these preparatory instructions below before running these examples. 
-Briefly, you need to set the path to the software and various data that will be used.
+Briefly, you need to first login to the server with your user name and password. And once you are logged in you should set the path to the software and various data that will be used by pasting in the following code in the terminal:
 
 ```bash
 
@@ -59,7 +59,7 @@ ANC=$DIR/data/anc.fa.gz
 which angsd
 ```
 
-Also, you will have to create two folders on your working directory, one for your results and one for your intermediate data.
+Also, you will have to create two folders in your working directory, one for your results and one for your intermediate data, which you can do by running the following code:
 
 
 ```bash
@@ -79,7 +79,7 @@ The workflow for this practical looks like this
 ![stages](./stages.png)
 
 which seems daunting! 
-However, that's not the case and we will go through each step to understand each one of them.
+However, that's actually not the case and we will go through each step to understand each one of them.
 
 The workflow is roughty divided into four steps:
 
@@ -96,7 +96,7 @@ First, we will learn **how to build a command line in ANGSD**.
 
 ![stage0](./stage0.png)
 
-To see a full list of options in ANGSD type:
+To see a full list of options in ANGSD type the following in the terminal:
 ```bash
 angsd
 ```
@@ -158,8 +158,8 @@ These filters are based on:
 <details>
 
 
-### make list of bam files
-We have alignment file from four populations. Lets make file list with bam file for each population seperately and one list of all samples. 
+### Make list of bam files
+In our data we have alignment files (BAM files) from four populations. Let's make file list with the BAM files for each population seperately and one list with all samples by running the following code 
 
 ```bash
  ls $DIR/data/CHB.BAMs/*bam > EAS.bams
@@ -185,7 +185,7 @@ ls *.bams
 
 </details>
 
-If the input file is in BAM format, the possible options are visible with `angsd -bam`.
+If the input file is in BAM format, the possible options are visible if you run the command `angsd -bam`.
 
 <details>
 
@@ -247,11 +247,11 @@ These filters will retain only uniquely mapping reads, not tagged as bad, consid
 `-C 50` reduces the effect of reads with excessive mismatches, while `-baq 1` computes base alignment quality as explained here ([BAQ](http://samtools.sourceforge.net/mpileup.shtml)) used to rule out false SNPs close to INDELS.
 
 Also, you may want to remove reads with low mapping quality and sites with low quality or covered by few reads (low depth).
-Under these circumnstances, the assignment of individual genotypes and SNPs is problematic, and can lead to errors.
+Under these circumstances, the assignment of individual genotypes and SNPs is problematic, and can lead to errors.
 We may also want to remove sites where a fraction (half?) of the individuals have no data.
 This is achieved by the ```-minInd``` option.
 
-In order to understan which filter to use, it is important to visualise the distribution of quality scores and depth.
+In order to understand which filters to use, it is important to visualise the distribution of quality scores and depth.
 ```bash
 angsd -b EUR.bams -ref $REF -out Results/EUR \
         -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
@@ -261,7 +261,7 @@ angsd -b EUR.bams -ref $REF -out Results/EUR \
 ## make a plot of the results
 Rscript $DIR/scripts/plotQC.R Results/EUR 2> /dev/null
 ```
-Angsd will give a warning that the bam files do not contain data for the whole genome. 
+Angsd will give a warning that the BAM files do not contain data for the whole genome. 
 
 
 Let's visuale the results.
@@ -330,8 +330,8 @@ Filedumping:
 ```
 </details>
 
-A description of these different implementation can be found [here](http://www.popgen.dk/angsd/index.php/Genotype_likelihoods).
-The GATK model refers to the first GATK paper, SAMtools is somehow more sophisticated (non-independence of errors), SOAPsnp requires a reference sequence for recalibration of quality scores, SYK is error-type specific.
+A description of these different models can be found [here](http://www.popgen.dk/angsd/index.php/Genotype_likelihoods).
+Briefly, the GATK model refers to the first GATK paper, SAMtools is somehow more sophisticated (non-independence of errors), SOAPsnp requires a reference sequence for recalibration of quality scores, SYK is error-type specific.
 For most applications and data, GATK and SAMtools models should give similar results.
 
 Let's assume to analyse European (Italian, of course) samples only.
@@ -362,7 +362,7 @@ ls Results/EUR.*
 ```
 </details>
 
-What are the information they contain?
+What information do they contain?
 
 <details>
 
@@ -469,7 +469,7 @@ angsd -glf Results/EUR.glf.gz -fai $REF.fai -nInd 10 -out Results/EUR \
 ```
 Let's ignore the `-doMaf` option now.
 
-Have a look at the output file:
+Have a look at the output file by running the follwoing command:
 ```bash
 less -S Results/EUR.geno.gz
 ```
@@ -488,7 +488,7 @@ zcat Results/EUR.geno.gz | grep -1 - | wc -l
 You can control how to set missing genotype when their confidence is low with `-postCutoff`.
 </details>
 
-Why are there some many sites with missing genotypes?
+Why are there so many sites with missing genotypes?
 
 The mean depth per sample is around 2-3X, therefore genotypes cannot be assigned with very high confidence.
 Setting this threshold depends on the mean sequencing depth of your data, as well as your application.
@@ -535,7 +535,7 @@ Let's assume that our reference sequence represents the ancestral sequence too.
 Please finally note that we want to relax out filtering to make sure to have results.
 
 Write the code that performs the following genotype calling for EDAR variants in all populations.
-Also, you can directly call genotypes without generating the genotype likelihood files, by starting from bam files directly.
+Also, you can directly call genotypes without generating the genotype likelihood files, by starting from BAM files directly.
 As an indication, you can follow these guidelines:
 - use the SAMtools genotype likelihood model
 - calculate genotype posterior probabilities using a HWE-based prior
@@ -572,7 +572,7 @@ done
 ```
 
 
-you can view the genotype calls with       
+You can view the genotype calls with       
 
 ```bash 
 for POP in AFR EUR EAS LAT NAM
@@ -608,7 +608,7 @@ Why is it not at high frequency in the Latino sample?
 
 We now want to estimate allele frequencies at each site without relying on genotype calls.
 In other words, at each site we want to to estimate (or count) how many copies of different alleles (two in case of biallelic variants) we observe in our sample (across all sequenced individuals).
-However with low depth data direct counting of individually assigned genotypes can lead to biased allele frequencies.
+However, with low depth data direct counting of individually assigned genotypes can lead to biased allele frequencies.
 
 ANGSD has an option to estimate **allele frequencies** taking into account data uncertainty from genotype likelihoods:
 ```
