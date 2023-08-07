@@ -138,12 +138,12 @@ Compare to the results from before the trimming.
 # Exercise 4: mapping with bwa
 
 #Step 1: Index the genome (DON’T do it now, it takes time).
-#We will now be working with human chromosome 21 and this 
-#will be our “reference genome”.
+#We will now be working with human chromosome 21 and this will be our “reference genome”.
 
-#this is the command line used for short genomes
-#bwa index -a is reference.fasta
+this is the command line used for short genomes
 ```bash
+#bwa index -a is reference.fasta
+## instead of running the command we will use the already index reference
 ref=$introNGS/referenceGenome/chr21.fa
 ```
 
@@ -153,9 +153,9 @@ first set the read group, very useful if multiple runs per sample
 ```bash
 readGroup='@RG\tID:ID\tCN:test\tDS:description\tPL:platform\tSM:sample'
 ```
-map the reads to the reference genome
+map the reads to the reference genome using (-t) 5 CPU threads 
 ```bash
-bwa mem -M -R $readGroup $ref $introNGS/NA19238.fastq.gz > NA19238.sam
+bwa mem -t 5 -M -R $readGroup $ref $introNGS/NA19238.fastq.gz > NA19238.sam
 ```
 
 Convert sam to bam 
@@ -216,12 +216,7 @@ Visualize the bam file using “samtools tview”
 samtools tview NA19238.sorted.bam
 ```
 
-if you want to vizualize the reference genome sequence as well:
 Note: chr21 does not have reference bases for the first 9719760 sites.
-```bash
-
-samtools tview NA19238.sorted.bam $ref
-```
 Type "g" to enter the position of the alignment that you want to see.
  - Type "chr21:10028350". Why do you think so many reads mapped to this position?
  - Use left/right arrows to navigate the alignment or the space key
@@ -230,6 +225,13 @@ Type "g" to enter the position of the alignment that you want to see.
  - Color the bases by the quality scores by typing 'b' 
  -  (you can go back by typing 'm'). Do you see any patterns?
 Ctrl+C to quit tview
+if you want to vizualize the reference genome sequence as well:
+
+```bash
+
+samtools tview NA19238.sorted.bam $ref
+```
+
 
 
 save mapped reads with mapping quality >30
@@ -238,12 +240,10 @@ save mapped reads with mapping quality >30
 samtools view -b -q 30 NA19238.sorted.bam | samtools sort -o NA19238.q30.bam
 ```
 
-note: paralogs are reads that map equally well to different regions of the assembly;  
-bwa mem assigns low quality scores to paralogs
+note: paralogs are reads that map equally well to different regions of the assembly;  bwa mem assigns low quality scores to paralogs
 
 Check the bam file again. First need to index the new bam file:
 ```bash
-
 samtools index NA19238.q30.bam
 ```
 
@@ -323,15 +323,10 @@ Open R  to plot depth distribution:
 
 ```R
 #In R:
-# save the path to old working directory
-od <- getwd()
-# change working directory to where we did previous analysis
-setwd("~/MATERIAL")
+
 # Visualize the depth distribution
-d<-read.table("dep1")
+d<-read.table("~/MATERIAL/dep1")
 barplot(d[2:20,1],names=1:19,xlab="depth") #ignores invariable sites
 
-# go back to old working directory
-setwd(od)
 ```
 
