@@ -185,7 +185,7 @@ If the input file is in BAM format, the possible options are visible if you run 
 
 <details>
 
-<summary> click here for BAM parsing options </summary>
+<summary> output of running the command </summary>
 
 ```bash
 parseArgs_bambi.cpp: bam reader:
@@ -260,7 +260,7 @@ Rscript $DIR/scripts/plotQC.R Results/EUR 2> /dev/null
 Angsd will give a warning that the BAM files do not contain data for the whole genome. 
 
 
-Let's visuale the results (note evince is slow to open so be patient).
+Let's visuale the results (note evince is slow to open so be patient or copy the pdf to your laptop).
 ```bash
 evince Results/EUR.pdf
 ```
@@ -330,13 +330,14 @@ A description of these different models can be found [here](http://www.popgen.dk
 Briefly, the GATK model refers to the first GATK paper, SAMtools is somehow more sophisticated (non-independence of errors), SOAPsnp requires a reference sequence for recalibration of quality scores, SYK is error-type specific.
 For most applications and data, GATK and SAMtools models should give similar results.
 
-Let's assume to analyse European (Italian, of course) samples only.
+Let's assume to analyse European (Italian like Matteo fumagalli) samples only.
 A possible command line to estimate allele frequencies might be:
 ```bash
 angsd -b EUR.bams -ref $REF -out Results/EUR \
         -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
         -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
-        -GL 2 -doGlf 4 
+        -GL 2 -doGlf 4
+
 ```
 where we specify:
 * -GL 2: genotype likelihood model as in GATK
@@ -354,21 +355,30 @@ What are the output files?
 <summary> click here to show the answer </summary>
 
 ```bash
-ls Results/EUR.*
+The output from angsd tells you it made two files called "Results/EUR.arg" and "Results/EUR.glf.gz"
+	.....
+	-> Done reading data waiting for calculations to finish
+	-> Done waiting for threads
+	-> Output filenames:
+		->"Results/EUR.arg"
+		->"Results/EUR.glf.gz"
+	-> Mon Aug  7 20:50:39 2023
+	-> Arguments and parameters for all analysis are located in .arg file
+	-> Total number of sites analyzed: 983839
+	-> Number of sites retained after filtering: 444928 
+	[ALL done] cpu-time used =  57.66 sec
+	[ALL done] walltime used =  57.00 sec
+
 ```
 </details>
 
-What information do they contain?
-
-<details>
-
-<summary> click here to show the answer </summary>
+One files contains information of all the used options and the other contains the 10 genotype likelihoods (log) for each individual. 
+View the file with
 
 ```bash
-less -S Results/EUR.arg
 less -S Results/EUR.glf.gz
 ```
-</details>
+press  'q' to exit. a value of 0 means no reads or an extremly low genotype likelihoods ( log(GL)~0). 
 
 
 ------------------------------------------
@@ -453,12 +463,12 @@ angsd -doMajorMinor
 ```
 </details>
 
-A typical command for genotype calling is (assuming we analyse our EUR samples):
+We can call genotypes from the genotype likelihoods ( Results/EUR.glf.gz) by first identifying the major and minor alleles accross samples and the choosing the genotype with the highest genotype likelihood. 
 ```bash
 angsd -b EUR.bams -ref $REF -out Results/EUR \
-	-uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
+        -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
         -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
-	-GL 2 -doGlf 1
+        -GL 2 -doGlf 1 
 
 angsd -glf Results/EUR.glf.gz -fai $REF.fai -nInd 10 -out Results/EUR \
 	-doMajorMinor 1 -doGeno 3 -doPost 2 -doMaf 1
@@ -497,7 +507,7 @@ We will show later how to accurately estimate summary statistics with low-depth 
 
 **EXERCISE 1**
 
-If we assume HWE, then we can use this information as prior probability to calculate genotype posterior probabilities.
+If we calculate the allele frequency and assume hwe then we can use this information as prior probability to calculate genotype posterior probabilities.
 The command line would be:
 ```bash
 angsd -glf Results/EUR.glf.gz -fai $REF.fai -nInd 10 -out Results/EUR \
@@ -544,17 +554,9 @@ As an indication, you can follow these guidelines:
 - use option `-r 2:109513601` to restrict the analysis only to that site
 but feel free to choose some parameters yourself.
 
+Run the below code where we loop over each population to generate results for each of them. 
+
 ```bash
-...
-```
-<details>
-
-<summary> click for a possible solution </summary>
-
-
-In this example, I suppress filtering to ensure all genotypes are assigned
-
-```
 for POP in AFR EUR EAS LAT NAM
 do
         echo $POP
@@ -583,7 +585,6 @@ Note that we have previously estimated a minor allele frequency of 0.84 in NAM w
 
 
 
-</details>
 
 Once done, open the output files and calculate the derived allele frequency by counting genotypes.
 What is the derived allele frequency for each population?
@@ -650,7 +651,7 @@ angsd -doMajorMinor
 ```
 
 A possible command line to estimate allele frequencies might be (this may take 1 min to run):
-```
+```bash
 angsd -b EUR.bams -ref $REF -out Results/EUR \
         -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
         -minMapQ 20 -minQ 20 -minInd 5 -setMinDepth 7 -setMaxDepth 30 -doCounts 1 \
@@ -698,7 +699,7 @@ There are two main ways to call SNPs using ANGSD with these options:
 ```
 Therefore we can consider assigning as SNPs sites whose estimated allele frequency is above a certain threhsold (e.g. the frequency of a singleton) or whose probability of being variable is above a specified value.
 
-** QUICK EXERCISE**
+
 
 As an illustration, call SNPs by computing:
  - genotype likelihoods using GATK method;
@@ -706,14 +707,8 @@ As an illustration, call SNPs by computing:
  - frequency from known major allele but unknown minor;
  - SNPs as those having MAF=>0.05.
 
-Try to write down this command by yourself and comment the results.
 
-```
-...
-
-```
-
-As a general guidance, `-GL 1`, `-doMaf 1/2` and `-doMajorMinor 1` should be the preferred choice when data uncertainty is high.
+As a general guidance, `-GL 1` ( Samtool genotype likelihood model), `-doMaf 1/2` and `-doMajorMinor 1` should be the preferred choice for genotype calling when data uncertainty is high.
 If interested in analysing very low frequency SNPs, then `-doMaf 2` should be selected.
 When accurate information on reference sequence or outgroup are available, one can use `-doMajorMinor` to 4 or 5.
 Also, detecting variable sites based on their probability of being SNPs is generally a better choice than defining a threshold on the allele frequency.
@@ -721,11 +716,10 @@ However, various cutoffs and a dedicated filtering should be perform to assess r
 
 ![stage3A](./stage3A.png)
 
-**QUICK EXERCISE**
 
 Try varying the cutoff for SNP calling and record how many sites are predicted to be variable for each scenario.
 Identify which sites are not predicted to be variable anymore with a more stringent cutoff (e.g. between a pair of scenario), and plot their allele frequencies.
-Use the previously calculated genotype likelihoods as input file (use ```-glf ? -fai ? -nInd ?```).
+Use the previously calculated genotype likelihoods as input file (use additonal options  -fai  and -nInd to provide information of the genome size and number of individuals).
 ```
 # iterate over some cutoffs (you can change these)
 for PV in 0.05 1e-2 1e-4 1e-6
@@ -789,11 +783,6 @@ done
 ```
 What is the difference compared to what previously estimated?
 
-An assessment of the deviation from HWE will be print out in files with extension `.hwe.gz`.
-You can inspect the results.
-```
-zcat Results/AFR.mafs.gz Results/EUR.mafs.gz Results/EAS.mafs.gz Results/LAT.mafs.gz Results/NAM.mafs.gz
-```
 
 
 
