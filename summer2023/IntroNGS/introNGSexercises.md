@@ -1,6 +1,6 @@
 # Introduction to basic NGS data, Data processing, and formats
 
-## pre Exercise
+# Exercise 0
 
 Log in to the server
 
