@@ -114,13 +114,6 @@ rm read1_u.fq.gz read2_u.fq.gz
 
 ## fastqc stats
 
-run fastqc on the 3 output files
-
-```bash
-fastqc read1_p.fq.gz
-fastqc read2_p.fq.gz
-fastqc read_u.fq.gz
-```
 
 
 
