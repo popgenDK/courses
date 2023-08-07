@@ -3,15 +3,16 @@
 Notes before we start:
 
 
-- In coding blocks, comments are preceeded with a #, example:
-
+- In coding blocks, comments are preceeded with a # and all of the code can be pasted in to the terminal
     ```bash
-    # This is a comment
+  # code you should run in the terminal
+    ls
     ```
 
 - **Please read the comments before running each line of code. So we know what we're doing or what we may consider.**
 
 ## Linux paths for today
+Lets first set some paths. Paste the following code in the terminal
 
 ```bash
 # bash command
@@ -21,7 +22,7 @@ realignedBam=$introNGS/2-filterBam/NA19238.q30.realign.intervals.bam
 ```
 
 ## Tools for today
-
+lets see if the software is installed. Again paste the code in the terminal and look for errors. 
 ```bash
 # bash command
 which TrimmomaticPE
@@ -42,57 +43,72 @@ which samtools
 
 </details>
 
-## `############### EXERCISE 1 ###############`
+
+
+
+# EXERCISE 1 
 
 
 ```bash
-############### EXERCISE 1 ###############
-
-#Exercise 1: assess the quality of the fastq files with fastqc:
+mkdir -p ~/MATERIAL
 cd ~/MATERIAL
-fastqc read1.fastq.gz
+```
 
+ assess the quality of the fastq files with fastqc:
+````bash
+fastqc read1.fastq.gz
+````
 #Output:
 #read1_fastqc.html
 #read1_fastqc.zip
 
-#If you want to access the tables used for the graphics:
-
+If you want to access the tables used for the graphics:
+```bash
 unzip read1_fastqc.zip
 cd read1_fastqc
-
-#use your favorite text editor to visualize this file
+```
+use your favorite text editor to visualize this file
+```bash
 gedit fastqc_data.txt
-
-#go back
-cd ..
+```
+go back to the MATERIAL folder
+```bash
+cd ~/MATERIAL
 ```
 
-## `############### EXERCISE 2 ###############`
-
+# EXERCISE 2 
+Exercise 2: Check out the Trimmomatic options:
 ```bash
-############### EXERCISE 2 ###############
-
-#Exercise 2: Check out the Trimmomatic options:
 
 TrimmomaticPE 
-
-#Visualize the contents of the “0-rm-adapt-clean-trimmomatic” file:
+```
+Visualize the contents of the “0-rm-adapt-clean-trimmomatic” file:
+```bash
 
 more 0-rm-adapt-clean-trimmomatic
+```
+(Ctrl+C to quit before the end of the file)
 
-#(Ctrl+C to quit before the end of the file)
+note: to make a text file executable:
+```bash
 
-#note: to make a text file executable:
 #chmod 755 newfile.txt
+```
+Run the script "0-rm-adapt-clean-trimmomatic" as:
+```bash
 
-#Run the script "0-rm-adapt-clean-trimmomatic" as:
 ./0-rm-adapt-clean-trimmomatic read1.fastq.gz read2.fastq.gz  
+```
 
-#Join the unpaired reads into a single file:
+Join the unpaired reads into a single file:
+
+```bash
+
 cat read1_u.fq.gz read2_u.fq.gz > read_u.fq.gzbwa mem -M -R $readGroup $ref $introNGS/NA19238.fastq.gz > NA19238.sam
+```
 
-#And remove the redundant files:
+And remove the redundant files:
+```bash
 rm read1_u.fq.gz read2_u.fq.gz 
 ```
 
