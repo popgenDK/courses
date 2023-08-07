@@ -89,21 +89,19 @@ more 0-rm-adapt-clean-trimmomatic
 ```
 (Ctrl+C to quit before the end of the file)
 
-note: to make a text file executable:
+note: to make a text file executable run
 ```bash
-
-#chmod 755 newfile.txt
+chmod 755 0-rm-adapt-clean-trimmomatic
 ```
+
 Run the script "0-rm-adapt-clean-trimmomatic" as:
 ```bash
-
 ./0-rm-adapt-clean-trimmomatic read1.fastq.gz read2.fastq.gz  
 ```
 
 Join the unpaired reads into a single file:
 
 ```bash
-
 cat read1_u.fq.gz read2_u.fq.gz > read_u.fq.gzbwa mem -M -R $readGroup $ref $introNGS/NA19238.fastq.gz > NA19238.sam
 ```
 
@@ -112,32 +110,37 @@ And remove the redundant files:
 rm read1_u.fq.gz read2_u.fq.gz 
 ```
 
-## `############### EXERCISE 3 ###############`
+# EXERCISE 3
+
+## fastqc stats
+
+run fastqc on the 3 output files
 
 ```bash
-
-############### EXERCISE 3 ###############
-
-#Exercise 3: fastqc stats
-
-#run fastqc on the 3 output files
 fastqc read1_p.fq.gz
 fastqc read2_p.fq.gz
 fastqc read_u.fq.gz
-
-#What is the total number of reads?
-
-#What is the lowest base quality score?
-
-#After which position in the read does the quality drop significantly?
-
-#Do the sequences contain adapter sequence?
-
-#Compare to the results from before the trimming.
-
 ```
 
-## `############### EXERCISE 4 ###############`
+
+
+
+run fastqc on the 3 output files
+```bash
+fastqc read1_p.fq.gz
+fastqc read2_p.fq.gz
+fastqc read_u.fq.gz
+```
+
+ - What is the total number of reads?
+ - What is the lowest base quality score?
+ - After which position in the read does the quality drop significantly?
+ - Do the sequences contain adapter sequence?
+
+Compare to the results from before the trimming.
+
+
+#EXERCISE 4 ###############`
 
 ```bash
 ############### EXERCISE 4 ###############
