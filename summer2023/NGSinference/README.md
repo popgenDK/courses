@@ -60,7 +60,7 @@ Also, you will have to create two folders in your working directory, one for you
 
 
 ```bash
-mkdir ~/NGSexercise
+mkdir -p ~/NGSexercise
 cd ~/NGSexercise
 mkdir Results
 mkdir Data
