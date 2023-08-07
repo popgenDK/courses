@@ -66,7 +66,7 @@ fastqc read1.fastq.gz
 #read1_fastqc.html
 #read1_fastqc.zip
 
- - download the html to your computer and open it in a browser ( e.g. double click on it )
+ - download the html to your computer and open it in a browser ( e.g. double click on it ) or use this [link](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/summer2023/IntroNGS/read1_fastqc.html)
 
 
 If you want to access the tables used for the graphics:
