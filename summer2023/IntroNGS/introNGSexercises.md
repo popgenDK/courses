@@ -116,23 +116,22 @@ And remove the redundant files:
 rm read1_u.fq.gz read2_u.fq.gz 
 ```
 
-# EXERCISE 3
+# Bonus EXERCISE 3 ( optional if you have finished 1 and 2)
 
 ## fastqc stats
-
-
 
 
 
 run fastqc on the 3 output files
 ```bash
 fastqc read1_p.fq.gz
-fastqc read2_p.fq.gz
-fastqc read_u.fq.gz
+fastqc read2_p.fq.gz #optional 
+fastqc read_u.fq.gz #optional
 ```
+Open the html file in the browser. 
 
  - What is the total number of reads?
- - What is the lowest base quality score?
+ -  - What is the lowest base quality score?
  - After which position in the read does the quality drop significantly?
  - Do the sequences contain adapter sequence?
 
