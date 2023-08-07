@@ -48,10 +48,11 @@ which samtools
 
 # EXERCISE 1 
 
+Go to the folder called MATERIAL and view the files
 
 ```bash
-mkdir -p ~/MATERIAL
 cd ~/MATERIAL
+ls
 ```
 
  assess the quality of the fastq files with fastqc:
@@ -270,19 +271,23 @@ samtools tview -p chr21:10029501 NA19238.q30.bam $ref
 ```
 
 Check a region before and after realignment 
-e.g. read name SRR002987.11216777
+<details>
+<summmary >e.g. read name SRR002987.11216777 </summary>
 bam line before realignment CIGAR: 36M
 #SRR002987.11216777      0       chr21   21515742        60      36M     *       0       0       TCTAGCTAGAAGACCAAACCAGTGGTAATATTCCCT      >>=>>>>>>>>?>>?F=?>A2>7?>?<<@;<<;;9<    NM:i:1  MD:Z:35C0       AS:i:35 XS:i:0  RG:Z:ID
 
 bam line after realignment CIGAR: 32M1D4M + OC:Z:36M tag
 
 #SRR002987.11216777      0       chr21   21515742        70      32M1D4M *       0       0       TCTAGCTAGAAGACCAAACCAGTGGTAATATTCCCT      >>=>>>>>>>>?>>?F=?>A2>7?>?<<@;<<;;9<    OC:Z:36M  
-
+</details>
+    
 ```bash
 realignedBam=$introNGS/2-filterBam/NA19238.q30.realign.intervals.bam
 samtools tview -p chr21:21515742 NA19238.q30.bam $ref
 ```
 
+<details>
+<summary> output </summary>
 21515771  
 attcccctta
 ......Y...
@@ -291,10 +296,13 @@ attcccctta
 ......T.    
 ...*....... 
 ...*........
+</details>
 
 ```bash
 samtools tview -p chr21:21515742 $realignedBam $ref
 ```
+<details>
+<summary> output </summary>
 
 21515771  
 attcccctta
@@ -304,7 +312,7 @@ attcccctta
 ...*..... 
 ...*......
 ...*......
-
+</details>
 M: Match (alignment column containing two letters, either different letters (mismatch) or identical.
 a * denotes a deletion/missing match; more details on the pileup format at
 
