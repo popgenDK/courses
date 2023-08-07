@@ -1,8 +1,11 @@
 # Introduction to basic NGS data, Data processing, and formats
 
+## pre Exercise
+
+Log in to the server
+
+
 Notes before we start:
-
-
 - In coding blocks, comments are preceeded with a # and all of the code can be pasted in to the terminal
     ```bash
   # code you should run in the terminal
@@ -44,16 +47,16 @@ which samtools
 </details>
 
 
-
-
-# EXERCISE 1 
-
 Go to the folder called MATERIAL and view the files
 
 ```bash
 cd ~/MATERIAL
 ls
 ```
+
+
+
+# EXERCISE 1 
 
  assess the quality of the fastq files with fastqc:
 ````bash
