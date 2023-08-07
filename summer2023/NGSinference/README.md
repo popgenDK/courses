@@ -170,7 +170,7 @@ In our data we have alignment files (BAM files) from four populations. Let's mak
 
 ```
 
-
+<details>
 <summary> click here to have a look at our list of BAM files </summary>
 
 ```bash
