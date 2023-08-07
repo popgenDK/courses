@@ -83,12 +83,11 @@ Exercise 2: Check out the Trimmomatic options:
 
 TrimmomaticPE 
 ```
-Visualize the contents of the “0-rm-adapt-clean-trimmomatic” file:
+print the contents of the “0-rm-adapt-clean-trimmomatic” file:
 ```bash
 
-more 0-rm-adapt-clean-trimmomatic
+cat 0-rm-adapt-clean-trimmomatic
 ```
-(Ctrl+C to quit before the end of the file)
 
 note: to make a text file executable run
 ```bash
