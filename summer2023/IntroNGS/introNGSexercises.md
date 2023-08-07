@@ -63,6 +63,9 @@ fastqc read1.fastq.gz
 #read1_fastqc.html
 #read1_fastqc.zip
 
+ - download the html to your computer and open it in a browser ( e.g. double click on it )
+
+
 If you want to access the tables used for the graphics:
 ```bash
 unzip read1_fastqc.zip
