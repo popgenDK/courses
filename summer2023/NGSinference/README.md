@@ -1,6 +1,6 @@
 # Exercises in estimating from NGS data
 
-Exercises are based on [Matteo Fumagilli's exercises](https://github.com/mfumagalli/Copenhagen)
+Exercises is a modified version of [Matteo Fumagilli's exercises](https://github.com/mfumagalli/Copenhagen)
 
 In this session you will learn how to do:
 * genotype calling
@@ -8,13 +8,10 @@ In this session you will learn how to do:
 * variant (or SNP) calling
 ### Data
 
-As an illustration, we will use 40 BAM files of human samples (of African, European, East Asian, and Native American descent), a reference genome, and putative ancestral sequence.
-We will also use 10 BAM files of Latinos in one example.
-*To make things more interesting, we have downsampled our data to an average mean depth of 2X!*.
+As an illustration, we will use 40 BAM files of human samples (of African, European, East Asian, and Native American descent), a reference genome, and putative ancestral sequence. We will also use 10 BAM files of Latinos in one example.
 
 
 *MOTIVATION*
-
 Detecting signatures of natural selection in the genome has the twofold meaning of (i) understanding which adaptive processes shaped genetic variation and (ii) identifying putative functional variants.
 In case of humans, biological pathways enriched with selection signatures include pigmentation, immune-system regulation and metabolic processes.
 The latter may be related to human adaptation to different diet regimes, depending on local food availability (e.g. the case of lactase persistence in dairy-practicing populations).
@@ -263,7 +260,7 @@ Rscript $DIR/scripts/plotQC.R Results/EUR 2> /dev/null
 Angsd will give a warning that the BAM files do not contain data for the whole genome. 
 
 
-Let's visuale the results.
+Let's visuale the results (note evince is slow to open so be patient).
 ```bash
 evince Results/EUR.pdf
 ```
@@ -765,9 +762,7 @@ Which frequencies are more difficult to estimate and therefore affect SNP callin
 
 Estimate derived allele frequencies for all populations of interest using a likelihood approach, without relying on genotype calls.
 
-<details>
 
-<summary> click for a possible solution </summary>
 
 
 ```
@@ -801,7 +796,6 @@ zcat Results/AFR.mafs.gz Results/EUR.mafs.gz Results/EAS.mafs.gz Results/LAT.maf
 ```
 
 
-</details>
 
 
 
