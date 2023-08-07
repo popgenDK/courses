@@ -102,7 +102,7 @@ Run the script "0-rm-adapt-clean-trimmomatic" as:
 Join the unpaired reads into a single file:
 
 ```bash
-cat read1_u.fq.gz read2_u.fq.gz > read_u.fq.gzbwa mem -M -R $readGroup $ref $introNGS/NA19238.fastq.gz > NA19238.sam
+cat read1_u.fq.gz read2_u.fq.gz > read_u.fq.gz
 ```
 
 And remove the redundant files:
