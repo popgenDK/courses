@@ -128,7 +128,7 @@ fastqc read1_p.fq.gz
 fastqc read2_p.fq.gz #optional 
 fastqc read_u.fq.gz #optional
 ```
-Open the html file in the browser or use this (link)[https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/summer2023/IntroNGS/read1_p_fastqc.html] 
+Open the html file in the browser or use this [link](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/summer2023/IntroNGS/read1_p_fastqc.html)
 
  - What is the total number of reads?
  -  - What is the lowest base quality score?
