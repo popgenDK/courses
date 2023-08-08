@@ -581,7 +581,6 @@ done
 ```
 
 For instance, you may have 0/20 in AFR and EUR, 20/20 in EAS, while there are only 4 called genotypes in NAM.
-Note that we have previously estimated a minor allele frequency of 0.84 in NAM without assigning individual genotypes.
 
 
 
@@ -789,8 +788,8 @@ do
 	 paste <(echo $POP) <(zcat Results/$POP.EDAR.mafs.gz | tail -1)
 done
 ```
- - What is the difference compared to what previously estimated?
- - Based on this results is there a difference in allele frequecny between East Asians ( EAS) and Native amerians ( NAM)?
+ - What is the difference compared to what you previously estimated?
+ - Based on these new results is there a difference in allele frequency between East Asians (EAS) and Native amerians (NAM)?
 
 Lets try to make a formal test. First make a file with all of the bam files for the two populations. Then make a file where the first 20 lines contains a zero ( representing the 20 NAM) and the next 20 lines contains a 1 ( representing the 20 EAS)
 ```bash
