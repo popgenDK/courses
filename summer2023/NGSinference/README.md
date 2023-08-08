@@ -771,7 +771,7 @@ do
                 -r 2:109513601
 done
 ```
-and print the results to the screen
+and print the results to the screen (Column knownEM if the estimated allele frequency based on know major and minor allele)
 ```
 #print header
 paste <(echo POP) <(zcat Results/EUR.EDAR.mafs.gz  | head -n1 )
@@ -781,12 +781,87 @@ do
 	 paste <(echo $POP) <(zcat Results/$POP.EDAR.mafs.gz | tail -1)
 done
 ```
-What is the difference compared to what previously estimated?
+ - What is the difference compared to what previously estimated?
+ - Based on this results is there a difference in allele frequecny between East Asians ( EAS) and Native amerians ( NAM)?
 
 
 
+cat NAM.bams EAS.bams > NAM_EAS.bams
+make a file where the first 20 lines contains a zero ( representing the 20 NAM) and the next 20 lines contains a 1 ( representing the 20 EAS)
+cat <(yes 0 | head -n 20) <(yes 1 | head -n 20) > NAM_EAS.ybin
 
+we will use the association module in angsd. 
 
+<details>
+
+ <summary> press to see options for angsd -doAsso</summary>
+angsd -doAsso
+	-> angsd version: 0.929-22-g5f6a144 (htslib: 1.9-271-g6738132) build(Dec 10 2020 17:19:15)
+	-> Analysis helpbox/synopsis information:
+	-> Command: 
+angsd -doAsso 	-> Tue Aug  8 08:02:31 2023
+-------------
+abcAsso.cpp:
+	-doAsso	0
+	1: Frequency Test (Known Major and Minor)
+	2: Score Test
+	4: Latent genotype model
+	5: Score Test with latent genotype model - hybrid test
+	6: Dosage regression
+	7: Latent genotype model (wald test)
+  Frequency Test Options:
+	-yBin		(null)	(File containing disease status)	
+
+  Score, Latent, Hybrid and Dosage Test Options:
+	-yBin		(null)	(File containing disease status)
+	-yCount		(null)	(File containing count phenotypes)
+	-yQuant		(null)	(File containing phenotypes)
+	-cov		(null)	(File containing additional covariates)
+	-model	1
+	1: Additive/Log-Additive (Default)
+	2: Dominant
+	3: Recessive
+
+	-minHigh	10	(Require atleast minHigh number of high credible genotypes)
+	-minCount	10	(Require this number of minor alleles, estimated from MAF)
+	-assoThres	0.000001	Threshold for logistic regression
+	-assoIter	100	Number of iterations for logistic regression
+	-emThres	0.000100	Threshold for convergence of EM algorithm in doAsso 4 and 5
+	-emIter	40	Number of max iterations for EM algorithm in doAsso 4 and 5
+
+	-doPriming	1	Prime EM algorithm with dosage derived coefficients (0: no, 1: yes - default) 
+
+  Hybrid Test Options:
+	-hybridThres		0.050000	(p-value value threshold for when to perform latent genotype model)
+Examples:
+	Perform Frequency Test
+	  './angsd -yBin pheno.ybin -doAsso 1 -GL 1 -out out -doMajorMinor 1 -minLRT 24 -doMaf 2 -doSNP 1 -bam bam.filelist'
+	Perform Score Test
+	  './angsd -yBin pheno.ybin -doAsso 2 -GL 1 -doPost 1 -out out -doMajorMinor 1 -minLRT 24 -doMaf 2 -doSNP 1 -bam bam.filelist'
+
+</details>
+We will use the frequency test (-doAsso 1) and include the "phenotype" file that we just made (NAM_EAS.ybin). 
+Use the following command to test whether there is a difference between the allele frequencies of the EDAR variants in the East Asian population and the Native american population. 
+```bash
+ angsd -b NAM_EAS.bams -ref $REF -anc $ANC -out Results/$POP.EDAR \
+                -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
+                -minMapQ 20 -minQ 20 -minInd 1 -setMinDepth 1 -setMaxDepth 100 -doCounts 1 \
+                -GL 1 -doMajorMinor 5 -doMaf 1 -skipTriallelic 1 \
+                -doGeno 3 -doPost 1 -postCutoff 0.50 \
+                -r 2:109513601  -yBin NAM_EAS.ybin -doAsso 1
+
+```
+
+Lets look at the results
+```bash
+## print output
+zcat Results/NAM.EDAR.lrt0.gz
+## convert the LRT score to a p-value
+Rscript -e 'cat("P-value is",pchisq(2.739244,1,low=F),"\n")'
+```
+
+ - Is there a significant difference?
+ - Can you find other uses for such a test?
 
 ---------------------------
 
