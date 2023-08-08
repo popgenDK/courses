@@ -599,7 +599,12 @@ Why is it not at high frequency in the Latino sample?
 
 ----------------------------
 
-#### 3. (OPTIONAL for the fast )SNP calling
+
+
+## SNP calling(OPTIONAL for the fast )
+
+<details>
+<summary> Expand to do the optional exercise </summary>
 
 ![stage3](./stage3.png)
 
@@ -751,6 +756,9 @@ evince Results/diffSnpCall.pdf
 ```
 What can you conclude from these results?
 Which frequencies are more difficult to estimate and therefore affect SNP calling?
+
+
+</details>
 
 **EXERCISE 2**
 
