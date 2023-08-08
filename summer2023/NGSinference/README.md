@@ -599,7 +599,7 @@ Why is it not at high frequency in the Latino sample?
 
 ----------------------------
 
-#### 3. SNP calling
+#### 3. (OPTIONAL for the fast )SNP calling
 
 ![stage3](./stage3.png)
 
