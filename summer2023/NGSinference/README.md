@@ -846,6 +846,9 @@ Examples:
 </details>
 We will use the frequency test (-doAsso 1) and include the "phenotype" file that we just made (NAM_EAS.ybin). 
 Use the following command to test whether there is a difference between the allele frequencies of the EDAR variants in the East Asian population and the Native american population. 
+
+
+
 ```bash
  angsd -b NAM_EAS.bams -ref $REF -anc $ANC -out Results/$POP.EDAR \
                 -uniqueOnly 1 -remove_bads 1 -only_proper_pairs 1 -trim 0 -C 50 -baq 1 \
@@ -857,6 +860,8 @@ Use the following command to test whether there is a difference between the alle
 ```
 
 Lets look at the results
+
+
 ```bash
 ## print output
 zcat Results/NAM.EDAR.lrt0.gz
