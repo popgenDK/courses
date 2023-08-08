@@ -604,7 +604,7 @@ Why is it not at high frequency in the Latino sample?
 ## SNP calling(OPTIONAL for the fast )
 
 <details>
-<summary> Expand to do the optional exercise </summary>
+<summary> Expand to do the optional exercise else continue with excercise 2 </summary>
 
 ![stage3](./stage3.png)
 
