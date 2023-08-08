@@ -784,13 +784,17 @@ done
  - What is the difference compared to what previously estimated?
  - Based on this results is there a difference in allele frequecny between East Asians ( EAS) and Native amerians ( NAM)?
 
-
-
+Lets try to make a formal test. First make a file with all of the bam files for the two populations. Then make a file where the first 20 lines contains a zero ( representing the 20 NAM) and the next 20 lines contains a 1 ( representing the 20 EAS)
+```bash
 cat NAM.bams EAS.bams > NAM_EAS.bams
-make a file where the first 20 lines contains a zero ( representing the 20 NAM) and the next 20 lines contains a 1 ( representing the 20 EAS)
-cat <(yes 0 | head -n 20) <(yes 1 | head -n 20) > NAM_EAS.ybin
 
-we will use the association module in angsd. 
+cat <(yes 0 | head -n 20) <(yes 1 | head -n 20) > NAM_EAS.ybin
+#view the file
+cat NAM_EAS.ybin
+```
+
+
+We will use the association module in angsd to perform the test. 
 
 <details>
 
