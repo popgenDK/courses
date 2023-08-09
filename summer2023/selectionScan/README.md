@@ -4,7 +4,21 @@
 set the following path and make a directory to work in 
 
 ```bash
-genomes=/course/popgen23/rute/REFERENCEgenome/
+#folder with data and scripts
+genomes=/course/popgen23/rute/selection
+
+#see if scripts are there
+ls $genomes/SCRIPTS/1-reconstruct-sfs.sh
+ls $genomes/SCRIPTS/2-calculate-thetas
+ls $genomes/SCRIPTS/3-calculate-folded-fst
+ls $genomes/SCRIPTS/4-calculate-PBS
+ls $genomes/SCRIPTS/run-get-sfs-thetas-2dsfs-fst-PBS.sh
+
+## check if software is installed
+which angsd
+which realSFS
+
+#make a folder and enter it. 
 mkdir -p ~/selection
 cd ~/selection
 ```
@@ -17,25 +31,25 @@ Find the lactase (Gene: LCT ) locus in the human genome using the ENSEMBL browse
 
 Compare the genomic context of the lactase gene in the human with other species
 In the ENSEMBL browser use the "Orthologs" link on the left-hand panel to find the a list of species that you can compare against. 
- - how many primates iwth orthologs did you find
+ - how many primates with orthologs did you find
 ### Find the lactase gene annotation in the gff file
 
 find the lactase gene annotation by name in the gff file
 ```bash
-zcat $genomes/Homo_sapiens.GRCh38.110.chromosome.2.gff3.gz | grep LCT
+zcat $genomes/REFERENCEgenome/Homo_sapiens.GRCh38.110.chromosome.2.gff3.gz | grep LCT
 ```
-
+ -  QUESTION
 ## Exercise 2. SNP information
 
 We will try to investigate SNP rs4988235. You can find information about the SNP rs4988235 in [dbSNP](https://www.ncbi.nlm.nih.gov/snp/rs4988235). 
 Extract the gff features that overlap with the SNP position using “bedtools intersect”  (you will need a bed file with the SNP genomic coordinates)
 I have prepared the bed file for you, check it out (remember bed files are zero-based)
 ```bash
-cat $genomes/rs4988235.bed
+cat $genomes/REFERENCEgenome/rs4988235.bed
 ```
-
+Run bedtools and extract the features in that region
 ```bash
-bedtools intersect  -a $genomes/Homo_sapiens.GRCh38.110.chromosome.2.gff3.gz -b $genomes/rs4988235.bed
+bedtools intersect  -a $genomes/REFERENCEgenome/Homo_sapiens.GRCh38.110.chromosome.2.gff3.gz -b $genomes/REFERENCEgenome/rs4988235.bed
 ```
 
 ## Exercise 4. Describe windows X in population B: estimate thetas and the 1dSFS
@@ -59,7 +73,7 @@ the paths to reference file and bamfiles are already inside the scripts
 but also here in case you want to try out other options 
 
 ```bash
-REF=/home/rute/2023/SELECTION/REFERENCEgenome/maizegenome-chl-mito-plasm.fasta
+REF=$genome/REFERENCEgenome/maizegenome-chl-mito-plasm.fasta
 ANC=$REF
 misc=/emily/program/albrecht/angsd/misc
 ```
@@ -67,10 +81,10 @@ misc=/emily/program/albrecht/angsd/misc
 lists of bamFiles
 ```bash
 
-wild=/home/rute/2023/SELECTION/EXERCISES/wild.fileList
-p750=/home/rute/2023/SELECTION/EXERCISES/750years.fileList
-p2000=/home/rute/2023/SELECTION/EXERCISES/2000years.fileList
-modern=/home/rute/2023/SELECTION/EXERCISES/modern.fileList
+wild=$genomes/EXERCISES/wild.fileList
+p750=$genomes/EXERCISES/750years.fileList
+p2000=$genomes/EXERCISES/2000years.fileList
+modern=$genomes/EXERCISES/modern.fileList
 ```
 
 we will focus on individual coding regions (this is capture data)
@@ -79,35 +93,63 @@ with region files (1-based): chr:start-end
 
 ```bash
 
-ZAGL1=/home/rute/2023/SELECTION/COORS/ZAGL1.coors
-DEHYD1A=/home/rute/2023/SELECTION/COORS/DEHYD1A.coors
-SUGARY1=/home/rute/2023/SELECTION/COORS/SUGARY1.coors
-AE1=/home/rute/2023/SELECTION/COORS/AE1.coors
-50genes=/home/rute/2023/SELECTION/COORS/random50.coors
+ZAGL1=$genomes/COORS/ZAGL1.coors
+DEHYD1A=$genomes/COORS/DEHYD1A.coors
+SUGARY1=$genomes/COORS/SUGARY1.coors
+AE1=$genomes/COORS/AE1.coors
+genes50=$genomes/COORS/random50.coors
 ```
 
 ### Step 1: Finding a 'global estimate' of the SFS for each population
+we will use a script
+<details>
+<summary> 1-reconstruct-sfs.sh/summary>
+REF=/home/rute/2023/SELECTION/REFERENCEgenome/maizegenome-chl-mito-plasm.fasta
+ANC=$REF
+
+id=$1 #output suffix
+bamList=$2
+minInd=$3
+rf=$4
+outSuffix=$5
+
+out=${id}.${outSuffix} 
+
+misc=/emily/program/albrecht/angsd/misc
+
+angsd -bam $bamList -doSaf 1 -anc $ANC -GL 1 -P 10 -out $out -minQ 20 -minMapQ 30 -minInd $minInd -rf ${rf} 
+
+#Obtain the maximum likelihood estimate of the SFS using the realSFS program found in the misc subfolder.
+$misc/realSFS $out.saf.idx -P 10 > $out.sfs
+
+</details>
+to run in 
 
 ```bash
-1-reconstruct-sfs.sh
+#set a output name
+OUTNAME=WILD_ZAGL1
+## run the script with the chosen file list and gene
+$genomes/SCRIPTS/1-reconstruct-sfs.sh ~/selection/SAF $enomes/EXERCISES/wild.fileList 3 $ZAGL1 $OUTNAME
 ```
+
+
 
 ### Step 2: Calculate the thetas for each site
 
 ```bash
 
-2-calculate-thetas
+$genomes/2-calculate-thetas
 ```
 
 ### Step 3: calculate 2D-sfs and Fst for all population pairs
 
 ```bash
 
-3-calculate-folded-fst
+$genomes/3-calculate-folded-fst
 ```
 #### Step 4:
 ```bash
-4-calculate-PBS
+$genomes/4-calculate-PBS
 ```
 
 this will run the full analysis for gene ZAGL1
