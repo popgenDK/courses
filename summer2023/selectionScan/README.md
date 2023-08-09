@@ -1,23 +1,24 @@
 
 # Exercises in selection scan
 
-set the following
+set the following path and make a directory to work in 
 
 ```bash
-genomes=/home/rute/2023/SELECTION/REFERENCEgenome/
+genomes=/course/popgen23/rute/REFERENCEgenome/
+mkdir -p ~/selection
+cd ~/selection
 ```
 
 ## Exercise 1. Lactase locus
 
-Choose your favorite genome browser and find the lactase (Gene: LCT ) locus in the human genome. 
-The figures in the presentation use ENSEMBL https://www.ensembl.org/index.html
-You can also use UCSC genome browser https://genome-euro.ucsc.edu/cgi-bin/hgGateway?redirect=manual&source=genome.ucsc.edu
 
-### Find the lactase gene annotation in the gff file
+Find the lactase (Gene: LCT ) locus in the human genome using the ENSEMBL browser.  https://www.ensembl.org/index.html. You might be able to use your favoriete browser e.g.  UCSC genome browser https://genome-euro.ucsc.edu/cgi-bin/hgGateway?redirect=manual&source=genome.ucsc.edu but for this exercise use ENSEMBL. 
+
 
 Compare the genomic context of the lactase gene in the human with other species
-Use the "Orthologs" link on the left-hand panel to find the a list of species that
-you can compare against
+In the ENSEMBL browser use the "Orthologs" link on the left-hand panel to find the a list of species that you can compare against. 
+ - how many primates iwth orthologs did you find
+### Find the lactase gene annotation in the gff file
 
 find the lactase gene annotation by name in the gff file
 ```bash
@@ -26,13 +27,11 @@ zcat $genomes/Homo_sapiens.GRCh38.110.chromosome.2.gff3.gz | grep LCT
 
 ## Exercise 2. SNP information
 
-Find information about the SNP rs4988235 in dbSNP
-Extract the gff features that overlap with the SNP position using “bedtools intersect” 
-(you will need a bed file with the SNP genomic coordinates)
-
+We will try to investigate SNP rs4988235. You can find information about the SNP rs4988235 in [dbSNP](https://www.ncbi.nlm.nih.gov/snp/rs4988235). 
+Extract the gff features that overlap with the SNP position using “bedtools intersect”  (you will need a bed file with the SNP genomic coordinates)
 I have prepared the bed file for you, check it out (remember bed files are zero-based)
 ```bash
-more $genomes/rs4988235.bed
+cat $genomes/rs4988235.bed
 ```
 
 ```bash
