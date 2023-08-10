@@ -150,17 +150,20 @@ http://www.trex.uqam.ca/index.php?action=newick&project=trex
 
 #### Find the lactase (Gene: LCT ) locus in the human genome using the ENSEMBL browser.  
 
-https://www.ensembl.org/index.html. 
+Go to the ENSEMBL browser: https://www.ensembl.org/index.html. 
 
-You might be able to use your favorite browser e.g. UCSC genome browser 
+(You might be able to use your favorite browser e.g. UCSC genome browser 
 
 https://genome-euro.ucsc.edu/cgi-bin/hgGateway?redirect=manual&source=genome.ucsc.edu 
 
-but for this exercise use ENSEMBL. 
+but for this exercise use ENSEMBL). 
+
+Then search for "LCT". Thsi will give qyuite a few hits. Click on the one called "LCT (Human Gene)" (the top one).
+
 
 #### Compare the genomic context of the lactase gene in the human with other species
 
-In the ENSEMBL browser use the "Orthologs" link on the left-hand panel to find the a list of species that you can compare against. 
+Now based on the the above ENSEMBL page for LCT In the ENSEMBL use the "Orthologs" link on the left-hand panel to find the a list of species that you can compare against. 
 
 How many primates with orthologs did you find?
 
