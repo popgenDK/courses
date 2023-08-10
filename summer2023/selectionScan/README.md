@@ -1,5 +1,15 @@
 # Exercises for the selection session
 
+We will use the following programs from angsd
+
+```bash
+which angsd
+which realSFS
+which
+
+```
+
+
 Set the following paths
 
 ```bash
