@@ -64,7 +64,7 @@ http://www.popgen.dk/angsd/index.php/Fst
 ## Exercise 1. Describe windows X in populations A, B and C
 
 #### Follow the instruction on the slides (slide 43)
-The "number of individuals" for diploid organisms is 2n (n=6 for the example on slide 43)
+The "number of individuals" for diploid organisms is 2n (n=6 for the example on slide 43). 
 
 In this exercise you will estimate thetas and the 1dSFS for population B and the 2dSFS for all 3 pairwise comparisons.
 
