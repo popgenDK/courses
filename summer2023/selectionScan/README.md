@@ -14,7 +14,6 @@ Set the following paths
 
 ```bash
 thePath=/course/popgen23/rute/selection
-genomes=$thePath/REFERENCEgenome/
 REF=$thePath/REFERENCEgenome/maizegenome-chl-mito-plasm.fasta
 ```
 
