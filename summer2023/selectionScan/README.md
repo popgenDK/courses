@@ -164,10 +164,6 @@ If you use the newick format (the branch length is indicated after the populatio
 (wild:0.284891,p2k:0,p750:0.222320);
 ```
 
-you can use this tool for visualization (choose radial for the depiction):
-
-
-http://www.trex.uqam.ca/index.php?action=newick&project=trex
 
 
 #OPTIONAL: combine the values of Tajima's D and PBS (750 and 2K) in one plot
