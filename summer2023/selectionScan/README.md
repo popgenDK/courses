@@ -23,7 +23,7 @@ BamFiles for the exercises with the maize data
 ```bash
 
 wild=$thePath/EXERCISES/wild.fileList
-p750=$thePath//EXERCISES/750years.fileList
+p750=$thePath/EXERCISES/750years.fileList
 p2000=$thePath/EXERCISES/2000years.fileList
 modern=$thePath//EXERCISES/modern.fileList
 ```
@@ -37,7 +37,7 @@ with region files (1-based): chr:start-end
 ZAGL1=$thePath/COORS/ZAGL1.coors
 DEHYD1A=$thePath/COORS/DEHYD1A.coors
 SUGARY1=$thePath/COORS/SUGARY1.coors
-AE1=$thePathCOORS/AE1.coors
+AE1=$thePath/COORS/AE1.coors
 genes50=$thePath/COORS/random50.coors
 ```
 
