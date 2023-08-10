@@ -62,14 +62,32 @@ http://www.popgen.dk/angsd/index.php/Fst
 
 ## Exercise 1. Describe windows X in populations A, B and C
 
-#### Follow the instruction on the slides (slide 43)
-The "number of individuals" for diploid organisms is 2N (n=6 for the example on slide 43). You can calculate the 
-  $$, \sum_{k=1}^6 1/k $$  in R as
-```bash
-sum(1/1:6)
-```
- 
+#### Follow the instruction on the slides (starting on slide 43)
+
 In this exercise you will estimate thetas and the 1dSFS for population B and the 2dSFS for all 3 pairwise comparisons.
+#### First calculate watersons theta for population B (Slide 44)
+The "number of individuals" for diploid organisms is 2N (n=6 for the example on slide 43). You can calculate the 
+  $$, \sum_{k=1}^{2N-1} 1/k $$  in R as
+```bash
+# open R for before running code
+sum(1/1:5)
+```
+#### Calculate Tajimas theta ( $\Pi$ ) for population B (Slide 45)
+For each pair of haplotype calculate the pairwise difference and fill in the table. Then calculate $\Pi$
+
+#### calculate and plot the SFS for population B (Slide 46)
+Examples for plotting the SFS for populaton A
+```bash
+# open R
+counts <- c(6, 3, 2, 1, 0, 0, 0)
+barplot(counts,names=0:6,col="hotpink",ylab="Number of sites",xlab="Number of derieved alleles")
+```
+
+####  Calculate the 2D SFS for population pairs A,C and B,C(Slide 47)
+For each position in the genome find the number of derived alleles for the pair of population and increment the table by one. 
+
+
+
 
 ## Exercise 2.  Calculate the diversity in the maize genes from the starch pathway
 
