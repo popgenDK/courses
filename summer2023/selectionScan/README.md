@@ -1,5 +1,4 @@
 # Exercises for the selection session
-
 We will use the following programs from angsd
 
 ```bash
@@ -64,8 +63,12 @@ http://www.popgen.dk/angsd/index.php/Fst
 ## Exercise 1. Describe windows X in populations A, B and C
 
 #### Follow the instruction on the slides (slide 43)
-The "number of individuals" for diploid organisms is 2N (n=6 for the example on slide 43). You can calculate the $$ \sum_k^n 1/k $$
-
+The "number of individuals" for diploid organisms is 2N (n=6 for the example on slide 43). You can calculate the 
+  $$, \sum_{k=1}^6 1/k $$  in R as
+```bash
+sum(1/1:6)
+```
+ 
 In this exercise you will estimate thetas and the 1dSFS for population B and the 2dSFS for all 3 pairwise comparisons.
 
 ## Exercise 2.  Calculate the diversity in the maize genes from the starch pathway
