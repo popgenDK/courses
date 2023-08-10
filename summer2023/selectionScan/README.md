@@ -158,7 +158,7 @@ https://genome-euro.ucsc.edu/cgi-bin/hgGateway?redirect=manual&source=genome.ucs
 
 but for this exercise use ENSEMBL). 
 
-Then search for "LCT". Thsi will give qyuite a few hits. Click on the one called "LCT (Human Gene)" (the top one).
+Then search for "LCT". This will give you quite a few options. Click on the one called "LCT (Human Gene)" (the top one).
 
 
 #### Compare the genomic context of the lactase gene in the human with other species
