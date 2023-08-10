@@ -170,7 +170,7 @@ The gene id for the lactase gene is LCT.
 
 ```bash
 
-zcat $genomes/Homo_sapiens.GRCh38.110.chromosome.2.gff3.gz | grep LCT
+zcat $thePath//REFERENCEgenome/Homo_sapiens.GRCh38.110.chromosome.2.gff3.gz | grep LCT
 ```
 
 
