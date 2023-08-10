@@ -195,7 +195,7 @@ How many primates with orthologs did you find?
 
 #### Find the lactase gene annotation in the gff file
 
-Now let's try to look up LCT in the annotation file (gff file) that comes along with the genome.
+Let's also try to look up LCT in the annotation file (gff file) that comes along with the genome.
 
 The gene id for the lactase gene is LCT.
 
