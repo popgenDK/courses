@@ -24,7 +24,7 @@ BamFiles for the exercises with the maize data
 wild=$thePath/EXERCISES/wild.fileList
 p750=$thePath/EXERCISES/750years.fileList
 p2000=$thePath/EXERCISES/2000years.fileList
-modern=$thePath//EXERCISES/modern.fileList
+modern=$thePath/EXERCISES/modern.fileList
 ```
 
 We will focus on individual coding regions (this is capture data)
