@@ -5,7 +5,7 @@ We will use the following programs from angsd
 ```bash
 which angsd
 which realSFS
-which
+which thetaStat
 
 ```
 
