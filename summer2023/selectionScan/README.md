@@ -170,7 +170,7 @@ The gene id for the lactase gene is LCT.
 
 ```bash
 
-zcat $thePath//REFERENCEgenome/Homo_sapiens.GRCh38.110.chromosome.2.gff3.gz | grep LCT
+zcat $thePath/REFERENCEgenome/Homo_sapiens.GRCh38.110.chromosome.2.gff3.gz | grep LCT
 ```
 
 
@@ -187,10 +187,10 @@ I have prepared the bed file for you, check it out (remember bed files are zero-
 
 ```bash
 
-cat $genomes/rs4988235.bed
+cat $thePath/REFERENCEgenome/rs4988235.bed
 ```
 
 ```bash
 
-bedtools intersect  -a $genomes/Homo_sapiens.GRCh38.110.chromosome.2.gff3.gz -b $genomes/rs4988235.bed
+bedtools intersect  -a $thePath/REFERENCEgenome/Homo_sapiens.GRCh38.110.chromosome.2.gff3.gz -b $thePath/REFERENCEgenome/rs4988235.bed
 ```
