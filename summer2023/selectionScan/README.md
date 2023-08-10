@@ -42,7 +42,7 @@ genes50=$thePath/COORS/random50.coors
 ```
 
 
- make a directory to work in and cp some scripts
+ make a directory to work in and copy some scripts to it
 ```bash
 mkdir -p ~/selection
 cd ~/selection
