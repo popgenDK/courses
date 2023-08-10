@@ -1,24 +1,21 @@
 # Exercises for the selection session
 
-Set the following paths and make a directory to work in 
+Set the following paths
 
 ```bash
-genomes=/course/popgen23/rute/REFERENCEgenome/
-REF=/home/rute/2023/SELECTION/REFERENCEgenome/maizegenome-chl-mito-plasm.fasta
-misc=/emily/program/albrecht/angsd/misc
-
-mkdir -p ~/selection
-cd ~/selection
+thePath=/course/popgen23/rute/selection
+genomes=$thePath/REFERENCEgenome/
+REF=$thePath/REFERENCEgenome/maizegenome-chl-mito-plasm.fasta
 ```
 
 BamFiles for the exercises with the maize data
 
 ```bash
 
-wild=/home/rute/2023/SELECTION/EXERCISES/wild.fileList
-p750=/home/rute/2023/SELECTION/EXERCISES/750years.fileList
-p2000=/home/rute/2023/SELECTION/EXERCISES/2000years.fileList
-modern=/home/rute/2023/SELECTION/EXERCISES/modern.fileList
+wild=$thePath/EXERCISES/wild.fileList
+p750=$thePath//EXERCISES/750years.fileList
+p2000=$thePath/EXERCISES/2000years.fileList
+modern=$thePath//EXERCISES/modern.fileList
 ```
 
 We will focus on individual coding regions (this is capture data)
@@ -27,11 +24,22 @@ with region files (1-based): chr:start-end
 
 ```bash
 
-ZAGL1=/home/rute/2023/SELECTION/COORS/ZAGL1.coors
-DEHYD1A=/home/rute/2023/SELECTION/COORS/DEHYD1A.coors
-SUGARY1=/home/rute/2023/SELECTION/COORS/SUGARY1.coors
-AE1=/home/rute/2023/SELECTION/COORS/AE1.coors
-50genes=/home/rute/2023/SELECTION/COORS/random50.coors
+ZAGL1=$thePath/COORS/ZAGL1.coors
+DEHYD1A=$thePath/COORS/DEHYD1A.coors
+SUGARY1=$thePath/COORS/SUGARY1.coors
+AE1=$thePathCOORS/AE1.coors
+genes50=$thePath/COORS/random50.coors
+```
+
+
+ make a directory to work in and cp some scripts
+```bash
+mkdir -p ~/selection
+cd ~/selection
+
+cp $thePath/SCRIPTS/*sh .
+#print the names of the scripts you copied
+ls *sh
 ```
 
 You will be executing scripts but please take your time to read the options to better understand what you are doing in each step.
