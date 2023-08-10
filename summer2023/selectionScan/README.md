@@ -164,7 +164,7 @@ If you use the newick format (the branch length is indicated after the populatio
 (wild:0.284891,p2k:0,p750:0.222320);
 ```
 
-
+you can plot the tree using this [website](http://etetoolkit.org/treeview/)
 
 #OPTIONAL: combine the values of Tajima's D and PBS (750 and 2K) in one plot
 
