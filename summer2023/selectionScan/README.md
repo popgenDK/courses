@@ -208,7 +208,7 @@ We will try to investigate SNP rs4988235. You can find information about the SNP
 
 #### Extract the gff features that overlap with the SNP position using “bedtools intersect”  (you will need a bed file with the SNP genomic coordinates)
 
-I have prepared the bed file for you, check it out (remember bed files are zero-based)
+I have prepared the bed file for you, check it out (remember bed files are zero-based) by first finding the SNP position for the relevant SNP and then looking up everything that overlaps with this posotion by running these commands:
 
 ```bash
 
@@ -219,3 +219,4 @@ cat $thePath/REFERENCEgenome/rs4988235.bed
 
 bedtools intersect  -a $thePath/REFERENCEgenome/Homo_sapiens.GRCh38.110.chromosome.2.gff3.gz -b $thePath/REFERENCEgenome/rs4988235.bed
 ```
+- Based on the output which genes overlap with the SNP rs4988235?
