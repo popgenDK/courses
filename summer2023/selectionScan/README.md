@@ -66,7 +66,7 @@ http://www.popgen.dk/angsd/index.php/Fst
 
 In this exercise you will estimate thetas and the 1dSFS for population B and the 2dSFS for all 3 pairwise comparisons.
 #### First calculate watersons theta for population B (Slide 44)
-The "number of individuals" for diploid organisms is 2N (n=6 for the example on slide 43). You can calculate the 
+The "number of individuals" for diploid organisms is 2N (n=6 for the example on slide 43). You can calculate 
   $$, \sum_{k=1}^{2N-1} 1/k $$  in R as
 ```bash
 # open R for before running code
@@ -110,16 +110,20 @@ You need to provide the location of the coordinate file and a prefix for the out
 ```
 
 For the genes involved in the starch pathway (SUGARY1 and AE1), plot the values of nucleotide diversity for each population per gene.
-Check the *pestPG to get the nucleotide diversity (tP) values and the number of sites used to calculate it (Nsites). 
-Remember to divide tP by the Nsites to get the estimate per site. 
-Note that even if you do a sliding windows analysis, the effective number of sites per window might be different from the window size, due to filtering, missing data, masking of the assembly, etc. 
+To do so you can pull out the nucleotide diversity (tP) values and the number of sites used to calculate it (Nsites) from the *pestPG files. Once you have that the estimate per site can be calculated by dividing tP by the Nsites. So e.g. you can extract the tP and Nsites values for the AEP1 gene for the 750 year old samples using this command:
 
-To extract the columns with tP and Nsites values from the *pestPG files:
 
 ```bash
 
 cut -f5,14 750years.AE1.thetas.idx.pestPG
 ```
+And then you can get the estimated nucleotide diversity by dividing the two numbers you get out (tP/Nsites). Once you have done this for the AE1 gene for the wild samples (teosinte), the 2000 year old samples, the 750 year old samples, and the modern samples (landraces) you can make the relevant plot for AE1 gene i R using the following command:
+```R
+vectorwithestimates = c(estWild, est2000y, est750y,estModern)
+barplot(vectorwithestimates, names=c("Wild","2000y","750y","Modern"), main="Nucleotide diversity in AE1")
+```
+Do this for both AE1 and SUGARY1.
+
 
 ## Exercise 3. Calculate the diversity and the PBS statistic for maize genes targeted by domestication  
 
