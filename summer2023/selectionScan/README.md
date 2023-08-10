@@ -184,7 +184,7 @@ https://genome-euro.ucsc.edu/cgi-bin/hgGateway?redirect=manual&source=genome.ucs
 
 but for this exercise use ENSEMBL). 
 
-Then search for "LCT". This will give you quite a few options. Click on the one called "LCT (Human Gene)" (the top one).
+Then search for "LCT". This will give you quite a few options. Click on the one called "LCT (Human Gene)" (the top one). Now try to explore the genomic context (e.g. which other genes are nearby).
 
 
 #### Compare the genomic context of the lactase gene in the human with other species
@@ -194,6 +194,8 @@ Now based on the the above ENSEMBL page for LCT In the ENSEMBL use the "Ortholog
 How many primates with orthologs did you find?
 
 #### Find the lactase gene annotation in the gff file
+
+Now let's try to look up LCT in the annotation file (gff file) that comes along with the genome.
 
 The gene id for the lactase gene is LCT.
 
