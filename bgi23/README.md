@@ -13,4 +13,23 @@ Admixture.ipynb
 ### morning
 BGI2023-populationStructureII.ipynb
 
+### afternoon
+PSMC_tutorial.ipynb
+
+
+
+## Wednessday 
+### morning
+
+### afternoon
+
+## Thursday 
+### morning
+
+### afternoon
+
+## Friday
+### morning
+
+### afternoon
 
