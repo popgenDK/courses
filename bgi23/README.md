@@ -5,24 +5,28 @@ Please see our [course website](http://popgen.dk/bgi23/) for more information.
 
 ## Monday
 ### morning
-NGSintro.ipynb
+[NGSintro.ipynb](https://github.com/popgenDK/courses/blob/main/bgi23/NGSintro.ipynb)
+
 ## afternoo 
-Admixture.ipynb
+[Admixture.ipynb](https://github.com/popgenDK/courses/blob/main/bgi23/Admixture.ipynb)
 
 ## Tuesday
 ### morning
-BGI2023-populationStructureII.ipynb
+[BGI2023-populationStructureII.ipynb](https://github.com/popgenDK/courses/blob/main/bgi23/BGI2023-populationStructureII.ipynb)
 
 ### afternoon
-PSMC_tutorial.ipynb
+[PSMC_tutorial.ipynb](https://github.com/popgenDK/courses/blob/main/bgi23/PSMC_tutorial.ipynb)
 
 
 
 ## Wednessday 
 ### morning
+- [glioblastoma.html](https://github.com/popgenDK/courses/blob/main/bgi23/glioblastoma.html) (Note: This file is large and you may download and open it in your browser locally.)
+- [scRNA_check_files](https://github.com/popgenDK/courses/blob/main/bgi23/scRNA_check_files.ipynb)
 
 ### afternoon
-
+- [scRNA_Seurat_Yano.ipynb](https://github.com/popgenDK/courses/blob/main/bgi23/scRNA_Seurat_Yano.ipynb)
+  
 ## Thursday 
 ### morning
 
