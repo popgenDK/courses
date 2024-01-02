@@ -1,2 +1,3 @@
 # courses
-add a folder for each course. 
+Each folder is a different course
+
