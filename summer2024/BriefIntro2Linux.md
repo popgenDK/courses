@@ -1,3 +1,7 @@
+# A Brief Intro to Linux
+
+**Summer Course in Population Genetics**
+
 # Introduction
 
 For this course you are not required to know linux beforehand. BUT a lot of the programs we going to use are only available in linux (or easier to use in linux), so below is a brief how to for linux. It should be enough to get by for the entire week. However, if you get stuck in an exercise because there is a linux command you don't understand or can't get to work then PLEASE just ask :)
