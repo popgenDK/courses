@@ -1,8 +1,8 @@
-**Introduction**
+# Introduction
 
 For this course you are not required to know linux beforehand. BUT a lot of the programs we going to use are only available in linux (or easier to use in linux), so below is a brief howto for linux. It should be enough to get by for the entire week. However, if you get stuck in an exercise because there is a linux command you don't understand or can't get to work then PLEASE just ask :)
 
-**Open a terminal and ssh**
+# Open a terminal and ssh
 More or less everything we are going to do in linux will be through a 'terminal'. You will get a login and password to a server.
 
 **Server Name**
@@ -23,11 +23,12 @@ If you use linux then you known how to open a terminal
 ssh -X USERNAME@emily.popgen.dk
 change USERNAME to your user name
 
-**Howto**
-Copy-paste
+# Howto
+**Copy-paste**
 Copy: To copy paste something mark the text you want to copy by holding your left mouse button down while moving the mouse from one end of the text
 Paste: just point your cursor where you want the text pasted and click once one your middle mouse button.
-Save a file from a browser to the file system
+
+**Save a file from a browser to the file system**
 Right click on the link an press "save-link-as". Then click your way to the directory you want to store the file in and finally click on "save".
 
 **Open a terminal**
