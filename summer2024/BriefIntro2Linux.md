@@ -1,6 +1,9 @@
 # A Brief Intro to Linux
 
-## Summer Course in Population Genetics
+Summer Course in Population Genetics
+
+University of Copenhagen
+
 
 # Introduction
 
