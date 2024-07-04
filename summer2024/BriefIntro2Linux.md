@@ -132,7 +132,7 @@ Use "history": you can go through your previous commands by using the up and dow
 
 Use "tab completion": you don't always have to type the whole filename. Instead try to use the tab button once you have written part of the filename. The computer will then finish the file name if it is the only one filenames that starts with what you wrote or finish the part that it can unambiguously.
 
-Use "regular expressions": if you want to do something with all the files that start or end with something specific you can use a * to denote the vaying part. Example:
+Use "regular expressions": if you want to do something with all the files that start or end with something specific you can use a * to denote the varying part. Example:
 
 ```
 mv *txt subdir1
