@@ -39,17 +39,17 @@ change USERNAME to your user name
 
 # How to
 
-**Copy-paste**
+**Copy-pasting**
 
 Copy: To copy paste something mark the text you want to copy by holding your left mouse button down while moving the mouse from one end of the text.
 
 Paste: just point your cursor where you want the text pasted and click once one your middle mouse button.
 
-**Save a file from a browser to the file system**
+**Saving a file from a browser to the file system**
 
 Right click on the link an press "save-link-as". Then click your way to the directory you want to store the file in and finally click on "save".
 
-**Open a terminal**
+**Opening a terminal**
 
 More or less everything we are going to do in linux will be through a 'terminal'. To open a terminal click on the button that looks like a small computer screen in the buttom left part of your screen. A terminal is a simple window where you can enter a command and make the computer execute it by pressing enter. Here is an example of typing a command to the commandline:
 
@@ -57,7 +57,7 @@ More or less everything we are going to do in linux will be through a 'terminal'
 ls
 ```
 
-**Find your way around in the file system in the terminal**
+**Finding your way around in the file system in the terminal**
 
 Here are some very useful commands to help you move around in the file system in the terminal:
 
@@ -75,7 +75,7 @@ cd subdir
 cd ..
 ```
 
-**Change the file system through a terminal**
+**Changing the file system through a terminal**
 
 Here are some commands for copying and moving files and for making new directories:
 
@@ -104,7 +104,7 @@ rm: remove a file, Example:
 rm mytextfile1.txt
 ```
 
-**View the content of different types of files from the terminal**
+**Viewing the content of different types of files from the terminal**
 
 less: shows the content of a text file. In less mode you can use arrows to navigate up and down in the text. To get out of less mode type q. Example:
 
@@ -118,7 +118,7 @@ evince: shows the content of pdf, eps, ps and png files. Example:
 evince myplot.png &
 ```
 
-**Edit files from the terminal**
+**Editing files from the terminal**
 
 gedit: a simple editor that is similar to msome of the simple Windows text editors. Example:
 
