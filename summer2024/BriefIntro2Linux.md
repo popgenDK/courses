@@ -22,7 +22,7 @@ For Windows users we recommend using MobaXterm.
 Download the program [MobaXterm](http://mobaxterm.mobatek.net/download-home-edition.html), open and press start a new session. Enter server, login and password.
 
 **Mac:**
-You should have [Xquartz](https://www.xquartz.org/) or similar installed so that you can view graphics from the terminal. Else ask Ida when you are here if you have problems.
+You should have [XQuartz](https://www.xquartz.org/) or similar installed so that you can view graphics from the terminal. Else ask when you are here if you have problems.
 
 ```
 ssh -Y USERNAME@emily.popgen.dk
