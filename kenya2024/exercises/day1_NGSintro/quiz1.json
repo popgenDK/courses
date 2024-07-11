@@ -1,1 +1,201 @@
+[
+  {
+        "question": "Hva er output fra følgende kode?",
+	      "code": "a=\"1\"\nb=\"2\"\nprint(a+b)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "1",
+                "correct": false,
+                "feedback": "Feil. Variablene inneholder strenger. Strenger slås sammen når de addderes."
+            },
+            {
+                "answer": "2",
+                "correct": false,
+                "feedback": "Feil. Variablene inneholder strenger. Strenger slås sammen når de addderes."
+            },
+            {
+                "answer": "3",
+                "correct": false,
+                "feedback": "Feil. Variablene inneholder strenger. Strenger slås sammen når de addderes."
+            },
+            {
+                "answer": "12",
+                "correct": true,
+                "feedback": "Riktig. Variablene inneholder strenger. Strenger slås sammen når de addderes."
+            },
+            {
+                "answer": "error",
+                "correct": false,
+                "feedback": "Feil. Variablene inneholder strenger. Strenger slås sammen når de addderes."
+            }
+        ]
+    },
+     {
+        "question": "Hva skjer når du kjører følgende kode?",
+	      "code": "print = \"Hei\"",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "\"Hei\" blir skrevet ut.",
+                "correct": false,
+                "feedback": "Feil. Korrekt syntaks for utskrift er: print(\"Hei\")"
+            },
+            {
+                "answer": "En feilmelding blir skrevet ut.",
+                "correct": false,
+                "feedback": "Feil. Det er fullt tillatt å skrive over print-funksjonen. Men nå finnes ikke print-funksjonen i programmet ditt mer, og du må restarte Python."
+            },
+            {
+                "answer": "Programmet krasjer.",
+                "correct": false,
+                "feedback": "Feil. Et program krasjer ikke med mindre det skjer noe teknisk feil."
+            },
+            {
+                "answer": "Ingenting skjer.",
+                "correct": true,
+                "feedback": "Riktig. Det er fullt tillatt å skrive over print-funksjonen. Men nå finnes ikke print-funksjonen i programmet ditt mer, og du må restarte Python."
+            }
+        ]
+    },
+    {
+       "question": "Hva er output?",
+       "code": "print(3>4)",
+       "type": "multiple_choice",
+       "answers": [
+           {
+               "answer": "En feilmelding blir skrevet ut.",
+               "correct": false,
+               "feedback": "Feil. Dette er en gyldig syntaks."
+           },
+           {
+               "answer": "True.",
+               "correct": false,
+               "feedback": "Feil. 3 er ikke større enn 4."
+           },
+           {
+               "answer": "False.",
+               "correct": true,
+               "feedback": "Riktig. 3 er ikke større enn 4, og vi får den boolske verdien False (merk at det alltid er stor forbokstav)."
+           },
+           {
+               "answer": "Ingenting skjer.",
+               "correct": false,
+               "feedback": "Feil."
+           }
+       ]
+   },
+    {
+        "question": "Hva er output fra følgende kode hvis du taster inn 1 og 2 i konsollen når du kjører programmet?",
+	      "code": "a = input(\"tall 1: \")\nb = input(\"tall 1: \")\nb = float(b) \nprint(a + b)",
+        "type": "multiple_choice",
+        "answers": [
+                       {
+                "answer": "3",
+                "correct": false,
+                "feedback": "Feil. Den ene variabelen er streng, og den andre er heltall. Disse kan ikke adderes."
+            },
+            {
+                "answer": "12",
+                "correct": false,
+                "feedback": "Feil. Den ene variabelen er streng, og den andre er heltall. Disse kan ikke adderes."
+            },
+            {
+                "answer": "1",
+                "correct": false,
+                "feedback": "Feil. Den ene variabelen er streng, og den andre er heltall. Disse kan ikke adderes."
+            },
+            {
+                "answer": "Feilmelding",
+                "correct": true,
+                "feedback": "Ja. Den ene variabelen er streng, og den andre er heltall. Disse kan ikke adderes."
+            }
+        ]
+    },
+    {
+        "question": "Hva er output fra følgende program?",
+           "code": "a = 5.0 \nb = 3.0 \nc = a + b \na = 3.0 \nd = 2.0 \ne = a + c * d \nprint(e)",
+        "type": "multiple_choice",
+        "answers": [
+          {
+            "answer": "18.0",
+            "correct": false,
+            "feedback": "Feil. Pass på regnerekkefølge og hold styr på innholdet i variablene."
+          },
+          {
+            "answer": "15.0",
+            "correct": false,
+            "feedback": "Feil. Pass på regnerekkefølge og hold styr på innholdet i variablene."
+          },
+            {
+                "answer": "22.0",
+                "correct": false,
+                "feedback": "Feil. Pass på regnerekkefølge og hold styr på innholdet i variablene."
+            },
+            {
+                "answer": "19.0",
+                "correct": true,
+                "feedback": "Riktig."
+            }
+        ]
+    },
+    {
+        "question": "Hva er verdien til variablene nedenfor?",
+           "code": "a = 10 \nb = 20 \na = b",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "a = 20, b = 20",
+                "correct": true,
+                "feedback": "Riktig. I tredje linje får a verdien til b."
+            },
+            {
+                "answer": "a = 20, b = 10",
+                "correct": false,
+                "feedback": "Feil. I tredje linje får a verdien til b, men ikke motsatt."
+            },
+            {
+                "answer": "a = 10, b = 10",
+                "correct": false,
+                "feedback": "Feil. I tredje linje får a verdien til b."
+            },
+            {
+                "answer": "a = 10, b = 20",
+                "correct": false,
+                "feedback": "Feil. I tredje linje får a verdien til b."
+            }
+        ]
+    },
+    {
+          "question": "Hvilke(n) kodesnutt(er) skriver ut 20 % av verdien til en variabel x?",
+          "type": "many_choice",
+          "answers": [
+              {
+                  "answer": "print(20 % x)",
+                  "correct": false,
+                  "feedback": "Feil. Dette er faktisk riktig Python-syntaks, men den regner ikke ut prosent. Her får vi resten etter en heltallsdivisjon mellom 20 og x."
+              },
+              {
+                  "answer": "print(20% * x)",
+                  "correct": false,
+                  "feedback": "Feil. Dette gir feilmelding."
+              },
+              {
+                  "answer": "print(1.20 * x)",
+                  "correct": false,
+                  "feedback": "Feil. Her får du 120 % av verdien."
+              },
+              {
+                  "answer": "print(x - 0.8 * x)",
+                  "correct": true,
+                  "feedback": "Riktig."
+              },
+              {
+                  "answer": "print(0.2 * x)",
+                  "correct": true,
+                  "feedback": "Riktig."
+              }
+          ]
+      }
+]
 
