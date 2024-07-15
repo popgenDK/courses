@@ -1,0 +1,101 @@
+[ {
+        "question": "How long are the reads (number of bases)?",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 150,
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "type": "range",
+                "range": [
+                   1,
+                    149
+                ],
+                "correct": false,
+                "feedback": "The number is higher. hint: look in the basic statistics table"
+            },
+            {
+                "type": "range",
+                "range": [
+                    151,
+                    100000000
+                ],
+                "correct": false,
+                "feedback": "The number is lower. hint: look in the basic statistics table"
+            },
+            {
+                "type": "default",
+                "feedback": "not corret Try again."
+            }
+        ]
+    },
+     {
+        "question": "What is the median base quality as most positions??",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 36,
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "type": "range",
+                "range": [
+                   1,
+                    35
+                ],
+                "correct": false,
+                "feedback": "The number is higher. look at the red line in the box plot in the per base quaity figure"
+            },
+            {
+                "type": "range",
+                "range": [
+                    37,
+                    100000000
+                ],
+                "correct": false,
+                "feedback": "The number is lower.  look at the red line in the box plot in the per base quaity figure"
+            },
+            {
+                "type": "default",
+                "feedback": "not corret Try again."
+            }
+        ]
+    },
+     {
+        "question": "Which summaries do not show any problems",
+        "type": "many_choice",
+        "answer_cols": 4,
+        "answers": [
+            {
+                "answer": "Per sequence quality scores",
+                "correct": true,
+                "feedback": "correct. All reads have a average read quality above 25"
+            },
+            {
+                "answer": "Per base sequence contents",
+                "correct": true,
+                "feedback": "Correct. with the exception of the first base then all positions in the read have the save GC contents and you always see same about of A and T (and C to G)"
+            },
+            {
+                "answer": "Per sequence GC content",
+                "correct": true,
+                "feedback": "Correct. The GC contents for most mammals is ~41%"
+            },
+            {
+                "answer": "Sequence Duplication Levels",
+                "correct": true,
+                "feedback": "Correct. There are only a few sequence duplications. This is not normal but for raw data so this data must have been cleaned"
+            },
+            {
+                "answer": "Adapter contents",
+                "correct": true,
+                "feedback": "Correct. For this data the adapter contamination has been removed"
+            }
+        ]
+    }
+    ]
