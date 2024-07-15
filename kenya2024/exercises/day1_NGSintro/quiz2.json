@@ -5,7 +5,7 @@
             {
                 "type": "value",
                 "value": 334024,
-                "correct": True,
+                "correct": true,
                 "feedback": "Correct."
             },
             {
@@ -14,7 +14,7 @@
                    1,
                     334023
                 ],
-                "correct": False,
+                "correct": false,
                 "feedback": "The number is higher"
             },
             {
@@ -23,7 +23,7 @@
                     334025,
                     100000000
                 ],
-                "correct": False,
+                "correct": false,
                 "feedback": "The number is lower"
             },
             {
@@ -39,7 +39,7 @@
             {
                 "type": "value",
                 "value": 83506,
-                "correct": True,
+                "correct": true,
                 "feedback": "Correct."
             },
             {
@@ -48,7 +48,7 @@
                    1,
                     83505
                 ],
-                "correct": False,
+                "correct": false,
                 "feedback": "The number is higher. use the fact that there are for lines for each read"
             },
             {
@@ -57,7 +57,7 @@
                     83507,
                     100000000
                 ],
-                "correct": False,
+                "correct": false,
                 "feedback": "The number is lower. use the fact that there are for lines for each read"
             },
             {
@@ -73,7 +73,7 @@
             {
                 "type": "value",
                 "value": 334025,
-                "correct": True,
+                "correct": true,
                 "feedback": "Correct."
             },
             {
@@ -82,7 +82,7 @@
                    1,
                     334024
                 ],
-                "correct": False,
+                "correct": false,
                 "feedback": "The number is higher. hint: you have the same number in both files"
             },
             {
@@ -91,7 +91,7 @@
                     334026,
                     100000000
                 ],
-                "correct": False,
+                "correct": false,
                 "feedback": "The number is lowerhint: you have the same number in both files"
             },
             {
