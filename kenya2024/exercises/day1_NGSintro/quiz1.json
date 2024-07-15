@@ -5,22 +5,22 @@
         "answers": [
             {
                 "answer": "read ID",
-                "correct": True,
+                "correct": true,
                 "feedback": "Correct."
             },
             {
                 "answer": "Read sequence",
-                "correct": False,
+                "correct": false,
                 "feedback": "False."
             },
             {
                 "answer": "base quality scores",
-                "correct": False,
+                "correct": false,
                 "feedback": "Incorrect."
             },
             {
                 "answer": "seperator between reads",
-                "correct": False,
+                "correct": false,
                 "feedback": "False."
             }
         ]
@@ -31,22 +31,22 @@
         "answers": [
             {
                 "answer": "read ID",
-                "correct": False,
+                "correct": false,
                 "feedback": "incorrect."
             },
             {
                 "answer": "Read sequence",
-                "correct": True,
+                "correct": true,
                 "feedback": "Correct."
             },
             {
                 "answer": "base quality scores",
-                "correct": False,
+                "correct": false,
                 "feedback": "Incorrect."
             },
             {
                 "answer": "seperator between reads",
-                "correct": False,
+                "correct": false,
                 "feedback": "False."
             }
         ]
@@ -57,22 +57,22 @@
         "answers": [
             {
                 "answer": "read ID",
-                "correct": False,
+                "correct": false,
                 "feedback": "incorrect."
             },
             {
                 "answer": "Read sequence",
-                "correct": False,
+                "correct": false,
                 "feedback": "False."
             },
             {
                 "answer": "base quality scores",
-                "correct": True,
+                "correct": true,
                 "feedback": "Correct."
             },
             {
                 "answer": "seperator between reads",
-                "correct": False,
+                "correct": false,
                 "feedback": "False."
             }
         ]
