@@ -1,0 +1,49 @@
+[ {
+        "question": "how many indiviudals?",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 5,
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "type": "default",
+                "feedback": "not corret Try again."
+            }
+        ]
+    },
+    {
+        "question": "how many SNP?",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 7,
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "type": "default",
+                "feedback": "not corret Try again."
+            }
+        ]
+    },
+     {
+        "question": "what is the (manhattan) distance between indvidual 1 and 2?",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 3,
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "type": "default",
+                "feedback": "not correct. substract the genotypes from the two indviduals and take the sum of this difference"
+            }
+        ]
+    }
+    ]
