@@ -1,6 +1,4 @@
-
-
-[ {
+[{
         "question": "how many individuals in the file?",
         "type": "numeric",
         "answers": [
@@ -80,4 +78,4 @@
             }
         ]
     }
-    ]
+]
