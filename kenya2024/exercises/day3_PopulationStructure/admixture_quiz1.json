@@ -1,7 +1,6 @@
 
 
-
-admix_quiz1 = [ {
+[ {
         "question": "how many individuals in the file?",
         "type": "numeric",
         "answers": [
