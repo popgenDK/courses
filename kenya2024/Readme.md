@@ -12,8 +12,9 @@ The slides will be put in the folder called slides
 ## Day 1
 
 ### intro to NGS
-[google slide](https://docs.google.com/presentation/d/167G6KqKP6ppgpxxmBfBXnGHhx1xP2KTW9fniAd13B-Y/edit?usp=sharing) [odf](https://github.com/popgenDK/courses/blob/main/kenya2024/slides/Day1/kenya%202024%20-%20day%201%20%20Intro%20to%20NGS.pdf)
+[google slide](https://docs.google.com/presentation/d/167G6KqKP6ppgpxxmBfBXnGHhx1xP2KTW9fniAd13B-Y/edit?usp=sharing)  or [pdf slides](https://github.com/popgenDK/courses/blob/main/kenya2024/slides/Day1/kenya%202024%20-%20day%201%20%20Intro%20to%20NGS.pdf)
 
+(exercises: download jyputer notebook)[https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day1_NGSintro/Day1_NGSintroV4.ipynb]
 
 
 ## Day 2
