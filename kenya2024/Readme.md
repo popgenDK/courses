@@ -8,8 +8,9 @@ For the course you will find the jupyter notebooks in the folder called exercise
 
 ## Day 1
 
-### intro the 
+### intro to NGS
 https://docs.google.com/presentation/d/167G6KqKP6ppgpxxmBfBXnGHhx1xP2KTW9fniAd13B-Y/edit?usp=sharing
+
 
 ## Day 2
 
