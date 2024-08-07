@@ -24,6 +24,9 @@ exercise: [download jyputer notebook](https://github.com/popgenDK/courses/blob/m
 ### diversity
 [slides for diversity](slides/Day1/Day_1_Genetic_diversity_theory.pdf)
 
+### research talk
+[slides for research talk](kenya2024/slides/Day1/Day_1_Research_talk.pdf)
+
 
 ## Day 2
 
