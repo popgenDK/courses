@@ -22,7 +22,7 @@ exercises: [download jyputer notebook](https://github.com/popgenDK/courses/blob/
 exercise: [download jyputer notebook](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/Day1_GeneticDiversity/Day1_GeneticDiversity.ipynb)
 
 ### research talk
-[slides for research talk](kenya2024/slides/Day1/Day_1_Research_talk.pdf)
+[slides for research talk](https://github.com/popgenDK/courses/blob/main/kenya2024/slides/Day1/Day_1_Research_talk.pdf)
 
 
 ## Day 2
