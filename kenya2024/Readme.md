@@ -17,7 +17,7 @@ The slides will be put in the folder called slides
 exercises: [download jyputer notebook](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day1_NGSintro/Day1_NGSintroV4.ipynb)
 
 ### genetic diversity
-[pdf slides](https://github.com/popgenDK/courses/blob/main/kenya2024/slides/Day1/Day%201%20Genetic%20diversity%20theory.pdf)
+[pdf slides](https://github.com/popgenDK/courses/blob/main/kenya2024/slides/Day1/Day_1_Genetic_diversity_theory.pdf)
 
 exercise: [download jyputer notebook](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/Day1_GeneticDiversity/Day1_GeneticDiversity.ipynb)
 
