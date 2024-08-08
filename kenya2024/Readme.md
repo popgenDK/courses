@@ -26,6 +26,7 @@ exercise: [download jyputer notebook](https://github.com/popgenDK/courses/blob/m
 
 
 ## Day 2
+exercise: [download jyputer notebook](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/Day2/Day2_Inbreeding_ROH.ipynb)
 
 
 ## Day 3
