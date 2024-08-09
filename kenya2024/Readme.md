@@ -36,10 +36,14 @@ exercise: [download jyputer notebook](https://github.com/popgenDK/courses/blob/m
 ### Intro to Admixture - Anders Albrechtsen
 exercise: [download jyputer notebook](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_AdmixtureV2.ipynb)
 [google slide](https://docs.google.com/presentation/d/1WqnhY59PXWkSr79eDx3IFfqIiHyXUL2y5rxmQFJjOBQ/edit?usp=sharing) or [pdf slides](https://github.com/popgenDK/courses/blob/main/kenya2024/slides/Day3/kenya2024_day3_Admixture.pdf)
+
 ### intro to PCA in genetics - Anders Albrechtsen 
 exercise: [download jyputer notebook](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb)
 
 [google slide](https://docs.google.com/presentation/d/1SfkZs6t04XGMQtK63S7YqdHm1W8ZL2lAiKMifv9OQNM/edit?usp=sharing) or [pdf slides](https://github.com/popgenDK/courses/blob/main/kenya2024/slides/Day3/kenya2024_Day3_PCA.pdf)
+
+### Fst  - Rasmus Heller
+exercise: [download jyputer notebook](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_Fst_RH.ipynb)
 
 ### research talk - rasmus heller
 [pdf slides](https://github.com/popgenDK/courses/blob/main/kenya2024/slides/Day3/Day3_population_structure_research_talk.pdf)
