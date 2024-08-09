@@ -33,6 +33,8 @@ exercise: [download jyputer notebook](https://github.com/popgenDK/courses/blob/m
 
 ### Admixture
 exercise: [download jyputer notebook](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_AdmixtureV2.ipynb)
-
+[google slide](https://docs.google.com/presentation/d/1WqnhY59PXWkSr79eDx3IFfqIiHyXUL2y5rxmQFJjOBQ/edit?usp=sharing)
 ### PCA
 exercise: [download jyputer notebook](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb)
+
+[google slide](https://docs.google.com/presentation/d/1SfkZs6t04XGMQtK63S7YqdHm1W8ZL2lAiKMifv9OQNM/edit?usp=sharing)
