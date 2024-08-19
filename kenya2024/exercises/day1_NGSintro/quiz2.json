@@ -1,5 +1,5 @@
 [ {
-        "question": "how many lines in the file?",
+        "question": "How many lines in the file?",
         "type": "numeric",
         "answers": [
             {
@@ -33,7 +33,7 @@
         ]
     },
      {
-        "question": "How many Reads in the fastq file?",
+        "question": "How many reads are there in the fastq file?",
         "type": "numeric",
         "answers": [
             {
@@ -67,7 +67,7 @@
         ]
     },
          {
-        "question": "how may lines in the other fastQ file?( CCTauTzS_8872.Goat.small.fq_2.gz )",
+        "question": "How may lines are there in the other fastQ file?( CCTauTzS_8872.Goat.small.fq_2.gz )",
         "type": "numeric",
         "answers": [
             {
