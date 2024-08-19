@@ -9,5 +9,9 @@
 ## Wednessday
 
 ## Thursday
+- [Finestructure](ChromoPainterFineSTRUCTUREPractical.ipynb)
+-
 
 ## Friday
+- [Dating admixture](DatingAdmixture.ipynb)
+-
