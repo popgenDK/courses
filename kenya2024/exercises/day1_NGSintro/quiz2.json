@@ -49,7 +49,7 @@
                     83505
                 ],
                 "correct": false,
-                "feedback": "The number is higher. use the fact that there are for lines for each read"
+                "feedback": "The number is higher. use the fact that there are four lines for each read"
             },
             {
                 "type": "range",
