@@ -1,5 +1,5 @@
 [ {
-        "question": "how may lines in the file?",
+        "question": "how many lines in the file?",
         "type": "numeric",
         "answers": [
             {
