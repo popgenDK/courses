@@ -5,7 +5,7 @@
 - [NGSintro notebook](NGSintro.ipynb) Download and upload to notebook
 ## Tuesday
 - [NGS inference notebook](NGS_inference.ipynb)
-- 
+- [Admixture inference notebook][admixExercise_popgen24.ipynb]
 ## Wednessday
 
 ## Thursday
