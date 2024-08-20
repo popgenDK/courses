@@ -8,7 +8,7 @@
 - Afternoon: [Admixture inference notebook](admixExercise_popgen24.ipynb) Download and upload to notebook
 ## Wednessday
 - morning: [PCA from NGS](summer2024-PCA.ipynb)
-- 
+- Afternoon: [D/f statistics and ancient geneflow notebook](f_stats.ipynb)
 ## Thursday
 - Morning: [Finestructure notebook](ChromoPainterFineSTRUCTUREPractical.ipynb) Download and upload to notebook
 -
