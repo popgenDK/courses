@@ -10,4 +10,4 @@
 
 ## Day 3
 - Morning slides: [google slides](https://docs.google.com/presentation/d/12SUaX4G_cR5VPUufTcCFmvsUQSHFpqjVtYCK4EUA_ZY/edit?usp=sharing) [pdf slides](summer2024-PCA.pdf)
-- Afternoon
+- Afternoon slides: Dstat/fstat geneflow [pdf](f_stats.pdf)
