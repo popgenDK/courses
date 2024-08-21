@@ -6,3 +6,7 @@
 
 ## Day 2
 - Morning slides: [google slides](https://docs.google.com/presentation/d/1zsZi7icgr5jd8CQsj37Ei2rU0kd0Keh9LCb3LIGtA9U/edit?usp=sharing) [pdf slides](summer2024_day_2_NGS_inference.pdf)
+
+
+## Day 3
+- Morning slides: [google slides](https://docs.google.com/presentation/d/12SUaX4G_cR5VPUufTcCFmvsUQSHFpqjVtYCK4EUA_ZY/edit?usp=sharing) [pdf slides](summer2024-PCA.pdf)
