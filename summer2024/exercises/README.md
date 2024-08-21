@@ -12,7 +12,7 @@
 - Afternoon: [D/f statistics and ancient geneflow notebook](f_stats.ipynb)
 ## Thursday
 - Morning: [Finestructure notebook](ChromoPainterFineSTRUCTUREPractical.ipynb) Download and upload to notebook
--
+- Afternoon: [Detecting genomic regions under (positive) selection](SelectionScans.ipynb) Download and upload to notebook
 
 ## Friday
 - Morning: [Dating admixture notebook](DatingAdmixture.ipynb) Download and upload to notebook
