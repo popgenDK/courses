@@ -15,3 +15,7 @@
 ## Day 4
 - Morning slides: Finestructure [pdf](ChromoPainterFineSTRUCTURELecture.pdf)
 - Afternoon slides: Detecting genomic regions under (positive) selection [pdf]()
+
+## Day 5
+- Morning slides: Dating admixture and selection in admixed individuals [pdf](DatingAdmixtureLecture.pdf)
+- Afternoon slides: Demography Inference [pdf]()
