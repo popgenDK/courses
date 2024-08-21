@@ -11,3 +11,7 @@
 ## Day 3
 - Morning slides: [google slides](https://docs.google.com/presentation/d/12SUaX4G_cR5VPUufTcCFmvsUQSHFpqjVtYCK4EUA_ZY/edit?usp=sharing) [pdf slides](summer2024-PCA.pdf)
 - Afternoon slides: Dstat/fstat geneflow [pdf](f_stats.pdf)
+
+## Day 4
+- Morning slides: Finestructure [pdf](ChromoPainterFineSTRUCTURELecture.pdf)
+- Afternoon slides: Detecting genomic regions under (positive) selection [pdf]()
