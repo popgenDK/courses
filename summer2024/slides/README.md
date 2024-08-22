@@ -14,7 +14,7 @@
 
 ## Day 4
 - Morning slides: Finestructure [pdf](ChromoPainterFineSTRUCTURELecture.pdf)
-- Afternoon slides: Detecting genomic regions under (positive) selection [pdf]()
+- Afternoon slides: Detecting genomic regions under (positive) selection [pdf](selection_popgenSummer_2024.pdf)
 
 ## Day 5
 - Morning slides: Dating admixture and selection in admixed individuals [pdf](DatingAdmixtureLecture.pdf)
