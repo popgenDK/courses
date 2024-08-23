@@ -4,6 +4,13 @@
 # exercises
 For the course you will find the jupyter notebooks in the folder called exercises. Download the notebook and upload it to the server.
 
+## data for exercises can be found here
+
+[Workshop data](https://popgen.dk/albrecht/course/kenya2024/)
+ - you will have to install the software on your wn
+
+
+
 # slides
 The slides will be put in the folder called slides
 
