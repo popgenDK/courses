@@ -7,7 +7,7 @@ For the course you will find the jupyter notebooks in the folder called exercise
 ## data for exercises can be found here
 
 [Workshop data](https://popgen.dk/albrecht/course/kenya2024/)
- - you will have to install the software on your wn
+ - you will have to install the software on your own
 
 
 
