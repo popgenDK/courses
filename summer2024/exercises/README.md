@@ -1,5 +1,12 @@
 # Exercises
 
+## data for exercises can be found here
+
+[notebook data](https://popgen.dk/albrecht/course/popgen24/)
+ - you will have to install the software on your own
+
+
+
 ## Monday
 - Morning: log into the nootbook. Login and passwords will be given. The notebook is already in your home directory
 - Afternoon: [NGSintro notebook](NGSintro.ipynb) Download and upload to notebook
