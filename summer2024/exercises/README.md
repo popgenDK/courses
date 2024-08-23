@@ -6,7 +6,7 @@
 ## Tuesday
 - Morning: [NGS inference notebook](NGS_inference.ipynb) Download and upload to notebook
 - Afternoon: [Admixture inference notebook](admixExercise_popgen24.ipynb) Download and upload to notebook
-- - Solutions: [Solutions to the admixture inference](AdmixtureSolutions2024.pdf)
+- - Solutions: [Solutions to the exercises](AdmixtureSolutions2024.pdf)
 ## Wednessday
 - morning: [PCA from NGS](summer2024-PCA.ipynb)
  - - [Bonus PCA with called genotypes](summer2024-PCA-CalledGenotypes.ipynb)
