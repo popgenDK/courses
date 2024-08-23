@@ -12,6 +12,7 @@
 - Afternoon: [D/f statistics and ancient geneflow notebook](f_stats.ipynb)
 ## Thursday
 - Morning: [Finestructure notebook](ChromoPainterFineSTRUCTUREPractical.ipynb) Download and upload to notebook
+- - Solutions: [Solutions to the exercises](CopenhagenPopgenWorkshop2024_ChromoPainterFineSTRUCTUREPracticalSOLN.pdf)
 - Afternoon: [Detecting genomic regions under (positive) selection](SelectionScans.ipynb) Download and upload to notebook
 
 ## Friday
