@@ -18,4 +18,5 @@
 
 ## Friday
 - Morning: [Dating admixture notebook](DatingAdmixture.ipynb) Download and upload to notebook
+- - Solutions: [Solutions to the exercises](CopenhagenPopgenWorkshop2024_DatingAdmixturePracticalSOLN.pdf)
 - Afternoon: [Demography Inference](summer2024-PSMC_tutorial_2024.ipynb) Download and upload to notebook
