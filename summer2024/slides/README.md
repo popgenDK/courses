@@ -18,4 +18,4 @@
 
 ## Day 5
 - Morning slides: Dating admixture and selection in admixed individuals [pdf](DatingAdmixtureLecture.pdf)
-- Afternoon slides: Demography Inference [pdf]()
+- Afternoon slides: Demography Inference [pdf](summer2024_day_5_Demog_2024.pdf)
