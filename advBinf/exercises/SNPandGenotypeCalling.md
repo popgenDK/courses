@@ -337,9 +337,11 @@ res <- sapply(list(sam=sam,gatk=gatk,angsd=angsd),function(x)
 mean(genoHap[indNamesBam,]==as.matrix(x[,keep]),na.rm=T))
 
 
+##don't close R
+```
+ - the above calculations assumed that the missing genotypes are discordant.
 
-
-#the above calculations assumed that the missing genotypes are discordance.
+```
 # Estimate the concordance rate without missing data
 angsdNA<-as.matrix(angsd)
 angsdNA[angsd==-1]<-NA
@@ -364,9 +366,8 @@ print(res)
 
 cat("\nDiscordance rate when ignoring missing genotypes:\n")
 print(resNA)
-
-
 ##don't close R
+
 ```
 
 
