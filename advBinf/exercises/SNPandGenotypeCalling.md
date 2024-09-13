@@ -158,7 +158,7 @@ unknownEM is the estimate allele frequency and pu-EM is the p-value, and nInd ar
 
 
 
-** Comparing the results (SNP-discovery)
+### Comparing the results (SNP-discovery)
  - This requires R and the VennDiagram package.
 Let us examine the difference between the three different approaches for SNP-calling. This we do by looking at the overlap. Start R.
 
@@ -217,7 +217,7 @@ table(gatk%in%trueSNPs)
 
  - What is the strength and weaknesses of the 3 methods
 
-** Bonus exercise
+## Bonus exercise
 There are 5 sites that both GATK and SAMtools call as SNPs, that ANGSD doesn't find.
  -   find these 5 sites. 
  - figure out why these stand out.
@@ -249,7 +249,7 @@ use the same individuals as the previous exercises
 ls $BAMFOLDER/smallNA*.bam >bams.list
 ```
 
-** preparing the information needed for imputation
+## preparing the information needed for imputation
 Using angsd we will call variable sites (-SNP_pval ) based on allele frequencies (-doMaf) based on the reference allele (-ref) and the inferred alternative allele (-doMajorMinor). Based on these sites we will out put the genotype likelihoods based on the samtools model (-GL 1) in the BEAGLE software format (-doGlf 2):
 
 ```
