@@ -1,4 +1,4 @@
-# title NGS: SNP calling, genoptype calling, allele frequencies, Imputation and EM algorithm
+# NGS: SNP calling, genoptype calling, allele frequencies, Imputation and EM algorithm
 
 
 We will work on 33 European samples where we have reduced the genome so there is very little data. 
