@@ -118,7 +118,7 @@ Now you know how the input looks. Next, let's try to perform an NGSadmix analyse
 NGSadmix -likes all.beagle.gz -K 3 -minMaf 0.05 -seed 1 -o all
 ```
 
- - While waiting for the analysis to run then make sure you understand the command. If you are in doubt seek help [[http://www.popgen.dk/software/index.php/NgsAdmix#Brief_Overview][here]]. Here you can also see what other options you have when you run an NGSadmix analyses.
+ - While waiting for the analysis to run then make sure you understand the command. If you are in doubt seek help [here](http://www.popgen.dk/software/index.php/NgsAdmix#Brief_Overview). Here you can also see what other options you have when you run an NGSadmix analyses.
 
 ### Explore the output
 The output from the analysis you just ran is three files:
@@ -185,7 +185,7 @@ Note that the order of the individuals in the plot are not the same as in the qo
  - What does the plot suggest about whether the individuals are admixed?
 
 
-NB As you could tell from the number of loci included in the analysis, the above analysis is based on data from very few loci (actually we on purpose only analyzed data from a small part of the genome to make sure the analysis ran fast). Results from an analyses of data from the entire genome can be seen [[http://popgen.dk/albrecht/phdcourse/html/plots/allWholegenome_NGSadmix.pdf][here]].
+NB As you could tell from the number of loci included in the analysis, the above analysis is based on data from very few loci (actually we on purpose only analyzed data from a small part of the genome to make sure the analysis ran fast). Results from an analyses of data from the entire genome can be seen [here](https://popgen.dk/albrecht/phdcourse/html/plots/allWholegenome_NGSadmix.pdf).
 
 
  - What does that suggest about whether the individuals are admixed?
@@ -266,11 +266,9 @@ Note that - like in the previous example - the order of the individuals in the p
 
 ### Other K values (if you have time)
  - Try to run NGSadmix with K=4 instead.
- - Plot the output (if you have trouble plotting it here is the plot I got: [[URL:http://popgen.dk/albrecht/phdcourse/admixture/data/bestK4.png][K4 plot]].
+ - Plot the output (if you have trouble plotting it here is the plot I got: [K4 plot](http://popgen.dk/albrecht/phdcourse/admixture/data/bestK4.png).
 
  - Based on all the results what can you say about the Mexican samples (MXL)?
 
 
 
-* Bonus exericse (if you have time)
-[[fastNGSadmix][fastNGSadmix]]
