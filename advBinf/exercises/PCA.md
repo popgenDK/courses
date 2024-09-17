@@ -196,6 +196,7 @@ Data:
  -   depth 2-9X (1000 genome project)
 
 | CEU | Europeans in Utah (British) |
+| --- | --- |
 | GBR | Great Britain |
 | IBS | Iberian/Spain |
 | TSI | Italien |
