@@ -174,7 +174,7 @@ ord<-orderInds(pop = pop[,1], q=q) # sort indiivduals by population and within p
 
 
 barplot(t(q)[,ord],col=2:10,space=0,border=NA,xlab="Individuals",ylab="Admixture proportions")
-text(tapply(1:nrow(pop),pop[ord,1],mean),-0.05,unique(pop[ord,1]),xpd=T)
+text(sort(tapply(1:nrow(pop),pop[ord,1],mean)),-0.05,unique(pop[ord,1]),xpd=T)
 abline(v=cumsum(sapply(unique(pop[ord,1]),function(x){sum(pop[ord,1]==x)})),col=1,lwd=1.2)
 
 ## close R
