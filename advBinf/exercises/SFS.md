@@ -25,6 +25,10 @@ whereis angsd
 #realSFS
 whereis realSFS
 
+#winSFS
+whereis winsfs
+
+
 #ancestral fasta file (chimp)
 ANC=$ThePath/smallerbams/hg19ancNoChr.fa.gz
 
@@ -68,6 +72,9 @@ Generate site frequency likelihoods using  ANGSD
 angsd -b  YRI.filelist  -anc $ANC -out yri $FILTERS $OPT -ref $REF &
 angsd -b  JPT.filelist  -anc $ANC -out jpt $FILTERS $OPT -ref $REF &
 angsd -b  CEU.filelist  -anc $ANC -out ceu $FILTERS $OPT -ref $REF
+
+
+
 ```
 
 The run time is a couple of minutes
@@ -77,9 +84,14 @@ Estimate the site frequency spectrum for each of the 3 populations without havin
 
 ```
 #calculate the 1 dimensional SFS
-realSFS yri.saf.idx > yri.sfs
-realSFS jpt.saf.idx > jpt.sfs
-realSFS ceu.saf.idx > ceu.sfs
+#realSFS yri.saf.idx > yri.sfs
+#realSFS jpt.saf.idx > jpt.sfs
+#realSFS ceu.saf.idx > ceu.sfs
+
+# use new faster version
+winsfs yri.saf.idx | tail -n 1 > yri.sfs
+winsfs jpt.saf.idx | tail -n 1 > jpt.sfs
+winsfs ceu.saf.idx | tail -n 1 > ceu.sfs
 ```
 
 
@@ -150,9 +162,15 @@ In order to estimate Fst between two population we will need to estimate the 2-d
 
 ```
 #calculate the 2D SFS 
-realSFS yri.saf.idx ceu.saf.idx >yri.ceu.ml &
-realSFS yri.saf.idx jpt.saf.idx >yri.jpt.ml &
-realSFS jpt.saf.idx ceu.saf.idx >jpt.ceu.ml
+#realSFS yri.saf.idx ceu.saf.idx >yri.ceu.ml &
+#realSFS yri.saf.idx jpt.saf.idx >yri.jpt.ml &
+#realSFS jpt.saf.idx ceu.saf.idx >jpt.ceu.ml
+
+#faster version
+winsfs -v yri.saf.idx ceu.saf.idx | tail -n1 >yri.ceu.ml &
+winsfs -v yri.saf.idx jpt.saf.idx | tail -n1 >yri.jpt.ml &
+winsfs -v jpt.saf.idx ceu.saf.idx | tail -n1 >jpt.ceu.ml
+
 ```
 
 Plot the results in R
@@ -267,18 +285,23 @@ FILTERS="-minMapQ 30 -minQ 20 -baq 1 -C 50 -minInd 8"
 OPT=" -dosaf 1 -gl 2"
 
 #get site frequency likelihoods
-$ANGSD -b  YRIchr5.filelist  -anc $ANC -out yriChr5 $FILTERS $OPT -ref $REF
-$ANGSD -b  JPTchr5.filelist  -anc $ANC -out jptChr5 $FILTERS $OPT -ref $REF
-$ANGSD -b  CEUchr5.filelist  -anc $ANC -out ceuChr5 $FILTERS $OPT -ref $REF
+angsd -b  YRIchr5.filelist  -anc $ANC -out yriChr5 $FILTERS $OPT -ref $REF
+angsd -b  JPTchr5.filelist  -anc $ANC -out jptChr5 $FILTERS $OPT -ref $REF
+angsd -b  CEUchr5.filelist  -anc $ANC -out ceuChr5 $FILTERS $OPT -ref $REF
 
 #estimate the 1D SFS
-$REAL yriChr5.saf.idx ceuChr5.saf.idx >yri.ceuChr5.ml
-$REAL yriChr5.saf.idx jptChr5.saf.idx >yri.jptChr5.ml
-$REAL jptChr5.saf.idx ceuChr5.saf.idx >jpt.ceuChr5.ml
+#$REAL yriChr5.saf.idx ceuChr5.saf.idx >yri.ceuChr5.ml
+#$REAL yriChr5.saf.idx jptChr5.saf.idx >yri.jptChr5.ml
+#$REAL jptChr5.saf.idx ceuChr5.saf.idx >jpt.ceuChr5.ml
+winsfs -v yriChr5.saf.idx ceuChr5.saf.idx | tail -n1 >yri.ceuChr5.ml
+winsfs -v yriChr5.saf.idx jptChr5.saf.idx | tail -n1 >yri.jptChr5.ml
+winsfs -v jptChr5.saf.idx ceuChr5.saf.idx | tail -n1 >jpt.ceuChr5.ml
+
+
 
 #get FST and PBS in sliding window
-$REAL fst index yriChr5.saf.idx jptChr5.saf.idx ceuChr5.saf.idx -fstout yri.jpt.ceuChr5 -sfs yri.jptChr5.ml -sfs yri.ceuChr5.ml -sfs jpt.ceuChr5.ml
-$REAL fst stats2 yri.jpt.ceuChr5.fst.idx -win 50000 -step 10000 >slidingwindowChr5
+realSFS fst index yriChr5.saf.idx jptChr5.saf.idx ceuChr5.saf.idx -fstout yri.jpt.ceuChr5 -sfs yri.jptChr5.ml -sfs yri.ceuChr5.ml -sfs jpt.ceuChr5.ml
+realSFS fst stats2 yri.jpt.ceuChr5.fst.idx -win 50000 -step 10000 >slidingwindowChr5
 
 ```
 
