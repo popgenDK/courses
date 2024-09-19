@@ -17,13 +17,13 @@ First set some paths
 ```
 ##must be done every time you open a new terminal
 
-ThePath=/isdata/othergrp/albrecht/scratch/advBinf
+ThePath=/course/advBinf/old
 
 #ANGSD program
-ANGSD=$ThePath/prog/angsd/angsd 
+whereis angsd
 
 #realSFS
-REAL=$ThePath/prog/angsd/misc/realSFS
+whereis realSFS
 
 #ancestral fasta file (chimp)
 ANC=$ThePath/smallerbams/hg19ancNoChr.fa.gz
@@ -65,9 +65,9 @@ OPT=" -dosaf 1 -gl 2"
 
 Generate site frequency likelihoods using  ANGSD  
 ```
-$ANGSD -b  YRI.filelist  -anc $ANC -out yri $FILTERS $OPT -ref $REF &
-$ANGSD -b  JPT.filelist  -anc $ANC -out jpt $FILTERS $OPT -ref $REF &
-$ANGSD -b  CEU.filelist  -anc $ANC -out ceu $FILTERS $OPT -ref $REF
+angsd -b  YRI.filelist  -anc $ANC -out yri $FILTERS $OPT -ref $REF &
+angsd -b  JPT.filelist  -anc $ANC -out jpt $FILTERS $OPT -ref $REF &
+angsd -b  CEU.filelist  -anc $ANC -out ceu $FILTERS $OPT -ref $REF
 ```
 
 The run time is a couple of minutes
@@ -77,9 +77,9 @@ Estimate the site frequency spectrum for each of the 3 populations without havin
 
 ```
 #calculate the 1 dimensional SFS
-$REAL yri.saf.idx > yri.sfs
-$REAL jpt.saf.idx > jpt.sfs
-$REAL ceu.saf.idx > ceu.sfs
+realSFS yri.saf.idx > yri.sfs
+realSFS jpt.saf.idx > jpt.sfs
+realSFS ceu.saf.idx > ceu.sfs
 ```
 
 
@@ -115,11 +115,11 @@ downsampleSFS <- function(x,chr){ #x 1:2n , chr < 2n
 }
 resDown <- t(apply(res,1,downsampleSFS,chr=10))
 barplot(resDown,beside=T,legend=c("YRI","JPT","CEU"),names=1:9,main="realSFS downsampled polymorphic sites")
-
+#dont close R
 ```
 
  - Which population has the largest population size?
- - These individuals are a subset of the 1000Genomes individuals. If you analyse a whole chromosome the results will look [[../Moltke5V2.pdf][like this]]
+
 
 
 lets use the sfs to calculate some statistics for the population
@@ -150,9 +150,9 @@ In order to estimate Fst between two population we will need to estimate the 2-d
 
 ```
 #calculate the 2D SFS 
-$REAL yri.saf.idx ceu.saf.idx >yri.ceu.ml &
-$REAL yri.saf.idx jpt.saf.idx >yri.jpt.ml &
-$REAL jpt.saf.idx ceu.saf.idx >jpt.ceu.ml
+realSFS yri.saf.idx ceu.saf.idx >yri.ceu.ml &
+realSFS yri.saf.idx jpt.saf.idx >yri.jpt.ml &
+realSFS jpt.saf.idx ceu.saf.idx >jpt.ceu.ml
 ```
 
 Plot the results in R
@@ -162,13 +162,14 @@ Plot the results in R
 yc<-scan("yri.ceu.ml")
 yj<-scan("yri.jpt.ml")
 jc<-scan("jpt.ceu.ml")
-    source("http://popgen.dk/albrecht/BAG2017/plot2dSFS.R")
+
+source("https://raw.githubusercontent.com/aalbrechtsen/Rfun/refs/heads/master/plot2dSFS.R")
+
 plot2<-function(s,...){
     dim(s)<-c(21,21)
     s[1]<-NA
     s[21,21]<-NA
-s<-s/sum(s,na.rm=T)
-
+    s<-s/sum(s,na.rm=T)
     pal <- color.palette(c("darkgreen","#00A600FF","yellow","#E9BD3AFF","orange","red4","darkred","black"), space="rgb")
     pplot(s/sum(s,na.rm=T),pal=pal,...)
 }
@@ -193,14 +194,14 @@ In order to get a measure of this populations are most closely related we willl 
 
 ```
 #first will will index the sample so the same sites are analysed for each population
-$REAL fst index jpt.saf.idx ceu.saf.idx -sfs jpt.ceu.ml -fstout jpt.ceu
-$REAL fst index yri.saf.idx ceu.saf.idx -sfs yri.ceu.ml -fstout yri.ceu
-$REAL fst index yri.saf.idx jpt.saf.idx -sfs yri.jpt.ml -fstout yri.jpt
+realSFS fst index jpt.saf.idx ceu.saf.idx -sfs jpt.ceu.ml -fstout jpt.ceu
+realSFS fst index yri.saf.idx ceu.saf.idx -sfs yri.ceu.ml -fstout yri.ceu
+realSFS fst index yri.saf.idx jpt.saf.idx -sfs yri.jpt.ml -fstout yri.jpt
 
 #get the global estimate
-$REAL fst stats jpt.ceu.fst.idx
-$REAL fst stats yri.jpt.fst.idx
-$REAL fst stats yri.ceu.fst.idx 
+realSFS fst stats jpt.ceu.fst.idx
+realSFS fst stats yri.jpt.fst.idx
+realSFS fst stats yri.ceu.fst.idx 
 ```
 
 look at the weigthed Fst (Fst.Weight).
@@ -212,8 +213,8 @@ look at the weigthed Fst (Fst.Weight).
 Lets see how the Fst and PBS varies between different regions of the genome my using a sliding windows approach (windows site of 50kb)
 
 ```
-$REAL fst index yri.saf.idx jpt.saf.idx ceu.saf.idx -fstout yri.jpt.ceu -sfs yri.jpt.ml -sfs yri.ceu.ml -sfs jpt.ceu.ml
-$REAL fst stats2 yri.jpt.ceu.fst.idx -win 50000 -step 10000 >slidingwindowBackground
+realSFS fst index yri.saf.idx jpt.saf.idx ceu.saf.idx -fstout yri.jpt.ceu -sfs yri.jpt.ml -sfs yri.ceu.ml -sfs jpt.ceu.ml
+realSFS fst stats2 yri.jpt.ceu.fst.idx -win 50000 -step 10000 >slidingwindowBackground
 ```
 
 
