@@ -121,59 +121,6 @@ barplot(resDown,beside=T,legend=c("YRI","JPT","CEU"),names=1:9,main="realSFS dow
  - Which population has the largest population size?
  - These individuals are a subset of the 1000Genomes individuals. If you analyse a whole chromosome the results will look [[../Moltke5V2.pdf][like this]]
 
-; close R
-
-
-; We can compare with what happens if we try to call genotypes by calling SNPs and genotypes like GATK. If you are running out of time then skip this part
-; ```
-; FILTERS="-minMapQ 30 -minQ 20 -baq 1 -C 50 -minInd 10"                           
-
-; OPT2="-gl 2 -doGeno 2 -doPost 2 -doMajorMinor 4 -doMaf 1 -SNP_pval 1e-6 -postCutoff 0.9"
-; $ANGSD -b  YRI.filelist  -out yri $FILTERS $OPT2 -ref $REF &  
-; $ANGSD -b  JPT.filelist  -out jpt $FILTERS $OPT2 -ref $REF &
-; $ANGSD -b  CEU.filelist  -out ceu $FILTERS $OPT2 -ref $REF  
-; ```
-
-
-; Plot the results in R
-; ```
-;  ##run in R                      
-; #plot the results
-; nnorm <- function(x) x/sum(x)
-; getSFS<-function(x) table(factor(rowSums(read.table(x)[,-c(1:2)]),levels=1:20))
-
-; res <- rbind(
-;   YRI=getSFS("yri.geno.gz"),
-;   JPI=getSFS("jpt.geno.gz"),
-;   CEU=getSFS("ceu.geno.gz")
-; )
-; colnames(res) <- 1:20
-
-; # density instead of expected counts
-; res <- t(apply(res,1,nnorm))
-
-; #plot the none ancestral sites
-; barplot(res,beside=T,legend=c("YRI","JPT","CEU"),names=1:20,main="SFS from called genotypes")
-
-; plot the polymorphic sites. 
-; resPoly <- t(apply(res[,-20],1,nnorm))
-; barplot(resPoly,beside=T,legend=c("YRI","JPT","CEU"),names=1:19,main="SFS from call\
-; ed genotypes")
-
-
-; #down sample to 5 individuals (10 chromosome) and exclude fixed derived
-; downsampleSFS <- function(x,chr){ #x 1:2n , chr < 2n
-;     n<-length(x)
-;     mat <- sapply(1:chr,function(i) choose(1:n,i)*choose(n- (1:n),chr-i)/choose(n,chr))
-;     nnorm( as.vector(t(mat) %*% x)[-chr] )
-; }
-; resDown <- t(apply(res,1,downsampleSFS,chr=10))
-; barplot(resDown,beside=T,legend=c("YRI","JPT","CEU"),names=1:9)
-
-
-; ```
-
-;  - How does this compare to the likelhood based estimates ([[../../oulu2016/web/realSFS.pdf][pdf]])
 
 lets use the sfs to calculate some statistics for the population
 
@@ -356,11 +303,11 @@ points(r$midPos,r$PBS_CEU,col=3,type="b",pch=18)
 legend("topleft",fill=1:3,c("YRI","JPT","CEU"))
 ```
 
- - Compare the values you observed on this part of the genome with the random pars of the genome you looked at earlier ([[../../oulu2016/web/PBS.pdf][pdf]]). Is this region extreme?
+ - Compare the values you observed on this part of the genome with the random pars of the genome you looked at earlier.  Is this region extreme?
  - Why is there two peak for the Fst and only one for the PBS?
  - In which of the populations are this loci under selection?
 
 
-Find out what genes is in this region by going to the [[https://genome.ucsc.edu/index.html][UCSC browser]]. Choose Genome browser. Choose human GRCh37/hg19 and find the region. Read about this gene on wikipedia and see if this fits PBS results. 
+Find out what genes is in this region by going to the [UCSC browser](https://genome.ucsc.edu/index.html). Choose Genome browser. Choose human GRCh37/hg19 and find the region. Read about this gene on wikipedia and see if this fits PBS results. 
 
 
