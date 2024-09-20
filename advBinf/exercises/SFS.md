@@ -3,12 +3,19 @@
 The data is from the 1000 genomes project which included the populations:       
 
                                                                                 
-| name     |  population |
-| --- | --- |
-| CEU     | European individuals |                        
-| JPT     | JPT Japanese individuals |
-| YRI     |  Yoruba individuals |
+| name     |  population | N |
+| --- | --- | --- | 
+| CEU     | European individuals | 10 |                       
+| JPT     | JPT Japanese individuals | 10 | 
+| YRI     |  Yoruba individuals | 10 | 
 
+
+### approach
+We will estimate the site frequency spectrum (SFS). To do this we will
+ - use ANGSD to calculate genotype likelihoods
+ - from genotype likelihoods ANGSD will calculate site allele frequency likelihoods (SAF)
+ - from SFS realSFS or winSFS can calculate the site frequency spectrum (SFS) using the EM algorith
+ - realSFS can use the 2 dimensional SFS to calculate Fst and PBS. This can be done for the whole genome or from a region of the genome
 
 
 
