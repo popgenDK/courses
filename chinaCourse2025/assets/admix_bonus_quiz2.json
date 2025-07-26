@@ -1,0 +1,65 @@
+[{
+        "question": "How many loci there are GLs for in the data set?",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 1306,
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "type": "default",
+                "feedback": "not correct. Look at the number of lines in the beagle file, Note that there is a header line."
+            }
+        ]
+    },
+{
+        "question": "What is the name of the first variant in beagle file ?",
+        "type": "string",
+        "answers": [
+            {
+                "answer": "1_20018051",
+                "correct": true,
+                "feedback": "Correct.",
+		"match_case": false
+            },
+            {
+                "type": "default",
+                "feedback": "not correct. Look at the second line of the beagle file. There might be a line wrap, take care."
+            }
+        ]
+    },
+{
+        "question": "what is the nucleotide of the allele2 of first marker?",
+        "type": "string",
+        "answers": [
+            {
+                "answer": "C",
+                "correct": true,
+                "feedback": "Correct.",
+		"match_case": false
+            },
+            {
+                "type": "default",
+                "feedback": "not correct. Read the last paragraph of interpretatoin, Look at the second line of the beagle file. There might be a line wrap, take care."
+            }
+        ]
+    },
+         {
+        "question": "Based on this, what is the most likely genotype for Ind0 in the first locus?",
+        "type": "string",
+        "answers": [
+            {
+                "answer": "CC",
+                "correct": true,
+                "feedback": "Correct.",
+		"match_case": false
+            },
+            {
+                "type": "default",
+                "feedback": "not correct. Look at last paragraph of interpretation"
+            }
+        ]
+    }
+]

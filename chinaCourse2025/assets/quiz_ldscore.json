@@ -1,0 +1,140 @@
+[
+      {
+        "question": "How many SNPs are in your summary stat files?",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 5961600,
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "type": "range",
+                "range": [
+                   1,
+                    5961599
+                ],
+                "correct": false,
+                "feedback": "The number is higher. use the numer of lines in the files"
+            },
+            {
+                "type": "range",
+                "range": [
+                    5961601,
+                    100000000
+                ],
+                "correct": false,
+                "feedback": "The number is lower. Remember that the file has a header"
+            },
+            {
+                "type": "default",
+                "feedback": "not corret Try again."
+            }
+        ]
+    },
+{
+        "question": "What is the column name of the p-value for each SNP?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "P",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Frq",
+                "correct": false,
+                "feedback": "False."
+            },
+            {
+                "answer": "SNP",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "BETA",
+                "correct": false,
+                "feedback": "False."
+            }
+        ]
+},
+    {
+        "question": "What is the column name for the effect size(the effect of the SNP on the trait)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "P",
+                "correct": false,
+                "feedback": "incorrect."
+            },
+            {
+                "answer": "Frq",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "SNP",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "BETA",
+                "correct": true,
+                "feedback": "Correct."
+            }
+        ]
+    },
+        {
+        "question": "What is the column name for the allele frequency?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "P",
+                "correct": false,
+                "feedback": "incorrect."
+            },
+            {
+                "answer": "Frq",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "SNP",
+                "correct": false,
+                "feedback": "Incorrect."
+            },
+            {
+                "answer": "BETA",
+                "correct": false,
+                "feedback": "False."
+            }
+        ]
+    },
+    {
+        "question": "What is the column name for the variant names (rsID)?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "P",
+                "correct": false,
+                "feedback": "incorrect."
+            },
+            {
+                "answer": "Frq",
+                "correct": false,
+                "feedback": "False."
+            },
+            {
+                "answer": "SNP",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "BETA",
+                "correct": false,
+                "feedback": "False."
+            }
+        ]
+    }
+    ]
