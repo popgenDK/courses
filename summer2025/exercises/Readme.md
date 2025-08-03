@@ -2,9 +2,11 @@
 
 ## Monday
 - Morning: log into the nootbook. Login and passwords will be given.
-- - [Coalescence notebook](CoulTutorial.ipynb) Download and upload to notebook
+- - [Coalescence notebook](CoalTutorial.ipynb) Download and upload to notebook
 - - [Wright Fisher notebook ](WrightFisherTutorial.ipynb) Download and upload to notebook
-- Afternoon: [NGSintro notebook](NGSintro.ipynb) Download and upload to notebook
+- Afternoon: log into the nootbook
+- - [NGSintro animal notebook](Day1_afternoon_NGSintro_animal.ipynb) Download and upload to notebook
+- - [NGSintro human notebook](Day1_afternoon_NGSintro_human.ipynb) Download and upload to notebook
 
 <!-- 
 ## Tuesday
