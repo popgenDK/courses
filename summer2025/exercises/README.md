@@ -12,6 +12,9 @@
 ## Tuesday
 - Morning: log into the nootbook
   - [NGS inference notebook](Day2_NGS_Inference.ipynb) Download and upload to notebook
+- Afternoon: log into the nootbook
+  - [NGS Imputation notebook](Day2_Afternoon_QUILT_Imputation.ipynb) Download and upload to notebook
+
 <!-- 
 - Afternoon: [Admixture inference notebook](admixExercise_popgen24.ipynb) Download and upload to notebook
 - - Solutions: [Solutions to the exercises](AdmixtureSolutions2024.pdf)
