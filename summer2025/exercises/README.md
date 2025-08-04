@@ -8,9 +8,10 @@
 - - [NGSintro animal notebook](Day1_afternoon_NGSintro_animal.ipynb) Download and upload to notebook
 - - [NGSintro human notebook](Day1_afternoon_NGSintro_human.ipynb) Download and upload to notebook
 
-<!-- 
+
 ## Tuesday
-- Morning: [NGS inference notebook](NGS_inference.ipynb) Download and upload to notebook
+- Morning: [NGS inference notebook](Day2_NGS_inference.ipynb) Download and upload to notebook
+<!-- 
 - Afternoon: [Admixture inference notebook](admixExercise_popgen24.ipynb) Download and upload to notebook
 - - Solutions: [Solutions to the exercises](AdmixtureSolutions2024.pdf)
  
