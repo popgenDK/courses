@@ -1,6 +1,7 @@
 # Slides
 
 ## Day 1
+- Welcome and practical intro to the course: [slides](https://github.com/popgenDK/courses/edit/main/summer2025/slides/IntroPopgen2025.pdf) 
 - Morning slides: https://popgen.dk/popgen25/slides/Coal_monday_1-1.pdf
 - Afternoon slides: Intro to NGS
   
