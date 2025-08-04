@@ -1,16 +1,17 @@
 # Exercises
 
 ## Monday
-- Morning: log into the nootbook. Login and passwords will be given.
-- - [Coalescence notebook](Day1_morning_CoalTutorial.ipynb) Download and upload to notebook
-- - [Wright Fisher notebook ](Day1_morning_WrightFisherTutorial.ipynb) Download and upload to notebook
-- Afternoon: log into the nootbook
-- - [NGSintro animal notebook](Day1_afternoon_NGSintro_animal.ipynb) Download and upload to notebook
-- - [NGSintro human notebook](Day1_afternoon_NGSintro_human.ipynb) Download and upload to notebook
+- Morning: log into the notebook. Login and passwords will be given.
+  - [Coalescence notebook](Day1_morning_CoalTutorial.ipynb) Download and upload to notebook
+  - [Wright Fisher notebook ](Day1_morning_WrightFisherTutorial.ipynb) Download and upload to notebook
+- Afternoon: log into the notebook
+  - [NGSintro animal notebook](Day1_afternoon_NGSintro_animal.ipynb) Download and upload to notebook
+  - [NGSintro human notebook](Day1_afternoon_NGSintro_human.ipynb) Download and upload to notebook
 
 
 ## Tuesday
-- Morning: [NGS inference notebook](Day2_NGS_inference.ipynb) Download and upload to notebook
+- Morning: log into the nootbook
+  - [NGS inference notebook](Day2_NGS_inference.ipynb) Download and upload to notebook
 <!-- 
 - Afternoon: [Admixture inference notebook](admixExercise_popgen24.ipynb) Download and upload to notebook
 - - Solutions: [Solutions to the exercises](AdmixtureSolutions2024.pdf)
