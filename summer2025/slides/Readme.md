@@ -1,7 +1,7 @@
 # Slides
 
 ## Day 1
-- Morning slides: 
+- Morning slides: https://popgen.dk/popgen25/slides/Coal_monday_1-1.pdf
 - Afternoon slides: Intro to NGS
   
 ## Day 2
