@@ -2,11 +2,11 @@
 
 ## Day 1
 - Welcome and practical intro to the course: [slides](https://github.com/popgenDK/courses/blob/main/summer2025/slides/IntroPopgen2025.pdf) 
-- Morning slides: https://popgen.dk/popgen25/slides/Coal_monday_1-1.pdf
-- Afternoon slides: https://popgen.dk/popgen25/slides/summer2025_day_1_Intro_to_NGS.pdf
+- Morning slides: Intro to popgen https://popgen.dk/popgen25/slides/Coal_monday_1-1.pdf
+- Afternoon slides: Intro to NGS https://popgen.dk/popgen25/slides/summer2025_day_1_Intro_to_NGS.pdf
   
 ## Day 2
-- Morning slides: Inference for NGS 
+- Morning slides: Inference for NG: https://popgen.dk/popgen25/slides/summer2025_day_2_NGS_inference.pdf
 - Afternoon slides: Imputation
 
 ## Day 3
