@@ -7,7 +7,7 @@
   
 ## Day 2
 - Morning slides: Inference for NG: https://popgen.dk/popgen25/slides/summer2025_day_2_NGS_inference.pdf
-- Afternoon slides: Imputation
+- Afternoon slides: Imputation [slides](https://github.com/popgenDK/courses/blob/main/summer2025/slides/Imputation_Day2.pdf)
 
 ## Day 3
 - Morning slides: Population structure and admixture 
