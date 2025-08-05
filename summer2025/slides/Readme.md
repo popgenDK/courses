@@ -11,7 +11,7 @@
 
 ## Day 3
 - Morning slides: Population structure and admixture 
-- Afternoon slides: Dstat/fstat geneflow
+- Afternoon slides: Dstat/fstat geneflow [slides](https://github.com/popgenDK/courses/blob/main/summer2025/slides/f_stats.pdf)
   
 ## Day 4
 - Morning slides: Local ancestry inference 
