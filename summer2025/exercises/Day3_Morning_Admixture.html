@@ -1,12 +1,7 @@
-None<!DOCTYPE html>
+<!DOCTYPE html>
 
 <html lang="en">
-<head><style type="text/css">
-        div.output_subarea {
-            max-width: 100% !important;
-        }
-    </style>
-<meta charset="utf-8"/>
+<head><meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Day3_Morning_Admixture</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <style type="text/css">
@@ -7457,7 +7452,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [1]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">COURSE_PATH</span><span class="o">=/</span><span class="n">course</span><span class="o">/</span><span class="n">popgen25</span>
@@ -7492,12 +7487,13 @@ a.anchor-link {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -7553,7 +7549,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [3]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">find</span> <span class="err">$</span><span class="n">BAMFOLDER</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">bam</span><span class="err">$</span> <span class="o">&gt;</span> <span class="nb">all</span><span class="o">.</span><span class="n">files</span>
@@ -7566,12 +7562,13 @@ a.anchor-link {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -7590,7 +7587,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [4]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">cat</span> <span class="nb">all</span><span class="o">.</span><span class="n">files</span>
@@ -7603,447 +7600,448 @@ a.anchor-link {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>/home/jupyter-harvinder/data_folder/smallbams/small.NA19731.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA07037.mapped.ILLUMINA.bwa.CEU.low_coverage.20130502.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18611.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19679.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18868.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19121.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19116.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18632.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18504.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18645.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12890.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20318.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19682.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18908.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12830.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18559.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19649.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18870.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19197.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18555.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18570.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20282.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20356.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18552.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18539.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18534.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12718.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20314.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19749.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19720.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18878.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19716.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19152.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19138.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19107.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11933.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19108.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20296.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18642.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18577.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19783.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18633.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20126.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19923.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18747.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19200.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19206.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20317.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20278.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18856.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18538.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12005.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18610.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12750.mapped.ILLUMINA.bwa.CEU.low_coverage.20130422.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12763.mapped.ILLUMINA.bwa.CEU.low_coverage.20130502.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12383.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18934.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19248.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11881.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18572.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19239.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18853.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19670.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18549.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19119.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12761.mapped.ILLUMINA.bwa.CEU.low_coverage.20130422.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20274.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12829.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19131.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18517.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18562.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12872.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18558.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18637.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18647.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19198.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19982.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18535.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19758.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18748.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20412.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12815.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19913.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11994.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18543.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11840.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12843.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12716.mapped.ILLUMINA.bwa.CEU.low_coverage.20130422.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19143.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12273.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18499.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18531.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19130.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18877.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12751.mapped.ILLUMINA.bwa.CEU.low_coverage.20130422.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11843.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA07051.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19703.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18639.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12045.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19210.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18635.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19669.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19728.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18597.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19648.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18626.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19786.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19147.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12400.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19904.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19835.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11893.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19113.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20355.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19785.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19782.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19189.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18548.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12154.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18603.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19741.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18501.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19664.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19625.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19129.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11832.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19712.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19114.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18628.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19776.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12778.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12413.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12546.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12348.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18502.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19726.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18917.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA06984.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA07347.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18602.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18533.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19663.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19223.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18595.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18871.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18542.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18629.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19740.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19777.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18566.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18907.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19207.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18608.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12249.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18488.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19723.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18508.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12762.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12873.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11829.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11931.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19678.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18582.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11919.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA07000.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12004.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19834.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18546.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12272.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18873.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18511.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18537.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12283.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12156.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19171.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18621.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12286.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12775.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18545.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12489.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18876.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19256.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19096.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19707.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18532.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18924.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12748.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12341.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18749.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20359.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA07056.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19774.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18489.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19222.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19908.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19701.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19149.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18631.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20342.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12044.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19725.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18486.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12043.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19654.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19735.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18507.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12234.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19681.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12777.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18591.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19172.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19746.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19655.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12760.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18861.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12414.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19732.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19711.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18865.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19201.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19779.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19756.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19160.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19747.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18634.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18864.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12046.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18641.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18617.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18630.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18916.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18648.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20298.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19761.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18574.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18522.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20320.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18606.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18553.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18536.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA07048.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20340.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12814.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18640.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18879.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12287.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11930.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19184.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11892.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19734.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18618.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18757.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19755.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19914.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18620.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA06989.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12889.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19750.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19153.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18625.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20346.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19209.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20287.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18644.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19984.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18596.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12812.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11992.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19717.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18622.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18636.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11830.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18579.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19713.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19729.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18528.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19146.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19771.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18612.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18560.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12144.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19247.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA06986.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12342.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19235.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18573.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19762.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18565.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20339.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19658.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11894.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19909.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12003.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18519.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12275.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19916.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA06985.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19770.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19917.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20357.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19704.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19092.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18623.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12399.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18541.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18520.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12874.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19651.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19095.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19759.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19700.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19093.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18592.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20332.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11918.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12813.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19684.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20127.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20348.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19099.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20362.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19920.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18627.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19214.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA06994.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18561.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12347.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA10851.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18867.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19102.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19185.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19652.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19118.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19722.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18564.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20334.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18745.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18571.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18510.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18516.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20299.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18609.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18624.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12749.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19175.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18614.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19236.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18525.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19144.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20294.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20291.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11932.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18498.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12282.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11920.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18550.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18567.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18593.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12155.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18881.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20351.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19204.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20276.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18615.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19137.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19257.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18638.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18557.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19141.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18740.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19818.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18910.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11995.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18643.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18544.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19225.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19719.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18505.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19238.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19794.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18646.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19676.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19190.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18523.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18530.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18613.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19795.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19900.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19159.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18912.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12717.mapped.ILLUMINA.bwa.CEU.low_coverage.20130422.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19661.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA11831.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12827.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12058.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18547.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19780.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19921.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12878.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19764.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18909.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12842.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18526.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18923.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18933.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19213.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19752.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA07357.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20289.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19788.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18619.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19098.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18563.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18616.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19792.mapped.ILLUMINA.bwa.MXL.low_coverage.20121211.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18858.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12828.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12340.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19922.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19789.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18915.mapped.ILLUMINA.bwa.YRI.low_coverage.20130502.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12006.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18874.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19117.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20281.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19773.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA12776.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19657.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18599.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA18605.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19901.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA10847.mapped.ILLUMINA.bwa.CEU.low_coverage.20130502.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA20321.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
-/home/jupyter-harvinder/data_folder/smallbams/small.NA19819.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+<pre>/home/jupyter-shixu/data_folder/smallbams/small.NA19731.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA07037.mapped.ILLUMINA.bwa.CEU.low_coverage.20130502.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18611.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19679.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18868.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19121.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19116.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18632.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18504.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18645.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12890.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20318.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19682.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18908.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12830.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18559.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19649.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18870.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19197.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18555.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18570.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20282.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20356.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18552.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18539.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18534.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12718.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20314.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19749.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19720.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18878.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19716.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19152.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19138.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19107.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11933.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19108.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20296.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18642.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18577.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19783.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18633.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20126.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19923.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18747.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19200.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19206.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20317.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20278.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18856.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18538.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12005.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18610.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12750.mapped.ILLUMINA.bwa.CEU.low_coverage.20130422.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12763.mapped.ILLUMINA.bwa.CEU.low_coverage.20130502.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12383.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18934.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19248.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11881.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18572.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19239.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18853.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19670.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18549.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19119.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12761.mapped.ILLUMINA.bwa.CEU.low_coverage.20130422.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20274.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12829.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19131.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18517.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18562.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12872.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18558.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18637.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18647.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19198.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19982.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18535.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19758.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18748.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20412.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12815.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19913.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11994.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18543.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11840.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12843.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12716.mapped.ILLUMINA.bwa.CEU.low_coverage.20130422.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19143.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12273.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18499.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18531.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19130.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18877.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12751.mapped.ILLUMINA.bwa.CEU.low_coverage.20130422.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11843.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA07051.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19703.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18639.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12045.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19210.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18635.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19669.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19728.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18597.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19648.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18626.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19786.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19147.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12400.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19904.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19835.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11893.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19113.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20355.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19785.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19782.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19189.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18548.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12154.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18603.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19741.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18501.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19664.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19625.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19129.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11832.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19712.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19114.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18628.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19776.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12778.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12413.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12546.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12348.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18502.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19726.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18917.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA06984.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA07347.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18602.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18533.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19663.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19223.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18595.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18871.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18542.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18629.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19740.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19777.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18566.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18907.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19207.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18608.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12249.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18488.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19723.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18508.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12762.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12873.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11829.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11931.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19678.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18582.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11919.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA07000.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12004.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19834.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18546.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12272.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18873.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18511.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18537.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12283.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12156.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19171.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18621.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12286.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12775.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18545.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12489.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18876.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19256.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19096.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19707.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18532.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18924.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12748.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12341.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18749.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20359.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA07056.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19774.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18489.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19222.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19908.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19701.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19149.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18631.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20342.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12044.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19725.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18486.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12043.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19654.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19735.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18507.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12234.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19681.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12777.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18591.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19172.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19746.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19655.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12760.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18861.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12414.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19732.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19711.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18865.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19201.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19779.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19756.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19160.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19747.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18634.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18864.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12046.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18641.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18617.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18630.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18916.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18648.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20298.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19761.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18574.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18522.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20320.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18606.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18553.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18536.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA07048.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20340.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12814.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18640.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18879.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12287.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11930.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19184.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11892.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19734.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18618.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18757.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19755.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19914.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18620.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA06989.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12889.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19750.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19153.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18625.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20346.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19209.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20287.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18644.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19984.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18596.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12812.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11992.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19717.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18622.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18636.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11830.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18579.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19713.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19729.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18528.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19146.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19771.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18612.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18560.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12144.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19247.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA06986.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12342.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19235.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18573.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19762.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18565.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20339.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19658.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11894.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19909.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12003.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18519.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12275.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19916.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA06985.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19770.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19917.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20357.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19704.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19092.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18623.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12399.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18541.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18520.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12874.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19651.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19095.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19759.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19700.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19093.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18592.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20332.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11918.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12813.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19684.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20127.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20348.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19099.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20362.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19920.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18627.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19214.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA06994.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18561.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12347.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA10851.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18867.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19102.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19185.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19652.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19118.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19722.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18564.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20334.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18745.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18571.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18510.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18516.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20299.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18609.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18624.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12749.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19175.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18614.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19236.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18525.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19144.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20294.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20291.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11932.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18498.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12282.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11920.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18550.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18567.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18593.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12155.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18881.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20351.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19204.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20276.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18615.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19137.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19257.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18638.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18557.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19141.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18740.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19818.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18910.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11995.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18643.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18544.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19225.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19719.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18505.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19238.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19794.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18646.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19676.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19190.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18523.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18530.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18613.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19795.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19900.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19159.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18912.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12717.mapped.ILLUMINA.bwa.CEU.low_coverage.20130422.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19661.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA11831.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12827.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12058.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18547.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19780.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19921.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12878.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19764.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18909.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12842.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18526.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18923.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18933.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19213.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19752.mapped.ILLUMINA.bwa.MXL.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA07357.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20289.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19788.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18619.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19098.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18563.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18616.mapped.ILLUMINA.bwa.CHB.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19792.mapped.ILLUMINA.bwa.MXL.low_coverage.20121211.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18858.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12828.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12340.mapped.ILLUMINA.bwa.CEU.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19922.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19789.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18915.mapped.ILLUMINA.bwa.YRI.low_coverage.20130502.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12006.mapped.ILLUMINA.bwa.CEU.low_coverage.20121211.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18874.mapped.ILLUMINA.bwa.YRI.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19117.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20281.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19773.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA12776.mapped.ILLUMINA.bwa.CEU.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19657.mapped.ILLUMINA.bwa.MXL.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18599.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA18605.mapped.ILLUMINA.bwa.CHB.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19901.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA10847.mapped.ILLUMINA.bwa.CEU.low_coverage.20130502.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA20321.mapped.ILLUMINA.bwa.ASW.low_coverage.20130415.bam
+/home/jupyter-shixu/data_folder/smallbams/small.NA19819.mapped.ILLUMINA.bwa.ASW.low_coverage.20120522.bam
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -8062,7 +8060,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [5]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">cat</span> <span class="nb">all</span><span class="o">.</span><span class="n">files</span> <span class="o">|</span> <span class="n">cut</span> <span class="o">-</span><span class="n">d</span><span class="s1">'.'</span> <span class="o">-</span><span class="n">f6</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">|</span> <span class="n">uniq</span> <span class="o">-</span><span class="n">c</span>
@@ -8075,8 +8073,8 @@ a.anchor-link {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>     61 ASW
      99 CEU
@@ -8085,7 +8083,8 @@ a.anchor-link {
     108 YRI
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -8107,7 +8106,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [6]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="err">$</span><span class="n">ANGSD</span> <span class="o">-</span><span class="n">bam</span> <span class="nb">all</span><span class="o">.</span><span class="n">files</span> <span class="o">-</span><span class="n">GL</span> <span class="mi">2</span> <span class="o">-</span><span class="n">doMajorMinor</span> <span class="mi">1</span> <span class="o">-</span><span class="n">doMaf</span> <span class="mi">1</span> <span class="o">-</span><span class="n">SNP_pval</span> <span class="mf">2e-6</span> <span class="o">-</span><span class="n">minMapQ</span> <span class="mi">30</span> <span class="o">-</span><span class="n">minQ</span> <span class="mi">20</span> <span class="o">-</span><span class="n">minInd</span> <span class="mi">25</span> <span class="o">-</span><span class="n">minMaf</span> <span class="mf">0.05</span> <span class="o">-</span><span class="n">doGlf</span> <span class="mi">2</span> <span class="o">-</span><span class="n">out</span> <span class="nb">all</span> <span class="o">-</span><span class="n">P</span> <span class="mi">5</span>
@@ -8120,8 +8119,8 @@ a.anchor-link {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>	-&gt; angsd version: 0.941-21-g8a58e17 (htslib: 1.18-17-g5acbc15) build(Sep 10 2023 10:54:12)
 	-&gt; /course/popgen25/software/angsd -bam all.files -GL 2 -doMajorMinor 1 -doMaf 1 -SNP_pval 2e-6 -minMapQ 30 -minQ 20 -minInd 25 -minMaf 0.05 -doGlf 2 -out all -P 5 
@@ -8156,15 +8155,16 @@ a.anchor-link {
 		-&gt;"all.arg"
 		-&gt;"all.beagle.gz"
 		-&gt;"all.mafs.gz"
-	-&gt; Tue Aug  5 14:50:02 2025
+	-&gt; Tue Aug  5 11:16:50 2025
 	-&gt; Arguments and parameters for all analysis are located in .arg file
 	-&gt; Total number of sites analyzed: 167518
 	-&gt; Number of sites retained after filtering: 1306 
-	[ALL done] cpu-time used =  101.81 sec
-	[ALL done] walltime used =  52.00 sec
+	[ALL done] cpu-time used =  96.88 sec
+	[ALL done] walltime used =  49.00 sec
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -8194,7 +8194,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [7]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">gunzip</span> <span class="o">-</span><span class="n">c</span> <span class="nb">all</span><span class="o">.</span><span class="n">beagle</span><span class="o">.</span><span class="n">gz</span> <span class="o">|</span> <span class="n">wc</span> <span class="o">-</span><span class="n">l</span>
@@ -8207,13 +8207,14 @@ a.anchor-link {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>1307
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -8245,7 +8246,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [8]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">zcat</span> <span class="nb">all</span><span class="o">.</span><span class="n">beagle</span><span class="o">.</span><span class="n">gz</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">'(NR&lt;=7)'</span> <span class="o">|</span> <span class="n">cut</span> <span class="o">-</span><span class="n">f1</span><span class="o">-</span><span class="mi">9</span> <span class="o">|</span> <span class="n">column</span> <span class="o">-</span><span class="n">t</span>
@@ -8258,8 +8259,8 @@ a.anchor-link {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>marker      allele1  allele2  Ind0      Ind0      Ind0      Ind1      Ind1      Ind1
 1_20018051  2        1        0.000559  0.333333  0.666108  0.941172  0.058828  0.000000
@@ -8270,7 +8271,8 @@ a.anchor-link {
 1_20050859  3        1        0.000000  0.111128  0.888872  0.999023  0.000977  0.000000
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -8306,7 +8308,7 @@ a.anchor-link {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [9]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="err">$</span><span class="n">NGSadmix</span> <span class="o">-</span><span class="n">likes</span> <span class="nb">all</span><span class="o">.</span><span class="n">beagle</span><span class="o">.</span><span class="n">gz</span> <span class="o">-</span><span class="n">K</span> <span class="mi">3</span> <span class="o">-</span><span class="n">minMaf</span> <span class="mf">0.05</span> <span class="o">-</span><span class="n">seed</span> <span class="mi">1</span> <span class="o">-</span><span class="n">o</span> <span class="nb">all</span>
@@ -8319,8 +8321,8 @@ a.anchor-link {
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Input: lname=all.beagle.gz nPop=3, fname=(null) qname=(null) outfiles=all
 Setup: seed=1 nThreads=1 method=1
@@ -8336,11 +8338,12 @@ best like=-454474.778286 after 145 iterations
 	-&gt; Dumpedfiles are: all.log
 	-&gt; Dumpedfiles are: all.qopt
 	-&gt; Dumpedfiles are: all.fopt.gz
-	[ALL done] cpu-time used =  5.34 sec
+	[ALL done] cpu-time used =  5.26 sec
 	[ALL done] walltime used =  5.00 sec
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -8378,7 +8381,7 @@ best like=-454474.778286 after 145 iterations
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [10]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">cat</span> <span class="nb">all</span><span class="o">.</span><span class="n">log</span>
@@ -8391,8 +8394,8 @@ best like=-454474.778286 after 145 iterations
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Input: lname=all.beagle.gz nPop=3, fname=(null) qname=(null) outfiles=all
 Setup: seed=1 nThreads=1 method=1
@@ -8400,12 +8403,13 @@ Convergence: maxIter=2000 tol=0.000010 tolLike50=0.100000 dymBound=0
 Filters: misTol=0.050000 minMaf=0.050000 minLrt=0.000000 minInd=0
 Input file has dim: nsites=1306 nind=435
 Input file has dim (AFTER filtering): nsites=1306 nind=435
-	[ALL done] cpu-time used =  5.34 sec
+	[ALL done] cpu-time used =  5.26 sec
 	[ALL done] walltime used =  5.00 sec
 best like=-454474.778286 after 145 iterations
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -8427,7 +8431,7 @@ best like=-454474.778286 after 145 iterations
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">zcat</span> <span class="nb">all</span><span class="o">.</span><span class="n">fopt</span><span class="o">.</span><span class="n">gz</span> <span class="o">|</span> <span class="n">awk</span> <span class="s1">'NR==1'</span>
@@ -8440,13 +8444,14 @@ best like=-454474.778286 after 145 iterations
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>0.29904640512855990009 0.38077570967368778998 0.74494733277312485953 
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -8468,7 +8473,7 @@ best like=-454474.778286 after 145 iterations
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">head</span> <span class="o">-</span><span class="n">n6</span> <span class="nb">all</span><span class="o">.</span><span class="n">qopt</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n1</span>
@@ -8481,13 +8486,14 @@ best like=-454474.778286 after 145 iterations
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>0.00000000099999999997 0.99999999799999994554 0.00000000099999999997 
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -8509,7 +8515,7 @@ best like=-454474.778286 after 145 iterations
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">head</span> <span class="o">-</span><span class="n">n6</span> <span class="nb">all</span><span class="o">.</span><span class="n">files</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="n">n1</span>
@@ -8522,13 +8528,14 @@ best like=-454474.778286 after 145 iterations
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>/home/jupyter-harvinder/data_folder/smallbams/small.NA19121.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
+<pre>/home/jupyter-shixu/data_folder/smallbams/small.NA19121.mapped.ILLUMINA.bwa.YRI.low_coverage.20130415.bam
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -8561,7 +8568,7 @@ best like=-454474.778286 after 145 iterations
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="c1"># Get ID and pop info for each individual</span>
@@ -8591,15 +8598,16 @@ best like=-454474.778286 after 145 iterations
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr" tabindex="0">
 <pre>Read 435 items
 </pre>
-</div> </div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult" tabindex="0">
+</div>
+</div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="Image" class="" height="420" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzde7Tld13f/2c0IBKCXEUgXAQBCyi3tjACGWoCyq9WEEVxIQUstYzBhaiA
 EAdhcFBRqlYlpUsqILalKpVWBGEGCQRBKYhcqnjhOgLhoshFEULy++P7HXMyOZd95uzr2Y/H
@@ -8965,7 +8973,7 @@ AElFTkSuQmCC" width="420"/>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">inputpath</span><span class="o">=~/</span><span class="n">data_folder</span><span class="o">/</span><span class="n">admixinput</span><span class="o">/</span><span class="mi">1000</span><span class="n">G5pops</span><span class="o">.</span><span class="n">inputgl</span><span class="o">.</span><span class="n">beagle</span><span class="o">.</span><span class="n">gz</span>
@@ -8985,32 +8993,33 @@ AElFTkSuQmCC" width="420"/>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 1 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed1
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 2 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed2
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 3 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed3
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 4 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed4
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 5 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed5
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 6 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed6
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 7 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed7
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 8 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed8
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 9 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed9
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 10 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed10
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 11 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed11
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 12 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed12
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 13 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed13
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 14 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed14
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 15 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed15
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 16 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed16
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 17 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed17
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 18 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed18
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 19 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed19
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 20 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed20
+<pre>NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 1 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed1
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 2 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed2
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 3 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed3
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 4 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed4
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 5 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed5
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 6 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed6
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 7 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed7
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 8 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed8
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 9 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed9
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 10 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed10
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 11 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed11
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 12 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed12
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 13 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed13
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 14 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed14
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 15 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed15
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 16 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed16
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 17 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed17
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 18 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed18
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 19 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed19
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 3 -P 10 -minMaf 0.05 -seed 20 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed20
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -9029,7 +9038,7 @@ NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputg
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">outadmix</span><span class="o">=~/</span><span class="n">data_folder</span><span class="o">/</span><span class="n">admixoutput</span><span class="o">/</span><span class="mi">1000</span><span class="n">G5popsAdmix</span>
@@ -9051,8 +9060,8 @@ NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputg
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>     3	-34941707.471918
     16	-34941707.578680
@@ -9076,7 +9085,8 @@ NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputg
     15	-34941708.730805
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -9098,7 +9108,7 @@ NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputg
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="c1"># Import some functions to help in visualization</span>
@@ -9124,9 +9134,9 @@ NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputg
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult" tabindex="0">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="Image" class="" height="420" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzdebRlZ1nv+28EQhOCoROFCn1PEBAvoQhYgoDmiIpBEQS7e8BLBRyoKNfQ
 lECI4hGwYUgOQzyXoIAo0hwOSJMQigSLRgQUxEgbEhICGqEIXRKS+8ecFXaKavaqvfZaa+/1
@@ -9462,7 +9472,7 @@ JEmSJEmSJEmSJEmSJEmSJEmSJEmSJGn18v9IogP6G2XHQgAAAABJRU5ErkJggg==" width="420"/>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">K</span><span class="o">=</span><span class="mi">3</span>
@@ -9481,13 +9491,14 @@ JEmSJEmSJEmSJEmSJEmSJEmSJEmSJGn18v9IogP6G2XHQgAAAABJRU5ErkJggg==" width="420"/>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>evalAdmix -beagle /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -fname /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed3.fopt.gz -qname /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK3seed3.qopt -o /home/jupyter-harvinder/data_folder/evaladmixoutput/1000G5pops.K3seed3.corres -P 20
+<pre>evalAdmix -beagle /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -fname /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed3.fopt.gz -qname /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK3seed3.qopt -o /home/jupyter-shixu/data_folder/evaladmixoutput/1000G5pops.K3seed3.corres -P 20
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -9506,7 +9517,7 @@ JEmSJEmSJEmSJEmSJEmSJEmSJEmSJGn18v9IogP6G2XHQgAAAABJRU5ErkJggg==" width="420"/>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="c1"># Import some funcitons to help in visualization</span>
@@ -9531,9 +9542,9 @@ JEmSJEmSJEmSJEmSJEmSJEmSJEmSJGn18v9IogP6G2XHQgAAAABJRU5ErkJggg==" width="420"/>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult" tabindex="0">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="Image" class="" height="420" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzde5wkV13//1fP0knIbja72cnO3iA3CCEXEkhIwhcIeAkgIpcvQkCFyB2R
 i4AC+o1cFPiJCupXERAJIAiEi3IT5CcGNBDDLUHulxBAdnd2NnvPbC472ZnvH9W1U3Omqrq6
@@ -10144,7 +10155,7 @@ gg==" width="420"/>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">inputpath</span><span class="o">=~/</span><span class="n">data_folder</span><span class="o">/</span><span class="n">admixinput</span><span class="o">/</span><span class="mi">1000</span><span class="n">G5pops</span><span class="o">.</span><span class="n">inputgl</span><span class="o">.</span><span class="n">beagle</span><span class="o">.</span><span class="n">gz</span>
@@ -10171,32 +10182,33 @@ gg==" width="420"/>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 1 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed1
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 2 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed2
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 3 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed3
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 4 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed4
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 5 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed5
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 6 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed6
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 7 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed7
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 8 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed8
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 9 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed9
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 10 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed10
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 11 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed11
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 12 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed12
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 13 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed13
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 14 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed14
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 15 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed15
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 16 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed16
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 17 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed17
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 18 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed18
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 19 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed19
-NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 20 -o /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed20
+<pre>NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 1 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed1
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 2 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed2
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 3 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed3
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 4 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed4
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 5 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed5
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 6 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed6
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 7 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed7
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 8 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed8
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 9 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed9
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 10 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed10
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 11 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed11
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 12 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed12
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 13 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed13
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 14 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed14
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 15 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed15
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 16 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed16
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 17 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed17
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 18 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed18
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 19 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed19
+NGSadmix -likes /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -K 4 -P 10 -minMaf 0.05 -seed 20 -o /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed20
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -10218,7 +10230,7 @@ NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputg
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">cat</span> <span class="o">-</span><span class="n">n</span> <span class="n">allK</span><span class="err">$</span><span class="p">{</span><span class="n">K</span><span class="p">}</span><span class="o">.</span><span class="n">likes</span> <span class="o">|</span> <span class="n">sort</span> <span class="o">-</span><span class="n">rhk2</span>
@@ -10231,8 +10243,8 @@ NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputg
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>     9	-34654597.394711
     11	-34654597.515125
@@ -10256,7 +10268,8 @@ NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputg
     20	-34654603.772069
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -10278,7 +10291,7 @@ NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputg
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">K</span><span class="o">=</span><span class="mi">4</span>
@@ -10297,13 +10310,14 @@ NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputg
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>evalAdmix -beagle /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -fname /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed9.fopt.gz -qname /home/jupyter-harvinder/data_folder/admixoutput/1000G5popsAdmixK4seed9.qopt -o /home/jupyter-harvinder/data_folder/evaladmixoutput/1000G5pops.K4seed9.corres -P 20
+<pre>evalAdmix -beagle /home/jupyter-shixu/data_folder/admixinput/1000G5pops.inputgl.beagle.gz -fname /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed9.fopt.gz -qname /home/jupyter-shixu/data_folder/admixoutput/1000G5popsAdmixK4seed9.qopt -o /home/jupyter-shixu/data_folder/evaladmixoutput/1000G5pops.K4seed9.corres -P 20
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -10322,7 +10336,7 @@ NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputg
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="n">source</span><span class="p">(</span><span class="s2">"https://raw.githubusercontent.com/GenisGE/evalAdmix/master/visFuns.R"</span><span class="p">)</span> <span class="c1"># import some funcitons to help in visualization</span>
@@ -10348,9 +10362,9 @@ NGSadmix -likes /home/jupyter-harvinder/data_folder/admixinput/1000G5pops.inputg
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult" tabindex="0">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="Image" class="" height="420" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzdebTlV13n/XckFEMMhkmmYhAUkAQFscUwdJAqoNNFO2Brg+DAavQxgaex
 nVooU0IKlO4GHGipZonrAWy06WbQdkVBE6EYLAZpQEEMIFNCQkAQQ1BIMPX88fvd5KZSVfee
@@ -10667,9 +10681,9 @@ SZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIk
 SZIkSZIkSZIkScPL/wPUr2WlVZYLzAAAAABJRU5ErkJggg==" width="420"/>
 </div>
 </div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult" tabindex="0">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="Image" class="" height="420" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzdeZxjVZ3//1fShka6oRstqGpoZFP2TZFNFnFpQFQWEVBHwQWE0cEFF0Zl
 xt0v6OioI6MoqwvKooOIC6LsIDsqqCCbSEPZINANzdbpTn5/nJtfpVOpVKpyb85N8no+HveR
@@ -11138,7 +11152,7 @@ AAAAAAAAJs9/AUoHo6/N1tIOAAAAAElFTkSuQmCC" width="420"/>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="c1"># Set path for all input files you will use in this exercise</span>
@@ -11152,12 +11166,13 @@ AAAAAAAAJs9/AUoHo6/N1tIOAAAAAElFTkSuQmCC" width="420"/>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -11215,7 +11230,7 @@ AAAAAAAAJs9/AUoHo6/N1tIOAAAAAElFTkSuQmCC" width="420"/>
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="c1"># Show the full content of the file nInd.txt</span>
@@ -11237,8 +11252,8 @@ AAAAAAAAJs9/AUoHo6/N1tIOAAAAAElFTkSuQmCC" width="420"/>
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>Content of nInd.txt:
 French  Han  Chukchi  Karitiana  Papuan  Sindhi  Yoruba
@@ -11249,7 +11264,8 @@ id        chr  pos     name       A0_freq  A1  French             Han           
 1_752566  1    752566  rs3094315  G        A   0.166666666666667  0.0606060606060606  0.369565217391304  0.0833333333333334  0.0714285714285714  0.305555555555556  0.671428571428571
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -11272,7 +11288,7 @@ id        chr  pos     name       A0_freq  A1  French             Han           
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="c1"># Analyse sample1</span>
@@ -11292,11 +11308,11 @@ id        chr  pos     name       A0_freq  A1  French             Han           
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>	-&gt; Dumping file: sample1.log
-Input: -likes /home/jupyter-harvinder/data_folder/fastNGSadmixinput//sample1.beagle -plink (null) -Nname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//refPanel.txt -out sample1 -whichPops all
+Input: -likes /home/jupyter-shixu/data_folder/fastNGSadmixinput//sample1.beagle -plink (null) -Nname /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-shixu/data_folder/fastNGSadmixinput//refPanel.txt -out sample1 -whichPops all
 Setup: -seed 1 -method 1
 Ploidy of 2 has been chosen
 
@@ -11319,7 +11335,7 @@ Chosen pop Yoruba
 
 nPop=7
 
-Opening nInd file: /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt with nPop=7
+Opening nInd file: /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt with nPop=7
 N = 25.000000
 N = 33.000000
 N = 23.000000
@@ -11396,10 +11412,10 @@ Q 0.689929 Q 0.229619 Q 0.000010 Q 0.000010 Q 0.000010 Q 0.000010 Q 0.080413  af
 Estimated  Q = 0.689929 0.229618 0.000010 0.000010 0.000010 0.000010 0.080413 best like -42566.011425 after 5 runs!
 	-&gt; Dumping file: sample1.qopt
 FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
-	[ALL done] cpu-time used =  10.89 sec
-	[ALL done] walltime used =  11.00 sec
+	[ALL done] cpu-time used =  9.49 sec
+	[ALL done] walltime used =  9.00 sec
 	-&gt; Dumping file: sample2.log
-Input: -likes /home/jupyter-harvinder/data_folder/fastNGSadmixinput//sample2.beagle.gz -plink (null) -Nname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//refPanel.txt -out sample2 -whichPops all
+Input: -likes /home/jupyter-shixu/data_folder/fastNGSadmixinput//sample2.beagle.gz -plink (null) -Nname /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-shixu/data_folder/fastNGSadmixinput//refPanel.txt -out sample2 -whichPops all
 Setup: -seed 1 -method 1
 Ploidy of 2 has been chosen
 
@@ -11422,7 +11438,7 @@ Chosen pop Yoruba
 
 nPop=7
 
-Opening nInd file: /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt with nPop=7
+Opening nInd file: /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt with nPop=7
 N = 25.000000
 N = 33.000000
 N = 23.000000
@@ -11497,10 +11513,10 @@ Q 0.000010 Q 0.000010 Q 0.000010 Q 0.999940 Q 0.000010 Q 0.000010 Q 0.000010  af
 Estimated  Q = 0.000010 0.000010 0.000010 0.999940 0.000010 0.000010 0.000010 best like -14874.737405 after 2 runs!
 	-&gt; Dumping file: sample2.qopt
 FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
-	[ALL done] cpu-time used =  1.63 sec
+	[ALL done] cpu-time used =  1.53 sec
 	[ALL done] walltime used =  2.00 sec
 	-&gt; Dumping file: sample3.log
-Input: -likes /home/jupyter-harvinder/data_folder/fastNGSadmixinput//sample3.beagle.gz -plink (null) -Nname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//refPanel.txt -out sample3 -whichPops all
+Input: -likes /home/jupyter-shixu/data_folder/fastNGSadmixinput//sample3.beagle.gz -plink (null) -Nname /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-shixu/data_folder/fastNGSadmixinput//refPanel.txt -out sample3 -whichPops all
 Setup: -seed 1 -method 1
 Ploidy of 2 has been chosen
 
@@ -11523,7 +11539,7 @@ Chosen pop Yoruba
 
 nPop=7
 
-Opening nInd file: /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt with nPop=7
+Opening nInd file: /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt with nPop=7
 N = 25.000000
 N = 33.000000
 N = 23.000000
@@ -11602,7 +11618,8 @@ FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
 	[ALL done] walltime used =  0.00 sec
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -11621,7 +11638,7 @@ FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [34]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="c1"># Re-analyse sample1 with a smaller reference panel</span>
@@ -11635,11 +11652,11 @@ FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>	-&gt; Dumping file: sample1V2.log
-Input: -likes /home/jupyter-harvinder/data_folder/fastNGSadmixinput//sample1.beagle -plink (null) -Nname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//refPanel.txt -out sample1V2 -whichPops Han,Yoruba,Sindhi,Papuan,Chukchi,Karitiana
+Input: -likes /home/jupyter-shixu/data_folder/fastNGSadmixinput//sample1.beagle -plink (null) -Nname /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-shixu/data_folder/fastNGSadmixinput//refPanel.txt -out sample1V2 -whichPops Han,Yoruba,Sindhi,Papuan,Chukchi,Karitiana
 Setup: -seed 1 -method 1
 Ploidy of 2 has been chosen
 
@@ -11661,7 +11678,7 @@ Chosen pop Yoruba
 
 nPop=6
 
-Opening nInd file: /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt with nPop=6
+Opening nInd file: /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt with nPop=6
 N = 33.000000
 N = 23.000000
 N = 12.000000
@@ -11758,11 +11775,12 @@ Q 0.232175 Q 0.000010 Q 0.000503 Q 0.000010 Q 0.642165 Q 0.125136  after 9!
 Estimated  Q = 0.232230 0.000010 0.000414 0.000010 0.642201 0.125135 best like -43804.676024 after 7 runs!
 	-&gt; Dumping file: sample1V2.qopt
 FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
-	[ALL done] cpu-time used =  49.16 sec
-	[ALL done] walltime used =  50.00 sec
+	[ALL done] cpu-time used =  44.72 sec
+	[ALL done] walltime used =  44.00 sec
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -11782,7 +11800,7 @@ FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [35]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="c1"># Show content of sample1.log </span>
@@ -11796,10 +11814,10 @@ FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>Input: -likes /home/jupyter-harvinder/data_folder/fastNGSadmixinput//sample1.beagle -plink (null) -Nname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//refPanel.txt -out sample1 -whichPops all
+<pre>Input: -likes /home/jupyter-shixu/data_folder/fastNGSadmixinput//sample1.beagle -plink (null) -Nname /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-shixu/data_folder/fastNGSadmixinput//refPanel.txt -out sample1 -whichPops all
 Setup: -seed 1 -method 1
 Ploidy of 2 has been chosen
 
@@ -11814,7 +11832,7 @@ Overlap: of 49643 sites between input and ref
 
 nPop=7
 
-Opening nInd file: /home/jupyter-harvinder/data_folder/fastNGSadmixinput//refPanel.txt with nPop=7
+Opening nInd file: /home/jupyter-shixu/data_folder/fastNGSadmixinput//refPanel.txt with nPop=7
 Chosen pop French
 N = 25.000000
 Chosen pop Han
@@ -11874,11 +11892,12 @@ Q 0.689929 Q 0.229619 Q 0.000010 Q 0.000010 Q 0.000010 Q 0.000010 Q 0.080413  af
 Estimated  Q = 0.689929 0.229618 0.000010 0.000010 0.000010 0.000010 0.080413 
 best like -42566.011425 after 5 runs!
 FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
-	[ALL done] cpu-time used =  10.89 sec
-	[ALL done] walltime used =  11.00 sec
+	[ALL done] cpu-time used =  9.49 sec
+	[ALL done] walltime used =  9.00 sec
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -11900,7 +11919,7 @@ FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [36]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="c1"># Show content of sample1.qopt</span>
@@ -11914,14 +11933,15 @@ FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>French  Han     Chukchi  Karitiana  Papuan  Sindhi  Yoruba
 0.6899  0.2296  0.0000   0.0000     0.0000  0.0000  0.0804
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -11943,7 +11963,7 @@ FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [48]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="c1"># Plot results for first analysis of sample1</span>
@@ -11970,9 +11990,9 @@ FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult" tabindex="0">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="Image" class="" height="420" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzdeZytV13n+08gJEBISCAICCEMEhCCTLYhAaVFhqalHbDVIIhwBZsht1FQ
 biODgijQIqhcRNq0gjYoMghyQQYlQpgRCRCEMENCQgARQpiSkHP/eNbxVCqnzql9qmrvXan3
@@ -12270,9 +12290,9 @@ SZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIkSZIk
 SZKk/vN/aiA22xin3c8AAAAASUVORK5CYII=" width="420"/>
 </div>
 </div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult" tabindex="0">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="Image" class="" height="420" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzdebhsV13n/3cCJEBICBAIU5inhiCTbUgAcWBoFBWwtbEBhUdQBLqxpbWb
 RlCQVuhGaOUniNIK2iAoRpAGEYQYCDMIKDSGGRIyMYcwJuT+/tjreuuenHPvqTNUnZvzej3P
@@ -12594,9 +12614,9 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBy
 +n8mRynyro3h6AAAAABJRU5ErkJggg==" width="420"/>
 </div>
 </div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult" tabindex="0">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="Image" class="" height="420" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzdeZRtZ13n/3cYEiAkhMmAzCABIchkExJAlGaQFgVRMQgq/ASaIb9GRVlG
 BmVQoEUQaVF+RptgB0UBQRazEEIIo0jC0BhmSCAkCEJIGJKQ+/tjP9d7buUOdW5VnVM39Xqt
@@ -12897,9 +12917,9 @@ JEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmS
 JEmSJEmSJEmSJEmS+s//ATi7Pv1u9N2fAAAAAElFTkSuQmCC" width="420"/>
 </div>
 </div>
-<div class="output_area">
-<div class="prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult" tabindex="0">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="Image" class="" height="420" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzdebRtV1nn708CJEBICJ2hC6GRRgjSWYYEEKVoCkVF7IKgwK+AokkVKgVD
 pJFOgZJGZIBSRougQVFAkEEvhBBCKxIExNBDAiFBEdIgpLu/P9a8Zt+T25x9zzl7n5vzPGOs
@@ -13230,7 +13250,7 @@ JEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJPWf/wMHnFDLtl1g/QAAAABJRU5ErkJggg==" width="420
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [38]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="err">$</span><span class="n">fastNGSadmix</span> <span class="o">-</span><span class="n">likes</span> <span class="err">$</span><span class="p">{</span><span class="n">inputpath</span><span class="p">}</span><span class="o">/</span><span class="n">sample2</span><span class="o">.</span><span class="n">beagle</span><span class="o">.</span><span class="n">gz</span> <span class="o">-</span><span class="n">fname</span> <span class="err">$</span><span class="p">{</span><span class="n">inputpath</span><span class="p">}</span><span class="o">/</span><span class="n">refPanel</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">Nname</span> <span class="err">$</span><span class="p">{</span><span class="n">inputpath</span><span class="p">}</span><span class="o">/</span><span class="n">nInd</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">outfiles</span> <span class="n">sample2boot</span> <span class="o">-</span><span class="n">whichPops</span> <span class="nb">all</span> <span class="o">-</span><span class="n">boot</span> <span class="mi">100</span>
@@ -13245,12 +13265,12 @@ JEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJPWf/wMHnFDLtl1g/QAAAABJRU5ErkJggg==" width="420
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
 <pre>	-&gt; Dumping file: sample2boot.log
-Input: -likes /home/jupyter-harvinder/data_folder/fastNGSadmixinput//sample2.beagle.gz -plink (null) -Nname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//refPanel.txt -out sample2boot -whichPops all
-Setup: -seed 1754398447 -method 1
+Input: -likes /home/jupyter-shixu/data_folder/fastNGSadmixinput//sample2.beagle.gz -plink (null) -Nname /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-shixu/data_folder/fastNGSadmixinput//refPanel.txt -out sample2boot -whichPops all
+Setup: -seed 1754386523 -method 1
 Ploidy of 2 has been chosen
 
 The accelerated EM has been chosen
@@ -13272,7 +13292,7 @@ Chosen pop Yoruba
 
 nPop=7
 
-Opening nInd file: /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt with nPop=7
+Opening nInd file: /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt with nPop=7
 N = 25.000000
 N = 33.000000
 N = 23.000000
@@ -13281,11 +13301,11 @@ N = 14.000000
 N = 18.000000
 N = 70.000000
 
-iter[start] like is=-17709.429434
-iter[10] like=-14875.857885 alpha=1.040001 Q=0.000010, Q=0.000139, Q=0.000431, Q=0.999390, Q=0.000010, Q=0.000010, Q=0.000010, 
-like after -14874.738032
+iter[start] like is=-17926.074263
+iter[10] like=-14903.737340 alpha=2.234064 Q=0.000010, Q=0.000806, Q=0.013740, Q=0.985414, Q=0.000010, Q=0.000010, Q=0.000010, 
+like after -14874.741745
 CONVERGENCE!
-This many iterations 13 for run 0
+This many iterations 16 for run 0
 
 At this bootstrapping: 1 out of: 100
 CONVERGENCE!
@@ -13487,17 +13507,17 @@ At this bootstrapping: 99 out of: 100
 CONVERGENCE!
 At this bootstrapping: 100 out of: 100
 CONVERGENCE!
-best like -14874.738032 after 0!
-Q 0.000010 Q 0.000010 Q 0.000010 Q 0.999940 Q 0.000010 Q 0.000010 Q 0.000010  after 0!
+best like -14874.741745 after 0!
+Q 0.000010 Q 0.000010 Q 0.000011 Q 0.999939 Q 0.000010 Q 0.000010 Q 0.000010  after 0!
 
-Estimated  Q = 0.000010 0.000010 0.000010 0.999940 0.000010 0.000010 0.000010 best like -14874.738032 after 0 runs!
+Estimated  Q = 0.000010 0.000010 0.000011 0.999939 0.000010 0.000010 0.000010 best like -14874.741745 after 0 runs!
 	-&gt; Dumping file: sample2boot.qopt
 FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
-	[ALL done] cpu-time used =  4.43 sec
-	[ALL done] walltime used =  4.00 sec
+	[ALL done] cpu-time used =  4.31 sec
+	[ALL done] walltime used =  5.00 sec
 	-&gt; Dumping file: sample3boot.log
-Input: -likes /home/jupyter-harvinder/data_folder/fastNGSadmixinput//sample3.beagle.gz -plink (null) -Nname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-harvinder/data_folder/fastNGSadmixinput//refPanel.txt -out sample3boot -whichPops all
-Setup: -seed 1754398453 -method 1
+Input: -likes /home/jupyter-shixu/data_folder/fastNGSadmixinput//sample3.beagle.gz -plink (null) -Nname /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt -fname /home/jupyter-shixu/data_folder/fastNGSadmixinput//refPanel.txt -out sample3boot -whichPops all
+Setup: -seed 1754386529 -method 1
 Ploidy of 2 has been chosen
 
 The accelerated EM has been chosen
@@ -13519,7 +13539,7 @@ Chosen pop Yoruba
 
 nPop=7
 
-Opening nInd file: /home/jupyter-harvinder/data_folder/fastNGSadmixinput//nInd.txt with nPop=7
+Opening nInd file: /home/jupyter-shixu/data_folder/fastNGSadmixinput//nInd.txt with nPop=7
 N = 25.000000
 N = 33.000000
 N = 23.000000
@@ -13528,11 +13548,11 @@ N = 14.000000
 N = 18.000000
 N = 70.000000
 
-iter[start] like is=-79.192198
-iter[10] like=-66.761568 alpha=1.141725 Q=0.000016, Q=0.000053, Q=0.000923, Q=0.998979, Q=0.000010, Q=0.000010, Q=0.000010, 
-like after -66.756497
+iter[start] like is=-76.696773
+iter[10] like=-66.764033 alpha=2.020701 Q=0.000055, Q=0.000010, Q=0.001385, Q=0.998520, Q=0.000010, Q=0.000010, Q=0.000010, 
+like after -66.756376
 CONVERGENCE!
-This many iterations 14 for run 0
+This many iterations 15 for run 0
 
 At this bootstrapping: 1 out of: 100
 CONVERGENCE!
@@ -13734,17 +13754,18 @@ At this bootstrapping: 99 out of: 100
 CONVERGENCE!
 At this bootstrapping: 100 out of: 100
 CONVERGENCE!
-best like -66.756497 after 0!
-Q 0.000010 Q 0.000029 Q 0.000014 Q 0.999918 Q 0.000010 Q 0.000010 Q 0.000010  after 0!
+best like -66.756376 after 0!
+Q 0.000010 Q 0.000010 Q 0.000010 Q 0.999940 Q 0.000010 Q 0.000010 Q 0.000010  after 0!
 
-Estimated  Q = 0.000010 0.000029 0.000014 0.999918 0.000010 0.000010 0.000010 best like -66.756497 after 0 runs!
+Estimated  Q = 0.000010 0.000010 0.000010 0.999940 0.000010 0.000010 0.000010 best like -66.756376 after 0 runs!
 	-&gt; Dumping file: sample3boot.qopt
 FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
 	[ALL done] cpu-time used =  0.05 sec
 	[ALL done] walltime used =  0.00 sec
 
 </pre>
-</div> </div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -13764,7 +13785,7 @@ FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [50]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="c1"># Plot estimates</span>
@@ -13789,9 +13810,9 @@ FIRST row of .qopt file is BEST estimated Q, rest are nBoot bootstrapping Qs
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult" tabindex="0">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="Image" class="" height="420" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzdefS1dV3v/yegoCKIiqGi4ogTzp0Q1GOaw6Gs1Mo0rXSlHgdOVqYr5xxK
 LYfMpR5PdI5aWOaQ5s8pU0REHDKxNMMRBUXAzABHpt8f1+eOfX+9h+/+Tvt783081rrW3vu6
@@ -14115,7 +14136,7 @@ kiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJ6j//B80Mm2gwp+gAAAAAAElFTkSuQmCC" width="420
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [33]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In [51]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-sos"><pre><span></span><span class="c1"># Plot estimates</span>
@@ -14140,9 +14161,9 @@ kiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJkiRJ6j//B80Mm2gwp+gAAAAAAElFTkSuQmCC" width="420
 <div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
 </div>
 <div class="jp-OutputArea jp-Cell-outputArea">
-<div class="output_area">
-<div class="prompt"></div>
-<div class="jp-RenderedImage jp-OutputArea-output jp-OutputArea-executeResult" tabindex="0">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedImage jp-OutputArea-output" tabindex="0">
 <img alt="Image" class="" height="420" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAA0gAAANICAYAAAD958/bAAAACXBIWXMAABJ0AAASdAHeZh94
 AAAgAElEQVR4nOzdebhlZ13n7U8IhCEkhhAMUwiDBIQw+xoSQARBTEuLxolJhUvgZcgrKkp3
 mASkBVsEkRabNq0EO9AoIMiLTGIIYR4MUxrDDAFCAkRIwpSEVP+xnjK7jnWqzj7TPpVz39e1
@@ -14452,8 +14473,8 @@ QmCC" width="420"/>
 <li>What explains the difference between the 2 plots?</li>
 </ul>
 <h1 id="C.-Try-to-use-the-tool-admixture-instead-on-a-dataset-with-called-genotypes">C. Try to use the tool admixture instead on a dataset with called genotypes<a class="anchor-link" href="#C.-Try-to-use-the-tool-admixture-instead-on-a-dataset-with-called-genotypes">¶</a></h1><p>Please go to</p>
-<p><a href="https://github.com/popgenDK/courses/tree/main/kenya2024/exercises/day3_PopulationStructure">https://github.com/popgenDK/courses/tree/main/kenya2024/exercises/day3_PopulationStructure</a></p>
-<p>and get the jupyter notebook called Day3_AdmixtureV2.ipynb and run it. Note that if you get some weird error messages in the left hand side of the screen when you upload the notebook to emily then don't worry about and you can most likely get rid of it by pressing "Console".</p>
+<p><a href="https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_Admixture_structure_bonus.ipynb">https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_Admixture_structure_bonus.ipynb</a></p>
+<p>to download the notebook and run it. Note that if you get some weird error messages in the left hand side of the screen when you upload the notebook to emily then don't worry about and you can most likely get rid of it by pressing "Console".</p>
 </div>
 </div>
 </div>
