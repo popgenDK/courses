@@ -21,14 +21,14 @@
 - Afternoon: login to the notebook
   - [f stats](Day3_f_stats.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_f_stats.html))
 
-<!-- 
 ## Thursday
 - Morning: login to the notebook
   - [Local Ancestry](Day4_Morning_LocalAncestry.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_Morning_LocalAncestry.html))
 - Afternoon: login to the notebook
-  - [f stats](Day3_f_stats.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_f_stats.html))
+  - [Selection](Day4_SelectionPopGen2025.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_SelectionPopGen2025.html))
 
 
+<!-- 
 - Afternoon: [Admixture inference notebook](admixExercise_popgen24.ipynb)  Download and upload to notebook ([html]( https://html-preview.github.io/?url= ) )
 - - Solutions: [Solutions to the exercises](AdmixtureSolutions2024.pdf)
  
