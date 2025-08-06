@@ -10,7 +10,7 @@
 - Afternoon slides: Imputation [slides](https://github.com/popgenDK/courses/blob/main/summer2025/slides/Imputation_Day2.pdf)
 
 ## Day 3
-- Morning slides: Population structure and admixture [slides](https://github.com/popgenDK/courses/blob/main/summer2025/slides/AdmixtureGlobal25.pdf)
+- Morning slides: Population structure and admixture [slides](https://github.com/popgenDK/courses/blob/main/summer2025/slides/AdmixGlobal25.pdf)
 - Afternoon slides: Dstat/fstat geneflow [slides](https://github.com/popgenDK/courses/blob/main/summer2025/slides/f_stats.pdf)
   
 ## Day 4
