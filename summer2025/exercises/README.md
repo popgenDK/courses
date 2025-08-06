@@ -4,7 +4,7 @@
 - Morning: login to the notebook. Login and passwords will be given.
   - [Coalescence notebook](Day1_morning_CoalTutorial.ipynb) Download and upload to notebook ([html]( https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_morning_CoalTutorial.html ) )
   - [Wright Fisher notebook ](Day1_morning_WrightFisherTutorial.ipynb) Download and upload to notebook ([html]( https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_morning_WrightFisherTutorial.html ) )
-- Afternoon: log into the notebook
+- Afternoon: login to the notebook
   - [NGS intro animal notebook](Day1_afternoon_NGSintro_animal.ipynb) Download and upload to notebook ([html]( https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_afternoon_NGSintro_animal.html))
   - [NGS intro human notebook](Day1_afternoon_NGSintro_human.ipynb) Download and upload to notebook ([html]( https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_afternoon_NGSintro_human.html ) )
 
@@ -12,7 +12,7 @@
 ## Tuesday
 - Morning: login to the notebook
   - [NGS inference notebook](Day2_NGS_Inference.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day2_NGS_Inference.html))
-- Afternoon: log into the notebook
+- Afternoon: login to the notebook
   - [NGS Imputation notebook](Day2_Imputation.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day2_Imputation.html))
 
 ## Wednesday
@@ -22,6 +22,13 @@
   - [f stats](Day3_f_stats.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_f_stats.html))
 
 <!-- 
+## Thursday
+- Morning: login to the notebook
+  - [Local Ancestry](Day4_Morning_LocalAncestry.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_Morning_LocalAncestry.html))
+- Afternoon: login to the notebook
+  - [f stats](Day3_f_stats.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_f_stats.html))
+
+
 - Afternoon: [Admixture inference notebook](admixExercise_popgen24.ipynb)  Download and upload to notebook ([html]( https://html-preview.github.io/?url= ) )
 - - Solutions: [Solutions to the exercises](AdmixtureSolutions2024.pdf)
  
