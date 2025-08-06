@@ -14,7 +14,7 @@
 - Afternoon slides: Dstat/fstat geneflow [slides](https://github.com/popgenDK/courses/blob/main/summer2025/slides/f_stats.pdf)
   
 ## Day 4
-- Morning slides: Local ancestry inference 
+- Morning slides: Local ancestry inference [slides](https://github.com/popgenDK/courses/blob/main/summer2025/slides/LAI_lecture.pdf)
 - Afternoon slides: Detecting genomic regions under (positive) selection 
 
 ## Day 5
