@@ -27,8 +27,17 @@
 - Afternoon: login to the notebook
   - [Selection](Day4_SelectionPopGen2025.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_SelectionPopGen2025.html))
 
+## Friday
+- Morning: login to the notebook
+  - [PCA](Day5_PCA_1.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_1.html))
+    - [PCA bonus](Day5_PCA_2.Call_genotype.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_2.Call_genotype.html))
 
 <!-- 
+- Afternoon: login to the notebook
+  - [Demography]() Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_SelectionPopGen2025.html))
+
+
+
 - Afternoon: [Admixture inference notebook](admixExercise_popgen24.ipynb)  Download and upload to notebook ([html]( https://html-preview.github.io/?url= ) )
 - - Solutions: [Solutions to the exercises](AdmixtureSolutions2024.pdf)
  
