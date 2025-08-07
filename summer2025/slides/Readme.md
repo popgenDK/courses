@@ -18,6 +18,6 @@
 - Afternoon slides: Detecting genomic regions under (positive) selection 
 
 ## Day 5
-- Morning slides: PCA and genome masking 
+- Morning slides: PCA [slides](summer2025-day5-morning-pca.pdf)
 - Afternoon slides: Demography Inference 
 
