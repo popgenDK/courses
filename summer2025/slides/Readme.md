@@ -15,7 +15,7 @@
   
 ## Day 4
 - Morning slides: Local ancestry inference [slides](https://github.com/popgenDK/courses/blob/main/summer2025/slides/LAI_lecture.pdf)
-- Afternoon slides: Detecting genomic regions under (positive) selection 
+- Afternoon slides: Detecting genomic regions under (positive) selection  https://popgen.dk/popgen25/slides/PopGen_Selection2025.pdf
 
 ## Day 5
 - Morning slides: PCA [slides](summer2025-day5-morning-pca.pdf)
