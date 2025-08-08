@@ -34,3 +34,5 @@
 - Afternoon: login to the notebook
   - [Demography](Day5_demography.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_demography.html))
 
+## Data
+each notebook will use a data set found [here](https://popgen.dk/popgen25/slides/data). Download a uncompress the tar.gz files to get all data for a notebook
