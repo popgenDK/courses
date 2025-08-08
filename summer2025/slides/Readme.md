@@ -19,5 +19,5 @@
 
 ## Day 5
 - Morning slides: PCA [slides](summer2025-day5-morning-pca.pdf)
-- Afternoon slides: Demography Inference 
+- Afternoon slides: Demography Inference: https://github.com/popgenDK/courses/blob/main/summer2025/slides/Day5_demography_2025.pdf
 
