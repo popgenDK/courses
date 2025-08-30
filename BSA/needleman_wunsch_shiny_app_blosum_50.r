@@ -1,3 +1,8 @@
+# source("https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/BSA/needleman_wunsch_shiny_app_blosum_50.r")
+# shinyApp(ui = ui, server = server)
+
+
+
 # app.R — Needleman–Wunsch (Global Alignment) visualizer for proteins using BLOSUM50
 # ------------------------------------------------------------------------------
 # Features
