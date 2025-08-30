@@ -1,5 +1,5 @@
 
-#source("dotplot.R")
+#source("https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/BSA/dotplotShiny.R")
 #shinyApp(ui, server)
 
 # app.R
