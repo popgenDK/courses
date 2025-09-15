@@ -2,7 +2,7 @@
 
 ## Monday
 - login to the notebook from . Login and passwords will be given.
-  - [Coalescence notebook](exercises/advBinf_EM_algorithm.ipynb) Download and upload to notebook
+  - [EM note book](exercises/advBinf_EM_algorithm.ipynb) Download and upload to notebook
 ## Wednesday: 
   - [Haplotype frequency notebook](exercises/haplotype_frequencies.ipynb) Download and upload to notebook
   - - [Solution](exercises/solution_haplotype_frequencies.ipynb) Download and upload to notebook
