@@ -18,7 +18,7 @@
     - 
 ## Friday
 - Morning: login to the notebook
-  - [PCA](Day5_Heritability_and_PGS.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day5_Heritability_and_PGS.html))
+  - [Heritability_and_PGS](Day5_Heritability_and_PGS.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day5_Heritability_and_PGS.html))
 
 ## Data
 each notebook will use a data set found [here](https://popgen.dk/albrecht/open/chinacourse2026/). 
