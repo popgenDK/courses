@@ -16,11 +16,11 @@ The slides will be put in the folder called slides
 ## Day 1: Workshop (August 19)
 ### Morning: 
 Intro to us. 
-Intro to conservation genetics and diversity (+ discussion) -> motivation + 1 case study (research topic) RH
-bash / linux intro / jyputer nb NM
+Intro to conservation genetics and diversity (+ discussion) -> motivation + 1 case study (research topic)
+bash / linux intro / jyputer nb
 
 ### Afternoon: 
-intro to NGS (+ computer exercise) AA
+Intro to NGS (+ computer exercise)
 	PreDinner 16.15-18.00: intro to themselves + their work (1 slide)
 
 
@@ -33,21 +33,26 @@ excursion (15h)
 
 
 ## Day 3: Workshop (August 21)
-### Morning: Ida - Admixture (+ computer exercise) IM
+### Morning:
+Admixture (+ computer exercise) IM
 
-### Afternoon: PCA (AA) and - geneflow (dstats), trees (+ computer exercise) AA; HP
+### Afternoon:
+PCA (AA) and - geneflow (dstats), trees (+ computer exercise) AA; HP
 
 
 ## Day 4: Workshop (August 22)
-### Morning: Relatedness, fst, outliers (+ computer exercise relateAdmix, 2D sfs (include for genotype likelihoods) e..g King,fst,. Li/R0,TT) NM 
+### Morning: 
+Relatedness, fst, outliers (+ computer exercise relateAdmix, 2D sfs (include for genotype likelihoods) e..g King,fst,. Li/R0,TT)
 
-### Afternoon: Selection and genome scans (+ computer exercise - fst scan on wildebeest) RH, TB
+### Afternoon: 
+Selection and genome scans (+ computer exercise - fst scan on wildebeest) RH, TB
 
 
 ## Day 5: Workshop (and a huge party) (August 23)
-### Morning: Thomas - Het, ROH (+ computer exercise) TB
-Genetic load [no exercise] TB
+### Morning:
+Het, ROH (+ computer exercise) TB
 
-### Afternoon: Conservation genomics in practice (+discussion) RH;?
+### Afternoon: 
+Conservation genomics in practice (+discussion) RH;?
  		Research talks conservation greenland IM? 
 Work on paper? 
