@@ -12,32 +12,36 @@ you will have to install the software on your own
 slides
 The slides will be put in the folder called slides
 
-Day 1: Workshop (August 19)
-	Morning: 
+## Day 1
+
+### intro to NGS
+
+## Day 1: Workshop (August 19)
+### 	Morning: 
 Intro to us. 
 Intro to conservation genetics and diversity (+ discussion) -> motivation + 1 case study (research topic) RH
 bash / linux intro / jyputer nb NM
-Afternoon: 
+### Afternoon: 
 intro to NGS (+ computer exercise) AA
 	PreDinner 16.15-18.00: intro to themselves + their work (1 slide)
 
-Day 2: Workshop (August 20)
-Morning: 
+## Day 2: Workshop (August 20)
+### Morning: 
 Demography (+ computer exercise) coalescence, SFS (+ computer exercise) HP
-Afternoon: Research talk(?). or PSMC (RH)
+### Afternoon: Research talk(?). or PSMC (RH)
 excursion (15h)
 
-Day 3: Workshop (August 21)
-Morning: Ida - Admixture (+ computer exercise) IM
-Afternoon: PCA (AA) and - geneflow (dstats), trees (+ computer exercise) AA; HP
+## Day 3: Workshop (August 21)
+### Morning: Ida - Admixture (+ computer exercise) IM
+### Afternoon: PCA (AA) and - geneflow (dstats), trees (+ computer exercise) AA; HP
 
-Day 4: Workshop (August 22)
-Morning: Relatedness, fst, outliers (+ computer exercise relateAdmix, 2D sfs (include for genotype likelihoods) e..g King,fst,. Li/R0,TT) NM 
-Afternoon: Selection and genome scans (+ computer exercise - fst scan on wildebeest) RH, TB
+## Day 4: Workshop (August 22)
+### Morning: Relatedness, fst, outliers (+ computer exercise relateAdmix, 2D sfs (include for genotype likelihoods) e..g King,fst,. Li/R0,TT) NM 
+### Afternoon: Selection and genome scans (+ computer exercise - fst scan on wildebeest) RH, TB
 
-Day 5: Workshop (and a huge party) (August 23)
-Morning: Sabhrina - Het, ROH (+ computer exercise) SGA
+## Day 5: Workshop (and a huge party) (August 23)
+### Morning: Sabhrina - Het, ROH (+ computer exercise) SGA
 Genetic load [no exercise] SGA
-Afternoon: Conservation genomics in practice (+discussion) RH;?
+### Afternoon: Conservation genomics in practice (+discussion) RH;?
  		Research talks conservation greenland IM? 
 Work on paper? 
