@@ -13,49 +13,55 @@ The slides will be put in the folder called slides
 
 ## Day 1: Workshop (August 19)
 ### Morning: 
-- Intro to us. 
-- Intro to conservation genetics and diversity (+ discussion) -> motivation + 1 case study (research topic)
+- Introductions of the instructors
+- Intro to conservation genetics and diversity -> motivation + 1 case study (research topic)
 - bash / linux intro / jyputer nb
+	- Exercises
 
 ### Afternoon: 
-Intro to NGS (+ computer exercise)
+- Intro to NGS
+	- Exercises
 
-	PreDinner 16.15-18.00: intro to themselves + their work (1 slide)
-
+### PreDinner 16.15-18.00:
+- Introductions from the students
 
 ## Day 2: Workshop (August 20)
 ### Morning: 
-Demography
-
-Coalescence,
-
-SFS
+- Demography
+- Coalescence
+- SFS
+	- Exercises
 
 ### Afternoon: Research talk(?). or PSMC (RH)
-excursion (15h)
-
+- Excursion (15h)
 
 ## Day 3: Workshop (August 21)
 ### Morning:
-Admixture (+ computer exercise) IM
+- Admixture
+	- Exercises
 
 ### Afternoon:
-PCA (AA) and - geneflow (dstats), trees (+ computer exercise) AA; HP
-
+- PCA
+- Geneflow
+	- Exercises
 
 ## Day 4: Workshop (August 22)
 ### Morning: 
-Relatedness, fst, outliers (+ computer exercise relateAdmix, 2D sfs (include for genotype likelihoods) e..g King,fst,. Li/R0,TT)
+- Relatedness
+- Fst
+- Outliers
+	- Exercises
 
 ### Afternoon: 
-Selection and genome scans (+ computer exercise - fst scan on wildebeest) RH, TB
-
+- Selection and genome scans
+	- Exercises
 
 ## Day 5: Workshop (and a huge party) (August 23)
 ### Morning:
-Het, ROH (+ computer exercise) TB
+- Heterozygosity
+- ROH
+	- Exercise
 
 ### Afternoon: 
-Conservation genomics in practice (+discussion) RH;?
- 		Research talks conservation greenland IM? 
-Work on paper? 
+- Conservation genomics in practice
+	- Research talks conservation greenland
