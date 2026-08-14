@@ -7,19 +7,18 @@ For the course you will find the jupyter notebooks in the folder called exercise
 
 
 
-
 # slides
 The slides will be put in the folder called slides
 
 ## Day 1: Workshop (August 19)
 ### Morning: 
-- Introductions of the instructors
-- Intro to conservation genetics and diversity -> motivation + 1 case study (research topic)
-- bash / linux intro / jyputer nb
+- Introductions of the instructors (Anders Albrechtsen, Rasmus Heller, Ida Moltke, Harvi Pawar, Nuno Martins, Thomas Bøggild)
+- Intro to conservation genetics and diversity -> motivation + 1 case study (research topic) (Rasmus Heller)
+- bash / linux intro / jyputer nb (Nuno Martins)
 	- Exercises
 
 ### Afternoon: 
-- Intro to NGS
+- Intro to NGS (Anders Albrechtsen)
 	- Exercises
 
 ### PreDinner 16.15-18.00:
@@ -27,9 +26,9 @@ The slides will be put in the folder called slides
 
 ## Day 2: Workshop (August 20)
 ### Morning: 
-- Demography
-- Coalescence
-- SFS
+- Demography (Harvi Pawar)
+- Coalescence (Harvi Pawar)
+- SFS (Harvi Pawar)
 	- Exercises
 
 ### Afternoon: Research talk(?). or PSMC (RH)
@@ -37,31 +36,33 @@ The slides will be put in the folder called slides
 
 ## Day 3: Workshop (August 21)
 ### Morning:
-- Admixture
+- Admixture (Ida Moltke)
 	- Exercises
 
 ### Afternoon:
-- PCA
-- Geneflow
+- PCA (Anders Albrechtsen)
+- Geneflow (Harvi Pawar)
 	- Exercises
 
 ## Day 4: Workshop (August 22)
 ### Morning: 
-- Relatedness
-- Fst
-- Outliers
+- Relatedness (Nuno Martins)
+- Fst (Nuno Martins)
+- Outliers (Nuno Martins)
 	- Exercises
 
 ### Afternoon: 
-- Selection and genome scans
+- Selection and genome scans (Rasmus Heller, Thomas Bøggild)
 	- Exercises
 
-## Day 5: Workshop (and a huge party) (August 23)
+## Day 5: Workshop (August 23)
 ### Morning:
-- Heterozygosity
-- ROH
+- Heterozygosity (Thomas Bøggild)
+- ROH (Thomas Bøggild)
 	- Exercise
 
 ### Afternoon: 
-- Conservation genomics in practice
-	- Research talks conservation greenland
+- Conservation genomics in practice (Rasmus Heller)
+	- Research talks conservation greenland (Ida Moltke)
+
+### Farewell party
