@@ -49,7 +49,6 @@ The slides will be put in the folder called slides
 ### Morning: 
 - Relatedness (Nuno Martins)
 - Fst (Nuno Martins)
-- Outliers (Nuno Martins)
 	- Exercises
 
 ### Afternoon: 
