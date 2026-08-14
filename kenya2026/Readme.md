@@ -13,18 +13,23 @@ The slides will be put in the folder called slides
 
 ## Day 1: Workshop (August 19)
 ### Morning: 
-Intro to us. 
-Intro to conservation genetics and diversity (+ discussion) -> motivation + 1 case study (research topic)
-bash / linux intro / jyputer nb
+- Intro to us. 
+- Intro to conservation genetics and diversity (+ discussion) -> motivation + 1 case study (research topic)
+- bash / linux intro / jyputer nb
 
 ### Afternoon: 
 Intro to NGS (+ computer exercise)
+
 	PreDinner 16.15-18.00: intro to themselves + their work (1 slide)
 
 
 ## Day 2: Workshop (August 20)
 ### Morning: 
-Demography (+ computer exercise) coalescence, SFS (+ computer exercise) HP
+Demography
+
+Coalescence,
+
+SFS
 
 ### Afternoon: Research talk(?). or PSMC (RH)
 excursion (15h)
