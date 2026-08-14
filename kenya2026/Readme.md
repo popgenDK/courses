@@ -31,7 +31,8 @@ The slides will be put in the folder called slides
 - SFS (Harvi Pawar)
 	- Exercises
 
-### Afternoon: Research talk(?). or PSMC (RH)
+### Afternoon: 
+- Research or PSMC (Rasmus Heller)
 - Excursion (15h)
 
 ## Day 3: Workshop (August 21)
