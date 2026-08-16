@@ -47,7 +47,7 @@ The slides will be put in the folder called slides
 
 ## Day 4: Workshop (August 22)
 ### Morning: 
-- Relatedness (Nuno Martins)
+- Relatedness (Anders Albrechtsen)
 - Fst (Nuno Martins)
 	- Exercises
 
