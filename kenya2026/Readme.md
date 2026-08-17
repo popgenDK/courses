@@ -19,7 +19,9 @@ The slides will be put in the folder called slides
 
 ### Afternoon: 
 - Intro to NGS (Anders Albrechtsen)
-	- Exercises
+	- [slides](https://docs.google.com/presentation/d/1X4QsL-Q3sa6otJPhXm-hlznQpXw96MmH6MBcDWL2M24/edit?usp=sharing) You can download as pdf (File -> Download)
+	- [Exercise notebook](exercises/Day1/Kenya2026_NGSintro.ipynb)
+ 	- [Exercise html](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day1/Kenya2026_NGSintro.html) 
 
 ### PreDinner 16.15-18.00:
 - Introductions from the students
