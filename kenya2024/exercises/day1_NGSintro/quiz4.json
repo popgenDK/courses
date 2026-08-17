@@ -1,6 +1,6 @@
 [
   {
-    "question": "After bwa mem writes NA19238.sam, what kind of information is in the SAM body lines?",
+    "question": "After bwa mem writes CTauTzS_8872.sam, what kind of information is in the SAM body lines?",
     "type": "multiple_choice",
     "answers": [
       {
@@ -32,7 +32,7 @@
       {
         "answer": "How the read aligns to the reference, including matches, insertions, deletions, or clipping",
         "correct": true,
-        "feedback": "Correct. For example, 100M means 100 aligned bases using match/mismatch operations."
+        "feedback": "Correct. For example, 150M means 150 aligned bases using match/mismatch operations."
       },
       {
         "answer": "The average quality score for the whole FASTQ file",
