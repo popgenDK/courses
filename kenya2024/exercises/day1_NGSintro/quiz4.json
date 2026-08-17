@@ -1,0 +1,54 @@
+[
+  {
+    "question": "After bwa mem writes NA19238.sam, what kind of information is in the SAM body lines?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "One alignment record per read or read mate, including position, flags, CIGAR, sequence, and qualities",
+        "correct": true,
+        "feedback": "Correct. SAM records connect each read to its alignment and metadata."
+      },
+      {
+        "answer": "One variant call per polymorphic site",
+        "correct": false,
+        "feedback": "Variant calls are stored in VCF files, not raw SAM alignment output."
+      },
+      {
+        "answer": "Only the reference genome sequence",
+        "correct": false,
+        "feedback": "The SAM file contains mapped read records and headers, not just the reference."
+      },
+      {
+        "answer": "Only read quality summaries from FastQC",
+        "correct": false,
+        "feedback": "FastQC summaries are separate reports; SAM files contain alignment records."
+      }
+    ]
+  },
+  {
+    "question": "In a SAM file, what does the CIGAR string describe?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "How the read aligns to the reference, including matches, insertions, deletions, or clipping",
+        "correct": true,
+        "feedback": "Correct. For example, 100M means 100 aligned bases using match/mismatch operations."
+      },
+      {
+        "answer": "The average quality score for the whole FASTQ file",
+        "correct": false,
+        "feedback": "Quality scores are stored separately from the CIGAR string."
+      },
+      {
+        "answer": "The name of the sequencing instrument",
+        "correct": false,
+        "feedback": "Instrument information may appear in read names or metadata, not the CIGAR string."
+      },
+      {
+        "answer": "The number of reads in the input file",
+        "correct": false,
+        "feedback": "Read counts are not encoded in the CIGAR field."
+      }
+    ]
+  }
+]
