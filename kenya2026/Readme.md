@@ -1,15 +1,5 @@
 # Workshop: Introduction to population genomics in wildlife conservation
 
-# exercises
-For the course you will find the jupyter notebooks in the folder called exercises. Download the notebook and upload it to the server.
-
-## data for exercises can be found here
-
-
-
-# slides
-The slides will be put in the folder called slides
-
 ## Day 1: Workshop (August 19)
 ### Morning: 
 - Introductions of the instructors (Anders Albrechtsen, Rasmus Heller, Ida Moltke, Harvi Pawar, Nuno Martins, Thomas Bøggild)
@@ -68,3 +58,7 @@ The slides will be put in the folder called slides
 	- Research talks conservation greenland (Ida Moltke)
 
 ### Farewell party
+
+
+# data
+After the course a link to the data will be found here
