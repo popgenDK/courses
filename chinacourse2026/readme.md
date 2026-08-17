@@ -13,7 +13,7 @@
   - [NGS admixture](Day4_Morning_Admixture.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_Morning_Admixture.html))
     - [NGS admixture bonus](Day4_Admixture_structure_bonus.ipynb) exercise if you have finished the main one ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_Admixture_structure_bonus.html))
 - Afternoon: login to the notebook
-    - [PCA](Day4_PCA_1.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=[https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_PCA_1.html](https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/chinacourse2026/Day4_Afternoon_PCA_1.html)))
+    - [PCA](Day4_PCA_1.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/chinacourse2026/Day4_Afternoon_PCA_1.html)))
     - [PCA bonus](Day4_PCA_2.Call_genotype.ipynb) exercise if you have finished the main one ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_PCA_2.Call_genotype.html))
     - 
 ## Friday
