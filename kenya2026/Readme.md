@@ -34,6 +34,10 @@
 
 ### Afternoon:
 - PCA (Anders Albrechtsen)
+	- [slides](https://docs.google.com/presentation/d/1zTcsGhOQrbEGcMMY5i8CsT-XeLFSl5OnCuSXqsV1ufo/edit?usp=sharing) You can download as pdf (File -> Download)
+	- [Exercise notebook](exercises/Day3/Kenya2026_PCA.ipynb)
+ 	- [Exercise html](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day3/Kenya2026_PCA.html) 
+
 - Geneflow (Harvi Pawar)
 	- Exercises
 
