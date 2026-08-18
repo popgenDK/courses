@@ -2,7 +2,7 @@
 
 - **Morning:**
     - Introduction to conservation genetics<br/>
-    - Introduction to linux/bash and Jupyter notebooks
+    - Bash / Linux / Jupyter Notebook introduction
 - **Afternoon:**
     - Introduction to NGS data
 
