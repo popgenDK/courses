@@ -9,38 +9,29 @@
 
 ### Afternoon: 
 - Intro to NGS (Anders Albrechtsen)
-	- [slides](https://docs.google.com/presentation/d/1X4QsL-Q3sa6otJPhXm-hlznQpXw96MmH6MBcDWL2M24/edit?usp=sharing) You can download as pdf (File -> Download)
-	- [Exercise notebook](exercises/Day1/Kenya2026_NGSintro.ipynb)
- 	- [Exercise html](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day1/Kenya2026_NGSintro.html) 
+	- [slides](https://docs.google.com/presentation/d/1X4QsL-Q3sa6otJPhXm-hlznQpXw96MmH6MBcDWL2M24/edit?usp=sharing) You can download as pdf (File -> Download),  [Exercise notebook](exercises/Day1/Kenya2026_NGSintro.ipynb) , [Exercise html](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day1/Kenya2026_NGSintro.html) 
 
-### PreDinner 16.15-18.00:
+### PreDinner 4.15-6pm:
 - Introductions from the students
 
 ## Day 2: Workshop (August 20)
 ### Morning: 
 - Demography (Harvi Pawar)
-- Coalescence (Harvi Pawar)
-- SFS (Harvi Pawar)
-	- Exercises
-
+	- 	[slides]() , [Exercise1](exercises/Day2/Coalescence_short_WoA.ipynb) , [html](https://html-preview.github.io/?url=) ,, [Exercise1](exercises/Day2/SFS_WoA.ipynb) , [html](https://html-preview.github.io/?url=) 
 ### Afternoon: 
 - Research or PSMC (Rasmus Heller)
-- Excursion (15h)
+ 	- 	[slides]() , [Exercise](exercises/Day2/) , [Exercise html]](https://html-preview.github.io/?url=)  
+### Excursion 3pm-
 
 ## Day 3: Workshop (August 21)
 ### Morning:
 - Admixture (Ida Moltke)
-	- Exercises
-
-### Afternoon:
-- PCA (Anders Albrechtsen)
-	- [slides](https://docs.google.com/presentation/d/1zTcsGhOQrbEGcMMY5i8CsT-XeLFSl5OnCuSXqsV1ufo/edit?usp=sharing) You can download as pdf (File -> Download)
-	- [Exercise notebook](exercises/Day3/Kenya2026_PCA.ipynb)
- 	- [Exercise html](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day3/Kenya2026_PCA.html) 
-
+	- 	[slides]() , [Exercise notebook](exercises/Day3/) , [Exercise html]](https://html-preview.github.io/?url=)
+## Afternoon: 13.00 
+- PCA (Anders Albrechtsen) 
+	- [slides](https://docs.google.com/presentation/d/1zTcsGhOQrbEGcMMY5i8CsT-XeLFSl5OnCuSXqsV1ufo/edit?usp=sharing) You can download as pdf (File -> Download), [Exercise notebook](exercises/Day3/Kenya2026_PCA.ipynb),  [Exercise html](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day3/Kenya2026_PCA.html) 
 - Geneflow (Harvi Pawar)
-	- Exercises
-
+	- 	[slides]() , [Exercise notebook](exercises/Day3/Geneflow&Dstat.ipynbb) , [Exercise html]](https://html-preview.github.io/?url=)
 ## Day 4: Workshop (August 22)
 ### Morning: 
 - Relatedness (Anders Albrechtsen)
