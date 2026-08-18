@@ -8,7 +8,7 @@
 	- [slides](https://docs.google.com/presentation/d/1TnKn6Pbyb8TT8xdVIqtS3p7MEBqyhj1nCThEaQga4ek/edit?usp=sharing). [Exercise notebook](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/IntroToBash.ipynb)
 	- [Linux Cheatsheet](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/Linux_cheatsheet.pdf), [Linux Cheatsheet Advanced](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/linux-command-line_Advanced.pdf) You can use these files to explore and understand what each command do
 
- 	- [Jupyter Notebook](https://emily.popgen.dk/hub/login?)
+ 	- [Jupyter Notebook]
 
 ### Afternoon (1pm-4pm): 
 - Intro to NGS (Anders Albrechtsen)
