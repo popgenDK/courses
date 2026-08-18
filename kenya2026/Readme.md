@@ -5,7 +5,7 @@
 - Introductions of the instructors (Anders Albrechtsen, Rasmus Heller, Ida Moltke, Harvi Pawar, Nuno Martins, Thomas Bøggild)
 - Intro to conservation genetics and diversity -> motivation + 1 case study (research topic) (Rasmus Heller)
 - bash / linux intro / jyputer nb (Nuno Martins)
-	- [slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day1/Kenya2026_Intro_to_Linux.pdf). [Exercise notebook](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/IntroToBash.ipynb), [Exercise html]
+	- [slides](https://docs.google.com/presentation/d/1TnKn6Pbyb8TT8xdVIqtS3p7MEBqyhj1nCThEaQga4ek/edit?usp=sharing). [Exercise notebook](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/IntroToBash.ipynb), [Exercise html]
 	- [Linux Cheatsheet](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/Linux_cheatsheet.pdf), [Linux Cheatsheet Advanced](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/linux-command-line_Advanced.pdf) You can use these files to explore and understand what each command do
 
  	- [Jupyter Notebook](https://emily.popgen.dk/hub/login?)
