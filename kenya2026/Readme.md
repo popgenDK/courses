@@ -6,7 +6,7 @@
 - Intro to conservation genetics and diversity -> motivation + 1 case study (research topic) (Rasmus Heller)
 - bash / linux intro / jyputer nb (Nuno Martins)
 	- [slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day1/Kenya2026_Intro_to_Linux.pdf). [Exercise notebook](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/IntroToBash.ipynb), [Exercise html]
-	- [Linux Cheatsheet](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/Linux_cheatsheet.pdf), [Linux Cheatsheet Advanced](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/linux-command-line_Advanced.pdf) You can use these files to explore and understand what each command does
+	- [Linux Cheatsheet](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/Linux_cheatsheet.pdf), [Linux Cheatsheet Advanced](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/linux-command-line_Advanced.pdf) You can use these files to explore and understand what each command do
 
 ### Afternoon (1pm-4pm): 
 - Intro to NGS (Anders Albrechtsen)
