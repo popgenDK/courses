@@ -5,7 +5,7 @@
 - Introductions of the instructors (Anders Albrechtsen, Rasmus Heller, Ida Moltke, Harvi Pawar, Nuno Martins, Thomas Bøggild)
 - Intro to conservation genetics and diversity -> motivation + 1 case study (research topic) (Rasmus Heller)
 - bash / linux intro / jyputer nb (Nuno Martins)
-	- [slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day1/Kenya2026_Intro_to_Linux.pdf). [Exercise notebook] (exercises/Day1/IntroToBash.ipynb) , [Exercise html]
+	- [slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day1/Kenya2026_Intro_to_Linux.pdf). [Exercise notebook] ([https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/IntroToBash.ipynb](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/IntroToBash.ipynb)) , [Exercise html]
 
 ### Afternoon (1pm-4pm): 
 - Intro to NGS (Anders Albrechtsen)
