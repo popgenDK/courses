@@ -36,7 +36,7 @@
 	- [slides](https://docs.google.com/presentation/d/1zTcsGhOQrbEGcMMY5i8CsT-XeLFSl5OnCuSXqsV1ufo/edit?usp=sharing) You can download as pdf (File -> Download), [Exercise notebook](exercises/Day3/Kenya2026_PCA.ipynb),  [Exercise html](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day3/Kenya2026_PCA.html)
 ### PreDinner (3.30pm-6pm):
 - Geneflow (Harvi Pawar)
-	- 	[slides]() , [Exercise notebook](exercises/Day3/Geneflow&Dstat.ipynbb) , [Exercise html]](https://html-preview.github.io/?url=)
+	- 	[slides]() , [Exercise notebook](exercises/Day3/Geneflow&Dstat.ipynbb) , [Exercise html](https://html-preview.github.io/?url=)
 ## Day 4: Workshop (August 22)
 ### Morning (9am-12pm): 
 - Relatedness and Fst (Nuno Martins, Ida Moltke)
