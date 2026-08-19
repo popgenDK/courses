@@ -99,7 +99,7 @@
 **Gene flow** — Harvi Pawar  
 - [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day3/Kenya2026_day3_GeneFlow_HP.pptx) 
 - [Exercise notebook](exercises/Day3/Geneflow&Dstat.ipynb)
-- [Exercise HTML](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Geneflow%26Dstat.html)
+- [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Geneflow%26Dstat.html)
 
 
 </details>
