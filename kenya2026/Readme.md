@@ -69,7 +69,10 @@
 
 **Research or PSMC** — Rasmus Heller  
 - Slides — TBA
-- Exercise — TBA
+
+**PSMC**
+- [Exercise notebook](exercises/Day2/psmc_kenya2026.ipynb)
+- [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day2/psmc_kenya2026.html)
 
 ### Pre-dinner (4:30pm–6pm)
 
