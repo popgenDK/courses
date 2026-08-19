@@ -57,9 +57,11 @@
 
 **Coalescence**
 - [Exercise notebook](exercises/Day2/Coalescence_short_WoA.ipynb)
+- [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day2/Coalescence_short_WoA.html)
 
 **Site Frequency Spectrum (SFS)**
 - [Exercise notebook](exercises/Day2/SFS_WoA.ipynb)
+- [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day2/SFS_WoA.html)
 
 ### Afternoon (12pm–4pm)
 
