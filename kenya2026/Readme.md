@@ -29,7 +29,7 @@
 - [Slides](slides/Day1/Intro_workshop_consgen.pdf)
 
 **Bash / Linux / Jupyter Notebook introduction** — Nuno Martins  
-- [Slides](https://docs.google.com/presentation/d/1Jl27rwjuxbiCThAFuOdm0nZvu4eJV23jnqz_xZ3rCAk/edit?usp=sharing)
+- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day1/Intro_to_Linux_Day1.pdf)
 - [Exercise notebook](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/IntroToBash.ipynb)
 - [Linux cheatsheet](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/Linux_cheatsheet.pdf)
 - [Advanced Linux cheatsheet](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/linux-command-line_Advanced.pdf)
