@@ -17,7 +17,6 @@
 
 
 
-# Workshop: Introduction to Population Genomics in Wildlife Conservation
 
 <details>
 <summary><strong>Day 1: Workshop — August 19</strong></summary>
