@@ -1,7 +1,7 @@
 # Workshop: Introduction to population genomics in wildlife conservation
 
 <details>
-<summary><strong>Day 1: Daily Schedule</strong></summary>
+<summary><strong> Daily Schedule</strong></summary>
 
 ## Daily schedule
 9.00, morning lecture<br>
