@@ -33,6 +33,7 @@
 - [Exercise notebook](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/IntroToBash.ipynb)
 - [Linux cheatsheet](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/Linux_cheatsheet.pdf)
 - [Advanced Linux cheatsheet](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/linux-command-line_Advanced.pdf)
+- [Exercise HTML](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/IntroToBash.html)
 
 ### Afternoon (12pm–4pm)
 
