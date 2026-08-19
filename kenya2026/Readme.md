@@ -54,7 +54,8 @@
 ### Morning (9am–12pm)
 
 **Demography** — Harvi Pawar
-
+- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day2/Kenya2026_day2_Demography_HP.pptx)
+  
 **Coalescence**
 - [Exercise notebook](exercises/Day2/Coalescence_short_WoA.ipynb)
 - [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day2/Coalescence_short.html)
@@ -95,9 +96,10 @@
 ### Pre-dinner (4:30pm–6pm)
 
 **Gene flow** — Harvi Pawar  
-- Slides — TBA
+- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day3/Kenya2026_day3_GeneFlow_HP.pptx) 
 - [Exercise notebook](exercises/Day3/Geneflow&Dstat.ipynb)
-- Exercise HTML — TBA
+- [Exercise HTML](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Geneflow%26Dstat.html)
+
 
 </details>
 
