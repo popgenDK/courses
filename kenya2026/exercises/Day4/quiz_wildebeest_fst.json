@@ -1,0 +1,44 @@
+[
+  {
+    "question": "What does a larger pairwise FST generally indicate?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Greater allele-frequency differentiation between populations",
+        "correct": true,
+        "feedback": "Correct, with interpretation conditional on sampling and the marker set."
+      },
+      {
+        "answer": "Greater recent kinship between every individual",
+        "correct": false,
+        "feedback": "FST is a population differentiation statistic, not a pedigree coefficient."
+      },
+      {
+        "answer": "A physically larger genome",
+        "correct": false,
+        "feedback": "FST does not measure genome size."
+      }
+    ]
+  },
+  {
+    "question": "What does the PLINK --within file provide?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Population assignments for individuals",
+        "correct": true,
+        "feedback": "Correct. These labels define the groups used in pairwise FST comparisons."
+      },
+      {
+        "answer": "Ancestral alleles for every SNP",
+        "correct": false,
+        "feedback": "The cluster file does not contain ancestral states."
+      },
+      {
+        "answer": "A list of LD-pruned markers",
+        "correct": false,
+        "feedback": "Marker pruning uses a separate variant list."
+      }
+    ]
+  }
+]

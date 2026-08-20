@@ -1,0 +1,65 @@
+[
+  {
+    "question": "Which ADMIXTURE output has one row of ancestry proportions per individual?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The .Q file",
+        "correct": true,
+        "feedback": "Correct. Q rows follow the FAM individual order."
+      },
+      {
+        "answer": "The .P file",
+        "correct": false,
+        "feedback": "P contains ancestry-specific allele frequencies and follows BIM marker order."
+      },
+      {
+        "answer": "The .bed file",
+        "correct": false,
+        "feedback": "BED contains binary called genotypes."
+      }
+    ]
+  },
+  {
+    "question": "Why must Q/FAM and P/BIM row orders match exactly?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Rows are associated by position, so reordering assigns values to the wrong samples or SNPs",
+        "correct": true,
+        "feedback": "Correct. Equal row counts alone do not detect a permutation."
+      },
+      {
+        "answer": "The files must be alphabetically sorted",
+        "correct": false,
+        "feedback": "Alphabetical sorting is unnecessary; consistency is what matters."
+      },
+      {
+        "answer": "It changes the number of chromosomes",
+        "correct": false,
+        "feedback": "Row order does not determine ploidy or chromosome count."
+      }
+    ]
+  },
+  {
+    "question": "What is relateAdmix designed to account for?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Individual admixture and population structure during relatedness estimation",
+        "correct": true,
+        "feedback": "Correct. It helps distinguish ancestry-related sharing from recent pedigree sharing."
+      },
+      {
+        "answer": "Sequencing base quality recalibration",
+        "correct": false,
+        "feedback": "relateAdmix does not process sequencing reads."
+      },
+      {
+        "answer": "Windowed population FST",
+        "correct": false,
+        "feedback": "Windowed FST is calculated in the preceding realSFS exercise."
+      }
+    ]
+  }
+]

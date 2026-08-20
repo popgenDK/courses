@@ -1,0 +1,44 @@
+[
+  {
+    "question": "Why should one usually retain the higher-quality individual from each close-relative pair?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It reduces dependence while preserving the sample with more reliable data",
+        "correct": true,
+        "feedback": "Correct. Coverage, missingness, and metadata quality can guide the choice."
+      },
+      {
+        "answer": "It guarantees that population structure disappears",
+        "correct": false,
+        "feedback": "Removing relatives does not remove population structure."
+      },
+      {
+        "answer": "It increases the number of close-relative pairs",
+        "correct": false,
+        "feedback": "The purpose is to reduce close relatedness in the retained set."
+      }
+    ]
+  },
+  {
+    "question": "What can close relatives do to an ordinary PCA?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Create family-driven axes or distort population patterns",
+        "correct": true,
+        "feedback": "Correct. Recent pedigree sharing can influence the covariance structure."
+      },
+      {
+        "answer": "Change diploid samples into haploids",
+        "correct": false,
+        "feedback": "Relatedness does not alter ploidy."
+      },
+      {
+        "answer": "Force every eigenvalue to zero",
+        "correct": false,
+        "feedback": "PCA remains defined, but its interpretation can be distorted."
+      }
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "question": "What does a KING kinship coefficient above 0.177 and below 0.354 usually indicate?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A first-degree relationship",
+        "correct": true,
+        "feedback": "Correct. Parent–offspring and full siblings usually fall in this interval."
+      },
+      {
+        "answer": "An unrelated pair",
+        "correct": false,
+        "feedback": "Unrelated pairs should have kinship close to or below zero."
+      },
+      {
+        "answer": "A third-degree relationship",
+        "correct": false,
+        "feedback": "Third-degree relationships are expected around 0.044–0.088."
+      }
+    ]
+  },
+  {
+    "question": "Why are there very many pairwise comparisons?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The number of pairs grows approximately with the square of sample size",
+        "correct": true,
+        "feedback": "Correct. There are n(n−1)/2 distinct sample pairs."
+      },
+      {
+        "answer": "KING duplicates every SNP",
+        "correct": false,
+        "feedback": "Pair counts arise from combinations of individuals, not duplicated SNPs."
+      },
+      {
+        "answer": "Every population is treated as one individual",
+        "correct": false,
+        "feedback": "KING compares individual samples."
+      }
+    ]
+  }
+]

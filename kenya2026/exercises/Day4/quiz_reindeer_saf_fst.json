@@ -1,0 +1,65 @@
+[
+  {
+    "question": "Which program estimates the pairwise 2D-SFS in this exercise?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "winsfs",
+        "correct": true,
+        "feedback": "Correct. winsfs estimates the joint spectrum from the two SAF likelihood datasets."
+      },
+      {
+        "answer": "ADMIXTURE",
+        "correct": false,
+        "feedback": "ADMIXTURE estimates ancestry proportions."
+      },
+      {
+        "answer": "PLINK2 KING",
+        "correct": false,
+        "feedback": "KING estimates pairwise kinship from called genotypes."
+      }
+    ]
+  },
+  {
+    "question": "Why are three files required for every SAF prefix?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The index, likelihood data, and positions jointly form one SAF dataset",
+        "correct": true,
+        "feedback": "Correct. The .saf.idx refers to its .saf.gz and .saf.pos.gz companions."
+      },
+      {
+        "answer": "They represent three biological replicates",
+        "correct": false,
+        "feedback": "They are components of one population SAF, not replicates."
+      },
+      {
+        "answer": "Only the .arg file contains likelihoods",
+        "correct": false,
+        "feedback": "The .arg file records commands and is not one of the three SAF components."
+      }
+    ]
+  },
+  {
+    "question": "Why is the winsfs #SHAPE line removed before realSFS fst index?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "realSFS expects a numeric flattened SFS prior",
+        "correct": true,
+        "feedback": "Correct. The winsfs header is metadata rather than an SFS entry."
+      },
+      {
+        "answer": "It contains all genomic positions",
+        "correct": false,
+        "feedback": "Positions remain in the SAF position files."
+      },
+      {
+        "answer": "It folds the SAF files",
+        "correct": false,
+        "feedback": "Removing the header does not fold SAF likelihoods."
+      }
+    ]
+  }
+]

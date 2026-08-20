@@ -1,0 +1,44 @@
+[
+  {
+    "question": "Why is ancestry-adjusted LD pruning with PCAone useful before relatedness analysis in structured populations?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It reduces linked-marker redundancy while accounting for population structure",
+        "correct": true,
+        "feedback": "Correct. PCAone calculates LD from ancestry-adjusted residuals."
+      },
+      {
+        "answer": "It removes every rare allele from the data",
+        "correct": false,
+        "feedback": "The aim is LD pruning, not removal of every rare allele."
+      },
+      {
+        "answer": "It converts called genotypes into genotype likelihoods",
+        "correct": false,
+        "feedback": "PCAone does not reconstruct genotype likelihoods from hard calls."
+      }
+    ]
+  },
+  {
+    "question": "For which analysis should the LD-pruned SNP set be used here?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "KING relatedness estimation",
+        "correct": true,
+        "feedback": "Correct. Dense linked markers can otherwise overweight genomic regions."
+      },
+      {
+        "answer": "Population SFS estimation",
+        "correct": false,
+        "feedback": "SFS estimation should use the appropriate unpruned callable site set."
+      },
+      {
+        "answer": "Final genome-wide FST estimation",
+        "correct": false,
+        "feedback": "Random or LD-based pruning can alter the site representation used for FST."
+      }
+    ]
+  }
+]
