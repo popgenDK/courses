@@ -67,8 +67,8 @@
 
 ### Afternoon (12pm–4pm)
 
-**Research or PSMC** — Rasmus Heller  
-- Slides — TBA
+**PSMC** — Rasmus Heller  
+- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day2/PSMC_slides_August17.pdf)
 
 **PSMC**
 - [Exercise notebook](exercises/Day2/psmc_kenya2026.ipynb)
