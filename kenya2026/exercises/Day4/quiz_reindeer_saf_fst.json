@@ -61,5 +61,47 @@
         "feedback": "Removing the header does not fold SAF likelihoods."
       }
     ]
+  },
+  {
+    "question": "What happens when the two population SAF files contain different sets of positions?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "winsfs uses the intersection of positions present in both populations",
+        "correct": true,
+        "feedback": "Correct. Nonoverlapping sites do not contribute to that joint SFS."
+      },
+      {
+        "answer": "Missing positions are automatically treated as fixed differences",
+        "correct": false,
+        "feedback": "Nonoverlapping sites are ignored rather than treated as fixed differences."
+      },
+      {
+        "answer": "The smaller population is duplicated",
+        "correct": false,
+        "feedback": "Site intersection does not duplicate samples."
+      }
+    ]
+  },
+  {
+    "question": "Why should SAF files generated with ANGSD -fold 1 not be used for this pairwise FST workflow?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Folding each population separately loses the joint allele-orientation information needed for proper pairwise handling",
+        "correct": true,
+        "feedback": "Correct. Pairwise folding, if required, should start from full-dimensional SAFs."
+      },
+      {
+        "answer": "Folded SAF files contain no genomic positions",
+        "correct": false,
+        "feedback": "They still have positions, but their allele-count dimensions have already been collapsed."
+      },
+      {
+        "answer": "Folding increases every FST value to one",
+        "correct": false,
+        "feedback": "That is not the mathematical effect of folding."
+      }
+    ]
   }
 ]

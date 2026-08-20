@@ -61,5 +61,47 @@
         "feedback": "Windowed FST is calculated in the preceding realSFS exercise."
       }
     ]
+  },
+  {
+    "question": "What information is stored in ADMIXTURE's .P file?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Ancestral-population allele-frequency estimates for each marker",
+        "correct": true,
+        "feedback": "Correct. P rows follow the marker order in the BIM file."
+      },
+      {
+        "answer": "One pedigree relationship per individual pair",
+        "correct": false,
+        "feedback": "Pairwise relatedness is produced later by relateAdmix."
+      },
+      {
+        "answer": "Sequencing qualities for every read",
+        "correct": false,
+        "feedback": "ADMIXTURE operates on genotype data, not sequencing reads."
+      }
+    ]
+  },
+  {
+    "question": "What might explain high KING kinship but substantially lower relateAdmix relatedness?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Population structure or admixture-related allele sharing inflated the pooled-frequency estimate",
+        "correct": true,
+        "feedback": "Correct. relateAdmix conditions on individual ancestry, although data quality and model fit should also be checked."
+      },
+      {
+        "answer": "The samples necessarily come from different species",
+        "correct": false,
+        "feedback": "A disagreement between estimators does not establish a species difference."
+      },
+      {
+        "answer": "The reference genome became shorter during ADMIXTURE",
+        "correct": false,
+        "feedback": "Neither estimator changes the reference genome."
+      }
+    ]
   }
 ]

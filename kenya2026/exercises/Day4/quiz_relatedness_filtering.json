@@ -40,5 +40,68 @@
         "feedback": "PCA remains defined, but its interpretation can be distorted."
       }
     ]
+  },
+  {
+    "question": "What does PLINK2 --king-cutoff-table do in this exercise?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Selects a set of individuals without relationships above the specified kinship cutoff",
+        "correct": true,
+        "feedback": "Correct. PLINK2 removes samples to break close-relative connections."
+      },
+      {
+        "answer": "Deletes SNPs with high FST",
+        "correct": false,
+        "feedback": "It acts on related individuals, not differentiated SNPs."
+      },
+      {
+        "answer": "Re-estimates sequencing base qualities",
+        "correct": false,
+        "feedback": "PLINK2 is operating on called genotypes."
+      }
+    ]
+  },
+  {
+    "question": "Why compare PCA before and after close-relative filtering?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "To see whether recent family structure was influencing the population-level PCA pattern",
+        "correct": true,
+        "feedback": "Correct. Family sharing can create or distort principal-component patterns."
+      },
+      {
+        "answer": "To verify that the genome became longer",
+        "correct": false,
+        "feedback": "Sample filtering cannot change genome length."
+      },
+      {
+        "answer": "To force all populations to overlap",
+        "correct": false,
+        "feedback": "Real population structure may remain after relatives are removed."
+      }
+    ]
+  },
+  {
+    "question": "Which information can help choose which member of a related pair to retain?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Genotype missingness, sequencing coverage, metadata quality, and study design",
+        "correct": true,
+        "feedback": "Correct. Retention should be based on data quality and analytical priorities."
+      },
+      {
+        "answer": "Always remove the alphabetically first sample",
+        "correct": false,
+        "feedback": "Alphabetical order has no biological or quality justification."
+      },
+      {
+        "answer": "Always remove both individuals",
+        "correct": false,
+        "feedback": "Usually one high-quality representative can be retained."
+      }
+    ]
   }
 ]

@@ -40,5 +40,68 @@
         "feedback": "Random or LD-based pruning can alter the site representation used for FST."
       }
     ]
+  },
+  {
+    "question": "What does the PLINK --maf 0.05 filter do?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Removes variants with minor-allele frequency below 5%",
+        "correct": true,
+        "feedback": "Correct. This excludes very rare variants from this called-genotype relatedness exercise."
+      },
+      {
+        "answer": "Removes individuals with more than 5% missing data",
+        "correct": false,
+        "feedback": "Individual missingness is controlled with a sample-level filter such as --mind."
+      },
+      {
+        "answer": "Keeps only variants on chromosome 5",
+        "correct": false,
+        "feedback": "The value refers to allele frequency, not a chromosome."
+      }
+    ]
+  },
+  {
+    "question": "What does the PLINK --geno 0.05 filter remove?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Variants missing in more than 5% of individuals",
+        "correct": true,
+        "feedback": "Correct. --geno is a variant-level missingness filter."
+      },
+      {
+        "answer": "Individuals missing more than 5% of variants",
+        "correct": false,
+        "feedback": "That is controlled by --mind."
+      },
+      {
+        "answer": "Variants with frequency above 5%",
+        "correct": false,
+        "feedback": "Allele-frequency filtering is controlled by --maf or --max-maf."
+      }
+    ]
+  },
+  {
+    "question": "Why should LD pruning not be applied to the population SFS or final FST dataset?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It changes site representation and can bias population-frequency summaries",
+        "correct": true,
+        "feedback": "Correct. LD pruning preferentially retains a nonrepresentative subset of sites."
+      },
+      {
+        "answer": "SFS and FST require exactly two SNPs",
+        "correct": false,
+        "feedback": "Neither statistic has that requirement."
+      },
+      {
+        "answer": "LD pruning changes diploid genotypes into haploid genotypes",
+        "correct": false,
+        "feedback": "Pruning removes markers; it does not alter ploidy."
+      }
+    ]
   }
 ]

@@ -40,5 +40,68 @@
         "feedback": "Marker pruning uses a separate variant list."
       }
     ]
+  },
+  {
+    "question": "Why is Hartebeest removed from the displayed wildebeest comparison table?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It is an outgroup outside the focal wildebeest population comparisons",
+        "correct": true,
+        "feedback": "Correct. Removing it focuses the summary on the intended wildebeest comparisons."
+      },
+      {
+        "answer": "PLINK cannot calculate FST for any outgroup",
+        "correct": false,
+        "feedback": "PLINK can calculate the comparison; it is removed here for presentation and focus."
+      },
+      {
+        "answer": "It has no called genotypes",
+        "correct": false,
+        "feedback": "It was present in the original dataset and output."
+      }
+    ]
+  },
+  {
+    "question": "What does the FST heatmap contain?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The same pairwise FST estimates rearranged into a symmetric matrix",
+        "correct": true,
+        "feedback": "Correct. The matrix changes the presentation, not the underlying estimates."
+      },
+      {
+        "answer": "Pairwise KING kinship coefficients",
+        "correct": false,
+        "feedback": "KING kinship belongs to the relatedness analysis."
+      },
+      {
+        "answer": "Individual ADMIXTURE proportions",
+        "correct": false,
+        "feedback": "ADMIXTURE Q values are individual ancestry proportions, not pairwise FST."
+      }
+    ]
+  },
+  {
+    "question": "Why should the heatmap dendrogram not automatically be interpreted as a true phylogeny?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It is a clustering of the observed FST matrix and does not explicitly model evolutionary history",
+        "correct": true,
+        "feedback": "Correct. Migration, sampling, and the clustering method can affect its shape."
+      },
+      {
+        "answer": "Dendrograms never contain branch points",
+        "correct": false,
+        "feedback": "They do contain branches, but those branches are not automatically evolutionary lineages."
+      },
+      {
+        "answer": "FST values contain no population information",
+        "correct": false,
+        "feedback": "FST describes differentiation, but clustering it is not equivalent to phylogenetic inference."
+      }
+    ]
   }
 ]

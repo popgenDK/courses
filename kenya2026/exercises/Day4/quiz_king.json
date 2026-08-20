@@ -40,5 +40,68 @@
         "feedback": "KING compares individual samples."
       }
     ]
+  },
+  {
+    "question": "What does IBS0 describe for a pair of individuals?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Sites where the pair shares no allele identical by state",
+        "correct": true,
+        "feedback": "Correct. For example, opposite homozygotes contribute to IBS0."
+      },
+      {
+        "answer": "Sites where both individuals are heterozygous",
+        "correct": false,
+        "feedback": "HETHET is a separate pairwise count."
+      },
+      {
+        "answer": "The number of principal components",
+        "correct": false,
+        "feedback": "IBS0 is an allele-sharing measure, not a PCA setting."
+      }
+    ]
+  },
+  {
+    "question": "Why should a true parent–offspring pair have almost no IBS0 sites?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The offspring inherits one allele from the parent at each autosomal site",
+        "correct": true,
+        "feedback": "Correct. Opposite homozygotes should therefore be extremely uncommon apart from errors."
+      },
+      {
+        "answer": "Parent and offspring must have identical genotypes everywhere",
+        "correct": false,
+        "feedback": "They share one transmitted allele, not necessarily both alleles."
+      },
+      {
+        "answer": "KING removes all homozygous sites",
+        "correct": false,
+        "feedback": "KING evaluates the observed genotypes; it does not remove all homozygotes."
+      }
+    ]
+  },
+  {
+    "question": "Why can high-kinship values cluster within blocks of the heatmap?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Close relatives and shared population ancestry are often concentrated within populations",
+        "correct": true,
+        "feedback": "Correct. Ordering samples by population makes such blocks visible."
+      },
+      {
+        "answer": "The heatmap randomly copies values into squares",
+        "correct": false,
+        "feedback": "The blocks reflect the sample ordering and pairwise estimates."
+      },
+      {
+        "answer": "Every individual within a population is necessarily first-degree related",
+        "correct": false,
+        "feedback": "Population membership alone does not imply a close pedigree relationship."
+      }
+    ]
   }
 ]
