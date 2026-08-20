@@ -4,6 +4,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "Greater allele-frequency differentiation between populations",
         "correct": true,
         "feedback": "Correct, with interpretation conditional on sampling and the marker set."
@@ -24,6 +29,11 @@
     "question": "What does the PLINK --within file provide?",
     "type": "multiple_choice",
     "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
       {
         "answer": "Population assignments for individuals",
         "correct": true,
@@ -46,6 +56,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "It is an outgroup outside the focal wildebeest population comparisons",
         "correct": true,
         "feedback": "Correct. Removing it focuses the summary on the intended wildebeest comparisons."
@@ -66,6 +81,11 @@
     "question": "What does the FST heatmap contain?",
     "type": "multiple_choice",
     "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
       {
         "answer": "The same pairwise FST estimates rearranged into a symmetric matrix",
         "correct": true,
@@ -88,6 +108,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "It is a clustering of the observed FST matrix and does not explicitly model evolutionary history",
         "correct": true,
         "feedback": "Correct. Migration, sampling, and the clustering method can affect its shape."
@@ -108,6 +133,11 @@
     "question": "Which population pair is the most genetically differentiated in the wildebeest results?",
     "type": "multiple_choice",
     "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
       {
         "answer": "Black and Selous",
         "correct": true,
@@ -130,6 +160,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "Amboseli and Nairobi",
         "correct": true,
         "feedback": "Correct. Their Hudson FST is approximately 0.0009, the smallest value in the table."
@@ -151,6 +186,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "Geographically close populations tend to have lower FST in these examples",
         "correct": true,
         "feedback": "Correct. Amboseli–Nairobi has FST ≈ 0.0009 and Monduli–Serengeti has FST ≈ 0.0246. This supports a geographic pattern, although it is not a universal rule."
@@ -171,6 +211,11 @@
     "question": "Why might geographically close wildebeest populations have lower FST?",
     "type": "multiple_choice",
     "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
       {
         "answer": "They may exchange more migrants and may share more recent ancestry",
         "correct": true,

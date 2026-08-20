@@ -4,6 +4,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "The .Q file",
         "correct": true,
         "feedback": "Correct. Q rows follow the FAM individual order."
@@ -24,6 +29,11 @@
     "question": "Why must Q/FAM and P/BIM row orders match exactly?",
     "type": "multiple_choice",
     "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
       {
         "answer": "Rows are associated by position, so reordering assigns values to the wrong samples or SNPs",
         "correct": true,
@@ -46,6 +56,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "Individual admixture and population structure during relatedness estimation",
         "correct": true,
         "feedback": "Correct. It helps distinguish ancestry-related sharing from recent pedigree sharing."
@@ -67,6 +82,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "Ancestral-population allele-frequency estimates for each marker",
         "correct": true,
         "feedback": "Correct. P rows follow the marker order in the BIM file."
@@ -87,6 +107,11 @@
     "question": "What might explain high KING kinship but substantially lower relateAdmix relatedness?",
     "type": "multiple_choice",
     "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
       {
         "answer": "Population structure or admixture-related allele sharing inflated the pooled-frequency estimate",
         "correct": true,

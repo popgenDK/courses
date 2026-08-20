@@ -4,6 +4,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "It reduces dependence while preserving the sample with more reliable data",
         "correct": true,
         "feedback": "Correct. Coverage, missingness, and metadata quality can guide the choice."
@@ -24,6 +29,11 @@
     "question": "What can close relatives do to an ordinary PCA?",
     "type": "multiple_choice",
     "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
       {
         "answer": "Create family-driven axes or distort population patterns",
         "correct": true,
@@ -46,6 +56,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "Selects a set of individuals without relationships above the specified kinship cutoff",
         "correct": true,
         "feedback": "Correct. PLINK2 removes samples to break close-relative connections."
@@ -67,6 +82,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "To see whether recent family structure was influencing the population-level PCA pattern",
         "correct": true,
         "feedback": "Correct. Family sharing can create or distort principal-component patterns."
@@ -87,6 +107,11 @@
     "question": "Which information can help choose which member of a related pair to retain?",
     "type": "multiple_choice",
     "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
       {
         "answer": "Genotype missingness, sequencing coverage, metadata quality, and study design",
         "correct": true,

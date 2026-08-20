@@ -4,6 +4,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "winsfs",
         "correct": true,
         "feedback": "Correct. winsfs estimates the joint spectrum from the two SAF likelihood datasets."
@@ -24,6 +29,11 @@
     "question": "Why are three files required for every SAF prefix?",
     "type": "multiple_choice",
     "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
       {
         "answer": "The index, likelihood data, and positions jointly form one SAF dataset",
         "correct": true,
@@ -46,6 +56,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "realSFS expects a numeric flattened SFS prior",
         "correct": true,
         "feedback": "Correct. The winsfs header is metadata rather than an SFS entry."
@@ -67,6 +82,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "winsfs uses the intersection of positions present in both populations",
         "correct": true,
         "feedback": "Correct. Nonoverlapping sites do not contribute to that joint SFS."
@@ -87,6 +107,11 @@
     "question": "Why should SAF files generated with ANGSD -fold 1 not be used for this pairwise FST workflow?",
     "type": "multiple_choice",
     "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
       {
         "answer": "Folding each population separately loses the joint allele-orientation information needed for proper pairwise handling",
         "correct": true,

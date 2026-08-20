@@ -4,6 +4,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "A first-degree relationship",
         "correct": true,
         "feedback": "Correct. Parent–offspring and full siblings usually fall in this interval."
@@ -24,6 +29,11 @@
     "question": "Why are there very many pairwise comparisons?",
     "type": "multiple_choice",
     "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
       {
         "answer": "The number of pairs grows approximately with the square of sample size",
         "correct": true,
@@ -46,6 +56,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "Sites where the pair shares no allele identical by state",
         "correct": true,
         "feedback": "Correct. For example, opposite homozygotes contribute to IBS0."
@@ -67,6 +82,11 @@
     "type": "multiple_choice",
     "answers": [
       {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
         "answer": "The offspring inherits one allele from the parent at each autosomal site",
         "correct": true,
         "feedback": "Correct. Opposite homozygotes should therefore be extremely uncommon apart from errors."
@@ -87,6 +107,11 @@
     "question": "Why can high-kinship values cluster within blocks of the heatmap?",
     "type": "multiple_choice",
     "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
       {
         "answer": "Close relatives and shared population ancestry are often concentrated within populations",
         "correct": true,
