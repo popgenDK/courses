@@ -128,5 +128,83 @@
         "feedback": "Neither estimator changes the reference genome."
       }
     ]
+  },
+  {
+    "question": "Why is LD pruning useful before running relateAdmix?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "It reduces the overrepresentation of correlated markers in ancestry and relatedness estimates",
+        "correct": true,
+        "feedback": "Correct. Dense groups of linked SNPs otherwise contribute partly redundant information."
+      },
+      {
+        "answer": "It converts genotype calls into sequencing reads",
+        "correct": false,
+        "feedback": "LD pruning selects markers; it does not create or modify sequencing reads."
+      },
+      {
+        "answer": "It guarantees that every retained SNP has the same allele frequency",
+        "correct": false,
+        "feedback": "Pruning targets correlations between markers, not equal allele frequencies."
+      }
+    ]
+  },
+  {
+    "question": "What do dark-red off-diagonal cells in the relateAdmix heatmap represent?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "Pairs with relatively high ancestry-adjusted kinship",
+        "correct": true,
+        "feedback": "Correct. Use the colour legend to translate the shade into an approximate kinship value."
+      },
+      {
+        "answer": "Individuals with the most missing population labels",
+        "correct": false,
+        "feedback": "Cell colour encodes pairwise kinship, not missing population labels."
+      },
+      {
+        "answer": "Markers with the highest ancestral allele frequency",
+        "correct": false,
+        "feedback": "Rows and columns represent individuals rather than genetic markers."
+      }
+    ]
+  },
+  {
+    "question": "Why should results be checked when the chosen ADMIXTURE K fits the ancestry structure poorly?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "Incorrect ancestry proportions or ancestral allele frequencies can affect the adjusted relatedness estimates",
+        "correct": true,
+        "feedback": "Correct. relateAdmix relies on the Q and P estimates, so ancestry-model fit matters."
+      },
+      {
+        "answer": "K determines how many chromosomes are present in each reindeer",
+        "correct": false,
+        "feedback": "K is the number of ancestry components in the model, not the chromosome count."
+      },
+      {
+        "answer": "A poorly fitting K automatically deletes related individuals",
+        "correct": false,
+        "feedback": "ADMIXTURE does not remove samples, and model misspecification is not a relatedness filter."
+      }
+    ]
   }
 ]
