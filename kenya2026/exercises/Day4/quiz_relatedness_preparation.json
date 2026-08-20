@@ -63,27 +63,6 @@
     ]
   },
   {
-    "question": "What does the PLINK --geno 0.05 filter remove?",
-    "type": "multiple_choice",
-    "answers": [
-      {
-        "answer": "Variants missing in more than 5% of individuals",
-        "correct": true,
-        "feedback": "Correct. --geno is a variant-level missingness filter."
-      },
-      {
-        "answer": "Individuals missing more than 5% of variants",
-        "correct": false,
-        "feedback": "That is controlled by --mind."
-      },
-      {
-        "answer": "Variants with frequency above 5%",
-        "correct": false,
-        "feedback": "Allele-frequency filtering is controlled by --maf or --max-maf."
-      }
-    ]
-  },
-  {
     "question": "Why should LD pruning not be applied to the population SFS or final FST dataset?",
     "type": "multiple_choice",
     "answers": [
