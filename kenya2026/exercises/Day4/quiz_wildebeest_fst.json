@@ -103,5 +103,68 @@
         "feedback": "FST describes differentiation, but clustering it is not equivalent to phylogenetic inference."
       }
     ]
+  },
+  {
+    "question": "Which population pair is the most genetically differentiated in the wildebeest results?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Black and Selous",
+        "correct": true,
+        "feedback": "Correct. This pair has the largest observed Hudson FST, approximately 0.5395."
+      },
+      {
+        "answer": "Amboseli and Nairobi",
+        "correct": false,
+        "feedback": "This is the least differentiated pair, with FST close to zero."
+      },
+      {
+        "answer": "Monduli and Serengeti",
+        "correct": false,
+        "feedback": "These populations are relatively similar, with FST approximately 0.0246."
+      }
+    ]
+  },
+  {
+    "question": "Which population pair is the most genetically similar in the wildebeest results?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Amboseli and Nairobi",
+        "correct": true,
+        "feedback": "Correct. Their Hudson FST is approximately 0.0009, the smallest value in the table."
+      },
+      {
+        "answer": "Black and Selous",
+        "correct": false,
+        "feedback": "This pair has the largest FST and is the most differentiated."
+      },
+      {
+        "answer": "Ethosha and Luangwa",
+        "correct": false,
+        "feedback": "Their FST is approximately 0.194, much larger than the minimum."
+      }
+    ]
+  },
+  {
+    "question": "If two cells in the FST heatmap have very similar colours, what is the best way to determine which pair has the larger FST?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Check the numerical FST table or matrix",
+        "correct": true,
+        "feedback": "Correct. The numerical values provide a reliable comparison when colour differences are subtle."
+      },
+      {
+        "answer": "Assume the cell closer to the top is larger",
+        "correct": false,
+        "feedback": "Cell position reflects population ordering, not FST magnitude."
+      },
+      {
+        "answer": "Treat the two FST values as exactly equal",
+        "correct": false,
+        "feedback": "Similar colours can represent distinct numerical values."
+      }
+    ]
   }
 ]
