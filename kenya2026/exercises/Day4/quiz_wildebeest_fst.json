@@ -147,23 +147,44 @@
     ]
   },
   {
-    "question": "If two cells in the FST heatmap have very similar colours, what is the best way to determine which pair has the larger FST?",
+    "question": "Considering the sampling map and the FST table, what general pattern is illustrated by pairs such as Amboseli–Nairobi and Monduli–Serengeti?",
     "type": "multiple_choice",
     "answers": [
       {
-        "answer": "Check the numerical FST table or matrix",
+        "answer": "Geographically close populations tend to have lower FST in these examples",
         "correct": true,
-        "feedback": "Correct. The numerical values provide a reliable comparison when colour differences are subtle."
+        "feedback": "Correct. Amboseli–Nairobi has FST ≈ 0.0009 and Monduli–Serengeti has FST ≈ 0.0246. This supports a geographic pattern, although it is not a universal rule."
       },
       {
-        "answer": "Assume the cell closer to the top is larger",
+        "answer": "Geographically close populations always have the highest FST",
         "correct": false,
-        "feedback": "Cell position reflects population ordering, not FST magnitude."
+        "feedback": "These nearby pairs have two of the lowest FST values in the table."
       },
       {
-        "answer": "Treat the two FST values as exactly equal",
+        "answer": "Geography and genetic differentiation must be completely unrelated",
         "correct": false,
-        "feedback": "Similar colours can represent distinct numerical values."
+        "feedback": "The observed nearby pairs suggest geography may matter, although other historical and ecological factors also influence FST."
+      }
+    ]
+  },
+  {
+    "question": "Why might geographically close wildebeest populations have lower FST?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "They may exchange more migrants and may share more recent ancestry",
+        "correct": true,
+        "feedback": "Correct. Gene flow and recent shared history can keep allele frequencies similar and reduce differentiation."
+      },
+      {
+        "answer": "Their genomes become physically shorter when populations are nearby",
+        "correct": false,
+        "feedback": "Geographic proximity does not alter genome length."
+      },
+      {
+        "answer": "FST is calculated directly from kilometres between sampling sites",
+        "correct": false,
+        "feedback": "FST is calculated from genetic variation; geographic distance may influence it biologically but is not part of the formula."
       }
     ]
   }
