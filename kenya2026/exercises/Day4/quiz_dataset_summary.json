@@ -49,17 +49,27 @@
   },
   {
     "question": "Which population has the highest number of individuals?",
-    "type": "string",
+    "type": "multiple_choice",
     "answers": [
       {
         "answer": "Kangerlussuaq-Sisimiut",
         "correct": true,
         "feedback": "Correct. It has 21 individuals.",
-        "match_case": false
       },
       {
-        "type": "default",
-        "feedback": "Not quite. Look for the largest value in the population breakdown."
+        "answer": "Akia/Maniitsoq",
+        "correct": false,
+        "feedback": "Not quite. Akia/Maniitsoq has 15 individuals."
+      },
+      {
+        "answer": "South_Greenland",
+        "correct": false,
+        "feedback": "Not quite. South_Greenland has 14 individuals."
+      },
+      {
+        "answer": "Neria",
+        "correct": false,
+        "feedback": "Not quite. Neria has 13 individuals."
       }
     ]
   }
