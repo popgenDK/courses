@@ -87,7 +87,7 @@
 ### Morning (9am–12pm)
 
 **Admixture** — Ida Moltke  
-- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day3/TBAKenya2026_day3_Admixture.pdf).
+- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day3/Kenya2026_day3_Admixture.pdf)
 - [Exercise notebook](exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb)
 - [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.html)
 
