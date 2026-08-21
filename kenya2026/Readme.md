@@ -88,7 +88,8 @@
 
 **Admixture** — Ida Moltke  
 - Slides — TBA
-- Exercise — TBA
+- [Exercise notebook](exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb)
+- [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.html)
 
 ### Afternoon (12pm–4pm)
 
