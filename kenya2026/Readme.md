@@ -126,7 +126,7 @@
 ### Afternoon (14pm–4pm)
 
 **Selection and genome scans** — Rasmus Heller, Thomas Bøggild  
-- Slides — TBA
+- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day4/Selection_Kenya2026.pdf)
 - [Exercise notebook](exercises/Day4/SelectionScans_22nd.ipynb)
 - [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day4/SelectionScans_22nd.html)
 
