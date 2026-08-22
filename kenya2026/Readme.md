@@ -114,7 +114,9 @@
 
 **FST** — Nuno Martins, Ida Moltke  
 - [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day4/Relatness_Fst.pdf) 
-- Exercise — TBA
+- [Exercise notebook](exercises/Day4/Related&Fst.ipynb)
+- [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day4/Related&Fst.html)
+
 
 **PCA** — Anders Albrechtsen  
 - [Slides](https://docs.google.com/presentation/d/1zTcsGhOQrbEGcMMY5i8CsT-XeLFSl5OnCuSXqsV1ufo/edit?usp=sharing) — download as PDF via *File → Download*
@@ -128,11 +130,13 @@
 - Exercise — TBA
 
 ### Pre-dinner (4:30pm–6pm)
-</details>
 
 **Relatednes** — Nuno Martins, Ida Moltke  
 - Slides — TBA
 - Exercise — TBA
+
+
+</details>
 
 
 <details>
@@ -159,3 +163,24 @@
 
 # data availability 
 After the course a link to the data will be found here
+
+
+# Workshop: Introduction to population genomics in wildlife conservation
+
+<details>
+<summary><strong> Daily Schedule</strong></summary>
+
+## Daily schedule
+9.00, morning lecture<br>
+10.00, morning tea<br>
+10.30, morning exercises<br>
+12.00, afternoon lecture<br>
+13.00, Lunch<br>
+14.00, afternoon exercises<br>
+16.00, afternoon tea<br>
+16.30, pre dinner session
+
+</details>
+
+
+
