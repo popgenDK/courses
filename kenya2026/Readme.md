@@ -127,7 +127,8 @@
 
 **Selection and genome scans** — Rasmus Heller, Thomas Bøggild  
 - Slides — TBA
-- Exercise — TBA
+- [Exercise notebook](exercises/Day4/SelectionScans_22nd.ipynb)
+- [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day4/SelectionScans_22nd.html)
 
 ### Pre-dinner (4:30pm–6pm)
 
