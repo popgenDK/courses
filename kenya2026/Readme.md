@@ -76,7 +76,9 @@
 
 ### Pre-dinner (4:30pm–6pm)
 
-**Excursion**
+
+**Talk by Joseph Ogutu**
+
 
 </details>
 
@@ -93,17 +95,13 @@
 
 ### Afternoon (12pm–4pm)
 
-**PCA** — Anders Albrechtsen  
-- [Slides](https://docs.google.com/presentation/d/1zTcsGhOQrbEGcMMY5i8CsT-XeLFSl5OnCuSXqsV1ufo/edit?usp=sharing) — download as PDF via *File → Download*
-- [Exercise notebook](exercises/Day3/Kenya2026_PCA.ipynb)
-- [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day3/Kenya2026_PCA.html)
-
-### Pre-dinner (4:30pm–6pm)
-
 **Gene flow** — Harvi Pawar  
 - [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day3/Kenya2026_day3_GeneFlow_HP.pptx) 
 - [Exercise notebook](exercises/Day3/Geneflow&Dstat.ipynb)
 - [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Geneflow%26Dstat.html)
+### Pre-dinner (4:30pm–6pm)
+**Excursion**
+
 
 
 </details>
@@ -114,21 +112,27 @@
 
 ### Morning (9am–12pm)
 
-**Relatedness and FST** — Nuno Martins, Ida Moltke  
+**FST** — Nuno Martins, Ida Moltke  
 - Slides — TBA
 - Exercise — TBA
 
-### Afternoon (12pm–4pm)
+**PCA** — Anders Albrechtsen  
+- [Slides](https://docs.google.com/presentation/d/1zTcsGhOQrbEGcMMY5i8CsT-XeLFSl5OnCuSXqsV1ufo/edit?usp=sharing) — download as PDF via *File → Download*
+- [Exercise notebook](exercises/Day3/Kenya2026_PCA.ipynb)
+- [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day3/Kenya2026_PCA.html)
+
+### Afternoon (14pm–4pm)
 
 **Selection and genome scans** — Rasmus Heller, Thomas Bøggild  
 - Slides — TBA
 - Exercise — TBA
 
 ### Pre-dinner (4:30pm–6pm)
-
-**Talk by Joseph Ogutu**
-
 </details>
+
+**Relatednes** — Nuno Martins, Ida Moltke  
+- Slides — TBA
+- Exercise — TBA
 
 
 <details>
