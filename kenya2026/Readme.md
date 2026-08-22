@@ -113,7 +113,7 @@
 ### Morning (9am–12pm)
 
 **FST** — Nuno Martins, Ida Moltke  
-- Slides — TBA
+- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day4/Relatness_Fst.pdf) 
 - Exercise — TBA
 
 **PCA** — Anders Albrechtsen  
