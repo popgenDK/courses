@@ -19,7 +19,7 @@
 
 
 <details>
-<summary><strong>Day 1: Workshop — August 19</strong></summary>
+<summary><strong>Day 1: August 19</strong></summary>
 
 ### Morning (9am–12pm)
 
@@ -50,7 +50,7 @@
 
 
 <details>
-<summary><strong>Day 2: Workshop — August 20</strong></summary>
+<summary><strong>Day 2: August 20</strong></summary>
 
 ### Morning (9am–12pm)
 
@@ -84,7 +84,7 @@
 
 
 <details>
-<summary><strong>Day 3: Workshop — August 21</strong></summary>
+<summary><strong>Day 3: August 21</strong></summary>
 
 ### Morning (9am–12pm)
 
@@ -108,7 +108,7 @@
 
 
 <details>
-<summary><strong>Day 4: Workshop — August 22</strong></summary>
+<summary><strong>Day 4: August 22</strong></summary>
 
 ### Morning (9am–12pm)
 
@@ -140,7 +140,7 @@ continue with selection scan
 
 
 <details>
-<summary><strong>Day 5: Workshop — August 23</strong></summary>
+<summary><strong>Day 5: August 23</strong></summary>
 
 ### Morning (9am–12pm)
 **Relatednes** — Nuno Martins, Ida Moltke  
