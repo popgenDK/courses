@@ -160,8 +160,11 @@ continue with selection scan
 **Research talks: Conservation genomics in Greenland** — Ida Moltke
 
 ### Pre-dinner (4:30pm–6pm)
+**Lab tour** 
 
-**Farewell party**
+
+
+**Farewell party 5.30pm**
 
 </details>
 
