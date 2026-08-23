@@ -132,10 +132,9 @@
 
 ### Pre-dinner (4:30pm–6pm)
 
-**Relatednes** — Nuno Martins, Ida Moltke  
-- Slides — TBA
-- Exercise — TBA
+continue with selection scan
 
+**Talk by Paul Kagame** — Africa biogenome project  
 
 </details>
 
@@ -144,6 +143,11 @@
 <summary><strong>Day 5: Workshop — August 23</strong></summary>
 
 ### Morning (9am–12pm)
+**Relatednes** — Nuno Martins, Ida Moltke  
+- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day4/Relatness_Fst.pdf) 
+- [Exercise notebook](exercises/Day4/Related&Fst.ipynb)
+- [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day4/Related&Fst.html)
+
 
 **Heterozygosity and ROH** — Thomas Bøggild  
 - Slides — TBA
