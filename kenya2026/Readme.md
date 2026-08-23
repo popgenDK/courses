@@ -113,8 +113,8 @@
 ### Morning (9am–12pm)
 
 **FST** — Nuno Martins, Ida Moltke  
-- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day4/Relatness_Fst.pdf) 
-- [Exercise notebook](exercises/Day4/Related&Fst.ipynb)
+- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day4/Fst.pdf) 
+- [Exercise notebook](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/Fst_Kenya2026.ipynb)
 - [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day4/Related&Fst.html)
 
 
@@ -144,8 +144,8 @@ continue with selection scan
 
 ### Morning (9am–12pm)
 **Relatednes** — Nuno Martins, Ida Moltke  
-- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day4/Relatness_Fst.pdf) 
-- [Exercise notebook](exercises/Day4/Related&Fst.ipynb)
+- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day5/Relatedness.pdf) 
+- [Exercise notebook](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day5/Related.ipynb)
 - [Exercise HTML](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/kenya2026/exercises/Day4/Related&Fst.html)
 
 
