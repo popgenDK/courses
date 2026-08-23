@@ -150,8 +150,9 @@ continue with selection scan
 
 
 **Heterozygosity and ROH** — Thomas Bøggild  
-- Slides — TBA
-- Exercise — TBA
+- [Slides](https://github.com/popgenDK/courses/blob/main/kenya2026/slides/Day5/genetic_diversity_heterozygosity_roh_slides.pdf)
+- [Exercise](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day5/Day5_GeneticDiversity.ipynb)
+- [Exercise HTML](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day5/Day5_GeneticDiversity.html)
 
 ### Afternoon (12pm–4pm)
 
