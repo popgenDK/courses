@@ -183,7 +183,7 @@ continue with selection scan
 
 
 # data availability 
-After the course a link to the data will be found here
+Data for individual notebooks can be downloaded from the [post-course data page](https://popgen.dk/albrecht/course/kenya2026/data/).
 
 
 # Workshop: Introduction to population genomics in wildlife conservation
