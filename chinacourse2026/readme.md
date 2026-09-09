@@ -4,21 +4,18 @@
 
 ## Tuesday
 - Morning: login to the notebook
-  - [NGS inference notebook](Day2_NGS_Inference.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day2_NGS_Inference.html))
+  - [NGS inference notebook](Day2_Morning_NGSintro_human.ipynb) Download and upload to notebook
 - Afternoon: login to the notebook
-  - [NGS Imputation notebook](Day2_Imputation.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day2_Imputation.html))
+  - [NGS Imputation notebook](Day2_Afternoon_Genotype_Imputation.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day2_Afternoon_Genotype_Imputation.html))
 
 ## Thursday
 - Morning: login to the notebook
-  - [NGS admixture](Day4_Morning_Admixture.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_Morning_Admixture.html))
-    - [NGS admixture bonus](Day4_Admixture_structure_bonus.ipynb) exercise if you have finished the main one ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_Admixture_structure_bonus.html))
+  - [NGS admixture](Day4_admix_eval_LAI.ipynb) Download and upload to notebook
 - Afternoon: login to the notebook
-    - [PCA](Day4_PCA_1.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/chinacourse2026/Day4_Afternoon_PCA_1.html)))
-    - [PCA bonus](Day4_PCA_2.Call_genotype.ipynb) exercise if you have finished the main one ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_PCA_2.Call_genotype.html))
-    - 
+    - [PCA](Day4_Afternoon_PCA_1.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_Afternoon_PCA_1.html))
 ## Friday
 - Morning: login to the notebook
-  - [Heritability_and_PGS](Day5_Heritability_and_PGS.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day5_Heritability_and_PGS.html))
+  - [Heritability_and_PGS](Day5_Morning_heribilty_and_ldscore.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day5_Morning_heribilty_and_ldscore.html))
 
 ## Data
 each notebook will use a data set found [here](https://popgen.dk/albrecht/open/chinacourse2026/). 
