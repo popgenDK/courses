@@ -4,7 +4,7 @@
 
 ## Monday
 - login to the notebook from . Login and passwords will be given.
-  - [EM note book](exercises/advBinf_EM_algorithm.ipynb) Download and upload to notebook
+  - [EM note book](exercises/advBinf_EM_algorithm.ipynb) Download and upload to notebook ([html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_EM_algorithm.html))
 ## Wednesday: 
   - [Haplotype frequency notebook](exercises/haplotype_frequencies.ipynb) Download and upload to notebook
   - - [Solution](exercises/solution_haplotype_frequencies.ipynb) Download and upload to notebook
