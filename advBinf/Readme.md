@@ -16,7 +16,8 @@
 ## Admixture Monday morning
 - : login to the notebook
   - [NGS admixture](exercises/advBinf_admixture.ipynb) Download and upload to notebook ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture.html))
-    - [NGS admixture bonus](exercises/advBinf_admixture_bonus.ipynb) Download and upload to notebook. Exercise if you have finished the main one ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture_bonus.html))
+    - [Bonus 1 - NGS admixture bonus](exercises/advBinf_admixture_bonus.ipynb) Download and upload to notebook. Exercise if you have finished the main one ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture_bonus.html))
+    - [Bonus 2 - the admixture model notebook](exercises/advBinf_admixture_EM.ipynb) Download and upload to notebook. The EM algorithm behind the admixture model: implement the E- and M-step and estimate Q and F yourself
 
 ## PCA Wednesday morning 
 login to the notebook
