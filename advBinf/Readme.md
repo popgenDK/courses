@@ -18,11 +18,11 @@
   - [NGS admixture](exercises/advBinf_admixture.ipynb) Download and upload to notebook ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture.html))
     - [NGS admixture bonus](exercises/advBinf_admixture_bonus.ipynb) Download and upload to notebook. Exercise if you have finished the main one ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture_bonus.html))
 
-## SFS Wednesday afternoon
-- : login to the notebook
-  - [SFS from low depth](exercises/advBinf_SFSmodel.ipynb) Download and upload to notebook ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_SFSmodel.html))
-
-## PCA Wednesday afternoon 
+## PCA Wednesday morning 
 login to the notebook
   - [PCA](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_1.ipynb) Download and upload to notebook ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_1.html))
     - [PCA bonus](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb) exercise if you have finished the main one ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_2.Call_genotype.html))
+
+## SFS Wednesday afternoon
+- : login to the notebook
+  - [SFS from low depth](exercises/advBinf_SFSmodel.ipynb) Download and upload to notebook ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_SFSmodel.html))
