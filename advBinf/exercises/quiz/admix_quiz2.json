@@ -1,0 +1,65 @@
+[
+    {
+        "question": "What does a single row of the qopt file contain?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "One individual's ancestry proportions from each of the K assumed ancestral populations - the row sums to 1",
+                "correct": true,
+                "feedback": "Correct. One row per individual, in the same order as the individuals in the beagle file (and in all.files)."
+            },
+            {
+                "answer": "One site's allele frequency in each of the K ancestral populations",
+                "correct": false,
+                "feedback": "That is the fopt file, which has one row per site."
+            },
+            {
+                "answer": "The probability that the individual belongs to each of the K populations",
+                "correct": false,
+                "feedback": "Careful - this is a tempting but wrong reading. The individual is not assigned to one population with some probability; its genome is modelled as a mixture, and the numbers are the proportions of that mixture."
+            }
+        ]
+    },
+    {
+        "question": "What are we assuming when we run NGSadmix with K=3?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "That the allele frequencies of every sample can be described as a mixture of 3 ancestral populations",
+                "correct": true,
+                "feedback": "Correct. Both the K sets of ancestral allele frequencies (fopt) and the mixture proportions per individual (qopt) are estimated from the data."
+            },
+            {
+                "answer": "That the samples come from exactly 3 sampling locations",
+                "correct": false,
+                "feedback": "No. K has nothing to do with how many places we sampled - here we have 5 populations and are running K=3."
+            },
+            {
+                "answer": "That we run the optimisation 3 times",
+                "correct": false,
+                "feedback": "No, that is the seed/number of runs, which is a separate matter."
+            }
+        ]
+    },
+    {
+        "question": "This first analysis used only a small slice of the genome. What do you expect that to do to the estimates?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "They get noisy, so individuals with no real admixture can still show small amounts of the other components",
+                "correct": true,
+                "feedback": "Correct. This is exactly what you should look for in the plot, and it is why the more realistic run later uses 100 000 sites."
+            },
+            {
+                "answer": "Nothing - the estimator is unbiased, so few sites is just as good",
+                "correct": false,
+                "feedback": "Unbiased is not the same as precise. With few sites the variance is large."
+            },
+            {
+                "answer": "All individuals will be estimated as 1/3, 1/3, 1/3",
+                "correct": false,
+                "feedback": "No - there is still plenty of signal to separate the continental groups, it is the small proportions that become unreliable."
+            }
+        ]
+    }
+]

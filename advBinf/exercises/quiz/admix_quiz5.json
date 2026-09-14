@@ -1,0 +1,65 @@
+[
+    {
+        "question": "How is fastNGSadmix different from NGSadmix?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "It estimates the admixture proportions of a single sample against a reference panel of known allele frequencies, instead of estimating the ancestral frequencies from the samples themselves",
+                "correct": true,
+                "feedback": "Correct. That is why it is fast, and why it can work with one sample - but also why the answer depends entirely on the panel."
+            },
+            {
+                "answer": "It is NGSadmix run with more threads",
+                "correct": false,
+                "feedback": "No - it is a different model with a different input."
+            },
+            {
+                "answer": "It uses called genotypes instead of genotype likelihoods",
+                "correct": false,
+                "feedback": "No, the sample is still given as genotype likelihoods in beagle format."
+            }
+        ]
+    },
+    {
+        "question": "When French is removed from the reference panel, sample1 is no longer estimated as French. Why?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The ancestry can only be expressed with the populations that are in the panel, so it is distributed over the closest ones that remain",
+                "correct": true,
+                "feedback": "Correct, and this is the main limitation to keep in mind: fastNGSadmix can never tell you about an ancestry that is not represented in the panel."
+            },
+            {
+                "answer": "Removing a population changes the genotype likelihoods of the sample",
+                "correct": false,
+                "feedback": "No - the sample's data are untouched. Only the model it is compared against changed."
+            },
+            {
+                "answer": "The analysis fails and returns random proportions",
+                "correct": false,
+                "feedback": "No, it returns a perfectly well defined maximum likelihood estimate - just under a model that lacks the right source population."
+            }
+        ]
+    },
+    {
+        "question": "What do the bootstrap confidence intervals for sample2 and sample3 tell you?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "How much the estimate would change if we had sequenced a different set of sites - so how much of the estimate is driven by the small number of overlapping sites",
+                "correct": true,
+                "feedback": "Correct. The sample with few overlapping sites gets wide intervals, and you should not read much into its point estimate."
+            },
+            {
+                "answer": "Whether the reference panel contains the right populations",
+                "correct": false,
+                "feedback": "No - the bootstrap resamples sites, so it says nothing about a missing source population. A wrong panel can give narrow intervals around a wrong answer."
+            },
+            {
+                "answer": "Whether the optimisation converged",
+                "correct": false,
+                "feedback": "That is what the -conv option is for."
+            }
+        ]
+    }
+]

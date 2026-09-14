@@ -1,0 +1,65 @@
+[
+    {
+        "question": "Why do we run NGSadmix 20 times with 20 different seeds?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The likelihood surface can have local optima, so a single run started from a random guess may stop at a solution that is not the best one",
+                "correct": true,
+                "feedback": "Correct. The seed decides the random starting point, and different starting points can end in different places."
+            },
+            {
+                "answer": "To get 20 independent estimates that we can average",
+                "correct": false,
+                "feedback": "No - and averaging would not even be possible: the K clusters come out in an arbitrary order, so column 1 of one run is not the same ancestral population as column 1 of another."
+            },
+            {
+                "answer": "Because NGSadmix is stochastic and gives a different answer every time no matter what",
+                "correct": false,
+                "feedback": "Not quite. With the same seed you get the same answer, and if the optimisation converges well all seeds give essentially the same answer."
+            }
+        ]
+    },
+    {
+        "question": "You have the 20 log likelihoods in front of you. Which run do you use?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The one with the highest log likelihood",
+                "correct": true,
+                "feedback": "Correct - that is our best shot at the maximum likelihood estimate."
+            },
+            {
+                "answer": "The one with the lowest log likelihood",
+                "correct": false,
+                "feedback": "No - we are maximising the likelihood. Remember these are negative numbers, so 'highest' means closest to zero."
+            },
+            {
+                "answer": "The one whose plot looks most like what you expected",
+                "correct": false,
+                "feedback": "Tempting, but that is choosing the answer before doing the analysis. Use the likelihood."
+            }
+        ]
+    },
+    {
+        "question": "19 of the 20 runs end at the same log likelihood and one ends clearly lower. What does that tell you?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The optimisation has most likely converged to the global maximum, and the odd run got stuck in a local optimum",
+                "correct": true,
+                "feedback": "Correct. Many seeds reaching the same top value is the practical evidence of convergence we have."
+            },
+            {
+                "answer": "That the data does not fit the admixture model",
+                "correct": false,
+                "feedback": "Convergence and model fit are two different questions. evalAdmix, later in the exercise, is what tells you about fit."
+            },
+            {
+                "answer": "That K is too low",
+                "correct": false,
+                "feedback": "Not from the likelihoods of a single K. You cannot see that here."
+            }
+        ]
+    }
+]

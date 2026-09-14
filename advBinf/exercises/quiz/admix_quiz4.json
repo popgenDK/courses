@@ -1,0 +1,65 @@
+[
+    {
+        "question": "What does evalAdmix actually calculate?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "For each pair of individuals, the correlation between their residuals - the difference between the observed genotype and the genotype the admixture model expects",
+                "correct": true,
+                "feedback": "Correct. If the model describes the data well, whatever is left over should be noise and therefore uncorrelated between individuals."
+            },
+            {
+                "answer": "The genetic distance between each pair of individuals",
+                "correct": false,
+                "feedback": "No. A pair of very distant individuals can still have a perfect model fit and therefore a correlation of 0."
+            },
+            {
+                "answer": "The log likelihood of each individual under the model",
+                "correct": false,
+                "feedback": "No, that is in the NGSadmix log file."
+            }
+        ]
+    },
+    {
+        "question": "What does a well fitting admixture model look like in the evalAdmix plot?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "All pairs close to 0, so the whole heatmap is one flat colour with no blocks",
+                "correct": true,
+                "feedback": "Correct - no structure left over means the K ancestral populations and the estimated proportions have captured it all."
+            },
+            {
+                "answer": "Strong positive correlation within each population",
+                "correct": false,
+                "feedback": "The opposite - blocks of positive correlation along the diagonal are the classic sign that the model does not fit those individuals."
+            },
+            {
+                "answer": "Correlations as close to 1 as possible",
+                "correct": false,
+                "feedback": "No, correlation of residuals is something we want to be absent."
+            }
+        ]
+    },
+    {
+        "question": "A whole block of individuals from one population shows positive correlation with each other, and negative correlation with everyone else. What is the most likely explanation?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "That population has ancestry that the K assumed ancestral populations do not describe, so it is being forced into a mixture of the ones we have",
+                "correct": true,
+                "feedback": "Correct - the usual cure is to try a larger K, which is exactly what we do next."
+            },
+            {
+                "answer": "Those individuals are all closely related to each other",
+                "correct": false,
+                "feedback": "Relatedness shows up as a strong positive correlation for a single pair (or a few pairs), not as a block covering a whole population."
+            },
+            {
+                "answer": "The optimisation did not converge",
+                "correct": false,
+                "feedback": "Possible in principle, but you have already checked convergence with the 20 seeds."
+            }
+        ]
+    }
+]
