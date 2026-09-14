@@ -15,8 +15,8 @@
 # EM algorithm week 2
 ## Admixture Monday morning
 - : login to the notebook
-  - [NGS admixture](exercises/advBinf_admixture.ipynb) Download and upload to notebook ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_Morning_Admixture.html))
-    - [NGS admixture bonus](exercises/advBinf_admixture_bonus.ipynb) Download and upload to notebook. Exercise if you have finished the main one ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.html))
+  - [NGS admixture](exercises/advBinf_admixture.ipynb) Download and upload to notebook ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture.html))
+    - [NGS admixture bonus](exercises/advBinf_admixture_bonus.ipynb) Download and upload to notebook. Exercise if you have finished the main one ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture_bonus.html))
 
 ## SFS Wednesday afternoon
 - : login to the notebook
