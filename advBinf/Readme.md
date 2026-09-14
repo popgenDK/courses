@@ -16,7 +16,7 @@
 ## Admixture Monday morning
 - : login to the notebook
   - [NGS admixture](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_Morning_Admixture.ipynb) Download and upload to notebook ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_Morning_Admixture.html))
-    - [NGS admixture bonus](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_Admixture_structure_bonus.ipynb) exercise if you have finished the main one ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_Admixture_structure_bonus.html))
+    - [NGS admixture bonus](exercises/advBinf_admixture_bonus.ipynb) Download and upload to notebook. Exercise if you have finished the main one ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.html))
 
 ## SFS Wednesday afternoon
 - : login to the notebook
