@@ -23,9 +23,15 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 15 | `genotype_calling_imputation/genotype_calling_and_imputation_human.ipynb` | `advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb` | 2026-09-09 | yes — paths, work folder, quizzes moved in | 2 older copies (see EXERCISES.md) |
 | — | `genotype_calling_imputation/quiz/*.json` (3 files) | `/course/data/current_data/popgen25_imputation/quiz/call_genotypes_quiz{1,2,3}.json` | 2025-08-05 | renamed only | none |
 | 16 | `genotype_calling_imputation/imputation_human.ipynb` | `advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb` (imputation half) + `chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb` (3 sections) | 2026-09-09 | yes — new composition, calling sections dropped | 5 older copies (see EXERCISES.md) |
+| 30 | `gene_flow/f_stats_human.ipynb` | `summer2025/exercises/Day3_f_stats.ipynb` | 2025-08-05 | yes — paths, staging dirs removed, course branding | 2 older copies (see EXERCISES.md) |
+| 31 | `gene_flow/gene_flow_dstat_animal.ipynb` | `kenya2026/exercises/Day3/Geneflow&Dstat.ipynb` | 2026-08-16 | yes — path cell added, paths, typos | `kenya2026/.../post_course/day3_afternoon_gene_flow_dstat.ipynb` (2026-08-25) |
 | 19 | `em_algorithms/pca_em_human.ipynb` | `advBinf/exercises/advBinf_PCA_EM.ipynb` | 2026-09-16 | yes — 3 quizzes, 14 question blocks | none |
 | 24 | `em_algorithms/admixture_em_human.ipynb` | `advBinf/exercises/advBinf_admixture_EM.ipynb` | 2026-09-14 | yes — 2 quizzes | none |
 | 37 | `em_algorithms/sfs_model.ipynb` | `advBinf/exercises/advBinf_SFSmodel.ipynb` | 2026-09-16 | yes — quiz bank moved in, typo | `advBinf/exercises/SFS.md` (2024-09-20) |
+| 23 | `admixture/admixture_low_depth_human.ipynb` | `advBinf/exercises/advBinf_admixture.ipynb` cells 5-70 | 2026-09-14 | yes — split, header, questions, paths | 5 older copies |
+| 60 | `admixture/admixture_reference_panel_human.ipynb` | `advBinf/exercises/advBinf_admixture.ipynb` cells 71-93 | 2026-09-14 | yes — split out as its own exercise | none |
+| 61 | `admixture/admixture_called_genotypes_human.ipynb` | `chinacourse2026/Day4_admix_eval_LAI.ipynb` cells 2-54 | 2026-07-30 | yes — split, header, questions, paths | none |
+| 25 | `admixture/admixture_called_genotypes_animal.ipynb` | `advBinf/exercises/advBinf_admixture_bonus.ipynb` | 2026-09-14 | yes — header, questions, paths, unsafe cell removed | 6 older copies |
 
 ## Notes
 
@@ -788,3 +794,76 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   every `/course/data/...` path in every built exercise resolves.
 
   `/course/data/` now holds just `current_data/` and `1000G/`.
+
+- **#30 `f_stats_human.ipynb` and #31 `gene_flow_dstat_animal.ipynb` (2026-09-16).** The
+  two halves of the f-statistics / D-statistics material, human and animal, both in
+  `gene_flow/`. Names kept from the build list, which already reads as "f-stats" and
+  "gene flow". Both are pure R under the SoS kernelspec; the teaching content, the
+  statistics and the question blocks are unchanged.
+
+  **#30, from the 2025-08-05 summer2025 notebook** (37 cells, `admixtools`): f2 heatmap
+  and neighbour-joining tree, admixture f3, outgroup f3, f4 treeness and symmetry tests,
+  and qpAdm, with four `## Task` cells left empty for the student on purpose.
+  - its one bash cell existed only to `mkdir` a work folder and create the
+    `~/current_folder` and `~/data_folder` symlinks that **R4 explicitly bans**. Replaced
+    with an R path cell, so the notebook is now all R and reads `DATA` directly.
+  - R11: dropped "CPH popgen 2025" from the practical's title.
+
+  **#31, from the 2026-08-16 kenya2026 notebook** (13 cells): the ABBA/BABA D statistic
+  computed from scratch in R on simulated CHIMP/AFR/EUR/NEA data, then f4 on real
+  wildebeest data with `admixtools`.
+  - it had **no path cell** — three absolute paths sat in three different cells. Added
+    one at the top, matching #30 and the `ngs/` notebooks.
+  - R11: "the D-statistic mentioned today" -> "above"; "what you learn today" ->
+    "what you have learned"; fixed "why do use hartebeest" and the species spelling
+    "Wilderbeet" -> "wildebeest".
+
+  **Two data findings:**
+  - **#30's data was missed by the original survey.** `/course/popgen25/dstats` (108 M)
+    was not in the data-copy list, because the notebook reaches it through the
+    `~/data_folder` symlink and so contains no literal `/course/...` path — the same
+    blind spot that hid the `geneticMap` dependency. Copied to
+    `data/f_stats/` (14,558/14,558 files, no symlinks).
+  - **#31 depended on an instructor home directory**, `/davidData/users/thomas/workshop`
+    (77 G), for a 1.5 M subfolder. `data/geneflow/` holds just the three things the
+    exercise reads, 3.3 M in total, so the exercise no longer needs the 77 G tree at all.
+
+  **Both were run end to end** (pure R, so every code cell executes), exit 0, no errors:
+  - #30: 98 populations and 50,493 SNPs loaded; admixture f3 strongly negative for
+    African Americans against European references (z about -31); the f4 treeness test
+    non-significant in the Yoruba configuration (z = 1.64) while the other two are
+    (z = 76.5 and 74.6), which is exactly the contrast its questions ask about; qpAdm
+    weights and `popdrop` produced.
+  - #31: 81,486 variants read, 81,259 biallelic retained, D = 0.187 — the introgression
+    signal the exercise is built around — and the 42-row wildebeest f4 table with its
+    plot.
+
+- **The four admixture exercises built (2026-09-16),** mirroring the PCA folder:
+  two on called genotypes, two on low depth.
+
+  | # | File | cells | quizzes | questions after code |
+  |---|---|---|---|---|
+  | 23 | `admixture_low_depth_human.ipynb` | 75 | 4 | 18/21 |
+  | 60 | `admixture_reference_panel_human.ipynb` | 29 | 1 | 8/10 |
+  | 61 | `admixture_called_genotypes_human.ipynb` | 56 | 4 | 21/22 |
+  | 25 | `admixture_called_genotypes_animal.ipynb` | 56 | 1 | 20/21 |
+
+  **`advBinf_admixture.ipynb` was two exercises.** Cells 5-70 are NGSadmix on
+  genotype likelihoods; cells 71-93 are fastNGSadmix, placing a **single**
+  individual against a fixed reference panel of 7 populations. Different method,
+  different question, so they are now #23 and #60.
+
+  **Data:** `data/current_data/admixture/{human_lowdepth,human_refpanel,human_called,animal}`,
+  631 M.
+
+  **A dangerous cell removed.** The animal notebook opened with
+  `mkdir -p ~/advBinf/admixture; cd ~/advBinf/admixture; rm -rf *`. Rewriting the
+  hardcoded paths left `cd` with no argument immediately before `rm -rf *`, which
+  would have deleted the contents of whatever directory the shell happened to be
+  in. The cell is replaced — the setup cell already creates and enters the working
+  folder. Worth remembering when rewriting paths in any notebook that clears its
+  workspace.
+
+  Also removed: three cells in the human notebook that read a
+  `~/.sysu_admixture_paths` config file and re-did the setup, superseded by the
+  standard setup cell (R16).

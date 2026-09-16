@@ -1,0 +1,148 @@
+[
+  {
+    "question": "What does evalAdmix assess for a fitted ADMIXTURE model?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Residual correlation between individuals after accounting for the fitted ancestry model.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The sequencing depth of each individual.",
+        "correct": false,
+        "feedback": "Not quite. evalAdmix is assessing model fit, not read depth."
+      },
+      {
+        "answer": "The phasing switch-error rate.",
+        "correct": false,
+        "feedback": "Not quite. Phasing is not being evaluated here."
+      },
+      {
+        "answer": "The geographic distance between populations.",
+        "correct": false,
+        "feedback": "Not quite. The residual plot is based on genotype/model residuals."
+      }
+    ]
+  },
+  {
+    "question": "In the residual-correlation summaries, which run has lower residuals overall?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The best-seed run.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The bad-seed run.",
+        "correct": false,
+        "feedback": "Not quite. Compare the mean, 95th percentile, and maximum absolute residuals."
+      }
+    ]
+  },
+  {
+    "question": "If a fitted model leaves strong residual correlation among some individuals, what is the most cautious interpretation?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The model may not fully capture structure for those individuals or groups.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Those individuals must have been duplicated in the input file.",
+        "correct": false,
+        "feedback": "Not quite. Duplication is one possible data issue, but residual correlation alone is not enough to conclude that."
+      },
+      {
+        "answer": "The LD pruning command definitely failed.",
+        "correct": false,
+        "feedback": "Not quite. Residual structure can have several causes."
+      },
+      {
+        "answer": "The population labels were definitely assigned incorrectly.",
+        "correct": false,
+        "feedback": "Not quite. That would require additional evidence."
+      }
+    ]
+  },
+  {
+    "question": "What should you compare before choosing between two ADMIXTURE runs with the same K?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Both the likelihoods and model-fit diagnostics such as evalAdmix residuals.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Only the order of samples in the barplot.",
+        "correct": false,
+        "feedback": "Not quite. Plot order is useful for readability, but it is not a fit criterion."
+      },
+      {
+        "answer": "Only the filename of the Q matrix.",
+        "correct": false,
+        "feedback": "Not quite. The fitted values and diagnostics matter."
+      },
+      {
+        "answer": "Only the number of chromosomes in the original VCF/BCF files.",
+        "correct": false,
+        "feedback": "Not quite. The comparison here is between fitted ADMIXTURE runs."
+      }
+    ]
+  },
+  {
+    "question": "What is the most likely reason the K=3 model can have strong evalAdmix residuals even if ADMIXTURE converged?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "K=3 is too simple to represent important structure in these data.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "evalAdmix only works for K=4 models.",
+        "correct": false,
+        "feedback": "Not quite. evalAdmix can assess models with different K values."
+      },
+      {
+        "answer": "The PLINK file must contain no admixed individuals.",
+        "correct": false,
+        "feedback": "Not quite. The issue is model fit, not the absence of admixed individuals."
+      },
+      {
+        "answer": "The Q matrix cannot be plotted when K is less than four.",
+        "correct": false,
+        "feedback": "Not quite. K=3 can be plotted, but it may underfit the data."
+      }
+    ]
+  },
+  {
+    "question": "Which comparison best separates a local-optimum problem from a too-low-K problem?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Compare seed convergence within a fixed K, then compare residual diagnostics across different K values.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Only inspect the colors used in the ADMIXTURE barplot.",
+        "correct": false,
+        "feedback": "Not quite. Colors are arbitrary labels for components."
+      },
+      {
+        "answer": "Only count the number of samples per population.",
+        "correct": false,
+        "feedback": "Not quite. Balanced sampling helps, but it does not diagnose model fit by itself."
+      },
+      {
+        "answer": "Use evalAdmix only for the worst random seed.",
+        "correct": false,
+        "feedback": "Not quite. evalAdmix is useful for comparing fitted models more broadly."
+      }
+    ]
+  }
+]

@@ -1,0 +1,70 @@
+[
+    {
+        "question": "Why does NGSadmix use genotype likelihoods as input instead of called genotypes? (more than one answer is correct)",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "At 2-6X depth the genotype of an individual is uncertain, and the likelihoods carry that uncertainty into the model",
+                "correct": true,
+                "feedback": "Correct. Nothing is thrown away - a site with a single read contributes a likelihood that says 'this is probably not the other homozygote', and no more."
+            },
+            {
+                "answer": "Calling genotypes at low depth is biased: a heterozygote that is covered by one or two reads is easily called as a homozygote",
+                "correct": true,
+                "feedback": "Correct. That bias would look like a lack of heterozygosity and would distort the estimated allele frequencies."
+            },
+            {
+                "answer": "Genotype likelihood files are smaller than genotype files",
+                "correct": false,
+                "feedback": "No - a beagle file stores three numbers per individual per site, so it is larger, not smaller."
+            },
+            {
+                "answer": "NGSadmix cannot read called genotypes at all, so there is no choice",
+                "correct": false,
+                "feedback": "Not the point. Called genotypes can be converted to likelihoods (0/1), which is what ADMIXTURE effectively uses. The reason to use real likelihoods is that the data are low depth."
+            }
+        ]
+    },
+    {
+        "question": "In the beagle file, what are the three numbers listed for one individual at one site?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The likelihoods of the three possible genotypes, normalised so that they sum to one",
+                "correct": true,
+                "feedback": "Correct. The normalisation only avoids underflow - it does not turn them into probabilities of the genotypes."
+            },
+            {
+                "answer": "The posterior probabilities of the three genotypes",
+                "correct": false,
+                "feedback": "No. To get a posterior you would have to multiply by a prior (for instance the allele frequency under Hardy-Weinberg). These numbers have no prior in them."
+            },
+            {
+                "answer": "The number of reads supporting each of the three genotypes",
+                "correct": false,
+                "feedback": "No, the read counts are not in the file - they have already been summarised into likelihoods by the genotype likelihood model."
+            }
+        ]
+    },
+    {
+        "question": "In beagle format the alleles are coded A=0, C=1, G=2, T=3. A site whose two allele columns are 0 and 2 is therefore which SNP?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "A/G",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "C/T",
+                "correct": false,
+                "feedback": "That would be coded 1 and 3."
+            },
+            {
+                "answer": "A/C",
+                "correct": false,
+                "feedback": "That would be coded 0 and 1."
+            }
+        ]
+    }
+]

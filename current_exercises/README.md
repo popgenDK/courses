@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**22 of 56 exercises built.**
+**26 of 56 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -100,14 +100,14 @@ Exercises that build an EM algorithm from scratch.
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 23 | `admixture_human.ipynb` | Admixture proportions with ADMIXTURE/NGSadmix. | ⬜ planned | _to generate_ |
-| 25 | `admixture_animal.ipynb` | Admixture proportions on wildlife data. | ⬜ planned | _to generate_ |
-| 26 | `admixture_bonus_animal.ipynb` | Admixture bonus: evaluating fit with evalAdmix. | ⬜ planned | _to generate_ |
-| 27 | `population_structure_ii_human.ipynb` | Population structure II: deeper structure inference on 1000G data. | ⬜ planned | _to generate_ |
+| 23 | [`admixture_low_depth_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_low_depth_human.ipynb) | NGSadmix on genotype likelihoods, evalAdmix and the choice of K. | ✅ built | ⚠️ _to regenerate_ |
+| 60 | [`admixture_reference_panel_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_reference_panel_human.ipynb) | fastNGSadmix: the ancestry of a single individual against a fixed reference panel. | ✅ built | ⚠️ _to regenerate_ |
+| 61 | [`admixture_called_genotypes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_human.ipynb) | ADMIXTURE on LD-pruned called genotypes, convergence across seeds, and evalAdmix. | ✅ built | ⚠️ _to regenerate_ |
+| 25 | [`admixture_called_genotypes_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_animal.ipynb) | ADMIXTURE on called wildebeest genotypes, seeds, K and model fit. | ✅ built | ⚠️ _to regenerate_ |
 | 28 | `local_ancestry_human.ipynb` | Local ancestry inference and evaluation. | ⬜ planned | _to generate_ |
 | 29 | `local_ancestry_hapla_human.ipynb` | Local ancestry with hapla. | ⬜ planned | _to generate_ |
-| 30 | `f_stats_human.ipynb` | f2/f3/f4 statistics for testing population relationships. | ⬜ planned | _to generate_ |
-| 31 | `gene_flow_dstat_animal.ipynb` | Gene flow and D-statistics (ABBA-BABA). | ⬜ planned | _to generate_ |
+| 30 | `f_stats_human.ipynb` | f2/f3/f4 statistics for testing population relationships, plus qpAdm, on ancient and modern humans from the AADR. | ⬜ planned | _to generate_ |
+| 31 | `gene_flow_dstat_animal.ipynb` | Gene flow and D-statistics (ABBA-BABA) from scratch on simulated data, then f4 on wildebeest. | ⬜ planned | _to generate_ |
 | 32 | `admixture_graphs_human.ipynb` | Fitting admixture graphs with qpGraph. | ⬜ planned | _to generate_ |
 | 33 | `chromopainter_finestructure_human.ipynb` | Chromosome painting and fineSTRUCTURE. | ⬜ planned | _to generate_ |
 | 34 | `dating_admixture_human.ipynb` | Dating admixture events. | ⬜ planned | _to generate_ |
@@ -321,36 +321,33 @@ Replaces 6 older copies:
 
 ### `admixture/`
 
-**23. `admixture_human.ipynb`**  
-From: [`advBinf/exercises/advBinf_admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture.ipynb) (2026-09-14)  
-Replaces 6 older copies:
+**23. `admixture_low_depth_human.ipynb`**  
+From: [`advBinf/exercises/advBinf_admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture.ipynb) (2026-09-14), cells 5-70  
+Replaces 5 older copies:
   - [`summer2025/exercises/Day3_Morning_Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_Morning_Admixture.ipynb) (2025-08-05)
-  - [`chinaCourse2025/Day4_Morning_admixture_genotype.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Morning_admixture_genotype.ipynb) (2025-07-28)
   - [`advBinf/exercises/admixture.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/admixture.md) (2024-09-16)
   - [`summer2024/exercises/admixExercise_popgen24.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/admixExercise_popgen24.ipynb) (2024-08-19)
   - [`bgi23/Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/Admixture.ipynb) (2023-11-02)
   - [`summer2023/InfererPopStructure/admixExercise_popgen23.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/InfererPopStructure/admixExercise_popgen23.ipynb) (2023-08-08)
 
-**25. `admixture_animal.ipynb`**  
-From: [`kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb) (2026-08-21)  
-Replaces 4 older copies:
+**60. `admixture_reference_panel_human.ipynb`**  
+From: [`advBinf/exercises/advBinf_admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture.ipynb) (2026-09-14), cells 71-93  
+Replaces: nothing — this is the only copy
+
+**61. `admixture_called_genotypes_human.ipynb`**  
+From: [`chinacourse2026/Day4_admix_eval_LAI.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_admix_eval_LAI.ipynb) (2026-07-30), cells 2-54  
+Replaces 1 older copy:
+  - [`chinaCourse2025/Day4_Morning_admixture_genotype.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Morning_admixture_genotype.ipynb) — **no**, see #25
+
+**25. `admixture_called_genotypes_animal.ipynb`**  
+From: [`advBinf/exercises/advBinf_admixture_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture_bonus.ipynb) (2026-09-14)  
+Replaces 6 older copies:
+  - [`kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb) (2026-08-21)
   - [`kenya2026/exercises/post_course/day3_morning_admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day3_morning_admixture.ipynb) (2026-08-25)
+  - [`chinaCourse2025/Day4_Morning_admixture_genotype.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Morning_admixture_genotype.ipynb) (2025-07-28)
   - [`kenya2024/exercises/day3_PopulationStructure/Day3_AdmixtureV2.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_AdmixtureV2.ipynb) (2024-08-08)
   - [`kenya2024/exercises/day3_PopulationStructure/Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Admixture.ipynb) (2024-08-07)
   - [`kenya2024/exercises/day3_PopulationStructure/Day3_Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_Admixture.ipynb) (2024-07-28)
-
-**26. `admixture_bonus_animal.ipynb`**  
-From: [`advBinf/exercises/advBinf_admixture_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture_bonus.ipynb) (2026-09-14)  
-Replaces 2 older copies:
-  - [`summer2025/exercises/Day3_Admixture_structure_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_Admixture_structure_bonus.ipynb) (2025-08-05)
-  - [`chinaCourse2025/Day4_Morning_Admixture.bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Morning_Admixture.bonus.ipynb) (2025-07-28)
-
-**27. `population_structure_ii_human.ipynb`**  
-From: [`bgi23/BGI2023-populationStructureII.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/BGI2023-populationStructureII.ipynb) (2023-11-02)  
-Replaces 3 older copies:
-  - [`summer2023/InfererPopStructure/popstructII2023.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/InfererPopStructure/popstructII2023.ipynb) (2023-08-09)
-  - [`summer2023/popstructureII/popstructII2023.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/popstructureII/popstructII2023.ipynb) (2023-08-08)
-  - [`summer2023/popstructureII/index.md`](https://github.com/popgenDK/courses/blob/main/summer2023/popstructureII/index.md) (2023-08-08)
 
 **28. `local_ancestry_human.ipynb`**  
 From: [`chinacourse2026/Day4_admix_eval_LAI.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_admix_eval_LAI.ipynb) (2026-07-30)  
@@ -513,7 +510,7 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**22 of 56 exercises built.** Numbering runs to 57 because two pairs are each one
+**26 of 56 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 

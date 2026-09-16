@@ -1,0 +1,102 @@
+[
+  {
+    "question": "Which seed has the best log-likelihood among the 10 ADMIXTURE runs shown in the table?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 5,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Check the likelihood table sorted from best to worst."
+      }
+    ]
+  },
+  {
+    "question": "How many of the top seeds converge to roughly the same log-likelihood and thus likely the same solution?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 6,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Check the likelihood table sorted from best to worst."
+      }
+    ]
+  },
+  {
+    "question": "What does a much worse log-likelihood from one seed suggest?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "That the run may have ended in a poorer local optimum.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "That the genotype file changed between seeds.",
+        "correct": false,
+        "feedback": "Not quite. The seed changes the initialization, not the input data."
+      },
+      {
+        "answer": "That K was automatically increased.",
+        "correct": false,
+        "feedback": "Not quite. K was fixed for these runs."
+      },
+      {
+        "answer": "That the population labels were used as supervised ancestry labels.",
+        "correct": false,
+        "feedback": "Not quite. This is an unsupervised ADMIXTURE run."
+      }
+    ]
+  },
+  {
+    "question": "For the ADMIXTURE log-likelihoods shown here, which direction is better?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Less negative / higher log-likelihood values are better.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "More negative / lower log-likelihood values are better.",
+        "correct": false,
+        "feedback": "Not quite. Higher log-likelihood is better."
+      }
+    ]
+  },
+  {
+    "question": "Why is it useful to run ADMIXTURE more than once with different seeds?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "To check whether independent starts reach similar likelihoods and ancestry estimates.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "To average genotypes across repeated sequencing runs.",
+        "correct": false,
+        "feedback": "Not quite. These are repeated model fits, not repeated sequencing runs."
+      },
+      {
+        "answer": "To infer the physical order of SNPs on each chromosome.",
+        "correct": false,
+        "feedback": "Not quite. SNP order comes from the PLINK BIM file."
+      },
+      {
+        "answer": "To remove the need for LD pruning.",
+        "correct": false,
+        "feedback": "Not quite. Seed checking and LD pruning address different issues."
+      }
+    ]
+  }
+]

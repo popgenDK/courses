@@ -1,0 +1,132 @@
+[
+  {
+    "question": "Why do we LD-prune the genotype data before running ADMIXTURE?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "To reduce correlations among nearby variants so the model is not dominated by linked SNP blocks.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "To remove all variants that differ among populations.",
+        "correct": false,
+        "feedback": "Not quite. LD pruning is about correlation among markers, not removing population-informative variation."
+      },
+      {
+        "answer": "To convert genotype likelihoods into hard-called genotypes.",
+        "correct": false,
+        "feedback": "Not quite. That is a different preprocessing step."
+      },
+      {
+        "answer": "To choose the number of ancestry components automatically.",
+        "correct": false,
+        "feedback": "Not quite. K is chosen separately from LD pruning."
+      }
+    ]
+  },
+  {
+    "question": "What is the key reason this exercise uses PCAone for LD pruning?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It can estimate LD while accounting for population structure.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "It guarantees that ADMIXTURE will find the global optimum.",
+        "correct": false,
+        "feedback": "Not quite. Seed convergence still has to be checked."
+      },
+      {
+        "answer": "It phases haplotypes before ADMIXTURE.",
+        "correct": false,
+        "feedback": "Not quite. Phasing is not part of this ADMIXTURE step."
+      },
+      {
+        "answer": "It replaces ADMIXTURE with a PCA-only ancestry estimate.",
+        "correct": false,
+        "feedback": "Not quite. PCAone is used here for pruning; ADMIXTURE is still the ancestry model."
+      }
+    ]
+  },
+  {
+    "question": "In the PCAone LD-pruning command, what does the LD r-squared threshold control?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "How strongly two nearby SNPs may be correlated before one is pruned.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The minimum genotype quality allowed for each sample.",
+        "correct": false,
+        "feedback": "Not quite. Look at the LD-pruning options."
+      },
+      {
+        "answer": "The number of ancestry components in ADMIXTURE.",
+        "correct": false,
+        "feedback": "Not quite. K is set in the ADMIXTURE command."
+      },
+      {
+        "answer": "The maximum allowed missingness per chromosome.",
+        "correct": false,
+        "feedback": "Not quite. This threshold is about marker correlation."
+      }
+    ]
+  },
+  {
+    "question": "What changes when ADMIXTURE is run again with a different random seed, assuming the same data and K?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The random initialization of the optimization.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The samples included in the PLINK file.",
+        "correct": false,
+        "feedback": "Not quite. The input data are unchanged."
+      },
+      {
+        "answer": "The number of SNPs in the pruned dataset.",
+        "correct": false,
+        "feedback": "Not quite. Pruning was already done."
+      },
+      {
+        "answer": "The value of K.",
+        "correct": false,
+        "feedback": "Not quite. K is fixed unless it is explicitly changed."
+      }
+    ]
+  },
+  {
+    "question": "Which statement best describes K in this ADMIXTURE exercise?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "K is a modeling choice that sets the number of inferred ancestry components.",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "K is the number of sampled populations in the metadata.",
+        "correct": false,
+        "feedback": "Not quite. Compare K with the number of population labels."
+      },
+      {
+        "answer": "K is the number of chromosomes used in the analysis.",
+        "correct": false,
+        "feedback": "Not quite. K belongs to the ADMIXTURE model."
+      },
+      {
+        "answer": "K is estimated by evalAdmix after ADMIXTURE has run.",
+        "correct": false,
+        "feedback": "Not quite. evalAdmix assesses a fitted model."
+      }
+    ]
+  }
+]

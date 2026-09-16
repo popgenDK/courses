@@ -1,0 +1,81 @@
+[{
+        "question": "how many individuals in the file?",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 73,
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "type": "default",
+                "feedback": "not corret. Try to look at the number of lines."
+            }
+        ]
+    },
+     {
+        "question": "How many populations is there data for?",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 7,
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "type": "default",
+                "feedback": "not correct. Look at the counts of populations."
+            }
+        ]
+    },
+         {
+        "question": "What is the smallest number of individuals in a populations?",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 3,
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "type": "default",
+                "feedback": "not correct. Look at the number of cookson"
+            }
+        ]
+    },
+         {
+        "question": "How many genetic variants do you have data for?",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 990980,
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "type": "default",
+                "feedback": "not correct. Look at the number of lines in the bim file"
+            }
+        ]
+    },
+         {
+        "question": "How many Chromosomes do you have data for?",
+        "type": "numeric",
+        "answers": [
+            {
+                "type": "value",
+                "value": 29,
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "type": "default",
+                "feedback": "not correct. Look at last command"
+            }
+        ]
+    }
+]

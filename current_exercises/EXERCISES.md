@@ -249,36 +249,54 @@ sequencing** — plus the shared theory section.
 
 # admixture/
 
-### 23. [ ] `admixture_human.ipynb`
-- **From:** `advBinf/exercises/advBinf_admixture.ipynb` (2026-09-14)
+Four exercises — two on **called genotypes** and two on **low depth sequencing** —
+mirroring the PCA folder, plus local ancestry and the gene-flow material.
+
+### 23. [x] `admixture_low_depth_human.ipynb`
+- **From:** `advBinf/exercises/advBinf_admixture.ipynb` (2026-09-14), cells 5-70
 - **Supersedes:**
   - `summer2025/exercises/Day3_Morning_Admixture.ipynb` (2025-08-05)
-  - `chinaCourse2025/Day4_Morning_admixture_genotype.ipynb` (2025-07-28)
   - `advBinf/exercises/admixture.md` (2024-09-16)
   - `summer2024/exercises/admixExercise_popgen24.ipynb` (2024-08-19)
   - `bgi23/Admixture.ipynb` (2023-11-02)
   - `summer2023/InfererPopStructure/admixExercise_popgen23.ipynb` (2023-08-08)
+- **Note:** NGSadmix on genotype likelihoods, then evalAdmix and the choice of K.
 
-### 25. [ ] `admixture_animal.ipynb`
-- **From:** `kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb` (2026-08-21)
+### 60. [x] `admixture_reference_panel_human.ipynb`
+- **From:** `advBinf/exercises/advBinf_admixture.ipynb` (2026-09-14), cells 71-93
+- **Supersedes:** none — only copy
+- **Note:** fastNGSadmix: the ancestry of a **single** individual against a fixed
+  reference panel of 7 populations. Split out of #23, which covered two methods.
+
+### 61. [x] `admixture_called_genotypes_human.ipynb`
+- **From:** `chinacourse2026/Day4_admix_eval_LAI.ipynb` (2026-07-30), cells 2-54
+- **Supersedes:** `chinaCourse2025/Day4_Morning_admixture_genotype.ipynb` — **no**, see #25
+- **Note:** ADMIXTURE on LD-pruned called genotypes, convergence across seeds, and
+  evalAdmix. The local-ancestry tail of the source notebook (cells 55+) is a separate
+  topic and stays with #28/#29.
+
+### 25. [x] `admixture_called_genotypes_animal.ipynb`
+- **From:** `advBinf/exercises/advBinf_admixture_bonus.ipynb` (2026-09-14)
 - **Supersedes:**
+  - `kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb` (2026-08-21)
   - `kenya2026/exercises/post_course/day3_morning_admixture.ipynb` (2026-08-25)
+  - `chinaCourse2025/Day4_Morning_admixture_genotype.ipynb` (2025-07-28)
   - `kenya2024/exercises/day3_PopulationStructure/Day3_AdmixtureV2.ipynb` (2024-08-08)
   - `kenya2024/exercises/day3_PopulationStructure/Admixture.ipynb` (2024-08-07)
   - `kenya2024/exercises/day3_PopulationStructure/Day3_Admixture.ipynb` (2024-07-28)
+- **Note:** **#25 and #26 were the same exercise** — the kenya notebook and
+  `advBinf_admixture_bonus` are 45 of 45 cells similar, 43 identical. Built from the
+  advBinf one as the newer. `chinaCourse2025/Day4_Morning_admixture_genotype.ipynb` was
+  wrongly listed under #23: it is **wildebeest, called genotypes**, only 2 of its 48
+  cells resemble #23, and it is 72% similar to this exercise. Moved here.
 
-### 26. [ ] `admixture_bonus_animal.ipynb`
-- **From:** `advBinf/exercises/advBinf_admixture_bonus.ipynb` (2026-09-14)
-- **Supersedes:**
-  - `summer2025/exercises/Day3_Admixture_structure_bonus.ipynb` (2025-08-05)
-  - `chinaCourse2025/Day4_Morning_Admixture.bonus.ipynb` (2025-07-28)
-
-### 27. [ ] `population_structure_ii_human.ipynb`
-- **From:** `bgi23/BGI2023-populationStructureII.ipynb` (2023-11-02)
-- **Supersedes:**
-  - `summer2023/InfererPopStructure/popstructII2023.ipynb` (2023-08-09)
-  - `summer2023/popstructureII/popstructII2023.ipynb` (2023-08-08)
-  - `summer2023/popstructureII/index.md` (2023-08-08)
+**Retired slot: #27 `population_structure_ii_human`.** Not an admixture exercise and
+not built. `bgi23/BGI2023-populationStructureII.ipynb` has three sections — *Simple
+example of PCA and MDS*, *PCA for low depth sequencing using PCAngsd* and *PCAngsd and
+selection* — and **53 of its 69 cells are identical to `advBinf_PCA.ipynb`**. It is a
+2023 ancestor of the PCA trio and is superseded by #58, #18 and #59 in `pca/`. It was
+filed under admixture because of its "population structure" title. The number is kept so
+the other exercises do not shift.
 
 ### 28. [ ] `local_ancestry_human.ipynb`
 - **From:** `chinacourse2026/Day4_admix_eval_LAI.ipynb` (2026-07-30)
@@ -288,15 +306,21 @@ sequencing** — plus the shared theory section.
 - **From:** `advBinf/exercises/Hapla_LAI_exercise.ipynb` (2025-10-07)
 - **Supersedes:** none — only copy (hapla-based, distinct from #28)
 
-### 30. [ ] `f_stats_human.ipynb`
+### 30. [x] `f_stats_human.ipynb`
 - **From:** `summer2025/exercises/Day3_f_stats.ipynb` (2025-08-05)
+- **Data: MISSED BY THE ORIGINAL SURVEY.** `/course/popgen25/dstats` (108 M) was not in
+  the data-copy list — the notebook reaches it through a `~/data_folder` symlink, so no
+  literal `/course/...` path appears in it. Now copied to `data/f_stats/`.
 - **Supersedes:**
   - `summer2024/exercises/f_stats.ipynb` (2024-08-21)
   - `summer2023/DfFstats/popgen23_f_stats.ipynb` (2023-08-09)
 
-### 31. [ ] `gene_flow_dstat_animal.ipynb`
+### 31. [x] `gene_flow_dstat_animal.ipynb`
 - **From:** `kenya2026/exercises/Day3/Geneflow&Dstat.ipynb` (2026-08-16)
 - **Supersedes:** `kenya2026/exercises/post_course/day3_afternoon_gene_flow_dstat.ipynb` (2026-08-25)
+- **Data:** the wildebeest f2 set came from `/davidData/users/thomas/workshop`, an
+  instructor home directory (77 G). Only the one 1.5 M subfolder is needed, so it and
+  the two simulated-data files were copied to `data/geneflow/` (3.3 M total).
 
 ### 32. [ ] `admixture_graphs_human.ipynb`
 - **From:** `summer2023/DfFstats/popgen23.Admixture_Graphs_Tutorial.ipynb` (2023-08-10)
@@ -546,6 +570,15 @@ data/imputation/
   vcfs/       ref panel, truth set, fake SNP chip, QUILT2, example      28 M
   resources/  GRCh38 + .fai, QUILT2 and Beagle 5 genetic maps          3.1 G
   software/   beagle 4.1 + 5.5 jars, QUILT distribution                 64 M
+
+data/f_stats/                                                          108 M
+  ho_anc.sample_info.tsv   AADR sample metadata, 98 populations
+  f2.ho_anc/               precomputed pairwise f2, 50,493 SNPs
+
+data/geneflow/                                                         3.3 M
+  hum_nea_siml.vcf.gz      simulated CHIMP/AFR/EUR/NEA data, 81,486 sites
+  hum_nea_siml.tsv         sample-to-population table
+  wildebeest_fstats_wildebeestref/   precomputed f2 for the wildebeest f4
 ```
 
 `chr21.fa.gz` was missing its `.fai`/`.gzi` index in the original course folder,
