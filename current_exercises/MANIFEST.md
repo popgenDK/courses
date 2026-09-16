@@ -467,11 +467,12 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   structure and every command are unchanged**. 85 cells, SoS kernel kept (it mixes
   Bash, R and Python cells), committed without outputs. The work is all R4/R8/R11:
 
-  - **R4** — `COURSE_PATH=/course/popgen25` became
-    `DATA_PATH=/course/data/popgen25_imputation` and
-    `SOFTWARE_PATH=/course/data/current_data/popgen25_software`. The notebook already funnelled
-    every path through one cell that writes an `env.sh`, which later cells re-`source`,
-    so this is a two-line change and no other cell contains a full path.
+  - **R4** — `COURSE_PATH=/course/popgen25` became a single
+    `DATA_PATH=/course/data/imputation`, with `SOFTWARE_PATH=$DATA_PATH/software`. The
+    notebook already funnelled every path through one cell that writes an `env.sh`, which
+    later cells re-`source`, so this is a two-line change and no other cell contains a
+    full path. (It went via the bulk folders `popgen25_imputation` +
+    `popgen25_software` first; the cleaned `data/imputation/` folder below replaced both.)
   - **R11** — the working folder `~/advBinfImputation` became
     `~/genotype_calling_imputation_human` (24 further cells updated to match).
   - **R8** — the three quiz files came out of the data folder and now sit in
@@ -581,9 +582,8 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   - the "how about imputing the **fetus**?" question, expanded into three questions at
     the end of the NIPT bonus
 
-  Paths, work folder (`~/imputation_human`) and quiz URLs follow #15 — one data store,
-  `popgen25_imputation` plus `popgen25_software`, and the same two genetic maps pointed
-  at the software tree rather than the dangling symlinks.
+  Paths, work folder (`~/imputation_human`) and quiz URLs follow #15: a single
+  `DATA_PATH=/course/data/imputation` covering reads, VCFs, reference, maps and software.
 
 - **Sample count fixed in #15 and #16.** Both said the study samples were **33** in four
   places while also saying **30** in six others. The bamlist has 30
@@ -703,8 +703,35 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   Only the software the two exercises actually invoke was taken from
   `popgen25_software/`, not the whole 1.8 G tree.
 
-  The bulk folders `popgen25_imputation/` and `popgen25_software/` are untouched and
-  still in the data-copy list; other exercises may need them.
+  The bulk folder `popgen25_imputation/` is untouched and still in the data-copy list;
+  other exercises may need it.
+
+  **This is why the folder is self-contained.** `popgen25_software/` was moved into
+  `data/current_data/` by the reorganisation recorded below, hours after these notebooks
+  were built. Because `data/imputation/software/` holds its own copy of the two Beagle
+  jars and the QUILT distribution, neither notebook referenced the moved folder and both
+  survived the move without an edit — verified after the fact. Pointing
+  `SOFTWARE_PATH` at `popgen25_software/`, which is what the first version of #15 did,
+  would have broken both.
+
+  **Gotcha found by running it: `cp` breaks ANGSD's fasta index check.** A plain `cp` of
+  the reference and its `.fai` gives both the same mtime to the second, and ANGSD wants
+  the index *strictly* newer:
+
+  ```
+  -> fai index file: '...fa.fai' looks older than corresponding fastafile: '...fa'.
+  -> Please reindex fasta file
+  ```
+
+  In the source folder the two were 8 hours apart, so this only appeared after the copy.
+  Fixed with `touch` on the `.fai` — the file is byte-identical to the original, it just
+  needed a newer timestamp. **Any future per-exercise data folder that copies a
+  reference genome needs the same treatment**, or ANGSD refuses to start.
+
+  The `.bai` and `.csi` indexes in `bams/` and `vcfs/` share their file's mtime exactly,
+  because they were copied with `cp -a` from a source where they already did. samtools
+  and bcftools do not enforce the comparison, and the full pipeline runs, so those were
+  deliberately left alone rather than restamped.
 
 - **Data moved into `data/current_data/` (2026-09-16).** Everything copied during
   the consolidation now sits under `current_data/`, keeping the folder names the
@@ -718,3 +745,36 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   Every path in every built exercise was repointed and then checked to resolve:
   9 files, 15 paths. The two imputation notebooks were correctly left untouched,
   since their data did not move.
+
+- **Every notebook now opens the same way (2026-09-16), per R19:** title, purpose,
+  what you will do, and the data described concretely.
+
+  **Four PCA notebooks had no introduction at all** — they opened on `## Setup`,
+  because the builder put the setup cell ahead of the intro. Titles and full
+  headers added.
+
+  The data is now described from **the actual files**, not from the old prose:
+
+  | Exercise | Data as now described |
+  |---|---|
+  | `pca_called_genotypes_human` | 192 individuals, 16 populations x 12, four super-populations, 317,850 LD-pruned SNPs |
+  | `pca_low_depth_human` | 435 individuals, ASW/CEU/CHB/MXL/YRI with counts, beagle genotype likelihoods |
+  | `pca_low_depth_selection_human` | 424 individuals, CEU/GBR/IBS/TSI with counts |
+  | `pca_called_genotypes_animal` | 73 blue wildebeest, 7 localities with counts, 990,980 SNPs |
+  | `ngs_intro_human` | NA19238, YRI Ibadan Nigeria, 171,880 read pairs of 100 bp, chr21 |
+  | `ngs_intro_animal` | CCTauTzS_8872 blue wildebeest, 83,506 read pairs of 150 bp, mapped to a **goat** reference |
+  | `ngs_inference_human` | 100 BAMs, 20 each from LWK/TSI/CHB/PEL/NAM, ~2-3x depth |
+  | the five EM notebooks | simulated, with what is simulated spelled out |
+
+  **A factual error fixed:** `ngs_inference_human` said "we will use 40 BAM files
+  ... and 10 BAM files of Latinos". The folder holds **100**, 20 from each of five
+  populations. The prose had drifted from the data.
+
+  Population codes are now expanded — `CEU` is given as "Utah residents with
+  northern/western European ancestry", `TSI` as "Toscani in Italy" — since a code
+  alone means nothing to a student. Two things that will bite later are called out
+  where they apply: the wildebeest sample sizes are very unequal (28 from one
+  locality, 3 from another), and the animal NGS intro maps a wildebeest to a goat
+  reference, which is explained rather than left as a surprise.
+
+  Your two imputation notebooks already met R19 and were left untouched.
