@@ -391,8 +391,10 @@ the other exercises do not shift.
 - **From:** `kenya2026/exercises/Day2/psmc_kenya2026.ipynb` (2026-08-19)
 - **Supersedes:** `kenya2026/exercises/post_course/day2_afternoon_psmc.ipynb` (2026-08-25)
 - **Data:** both PSMC exercises now read one shared folder, `data/psmc/`
-  (485 M: `data/` simulated + 1000 Genomes, `animal/` wildebeest, `images/`,
-  `scripts/`, `software/` with the psmc binary and its utils).
+  (284 M: `data/` simulated + 1000 Genomes, `animal/` wildebeest, `images/`,
+  `scripts/`, `software/` with the psmc binary and its utils). Trimmed to the
+  files the two notebooks actually read; 10 unreferenced files (211 M) removed,
+  all still available in `popgen25_demography/data/`.
 - **Note:** PSMC on simulated data, then on **real wildebeest samples**. Same structure as
   #62; the two differ in which real individuals are analysed.
 
@@ -627,7 +629,7 @@ data/sfs/                                                              291 M
   blackwildebeest_chr1.vcf.gz             folded sfs, real data
   bluewildebeest_whitebeard_chr1.vcf.gz   folded sfs, real data
 
-data/psmc/                                        shared by #39 and #62   485 M
+data/psmc/                                        shared by #39 and #62   284 M
   data/       simulated + 1000 Genomes psmcfa/psmc, wildebeest bcf for the bonus
   animal/     wildebeest psmcfa and precomputed psmc results
   images/     popsize, bootstrap, 1kg_chr1, NA12718 figures

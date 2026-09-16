@@ -985,7 +985,7 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   Genomes individuals (NA12718 CEU, NA19471 Luhya). #62 ends with a wildebeest bonus that
   #39 covers properly.
 
-  **One shared data folder, `data/psmc/` (485 M),** rather than one per exercise, since
+  **One shared data folder, `data/psmc/` (284 M),** rather than one per exercise, since
   they overlap almost completely — the same layout idea as `data/NGSintro/`:
 
   ```
@@ -1046,8 +1046,23 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   on the 1000 Genomes and wildebeest samples. Every command in those cells is the same
   binary and options exercised above, on data verified present.
 
-  **Note on `data/psmc/data/`:** 202 M of its 410 M is not referenced by either
-  notebook — `exercise_2.vcf.gz` (90 M, which looks like it belongs to a different
-  exercise entirely) and chr5/chr21 alternatives of the 1000 Genomes files. Left in place
-  rather than trimmed, since the chr5/chr21 sets are plausible swap-ins for the same
-  exercise, but say the word if you want the folder cut to only what is read.
+  **Trimmed to what is actually read (by request, 2026-09-16).** `data/psmc/data/` came
+  across with 22 files, 10 of which neither notebook names. Those 10 were removed:
+  `exercise_2.vcf.gz` (93 M, belonging to some other exercise), the chr5 and chr21
+  alternatives of the 1000 Genomes VCFs and psmcfa files, and
+  `1kg_2samps_chr1.recode.vcf.gz` (the with-indels version of a file the exercise only
+  uses in its `_noindels` form). **211 M freed**; the folder went 410 M -> 209 M and the
+  whole of `data/psmc/` 485 M -> 284 M.
+
+  Checked before deleting, not after:
+  - only the two PSMC notebooks read `data/psmc/` at all, so no other exercise could be
+    affected
+  - usage was matched on the **exact** filename, not a stem — a stem match wrongly counts
+    `1kg_2samps_chr1.recode.vcf.gz` as used because its name is a prefix of
+    `1kg_2samps_chr1_noindels.recode.vcf.gz`
+  - **all 10 still exist in `popgen25_demography/data/`**, so every one is a single `cp`
+    away if an exercise turns out to want it
+
+  Re-verified after deleting: the full toolchain still runs (vcf -> psmcfa -> psmc ->
+  plot -> png), all 12 files the notebooks name are present, all 7 wildebeest files, all
+  4 figures, and the bcf still opens under `bcftools view`.

@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**36 of 55 exercises built.**
+**38 of 55 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -106,8 +106,8 @@ Exercises that build an EM algorithm from scratch.
 | 25 | [`admixture_called_genotypes_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_animal.ipynb) | ADMIXTURE on called wildebeest genotypes, seeds, K and model fit. | ✅ built | ⚠️ _to regenerate_ |
 | 28 | [`local_ancestry_flare_mosaic_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_flare_mosaic_human.ipynb) | FLARE and MOSAIC on simulated admixed genomes, 20 vs 200 generations since admixture. | ✅ built | ⚠️ _to regenerate_ |
 | 29 | [`local_ancestry_hapla_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_hapla_human.ipynb) | hapla cluster/admix/fatash on simulated data, then a real cattle dataset. | ✅ built | _to generate_ |
-| 30 | `f_stats_human.ipynb` | f2/f3/f4 statistics for testing population relationships, plus qpAdm, on ancient and modern humans from the AADR. | ⬜ planned | _to generate_ |
-| 31 | `gene_flow_dstat_animal.ipynb` | Gene flow and D-statistics (ABBA-BABA) from scratch on simulated data, then f4 on wildebeest. | ⬜ planned | _to generate_ |
+| 30 | [`f_stats_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/f_stats_human.ipynb) | f2/f3/f4 statistics for testing population relationships, plus qpAdm, on ancient and modern humans from the AADR. | ✅ built | ⚠️ _to regenerate_ |
+| 31 | [`gene_flow_dstat_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/gene_flow_dstat_animal.ipynb) | Gene flow and D-statistics (ABBA-BABA) from scratch on simulated data, then f4 on wildebeest. | ✅ built | ⚠️ _to regenerate_ |
 | 32 | [`admixture_graphs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_graphs_human.ipynb) | qpgraph and treemix on precomputed F2 statistics for 33 world populations. | ✅ built | _to generate_ |
 | 33 | [`chromopainter_finestructure_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/chromopainter_finestructure_human.ipynb) | Chromosome painting with ChromoPainter, clustering with fineSTRUCTURE, then GLOBETROTTER and SOURCEFIND. | ✅ built | _to generate_ |
 | 34 | [`dating_admixture_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/dating_admixture_human.ipynb) | Dating admixture with ALDER, MALDER, fastGLOBETROTTER and MOSAIC, then AdaptMix for selection. | ✅ built | _to generate_ |
@@ -496,7 +496,7 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**36 of 55 exercises built.** Numbering runs to 57 because two pairs are each one
+**38 of 55 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 
