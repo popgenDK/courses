@@ -1,0 +1,106 @@
+[
+  {
+    "question": "For an admixed individual, what is the individual allele frequency h_ij?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The admixture-weighted average of the ancestral frequencies, sum_k Q_ik F_jk",
+        "correct": true,
+        "feedback": "Correct \u2014 one allele copy is drawn from population k with probability Q_ik."
+      },
+      {
+        "answer": "The average of the ancestral frequencies, unweighted",
+        "correct": false,
+        "feedback": "The weights are the admixture proportions."
+      },
+      {
+        "answer": "The frequency in the population the individual mostly comes from",
+        "correct": false,
+        "feedback": "All sources contribute."
+      },
+      {
+        "answer": "The observed genotype divided by two",
+        "correct": false,
+        "feedback": "That is the sample estimate, not the model."
+      }
+    ]
+  },
+  {
+    "question": "An individual has 80% ancestry from population 2, yet an observed A allele is assigned to population 2 with probability 86%. Why higher than 80%?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Because the A allele is more frequent in population 2, so seeing an A is itself evidence for that origin",
+        "correct": true,
+        "feedback": "Correct \u2014 the posterior combines the prior Q with the likelihood F."
+      },
+      {
+        "answer": "Because of a rounding error",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "Because Q is estimated badly",
+        "correct": false,
+        "feedback": "This calculation uses the true Q."
+      },
+      {
+        "answer": "It should equal 80%",
+        "correct": false,
+        "feedback": "Only if the allele carried no information."
+      }
+    ]
+  },
+  {
+    "question": "What is the hidden variable in the admixture EM?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Which ancestral population each allele copy came from",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The genotype",
+        "correct": false,
+        "feedback": "The genotypes are observed here."
+      },
+      {
+        "answer": "The number of populations K",
+        "correct": false,
+        "feedback": "K is fixed by you, not estimated."
+      },
+      {
+        "answer": "The allele frequency in the sample",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "The EM estimate can reach a HIGHER likelihood than the true parameters. Is that a bug?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "No \u2014 many parameters are fitted to finite data, so the fitted values can explain this particular data set better than the truth",
+        "correct": true,
+        "feedback": "Correct, this is overfitting, not an error."
+      },
+      {
+        "answer": "Yes, the likelihood is wrong",
+        "correct": false,
+        "feedback": "The likelihood is correct."
+      },
+      {
+        "answer": "Yes, the EM has a bug",
+        "correct": false,
+        "feedback": "No \u2014 EM increases the likelihood every iteration by construction."
+      },
+      {
+        "answer": "No, because the truth always has the highest likelihood",
+        "correct": false,
+        "feedback": "It does not, on finite data."
+      }
+    ]
+  }
+]

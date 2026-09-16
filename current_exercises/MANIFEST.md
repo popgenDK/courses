@@ -20,6 +20,9 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 13 | `ngs/ngs_intro_animal.ipynb` | `kenya2026/exercises/Day1/Kenya2026_NGSintro.ipynb` | 2026-08-17 | yes — quizzes, questions, typos, paths | 6 older copies (see EXERCISES.md) |
 | — | `ngs/quiz/*.json` (10 files) | new + `kenya2024/.../quiz{1..4}.json` | 2026-09-16 | new quiz bank | kenya2024 quiz1-4 |
 | 14 | `ngs/ngs_inference_human.ipynb` | `summer2025/exercises/Day2_NGS_Inference.ipynb` | 2025-08-04 | yes — split, quizzes, questions, bug fixes, paths | `summer2024/exercises/NGS_inference.ipynb`, `summer2023/NGSinference/` |
+| 19 | `em_algorithms/pca_em_human.ipynb` | `advBinf/exercises/advBinf_PCA_EM.ipynb` | 2026-09-16 | yes — 3 quizzes, 14 question blocks | none |
+| 24 | `em_algorithms/admixture_em_human.ipynb` | `advBinf/exercises/advBinf_admixture_EM.ipynb` | 2026-09-14 | yes — 2 quizzes | none |
+| 37 | `em_algorithms/sfs_model.ipynb` | `advBinf/exercises/advBinf_SFSmodel.ipynb` | 2026-09-16 | yes — quiz bank moved in, typo | `advBinf/exercises/SFS.md` (2024-09-20) |
 
 ## Notes
 
@@ -393,3 +396,35 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 
   `local_ancestry/` and `gene_flow/` no longer exist. `em_algorithms/` now holds
   5 exercises and `admixture/` holds 11.
+
+- **#19, #24, #37 — the three remaining EM notebooks** — built 2026-09-16.
+
+  | | cells | quizzes | questions after code |
+  |---|---|---|---|
+  | `pca_em_human.ipynb` | 48 -> 68 | 0 -> 3 | 8/22 -> **22/22** |
+  | `admixture_em_human.ipynb` | 36 -> 40 | 0 -> 2 | 12/14 |
+  | `sfs_model.ipynb` | 32 | 5 (moved) | 9/10 |
+
+  **All three are self-contained** — they simulate their own data and read no
+  files at all, so nothing was needed from `data/` and there were no paths to
+  centralise. That is unusual for advBinf exercises, which I had listed as
+  `env.sh`-staged; these three are the exception.
+
+  `pca_em_human.ipynb` needed the most work: it is the longest of the three and
+  had questions after only 8 of 22 code cells, mostly missing on the function
+  definitions (`emu`, `pcangsd`, `halko`, `winsvd`) where the point is to read
+  the code and find the E- and M-steps. Those now all carry questions.
+
+  `sfs_model.ipynb` already had 5 quizzes, but they loaded from
+  `advBinf/exercises/quiz/`. The five JSON files were copied into
+  `em_algorithms/quiz/` and the URLs repointed, so the exercise does not depend
+  on the advBinf course folder. Also fixed `allleles` -> `alleles`.
+
+  New quiz bank: `pca_em_missing`, `pca_em_lowdepth`, `pca_em_rsvd`,
+  `admixture_em_model`, `admixture_em_practice` — 20 questions, all conceptual,
+  covering the traps the exercises are built around (mean imputation pulling
+  missing individuals to the origin, the population-frequency prior being mean
+  imputation again, label switching, and why a higher likelihood at K=3 cannot
+  be used to choose K).
+
+  Still without quizzes: `em_algorithm.ipynb` and `haplotype_frequencies.ipynb`.

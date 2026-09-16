@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**12 of 56 exercises built.**
+**15 of 55 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -67,9 +67,9 @@ Exercises that build an EM algorithm from scratch.
 |---|---|---|---|---|
 | 5 | [`em_algorithm.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/em_algorithm.ipynb) | The EM algorithm from first principles: two coins, allele frequencies from genotype likelihoods, and the binomial. | ✅ built | ⚠️ _to regenerate_ |
 | 6+7 | [`haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/haplotype_frequencies.ipynb) | Estimating haplotype frequencies from genotypes with an EM algorithm. | ✅ built | ⚠️ _to regenerate_ |
-| 19 | `pca_em_human.ipynb` | The EM algorithms behind EMU and PCAngsd. | ⬜ planned | _to generate_ |
-| 24 | `admixture_em_human.ipynb` | The EM algorithm behind ADMIXTURE. | ⬜ planned | _to generate_ |
-| 37 | `sfs_model.ipynb` | Modelling the site frequency spectrum. | ⬜ planned | _to generate_ |
+| 19 | [`pca_em_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/pca_em_human.ipynb) | The EM algorithms behind EMU and PCAngsd. | ✅ built | ⚠️ _to regenerate_ |
+| 24 | [`admixture_em_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/admixture_em_human.ipynb) | The EM algorithm behind ADMIXTURE. | ✅ built | ⚠️ _to regenerate_ |
+| 37 | [`sfs_model.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/sfs_model.ipynb) | Modelling the site frequency spectrum. | ✅ built | ⚠️ _to regenerate_ |
 
 ### NGS data and mapping — `ngs/`
 
@@ -85,7 +85,6 @@ Exercises that build an EM algorithm from scratch.
 |---|---|---|---|---|
 | 15 | `genotype_calling_and_imputation_human.ipynb` | SNP calling, genotype calling and haplotype imputation in one exercise. | ⬜ planned | _to generate_ |
 | 16 | `imputation_human.ipynb` | Genotype imputation with a reference panel (QUILT). | ⬜ planned | _to generate_ |
-| 17 | `phasing_shapeit_human.ipynb` | Haplotype phasing with SHAPEIT. | ⬜ planned | _to generate_ |
 
 ### PCA — `pca/`
 
@@ -284,10 +283,6 @@ Replaces 5 older copies:
   - [`bgi23/03.QUILT_Imputation_new.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/03.QUILT_Imputation_new.ipynb) (2023-11-09)
   - [`bgi23/03.QUILT_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/03.QUILT_Imputation.ipynb) (2023-11-09)
   - [`bgi23/02.Minimac4_Imputaion.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/02.Minimac4_Imputaion.ipynb) (2023-11-09)
-
-**17. `phasing_shapeit_human.ipynb`**  
-From: [`bgi23/ 01.phasing.SHAPEIT_v2.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/%2001.phasing.SHAPEIT_v2.ipynb) (2023-11-09) — note leading space  
-Replaces: nothing — this is the only copy
 
 
 ### `pca/`
@@ -512,8 +507,8 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**12 of 56 exercises built.** Numbering runs to 57 because #6 and #7 were
-merged into a single exercise.
+**15 of 55 exercises built.** Numbering runs to 57 because #6 and #7 were
+merged into a single exercise, and #17 (SHAPEIT phasing) was removed from scope.
 
 | | |
 |---|---|

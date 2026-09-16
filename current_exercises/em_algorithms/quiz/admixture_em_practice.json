@@ -1,0 +1,106 @@
+[
+  {
+    "question": "Running the EM from 5 random starting points gives different likelihoods. What does that tell you?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The likelihood surface has several local maxima, and EM only climbs to one of them",
+        "correct": true,
+        "feedback": "Correct \u2014 this is why ADMIXTURE and NGSadmix are run many times."
+      },
+      {
+        "answer": "The data are corrupted",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "The EM is not converging",
+        "correct": false,
+        "feedback": "Each run converges \u2014 just to different optima."
+      },
+      {
+        "answer": "K is too small",
+        "correct": false,
+        "feedback": "That is a separate question."
+      }
+    ]
+  },
+  {
+    "question": "Of several runs with different likelihoods, which would you keep?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The one with the highest likelihood",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The average of them",
+        "correct": false,
+        "feedback": "Averaging Q matrices across runs is not meaningful."
+      },
+      {
+        "answer": "The first one",
+        "correct": false,
+        "feedback": "Arbitrary."
+      },
+      {
+        "answer": "The one with the most even Q",
+        "correct": false,
+        "feedback": "Not a criterion."
+      }
+    ]
+  },
+  {
+    "question": "The log likelihood with K=3 is higher than with K=2. Can you use that to choose K?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "No \u2014 adding a population adds parameters, so the likelihood almost always goes up",
+        "correct": true,
+        "feedback": "Correct; choosing K needs cross-validation or another criterion."
+      },
+      {
+        "answer": "Yes, pick the K with the highest likelihood",
+        "correct": false,
+        "feedback": "That would always pick the largest K."
+      },
+      {
+        "answer": "Yes, if the increase is more than 10",
+        "correct": false,
+        "feedback": "No such rule."
+      },
+      {
+        "answer": "No, because the likelihood is not comparable at all",
+        "correct": false,
+        "feedback": "It is comparable, it is just not a valid model-selection rule."
+      }
+    ]
+  },
+  {
+    "question": "Estimated population 1 sometimes corresponds to TRUE population 2, so the points fall on the anti-diagonal. Why?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Label switching \u2014 the model has no way to know which ancestral population you called 1",
+        "correct": true,
+        "feedback": "Correct, the likelihood is identical under a relabelling."
+      },
+      {
+        "answer": "The EM failed",
+        "correct": false,
+        "feedback": "It converged fine."
+      },
+      {
+        "answer": "The simulation is wrong",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "The allele frequencies are inverted",
+        "correct": false,
+        "feedback": "Not the cause."
+      }
+    ]
+  }
+]

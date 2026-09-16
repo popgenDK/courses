@@ -1,0 +1,106 @@
+[
+  {
+    "question": "Mean imputation replaces a missing genotype with 2f, the mean genotype at that SNP. After normalising, what value does that entry take?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Zero \u2014 the centre of the normalised data",
+        "correct": true,
+        "feedback": "Correct, which is exactly why those individuals are pulled to the middle of the plot."
+      },
+      {
+        "answer": "Two",
+        "correct": false,
+        "feedback": "No \u2014 normalising subtracts 2f, so it becomes 0."
+      },
+      {
+        "answer": "The individual's own mean",
+        "correct": false,
+        "feedback": "No, the SNP's mean is used."
+      },
+      {
+        "answer": "It stays missing",
+        "correct": false,
+        "feedback": "No, it is filled in."
+      }
+    ]
+  },
+  {
+    "question": "An individual with 95% missing data lands near the origin of the mean-imputed PCA. Is that biology?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "No \u2014 it is an artefact: most of its row was set to the population mean, so it cannot sit anywhere else",
+        "correct": true,
+        "feedback": "Correct. This is the trap the exercise is built around."
+      },
+      {
+        "answer": "Yes \u2014 it is genuinely intermediate between the populations",
+        "correct": false,
+        "feedback": "Nothing about its ancestry says that; the missingness alone puts it there."
+      },
+      {
+        "answer": "Yes \u2014 it must be admixed",
+        "correct": false,
+        "feedback": "Missingness is not admixture."
+      },
+      {
+        "answer": "No \u2014 it is a bug in svd()",
+        "correct": false,
+        "feedback": "The SVD is fine; the input was distorted."
+      }
+    ]
+  },
+  {
+    "question": "In the EMU loop, why is only `E[miss] <- Ghat[miss]` updated rather than `E <- Ghat`?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The observed genotypes are data and must not be replaced by the model's own prediction",
+        "correct": true,
+        "feedback": "Correct \u2014 overwriting them would let the low-rank fit erase the evidence."
+      },
+      {
+        "answer": "It is faster",
+        "correct": false,
+        "feedback": "Speed is not the reason."
+      },
+      {
+        "answer": "Ghat is only defined for missing entries",
+        "correct": false,
+        "feedback": "It is defined everywhere."
+      },
+      {
+        "answer": "To save memory",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "EMU alternates a low-rank SVD with re-filling the missing entries. Which step is the E-step?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Re-filling the missing entries with the current prediction",
+        "correct": true,
+        "feedback": "Correct \u2014 that is the expectation of the missing data given the model."
+      },
+      {
+        "answer": "The truncated SVD",
+        "correct": false,
+        "feedback": "That is the M-step: it fits the parameters."
+      },
+      {
+        "answer": "Computing the allele frequencies",
+        "correct": false,
+        "feedback": "That is done once, before the loop."
+      },
+      {
+        "answer": "Normalising the matrix",
+        "correct": false,
+        "feedback": "That is bookkeeping, not a step of the EM."
+      }
+    ]
+  }
+]

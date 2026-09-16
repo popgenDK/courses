@@ -1,0 +1,106 @@
+[
+  {
+    "question": "Halko's randomized SVD sketches the matrix with a random Omega and refines it with power iterations. What is the cost being minimised in the out-of-core setting?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The number of passes over the data, because the matrix lives on disk",
+        "correct": true,
+        "feedback": "Correct \u2014 that is the whole point of the comparison with PCAone."
+      },
+      {
+        "answer": "The number of SNPs",
+        "correct": false,
+        "feedback": "That is fixed by the data."
+      },
+      {
+        "answer": "The amount of RAM used by svd()",
+        "correct": false,
+        "feedback": "Related, but the exercise measures passes."
+      },
+      {
+        "answer": "The number of individuals",
+        "correct": false,
+        "feedback": "Also fixed."
+      }
+    ]
+  },
+  {
+    "question": "Omega has l = k + 5 columns rather than k. Why the extra columns?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Oversampling: extra random directions make it far more likely the sketch captures the true top-k subspace",
+        "correct": true,
+        "feedback": "Correct \u2014 a small cost for much better accuracy."
+      },
+      {
+        "answer": "To make the output easier to plot",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "Because svd() requires at least 7 columns",
+        "correct": false,
+        "feedback": "It does not."
+      },
+      {
+        "answer": "To store the singular values",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "One Halko power iteration costs two passes over the data, one PCAone window epoch costs one. Where does PCAone's advantage come from?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It updates Omega several times within a single pass, using blocks of SNPs, so the same work buys more updates",
+        "correct": true,
+        "feedback": "Correct \u2014 the same work in a smarter order."
+      },
+      {
+        "answer": "It does strictly less arithmetic",
+        "correct": false,
+        "feedback": "The arithmetic is comparable."
+      },
+      {
+        "answer": "It uses a smaller k",
+        "correct": false,
+        "feedback": "Same k."
+      },
+      {
+        "answer": "It skips the normalisation",
+        "correct": false,
+        "feedback": "It does not."
+      }
+    ]
+  },
+  {
+    "question": "Why does PCAone permute the SNPs before splitting them into blocks?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "So that a block is a random sample of the genome rather than one contiguous region in linkage disequilibrium",
+        "correct": true,
+        "feedback": "Correct \u2014 otherwise each block would carry its own local structure."
+      },
+      {
+        "answer": "To make the blocks equal in size",
+        "correct": false,
+        "feedback": "The boundaries do that."
+      },
+      {
+        "answer": "To remove rare variants",
+        "correct": false,
+        "feedback": "It removes nothing."
+      },
+      {
+        "answer": "To speed up the matrix product",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  }
+]

@@ -1,0 +1,80 @@
+[
+    {
+        "question": "In the E-step we compute q(Z_j = z). What is it?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The posterior probability that site j has z derived alleles, given the data and the current SFS",
+                "correct": true,
+                "feedback": "Correct. Each site is spread over all 2n+1 categories according to how well each count explains its data."
+            },
+            {
+                "answer": "The most likely number of derived alleles at site j",
+                "correct": false,
+                "feedback": "That would be calling the allele count, which is exactly what we are trying to avoid. The E-step keeps the whole distribution."
+            },
+            {
+                "answer": "The likelihood of the data at site j",
+                "correct": false,
+                "feedback": "That is the SAF, which is one of the ingredients of the E-step - but the E-step also uses the current SFS as the prior."
+            },
+            {
+                "answer": "The new estimate of the SFS",
+                "correct": false,
+                "feedback": "That comes out of the M-step, by averaging q over all sites."
+            }
+        ]
+    },
+    {
+        "question": "The M-step is theta_z = (sum over sites of q(Z_j = z)) / m. What does that correspond to?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The expected proportion of sites in category z, where each site contributes a fraction to every category",
+                "correct": true,
+                "feedback": "Correct. It is the same 'expected counts instead of observed counts' idea as in every other EM algorithm in this course."
+            },
+            {
+                "answer": "The proportion of sites whose most likely allele count is z",
+                "correct": false,
+                "feedback": "That would be the genotype/allele-count calling approach, and it is biased in the same way as calling genotypes."
+            },
+            {
+                "answer": "The average genotype likelihood in category z",
+                "correct": false,
+                "feedback": "The genotype likelihoods enter through the SAF and the E-step, but the M-step averages posteriors, not likelihoods."
+            },
+            {
+                "answer": "A weighted average of the true and the called SFS",
+                "correct": false,
+                "feedback": "The true SFS is unknown - the M-step only uses the data and the current parameter estimate."
+            }
+        ]
+    },
+    {
+        "question": "Which quantity plays the role of the prior p(Z_j = z) in this model?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The SFS itself, theta_z",
+                "correct": true,
+                "feedback": "Correct, and that is the elegant part: the parameter we are estimating is also the prior on the hidden state, so the EM keeps improving its own prior."
+            },
+            {
+                "answer": "The flat 1/(2n+1) used to start the algorithm",
+                "correct": false,
+                "feedback": "That is only the starting value of theta. After the first M-step the prior is the current SFS estimate."
+            },
+            {
+                "answer": "The genotype likelihoods",
+                "correct": false,
+                "feedback": "Those are the data side of the model, p(X | G), not a prior on the allele count."
+            },
+            {
+                "answer": "The Beta(0.5, 2) distribution used in the simulation",
+                "correct": false,
+                "feedback": "That generated the data, but the EM algorithm knows nothing about it - it estimates the spectrum without assuming any parametric shape."
+            }
+        ]
+    }
+]

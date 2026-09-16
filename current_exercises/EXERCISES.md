@@ -21,7 +21,8 @@ current_exercises/
 data -> /course/data/
 ```
 
-**56 exercises** (numbering runs to 57; #6 and #7 are one exercise). Done so far: 12.
+**55 exercises** (numbering runs to 57; #6 and #7 are one exercise, and #17 was
+removed from scope). Done so far: 12.
 
 ---
 
@@ -162,10 +163,6 @@ Exercises that build an EM algorithm from scratch.
   - `bgi23/03.QUILT_Imputation_new.ipynb` (2023-11-09)
   - `bgi23/03.QUILT_Imputation.ipynb` (2023-11-09)
   - `bgi23/02.Minimac4_Imputaion.ipynb` (2023-11-09)
-
-### 17. [ ] `phasing_shapeit_human.ipynb`
-- **From:** `bgi23/ 01.phasing.SHAPEIT_v2.ipynb` (2023-11-09) — note leading space
-- **Supersedes:** none — only copy
 
 ---
 
@@ -504,6 +501,18 @@ and its paths rewritten.
 Exercises that exist on the server but are not tracked in git — for example
 `/course/bsa/.../pairwise_alignment.ipynb` and `blast.ipynb` — are deliberately
 **not** included. Do not add them.
+
+**Removed from scope (2026-09-16):** #17 `phasing_shapeit_human.ipynb`, from
+`bgi23/ 01.phasing.SHAPEIT_v2.ipynb` (2023-11-09). Removed by request. It was the
+only SHAPEIT/phasing exercise in the list and the only copy of it, so nothing
+supersedes it and nothing else in the list depends on it. Number 17 is retired
+rather than reused — the numbering already skips, so later exercises keep their
+numbers. `bgi23/ 01.phasing.SHAPEIT_v2.ipynb` stays untouched in `bgi23/` as
+history (R6).
+
+Its data was never copied: the notebook reads `/course/bgi23/malthe/thursday/`,
+which is not in the data-copy list above, so removing it orphans nothing.
+(`bgi23_quan/`, 27 G, is for the single-cell exercise, not this one.)
 
 # Open questions
 

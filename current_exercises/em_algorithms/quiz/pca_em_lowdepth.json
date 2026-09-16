@@ -1,0 +1,106 @@
+[
+  {
+    "question": "At a site with no reads, all three genotype likelihoods are equal. What does calling the most likely genotype do there?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It picks arbitrarily \u2014 whichever genotype happens to come first in the tie",
+        "correct": true,
+        "feedback": "Correct, and that is pure noise added to the PCA."
+      },
+      {
+        "answer": "It returns a missing value",
+        "correct": false,
+        "feedback": "No \u2014 max.col still returns something."
+      },
+      {
+        "answer": "It returns the population mean",
+        "correct": false,
+        "feedback": "That is what the dosage does, not the call."
+      },
+      {
+        "answer": "It returns a heterozygote",
+        "correct": false,
+        "feedback": "Only by accident of the tie-break."
+      }
+    ]
+  },
+  {
+    "question": "Using the population allele frequency as the prior gives the dosage 2f at a site with no reads. Why is that not a real improvement over mean imputation?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It is mean imputation \u2014 the shallow individuals are again pulled to the population mean",
+        "correct": true,
+        "feedback": "Correct, which is why PCAngsd needs individual allele frequencies."
+      },
+      {
+        "answer": "It is worse, because the prior is wrong",
+        "correct": false,
+        "feedback": "The prior is not wrong, it is just not individual-specific."
+      },
+      {
+        "answer": "It is better, because it uses Bayes' formula",
+        "correct": false,
+        "feedback": "The formula is right, but the prior carries no individual information."
+      },
+      {
+        "answer": "There is no difference at any site",
+        "correct": false,
+        "feedback": "At covered sites the reads do inform the dosage."
+      }
+    ]
+  },
+  {
+    "question": "What does PCAngsd change compared with using a population frequency prior?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It replaces the population frequency with an individual allele frequency from the low-rank PCA, and iterates",
+        "correct": true,
+        "feedback": "Correct \u2014 the prior becomes individual-specific."
+      },
+      {
+        "answer": "It calls genotypes more accurately first",
+        "correct": false,
+        "feedback": "It never calls genotypes."
+      },
+      {
+        "answer": "It increases the sequencing depth",
+        "correct": false,
+        "feedback": "The data are fixed."
+      },
+      {
+        "answer": "It uses a different SVD",
+        "correct": false,
+        "feedback": "The SVD is the same."
+      }
+    ]
+  },
+  {
+    "question": "Compare `emu` and `pcangsd` line by line. What is genuinely the same?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Both alternate a low-rank SVD with re-estimating the unknown genotypes from the current fit",
+        "correct": true,
+        "feedback": "Correct \u2014 same algorithm, different notion of 'unknown'."
+      },
+      {
+        "answer": "Both treat missing data as NA",
+        "correct": false,
+        "feedback": "PCAngsd has no NA; it has likelihoods."
+      },
+      {
+        "answer": "Both need called genotypes to start",
+        "correct": false,
+        "feedback": "Neither does."
+      },
+      {
+        "answer": "Both assume no population structure",
+        "correct": false,
+        "feedback": "Structure is exactly what they estimate."
+      }
+    ]
+  }
+]

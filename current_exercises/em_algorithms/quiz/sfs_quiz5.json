@@ -1,0 +1,80 @@
+[
+    {
+        "question": "You rerun the simulation with mean_depth = 30 instead of 2. What do you expect?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The SFS from called genotypes becomes almost identical to the EM estimate and to the truth",
+                "correct": true,
+                "feedback": "Correct. With high depth the genotype is essentially known, so there is nothing for the likelihood approach to gain."
+            },
+            {
+                "answer": "The EM estimate gets worse because the SAF becomes harder to compute",
+                "correct": false,
+                "feedback": "The cost of the SAF depends on the number of individuals and sites, not on the depth, and more data can only help."
+            },
+            {
+                "answer": "Nothing changes, the bias is independent of depth",
+                "correct": false,
+                "feedback": "The bias comes entirely from genotype uncertainty, so it disappears as the depth grows. Try it."
+            },
+            {
+                "answer": "Both spectra become flat",
+                "correct": false,
+                "feedback": "The shape of the spectrum is set by the simulated allele frequencies, not by the depth."
+            }
+        ]
+    },
+    {
+        "question": "You set the error rate to 10%. Which spectrum suffers the most?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Both do, but the called genotypes suffer most, because a few erroneous reads are enough to flip a call",
+                "correct": true,
+                "feedback": "Correct. The likelihood approach at least knows that the data is uncertain; a call throws that information away."
+            },
+            {
+                "answer": "Neither - the error rate is part of the genotype likelihood, so it is fully accounted for",
+                "correct": false,
+                "feedback": "The error rate is used when computing the likelihoods, but a 10% error rate genuinely destroys information, and no method can invent it back."
+            },
+            {
+                "answer": "Only the true SFS changes",
+                "correct": false,
+                "feedback": "The true SFS is calculated from the true genotypes and does not depend on the sequencing at all."
+            },
+            {
+                "answer": "The EM algorithm stops converging",
+                "correct": false,
+                "feedback": "It still converges, it just converges to a worse estimate because the data carries less information."
+            }
+        ]
+    },
+    {
+        "question": "Which statement best summarises the point of this exercise?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Treating the unknown allele count as a hidden variable and estimating the SFS by maximum likelihood avoids the bias that genotype calling introduces",
+                "correct": true,
+                "feedback": "Correct - and this is exactly what ANGSD/realSFS does on real data, with the same SAF and the same EM algorithm."
+            },
+            {
+                "answer": "Genotype calling is always wrong and should never be used",
+                "correct": false,
+                "feedback": "Too strong. At high depth calling is fine and much simpler. The problem is specifically low depth data."
+            },
+            {
+                "answer": "The SFS can only be estimated if you know the true genotypes",
+                "correct": false,
+                "feedback": "The whole exercise shows the opposite: the SFS is estimated well without ever calling a single genotype."
+            },
+            {
+                "answer": "The EM algorithm estimates the genotypes and then counts them",
+                "correct": false,
+                "feedback": "It never commits to a genotype or an allele count - it keeps the full posterior distribution over allele counts for every site."
+            }
+        ]
+    }
+]
