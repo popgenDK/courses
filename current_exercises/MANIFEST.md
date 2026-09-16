@@ -30,6 +30,8 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 38 | `demography/sfs_animal.ipynb` | `kenya2026/exercises/Day2/SFS_WoA.ipynb` | 2026-08-15 | yes — path cell added, paths, folded-axis label | `kenya2026/.../post_course/day2_morning_sfs.ipynb` (2026-08-25) |
 | 39 | `demography/psmc_demography_animal.ipynb` | `kenya2026/exercises/Day2/psmc_kenya2026.ipynb` | 2026-08-19 | yes — paths, work folder, chdir bug, quizzes moved in | `kenya2026/.../post_course/day2_afternoon_psmc.ipynb` (2026-08-25) |
 | 62 | `demography/psmc_demography_human.ipynb` | `summer2025/exercises/Day5_demography.ipynb` | 2025-08-07 | yes — paths, work folder, chdir bug | 3 older copies (see EXERCISES.md) |
+| 63 | `selection/sfs_fst_pbs_human.ipynb` | web page `popgen.dk/albrecht/phdcourse/html/EMBO2021sfs.html` | 2021-03-22 | yes — written as a new SoS notebook | none — new exercise |
+| — | `data/scripts/plot2dSFS.R` | `/davidData/albrecht/course/sfs/plot2dSFS.R` | 2023-07-07 | no — copied verbatim | none |
 | — | `demography/quiz/psmc_*.json` (3 files) | `/davidData/users/thomas/workshop/psmc_quizzes/` | 2026 | renamed only | none |
 | — | `data/scripts/simulateWF.R` | `/course/popgen25/software/simulateWF.R` | 2025 | no — copied verbatim | none |
 | 19 | `em_algorithms/pca_em_human.ipynb` | `advBinf/exercises/advBinf_PCA_EM.ipynb` | 2026-09-16 | yes — 3 quizzes, 14 question blocks | none |
@@ -1091,3 +1093,78 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   rejects models rather than confirming them, that a negative qpAdm weight invalidates a
   model whatever its p-value, and why the blocked jackknife standard error is what makes
   any of it interpretable.
+
+- **#63 `sfs_fst_pbs_human.ipynb` — new exercise, built from a web page (2026-09-16).**
+  Requested directly: an SoS notebook version of
+  `https://www.popgen.dk/albrecht/phdcourse/html/EMBO2021sfs.html` (page updated
+  2021-03-22). It was not in the repo in any form, so nothing is superseded. Put in
+  `selection/`, which otherwise holds only animal exercises, so this is its human
+  counterpart. 50 cells: 26 markdown, 12 Bash, 12 R.
+
+  The content follows the page section by section — SFS in 1D and 2D from genotype
+  likelihoods, pairwise Fst, a PBS sliding-window scan against a genome-wide background,
+  and the chromosome 5 region. Every command, filter and option is the page's, and all of
+  its questions are kept.
+
+  **Adapted for a notebook rather than a terminal + separate R session:**
+  - the page's `$ThePath=/home/albrechtsen/embo2021` layout became one
+    `DATA_PATH=/course/data/current_data/sfs_fst_pbs`, written to an `env.sh` that every
+    one of the 12 bash cells re-`source`s — the same robustness pattern as #15/#16, which
+    matters here because the steps are deeply dependent on each other
+  - `angsd` and `realSFS` are on PATH on this server, so `ANGSD`/`REAL` point at those
+    rather than at a per-course `prog/angsd/` build
+  - the three `x11()` calls are gone: in a notebook each plot belongs in its own cell, so
+    the 2D spectra are three cells instead of one cell plus two X windows
+  - "open R", "close R" and "Remember to close R" instructions dropped — the R cells are
+    part of the notebook
+  - `cp $ThePath/sfs/plot2dSFS.R .` dropped; the helper is `source()`d from
+    `data/scripts/plot2dSFS.R` (R14), so nothing is copied into the working folder
+  - the R cells `setwd()` into the working folder, since the bash `cd` does not reach them
+
+  **Two fixes to the exercise itself:**
+  - the genotype-calling bonus reused the output prefixes `yri`, `jpt` and `ceu` — the
+    same as the saf runs in section 2 — so it overwrote `yri.arg`, `yri.mafs.gz` and so on
+    from the earlier section. Changed to `yriGeno`/`jptGeno`/`ceuGeno`, and the R cell
+    reads those. It also now passes `-anc $ANC`, which `-doMajorMinor 4` (use the
+    ancestral allele) requires.
+  - one of the four linked PDFs, `oulu2016/web/PBS.pdf`, is **404**. It illustrated the
+    background Fst/PBS distribution, which students now generate themselves a few cells
+    earlier, so the text points at their own histograms and maxima instead. The other
+    three links are live (checked, HTTP 200) and kept.
+
+  **Data: `data/sfs_fst_pbs/` (2.4 G)** copied from `/davidData/albrecht/course/sfs/` —
+  the human reference and the chimp ancestral fasta with their indexes, `smallerbams/`
+  (30 bams + indexes, 10 per population) and `chr5_33M_v2/` (30 bams). No symlinks.
+  - the `.fai` files hit **the same ANGSD timestamp trap** recorded under R5: ANGSD
+    refused to start with "Please reindex fasta file" until the copied indexes were
+    `touch`ed. This is now the second time that has bitten, on unrelated data.
+  - the chr5 bams have **no `.bai`**, which turned out not to matter: ANGSD reads them
+    sequentially since no region is requested. Verified on a 2-bam test run, 648,443 sites
+    retained.
+  - `precomputed/` holds the saf files from a verification run, so the page's "if it takes
+    too long, copy the results" shortcut works. The page pointed at
+    `$ThePath/run/`, which does not exist here.
+
+  **Verified by running the whole pipeline on the real data.** The answers the questions
+  ask for all come out correctly:
+  - 1.61 M sites retained per population; YRI has the most singletons (0.083 of the
+    spectrum, against 0.054 for JPT and 0.039 for CEU) and the largest fraction of
+    segregating sites (0.0050 vs 0.0035 and 0.0034), giving Ne ~23,500 against ~16,300 and
+    ~16,000 — so "which population has the largest population size?" resolves to the
+    African one, as it should
+  - global weighted Fst: **JPT-CEU 0.085** (most closely related), YRI-CEU 0.121,
+    **YRI-JPT 0.157** (most distant) — the textbook ordering the two Fst questions expect
+  - the background scan produced 104 windows of 50 kb
+
+  **The page's Shiny bonus is not included (dropped by request, 2026-09-16).** Its last
+  section launched a genome-wide PBS browser as a Shiny app. It is not runnable on this
+  server: the app `require(rCharts)`, a GitHub-only and unmaintained package that is not
+  installed, and its export path writes to a home directory that no longer exists. With
+  that section gone the notebook reads **entirely** from `data/` — no path anywhere in it
+  points outside the data store. The app is untouched at
+  `/davidData/albrecht/course/selectionScan/` (487 M, not copied) if it is ever wanted
+  back; it would need `rCharts` first.
+
+  The notebook is therefore 50 cells (26 markdown, 12 Bash, 12 R) and ends on the
+  genotype-calling bonus, which is a natural close: it is the section that answers "was it
+  worth avoiding genotype calls?".

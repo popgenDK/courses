@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**38 of 55 exercises built.**
+**40 of 56 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -127,13 +127,14 @@ Exercises that build an EM algorithm from scratch.
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 40 | `selection_scans_animal.ipynb` | Selection scans on wildlife data. **Blue wildebeest**, with a **human** comparison. | ⬜ planned | _to generate_ |
+| 63 | [`sfs_fst_pbs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/sfs_fst_pbs_human.ipynb) | SFS, Fst and a PBS selection scan from genotype likelihoods. **CEU/JPT/YRI** at 2-6X, landing on the lactase region. | ✅ built | _to generate_ |
 | 41 | `selection_scans_popgen_animal.ipynb` | Selection scans: population-genetic statistics along the genome. **Maize**. | ⬜ planned | _to generate_ |
 
 ### Relatedness and genetic diversity — `relatedness_diversity/`
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 42 | `fst_animal.ipynb` | Fst between populations. **Reindeer** and **wildebeest**. | ⬜ planned | _to generate_ |
+| 42 | [`fst_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/fst_animal.ipynb) | Pairwise Fst from called genotypes with plink2, then from genotype likelihoods with SAF. **Blue and black wildebeest** (95 individuals, 9 groups), then **Greenland reindeer** (3 populations). | ✅ built | _to generate_ |
 | 43 | `relatedness_animal.ipynb` | Relatedness and kinship estimation. **Reindeer**. | ⬜ planned | _to generate_ |
 | 45 | `heterozygosity_roh_animal.ipynb` | Heterozygosity and runs of homozygosity. **Blue wildebeest**. | ⬜ planned | _to generate_ |
 
@@ -414,6 +415,10 @@ Replaces 2 older copies:
   - [`kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb) (2026-08-25)
   - [`summer2023/selectionScan/README.md`](https://github.com/popgenDK/courses/blob/main/summer2023/selectionScan/README.md) (2023)
 
+**63. `sfs_fst_pbs_human.ipynb`**  
+From: the web page `https://www.popgen.dk/albrecht/phdcourse/html/EMBO2021sfs.html` (updated 2021-03-22), converted to an SoS notebook by request (2026-09-16).  
+Replaces: nothing — this is the only copy
+
 **41. `selection_scans_popgen_animal.ipynb`**  
 From: [`summer2025/exercises/Day4_SelectionPopGen2025.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_SelectionPopGen2025.ipynb) (2025-08-06)  
 Replaces 1 older copy:
@@ -496,7 +501,7 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**38 of 55 exercises built.** Numbering runs to 57 because two pairs are each one
+**40 of 56 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 

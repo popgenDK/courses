@@ -425,6 +425,23 @@ the other exercises do not shift.
   - `kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb` (2026-08-25)
   - `summer2023/selectionScan/README.md` (2023)
 
+### 63. [x] `sfs_fst_pbs_human.ipynb` — **new, not from the repo**
+- **From:** the web page `https://www.popgen.dk/albrecht/phdcourse/html/EMBO2021sfs.html`
+  (updated 2021-03-22), converted to an SoS notebook by request (2026-09-16).
+- **Supersedes:** none — this exercise was not in the repo in any form.
+- **Note:** the human counterpart of the `selection/` folder, which otherwise holds only
+  animal exercises. SFS (1D and 2D) from genotype likelihoods, pairwise Fst, then a PBS
+  sliding-window scan that lands on the lactase region — CEU/JPT/YRI from 1000 Genomes,
+  10 individuals each at 2-6X.
+- **Data:** `data/sfs_fst_pbs/` (2.4 G), copied from `/davidData/albrecht/course/sfs/`.
+  The `plot2dSFS.R` helper went to `data/scripts/` per R14.
+- **Shiny bonus dropped by request (2026-09-16).** The page's last section launched a
+  Shiny PBS browser; it needed the `rCharts` package, which is not installed and is
+  GitHub-only and unmaintained, and its export wrote to a home directory that no longer
+  exists. The section is not in the notebook, which therefore reads **entirely** from
+  `data/`. The app itself is untouched at `/davidData/albrecht/course/selectionScan/` if
+  it is ever wanted back.
+
 ### 41. [ ] `selection_scans_popgen_animal.ipynb`
 - **From:** `summer2025/exercises/Day4_SelectionPopGen2025.ipynb` (2025-08-06)
 - **Supersedes:** `summer2024/exercises/SelectionScans.ipynb` (2024-08-22)
@@ -434,12 +451,18 @@ the other exercises do not shift.
 
 # relatedness_diversity/
 
-### 42. [ ] `fst_animal.ipynb` — **post-course small-dataset version**
+### 42. [x] `fst_animal.ipynb`
 - **From:** `kenya2026/exercises/post_course/day4_morning_fst.ipynb` (2026-08-25)
 - **Supersedes:**
   - `kenya2026/exercises/Day4/Fst_Kenya2026.ipynb` (2026-08-23)
   - `kenya2024/exercises/day3_PopulationStructure/Day3_Fst_RH.ipynb` (2024-08-09)
-- **Paired with:** #44, the merged Related&Fst form
+- **Note:** pairwise $F_{ST}$ two ways — `plink2` on **called genotypes** (95 wildebeest in
+  9 groups, including black wildebeest as an outgroup species), then SAF-based estimation
+  on **genotype likelihoods** (3 Greenland reindeer populations). The post-course version
+  was chosen over the taught one because it reads a far smaller dataset (R7).
+- **Data:** `data/current_data/fst/` — 8.0 G, of which 6.8 G is the reindeer SAF files.
+  Replaced the post-course download machinery (`wget` of a zip into
+  `$KENYA2026_WORK_DIR`) with a standard setup cell.
 
 ### 43. [ ] `relatedness_animal.ipynb`
 - **From:** `kenya2026/exercises/Day5/Related.ipynb` (2026-08-23)
@@ -635,6 +658,12 @@ data/psmc/                                        shared by #39 and #62   284 M
   images/     popsize, bootstrap, 1kg_chr1, NA12718 figures
   scripts/    vcf2psmcfa.py
   software/   the psmc binary and utils/psmc_plot.pl
+
+data/sfs_fst_pbs/                                                       2.4 G
+  hg19.fa.gz + hg19ancNoChr.fa.gz    human reference and chimp ancestral (+ indexes)
+  smallerbams/     30 bams + indexes, 10 each CEU/JPT/YRI, reduced genome
+  chr5_33M_v2/     30 bams, the 1 Mb region on chromosome 5
+  precomputed/     saf files, so the angsd step can be skipped
 ```
 
 `chr21.fa.gz` was missing its `.fai`/`.gzi` index in the original course folder,

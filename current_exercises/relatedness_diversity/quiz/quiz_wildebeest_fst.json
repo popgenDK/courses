@@ -1,0 +1,236 @@
+[
+  {
+    "question": "What does a larger pairwise FST generally indicate?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "Greater allele-frequency differentiation between populations",
+        "correct": true,
+        "feedback": "Correct, with interpretation conditional on sampling and the marker set."
+      },
+      {
+        "answer": "Greater recent kinship between every individual",
+        "correct": false,
+        "feedback": "FST is a population differentiation statistic, not a pedigree coefficient."
+      },
+      {
+        "answer": "A physically larger genome",
+        "correct": false,
+        "feedback": "FST does not measure genome size."
+      }
+    ]
+  },
+  {
+    "question": "What does the PLINK --within file provide?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "Population assignments for individuals",
+        "correct": true,
+        "feedback": "Correct. These labels define the groups used in pairwise FST comparisons."
+      },
+      {
+        "answer": "Ancestral alleles for every SNP",
+        "correct": false,
+        "feedback": "The cluster file does not contain ancestral states."
+      },
+      {
+        "answer": "A list of LD-pruned markers",
+        "correct": false,
+        "feedback": "Marker pruning uses a separate variant list."
+      }
+    ]
+  },
+  {
+    "question": "Why is Hartebeest removed from the displayed wildebeest comparison table?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "It is an outgroup outside the focal wildebeest population comparisons",
+        "correct": true,
+        "feedback": "Correct. Removing it focuses the summary on the intended wildebeest comparisons."
+      },
+      {
+        "answer": "PLINK cannot calculate FST for any outgroup",
+        "correct": false,
+        "feedback": "PLINK can calculate the comparison; it is removed here for presentation and focus."
+      },
+      {
+        "answer": "It has no called genotypes",
+        "correct": false,
+        "feedback": "It was present in the original dataset and output."
+      }
+    ]
+  },
+  {
+    "question": "What does the FST heatmap contain?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "The same pairwise FST estimates rearranged into a symmetric matrix",
+        "correct": true,
+        "feedback": "Correct. The matrix changes the presentation, not the underlying estimates."
+      },
+      {
+        "answer": "Pairwise KING kinship coefficients",
+        "correct": false,
+        "feedback": "KING kinship belongs to the relatedness analysis."
+      },
+      {
+        "answer": "Individual ADMIXTURE proportions",
+        "correct": false,
+        "feedback": "ADMIXTURE Q values are individual ancestry proportions, not pairwise FST."
+      }
+    ]
+  },
+  {
+    "question": "Why should the heatmap dendrogram not automatically be interpreted as a true phylogeny?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "It is a clustering of the observed FST matrix and does not explicitly model evolutionary history",
+        "correct": true,
+        "feedback": "Correct. Migration, sampling, and the clustering method can affect its shape."
+      },
+      {
+        "answer": "Dendrograms never contain branch points",
+        "correct": false,
+        "feedback": "They do contain branches, but those branches are not automatically evolutionary lineages."
+      },
+      {
+        "answer": "FST values contain no population information",
+        "correct": false,
+        "feedback": "FST describes differentiation, but clustering it is not equivalent to phylogenetic inference."
+      }
+    ]
+  },
+  {
+    "question": "Which population pair is the most genetically differentiated in the wildebeest results?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "Black and Selous",
+        "correct": true,
+        "feedback": "Correct. This pair has the largest observed Hudson FST, approximately 0.5395."
+      },
+      {
+        "answer": "Amboseli and Nairobi",
+        "correct": false,
+        "feedback": "This is the least differentiated pair, with FST close to zero."
+      },
+      {
+        "answer": "Monduli and Serengeti",
+        "correct": false,
+        "feedback": "These populations are relatively similar, with FST approximately 0.0246."
+      }
+    ]
+  },
+  {
+    "question": "Which population pair is the most genetically similar in the wildebeest results?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "Amboseli and Nairobi",
+        "correct": true,
+        "feedback": "Correct. Their Hudson FST is approximately 0.0009, the smallest value in the table."
+      },
+      {
+        "answer": "Black and Selous",
+        "correct": false,
+        "feedback": "This pair has the largest FST and is the most differentiated."
+      },
+      {
+        "answer": "Ethosha and Luangwa",
+        "correct": false,
+        "feedback": "Their FST is approximately 0.194, much larger than the minimum."
+      }
+    ]
+  },
+  {
+    "question": "Considering the sampling map and the FST table, what general pattern is illustrated by pairs such as Amboseli–Nairobi and Monduli–Serengeti?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "Geographically close populations tend to have lower FST in these examples",
+        "correct": true,
+        "feedback": "Correct. Amboseli–Nairobi has FST ≈ 0.0009 and Monduli–Serengeti has FST ≈ 0.0246. This supports a geographic pattern, although it is not a universal rule."
+      },
+      {
+        "answer": "Geographically close populations always have the highest FST",
+        "correct": false,
+        "feedback": "These nearby pairs have two of the lowest FST values in the table."
+      },
+      {
+        "answer": "Geography and genetic differentiation must be completely unrelated",
+        "correct": false,
+        "feedback": "The observed nearby pairs suggest geography may matter, although other historical and ecological factors also influence FST."
+      }
+    ]
+  },
+  {
+    "question": "Why might geographically close wildebeest populations have lower FST?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "They may exchange more migrants and may share more recent ancestry",
+        "correct": true,
+        "feedback": "Correct. Gene flow and recent shared history can keep allele frequencies similar and reduce differentiation."
+      },
+      {
+        "answer": "Their genomes become physically shorter when populations are nearby",
+        "correct": false,
+        "feedback": "Geographic proximity does not alter genome length."
+      },
+      {
+        "answer": "FST is calculated directly from kilometres between sampling sites",
+        "correct": false,
+        "feedback": "FST is calculated from genetic variation; geographic distance may influence it biologically but is not part of the formula."
+      }
+    ]
+  }
+]
