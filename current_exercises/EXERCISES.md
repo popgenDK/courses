@@ -487,6 +487,15 @@ superseding summer2024 (human), which share **0%** of their cells.
 notebook; they are kept separately as #42 Fst and #43 relatedness, which is how the newer
 kenya2026 notebooks split them. The source stays untouched in `kenya2026/`.
 
+### 64. [x] `relatedness_human.ipynb`
+- **From:** written for this set, using the GWAS-intro cohort
+- **Supersedes:** none — new exercise
+- **Note:** a short exercise on why relatedness matters **before** a GWAS: relatives
+  share long stretches of genome, so they violate the independence a GWAS assumes and
+  inflate the test statistics. Estimates pairwise IBD with plink and removes relatives.
+- **Data:** the same case/control cohort as the GWAS exercises. **Called genotypes**.
+- **Leads to** the `gwas/` exercises.
+
 ### 45. [ ] `heterozygosity_roh_animal.ipynb` — **post-course small-dataset version**
 - **From:** `kenya2026/exercises/post_course/day5_morning_heterozygosity_roh.ipynb` (2026-08-25)
 - **Supersedes:**

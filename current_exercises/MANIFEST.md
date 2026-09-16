@@ -31,6 +31,9 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 39 | `demography/psmc_demography_animal.ipynb` | `kenya2026/exercises/Day2/psmc_kenya2026.ipynb` | 2026-08-19 | yes — paths, work folder, chdir bug, quizzes moved in | `kenya2026/.../post_course/day2_afternoon_psmc.ipynb` (2026-08-25) |
 | 62 | `demography/psmc_demography_human.ipynb` | `summer2025/exercises/Day5_demography.ipynb` | 2025-08-07 | yes — paths, work folder, chdir bug | 3 older copies (see EXERCISES.md) |
 | 63 | `selection/sfs_fst_pbs_human.ipynb` | web page `popgen.dk/albrecht/phdcourse/html/EMBO2021sfs.html` | 2021-03-22 | yes — written as a new SoS notebook | none — new exercise |
+| 43 | `relatedness_diversity/relatedness_animal.ipynb` | `kenya2026/exercises/Day5/Related.ipynb` | 2026-08-23 | yes — paths, setup cell, quizzes moved in, broken quiz JSON fixed | `kenya2026/.../post_course/day5_morning_relatedness.ipynb` (2026-08-25) |
+| 64 | `relatedness_diversity/relatedness_human.ipynb` | new, written from the GWAS-intro data and analysis | 2026-09-16 | yes — new short exercise | none — new exercise |
+| — | `relatedness_diversity/quiz/*.json` (5 files) | `kenya2026/exercises/Day4/quiz_*.json` | 2026 | renamed; one fixed | none |
 | — | `data/scripts/plot2dSFS.R` | `/davidData/albrecht/course/sfs/plot2dSFS.R` | 2023-07-07 | no — copied verbatim | none |
 | — | `demography/quiz/psmc_*.json` (3 files) | `/davidData/users/thomas/workshop/psmc_quizzes/` | 2026 | renamed only | none |
 | — | `data/scripts/simulateWF.R` | `/course/popgen25/software/simulateWF.R` | 2025 | no — copied verbatim | none |
@@ -1183,3 +1186,73 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   The notebook is therefore 50 cells (26 markdown, 12 Bash, 12 R) and ends on the
   genotype-calling bonus, which is a natural close: it is the section that answers "was it
   worth avoiding genotype calls?".
+
+- **#43 `relatedness_animal.ipynb` (2026-09-16).** From the 2026-08-23 kenya2026 notebook,
+  into `relatedness_diversity/`. 44 cells, SoS kernelspec (Bash + R + Python quiz cells).
+  The pipeline on 111 Greenland reindeer, 2.8 M SNPs, 12 populations: LD pruning from
+  precomputed PCAone residuals, KING kinship in plink2, PCA before and after dropping
+  relatives, ADMIXTURE K=2, then admixture-aware relatedness with `relateAdmix`, and a
+  KING-vs-relateAdmix comparison. Content unchanged; all five quizzes kept.
+
+  - **R4/R11:** the notebook opened with a bare `mkdir -p ~/kenya2026/relatedness` and had
+    the data path written out in full in a dozen cells. Now one path cell writing an
+    `env.sh` that all 12 bash code cells re-`source`, and the work folder is
+    `~/relatedness_animal`.
+  - **Data: `data/relatedness/` (1.5 G),** all `cmp`-identical — the Reindeer plink
+    fileset, the PCAone residuals, the precomputed ADMIXTURE K=2 output, `population.tsv`
+    and the `relateAdmix` binary. The two R plotting helpers went to `data/scripts/` (R14).
+  - **A pre-existing broken quiz, fixed.**
+    `kenya2026/exercises/Day4/quiz_dataset_summary.json` has a trailing comma before a `}`
+    and is **not valid JSON**, so the notebook's first quiz has never loaded for a student.
+    Fixed in the copy. Its four answers were then checked against the data and all are
+    right: 111 individuals, 2,818,432 SNPs, 12 populations, Kangerlussuaq-Sisimiut largest
+    at 21.
+  - removed a trailing comma in a `plot_pca_before_after()` call. R tolerates it only
+    because the empty argument binds to `sample_col`, which the function never evaluates.
+
+  **Verified by running all 11 bash cells on the real data** with an `ERR` trap: exit 0,
+  trap never fired. 2,818,432 SNPs prune to 4,399; KING classifies 4,304 pairs unrelated,
+  1,209 second-degree, 456 third-degree, 134 first-degree and 2 duplicate/MZ — which is
+  the inflation the notebook's own question ("the values are huge, can you think why?") is
+  about; 63 individuals get flagged at the 0.177 cutoff; both PCAs, ADMIXTURE and
+  `relateAdmix` produce their outputs. An earlier run exited 1 from leftover state in a
+  work directory I had deleted mid-run, not from the notebook.
+
+- **#64 `relatedness_human.ipynb` — new short exercise (2026-09-16).** Requested as the
+  human counterpart to #43, built on the data and the analysis from the GWAS-intro
+  exercise. 25 cells: 14 markdown, 7 Bash, 4 R. Not from any existing notebook, so nothing
+  is superseded.
+
+  The GWAS-intro notebook already runs `plink --genome` as one step among many; this pulls
+  that out and makes a short exercise of it: what IBD sharing is, `--genome` on the
+  cohort, the Z0/Z1 plot, the PI_HAT distribution, and what to do about it.
+
+  - **written with plain base R by request** — no `plotPlink`, no `newPlotPlink.R`
+    dependency. Three plots: a Z1-against-Z0 scatter with the six textbook relationships
+    marked, a `PI_HAT` histogram with the degree thresholds, and a sorted missingness plot.
+  - **the "assumes no population structure" caveat is stated up front**, in a blockquote,
+    with the reason (allele frequencies come from the sample, so shared ancestry looks like
+    relatedness) and the note that it is fine for this single-population cohort. The
+    closing questions come back to it: what the plot would look like for a mixed sample,
+    and how to tell relatedness from structure.
+  - **Data: `data/gwas_human/` (58 M)** — `gwa.{bed,bim,fam}` and `pheno3.txt`, extracted
+    from `novo23_gwas/GWASex.tar.gz`. The exercise reads the fileset in place instead of
+    copying a tarball into the home directory and untarring it, which is what the GWAS
+    notebook does. The same folder will serve #46-#48 when they are built.
+
+  **The dataset turned out to have something worth teaching, so the exercise is built
+  around it.** Running the analysis first:
+  - **there are no close relatives at all**: the largest `PI_HAT` is **0.148**, and only 7
+    of 63,190 pairs exceed 0.08. So the honest answer to "should we remove anyone?" is no,
+    and that is what makes the cohort usable for the GWAS exercises.
+  - **but 54 pairs come back as `nan`**, and they are not random: every one involves the
+    15 individuals who are missing **49-55%** of their genotypes. With half the genotypes
+    gone in both members of a pair, too few SNPs are left where both are called for the
+    method-of-moments estimate to resolve.
+  - `--mind 0.2` removes exactly those 15 individuals and the NaN count goes to **zero**,
+    while the largest `PI_HAT` stays 0.148 - so the conclusion does not change, which is
+    itself the answer to one of the questions.
+
+  Sections 4 and 5 of the notebook are that investigation: count the failures, find the
+  individuals, measure missingness with `--missing`, plot it, and redo the estimate on the
+  individuals with enough data.
