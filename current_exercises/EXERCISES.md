@@ -52,7 +52,7 @@ data -> /course/data/
 - **From:** `stat_molbio/normal.R` (2026-01-16)
 - **Supersedes:** none — only copy
 
-### 5. [ ] `em_algorithm.ipynb`
+### 5. [x] `em_algorithm.ipynb`
 - **From:** `advBinf/exercises/advBinf_EM_algorithm.ipynb` (2026-09-09)
 - **Supersedes:** none — only copy
 
@@ -123,7 +123,7 @@ Shiny server code lives in its own folder rather than under a theme (R13).
   - `kenya2024/exercises/day1_NGSintro/Day1_NGSintroV3.ipynb` (2024-07-26)
   - `kenya2024/exercises/day1_NGSintro/Day1_NGSintroV2.ipynb` (2024-07-15)
 
-### 14. [ ] `ngs_inference_human.ipynb`
+### 14. [x] `ngs_inference_human.ipynb`
 - **From:** `summer2025/exercises/Day2_NGS_Inference.ipynb` (2025-08-04)
 - **Supersedes:**
   - `summer2024/exercises/NGS_inference.ipynb` (2024-08-19)
@@ -434,6 +434,7 @@ predates this work.
 | [x] | `1000G/` | already present | 73 G |
 | [x] | `BSA/` | `/davidData/data/BSA` | 1.2 G |
 | [x] | `NGSintro/` | curated for exercises #12/#13 (see below) | 465 M |
+| [x] | `NGSinference/` | `/course/popgen25/NGSInference/data` — for #14 | 2.1 G |
 | [x] | `geneticMap/` | `/course/scripts/geneticMap` | 480 M |
 | [x] | `thomas_workshop/` | `/davidData/users/thomas/workshop` | 77 G |
 | [x] | `kenyaWorkshop_anders/` | `/course/kenyaWorkshop/anders` | 76 G |

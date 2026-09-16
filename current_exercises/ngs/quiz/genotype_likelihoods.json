@@ -1,0 +1,114 @@
+[
+  {
+    "question": "How many genotype likelihoods does ANGSD print per individual per site for a diploid?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 10,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000000,
+          9
+        ],
+        "correct": false,
+        "feedback": "Too few \u2014 count the unordered pairs of the four bases."
+      },
+      {
+        "type": "range",
+        "range": [
+          11,
+          1000
+        ],
+        "correct": false,
+        "feedback": "Too many \u2014 count the unordered pairs of the four bases."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "A genotype likelihood is p(data | genotype). Why does working with likelihoods beat calling a genotype first, at low depth?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Calling throws away the uncertainty; the likelihood keeps how strongly the reads support each genotype",
+        "correct": true,
+        "feedback": "Correct \u2014 this is the central idea of the whole exercise."
+      },
+      {
+        "answer": "Likelihoods are faster to compute",
+        "correct": false,
+        "feedback": "Speed is not the reason."
+      },
+      {
+        "answer": "Likelihoods need no reference genome",
+        "correct": false,
+        "feedback": "A reference is still used."
+      },
+      {
+        "answer": "Calling genotypes is only possible for humans",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "In the .glf output a value of 0 appears very often. What does it mean?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Either no reads, or the most likely genotype \u2014 log(1) = 0, since the values are scaled log-likelihoods",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The genotype is homozygous reference",
+        "correct": false,
+        "feedback": "Not necessarily."
+      },
+      {
+        "answer": "The site failed filtering",
+        "correct": false,
+        "feedback": "Filtered sites are not printed."
+      },
+      {
+        "answer": "The base quality was zero",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "-GL 1 and -GL 2 give different results. What do they select?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The genotype likelihood model \u2014 1 is SAMtools, 2 is GATK",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The number of threads",
+        "correct": false,
+        "feedback": "That is -P."
+      },
+      {
+        "answer": "How many likelihoods are printed",
+        "correct": false,
+        "feedback": "Always 10 for a diploid."
+      },
+      {
+        "answer": "The ploidy",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  }
+]

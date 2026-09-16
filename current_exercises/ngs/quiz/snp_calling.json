@@ -1,0 +1,80 @@
+[
+  {
+    "question": "Lowering -SNP_pval from 0.05 to 1e-6 reduces the number of SNPs. Which sites drop out first?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Sites with low minor allele frequency, where the evidence for any variation is weakest",
+        "correct": true,
+        "feedback": "Correct \u2014 that is what the histograms show."
+      },
+      {
+        "answer": "Sites with high minor allele frequency",
+        "correct": false,
+        "feedback": "Those are the easiest to call."
+      },
+      {
+        "answer": "Sites with high depth",
+        "correct": false,
+        "feedback": "Depth helps, it does not hurt."
+      },
+      {
+        "answer": "Sites on the reverse strand",
+        "correct": false,
+        "feedback": "Strand is not involved."
+      }
+    ]
+  },
+  {
+    "question": "In the .mafs.gz output, what is knownEM?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The allele frequency estimated by an EM algorithm, given an assumed major and minor allele",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The number of individuals with data",
+        "correct": false,
+        "feedback": "That is nInd."
+      },
+      {
+        "answer": "The p-value for the site being variable",
+        "correct": false,
+        "feedback": "That is pK.EM."
+      },
+      {
+        "answer": "The reference allele",
+        "correct": false,
+        "feedback": "That is the ref column."
+      }
+    ]
+  },
+  {
+    "question": "Why can an allele frequency be estimated more accurately than the individual genotypes it comes from?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The frequency pools information across all individuals, so the uncertainty in each single genotype partly averages out",
+        "correct": true,
+        "feedback": "Correct \u2014 the key reason to avoid calling genotypes at low depth."
+      },
+      {
+        "answer": "Frequencies are rounded to two decimals",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "It uses a different sequencing technology",
+        "correct": false,
+        "feedback": "Same data."
+      },
+      {
+        "answer": "It only uses the individuals with high depth",
+        "correct": false,
+        "feedback": "It uses all of them."
+      }
+    ]
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "question": "The derived allele frequency at the EDAR variant is high in East Asians and low in Africans and Europeans. What is the textbook explanation?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Positive selection on EDAR in East Asia",
+        "correct": true,
+        "feedback": "Correct \u2014 EDAR is a classic example."
+      },
+      {
+        "answer": "Sequencing error specific to East Asian samples",
+        "correct": false,
+        "feedback": "No \u2014 the pattern is real and replicated."
+      },
+      {
+        "answer": "The reference genome is East Asian",
+        "correct": false,
+        "feedback": "It is not."
+      },
+      {
+        "answer": "Genetic drift alone, with no selection",
+        "correct": false,
+        "feedback": "Drift alone is unlikely to produce this."
+      }
+    ]
+  },
+  {
+    "question": "Native Americans show an intermediate frequency. What complicates the interpretation?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The population is admixed, so part of the genome has recent European ancestry",
+        "correct": true,
+        "feedback": "Correct \u2014 admixture is listed as a challenge at the top of the exercise."
+      },
+      {
+        "answer": "Native Americans were sequenced at higher depth",
+        "correct": false,
+        "feedback": "Not the issue."
+      },
+      {
+        "answer": "EDAR is not present in their genome",
+        "correct": false,
+        "feedback": "It is."
+      },
+      {
+        "answer": "The ancestral allele is unknown",
+        "correct": false,
+        "feedback": "An ancestral sequence is supplied."
+      }
+    ]
+  },
+  {
+    "question": "The -doAsso 1 test compares allele frequencies between NAM and EAS using a 0/1 'phenotype'. What is being tested?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Whether the allele frequency differs between the two groups, using a likelihood ratio test",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Whether the site is in Hardy-Weinberg equilibrium",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "Whether the individuals are related",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "Whether the site is triallelic",
+        "correct": false,
+        "feedback": "That is -skipTriallelic."
+      }
+    ]
+  },
+  {
+    "question": "Estimating the frequency from called genotypes gave a different answer from the likelihood approach. Which is more trustworthy here and why?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The likelihood approach, because calling genotypes at 2-3X discards uncertainty and biases frequencies towards the major allele",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The called genotypes, because they are simpler",
+        "correct": false,
+        "feedback": "Simpler, but biased at low depth."
+      },
+      {
+        "answer": "They are always identical",
+        "correct": false,
+        "feedback": "They are not, as you just saw."
+      },
+      {
+        "answer": "Neither works below 10X",
+        "correct": false,
+        "feedback": "The likelihood approach is designed for low depth."
+      }
+    ]
+  }
+]

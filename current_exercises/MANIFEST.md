@@ -14,10 +14,12 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 11 | `shiny/dotplot.R` | `BSA/dotplotShiny.R` | 2025-08-30 | yes — self-`source()` URL repointed | none |
 | 3 | `statistics/stats_binomial.R` | `stat_molbio/binom.R` | 2026-01-16 | no — copied verbatim | none |
 | 4 | `statistics/stats_normal.R` | `stat_molbio/normal.R` | 2026-01-16 | no — copied verbatim | none |
+| 5 | `statistics/em_algorithm.ipynb` | `advBinf/exercises/advBinf_EM_algorithm.ipynb` | 2026-09-09 | yes — 3 bugs fixed, figure added, headings restructured, typos, citation | none |
 | 6+7 | `statistics/haplotype_frequencies.ipynb` | `advBinf/exercises/solution_haplotype_frequencies.ipynb` | 2025-09-12 | yes — rebuilt as one scaffolded notebook; print bug fixed | `advBinf/exercises/haplotype_frequencies.ipynb` (2025-09-12) |
 | 12 | `ngs/ngs_intro_human.ipynb` | `chinacourse2026/Day2_Morning_NGSintro_human.ipynb` | 2026-09-14 | yes — quizzes, questions, figure, typos, paths | 5 older copies (see EXERCISES.md) |
 | 13 | `ngs/ngs_intro_animal.ipynb` | `kenya2026/exercises/Day1/Kenya2026_NGSintro.ipynb` | 2026-08-17 | yes — quizzes, questions, typos, paths | 6 older copies (see EXERCISES.md) |
 | — | `ngs/quiz/*.json` (10 files) | new + `kenya2024/.../quiz{1..4}.json` | 2026-09-16 | new quiz bank | kenya2024 quiz1-4 |
+| 14 | `ngs/ngs_inference_human.ipynb` | `summer2025/exercises/Day2_NGS_Inference.ipynb` | 2025-08-04 | yes — split, quizzes, questions, bug fixes, paths | `summer2024/exercises/NGS_inference.ipynb`, `summer2023/NGSinference/` |
 
 ## Notes
 
@@ -234,3 +236,125 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   original course folder, although `samtools tview` and `bcftools mpileup -f`
   both need one. Generated in the clean folder; all 7 index files are now
   present for both references.
+
+- **#5 `em_algorithm.ipynb`** — copied from the 2026-09-09 advBinf notebook and
+  corrected. Unlike #6+7 this one was already a single fully worked notebook with
+  no blanks and no separate solution, so the structure and the pedagogy are
+  unchanged: 23 cells, same order, same code. Kernel left as `ir`, committed
+  without outputs. No data paths and no quizzes, so R4 and R10 need nothing.
+
+  **Three real bugs fixed:**
+  - the two-coin EM initialised `theta <- c(0.5,0.6)` while the text above it says
+    to start at $\theta_A=0.6, \theta_B=0.5$. Coin A therefore converged to 0.52 and
+    coin B to 0.80 — the labels swapped relative to the text, relative to Figure 1
+    of the source article the exercise tells students to compare against, and
+    relative to the notebook's own Bonus 2 cell, which does start `(0.6,0.5,0.9)`.
+    Now `c(0.6,0.5)`, giving $\theta_A=0.797$, $\theta_B=0.520$.
+  - the GATK genotype-likelihood formula wrote $g_{TT}$ with a plain `e` instead of
+    `\epsilon`, inconsistent with the $g_{CC}$ and $g_{CT}$ lines above it. The R code
+    was always right; only the formula was wrong.
+  - the E-step Bayes formula used curly typographic apostrophes in $z'$, which
+    MathJax renders literally instead of as a prime.
+
+  **Rendering fixes** (per the math pitfalls in `RUN_DATA_NOTEBOOKS.md`):
+  - three multi-line formulas were inline `$...$`, one of them containing a `\\`
+    line break, which MathJax cannot do inline. Made them display `$$...$$`.
+  - a literal Unicode `∝` inside math replaced with `\propto`.
+
+  **Structure:** the notebook was titled "Two-Coin EM Example" but contains three
+  parts, with a second `#` heading at "EM algorithm examples" and a third at
+  "Coin toss - how to find the maximum likelihood for a binomial". Retitled
+  `# The EM algorithm` with a 3-item contents list, and the two later `#` headings
+  demoted to `# 1.`/`# 2.`/`# 3.` sections. **Cell order is unchanged** — note that
+  part 3 is the gentlest material (plain binomial ML, no latent variable, no EM) and
+  still sits last, so the contents list says to read it first if likelihoods are new.
+  Say the word if you want it moved to the front instead.
+
+  **Other changes:**
+  - the coin example is now cited — Do CB & Batzoglou S (2008), *What is the
+    expectation maximization algorithm?*, Nature Biotechnology 26:897-899
+    (**confirmed correct, 2026-09-16**). The exercise asked students to "compare with
+    the review" and to read "the figure in the article" without ever naming either.
+  - **a figure was added** (2026-09-16), two cells after the two-coin EM run: our own
+    version of that paper's Figure 1 walk-through, generated in R from the notebook's
+    own numbers rather than copied from the paper. Left panel, the E-step posterior
+    q(Z_i) per sequence at the first iteration; right panel, the two estimates
+    converging over 10 iterations.
+
+    It is drawn rather than embedded for two reasons: the published figure is
+    copyright Nature Biotechnology and `current_exercises/` is headed for a public
+    GitHub repo, and a generated figure cannot fall out of sync with the code above
+    it. The repo's other notebooks link images from `popgen.dk/albrecht/open/`, so if
+    you would rather show the real figure, put a copy there and the markdown cell
+    becomes a one-line image link.
+
+    The E-step weights it draws — 0.45, 0.80, 0.73, 0.35, 0.65 — match the first
+    iteration of the paper's Figure 1b exactly, which independently confirms both the
+    reference and the corrected `c(0.6,0.5)` initialisation above. Colours are the
+    blue/orange categorical pair `#2a78d6`/`#eb6834`, checked colourblind-safe
+    (worst all-pairs CVD ΔE 24.7).
+  - $\pi$ was introduced as a parameter and fixed to 0.5 in the same sentence; it now
+    says it is assumed here and estimated in Bonus 2.
+  - the conditional likelihoods $P(X_i|Z_i)$ were labelled "(complete-data) likelihood",
+    which would be $P(X_i,Z_i)$.
+  - one cell contained nothing but the fragment `$p(X|\theta)$`, evidently a stub for
+    the Bonus 1 answer. It is now an answer prompt.
+  - `set.seed(1)` added to the simulated coin tosses in part 3. Without it `k` changes
+    on every run, so a published html render would not match a student's own numbers.
+  - dead commented-out `#abline(v=theta_save)` removed (no such variable).
+  - ~15 typos, including 4 in printed output (`Genotypes likehooods:`,
+    `log-likelhoods`) and 3 garbled sentences.
+
+  Verified by extracting all 10 code cells and running them through `Rscript`: exit 0,
+  no errors. The genotype EM is unchanged at $\theta_T=0.459292$, log likelihood
+  -23.63654; the coin EM now converges with A and B the right way round, to
+  $\theta_A=0.797$, $\theta_B=0.520$. 25 cells (23 from the source plus the two
+  figure cells).
+
+- **#14 `ngs_inference_human.ipynb`** — built 2026-09-16. 99 source cells -> 123,
+  with 5 quizzes and questions after 34 of 37 code cells (the 3 without are
+  setup).
+
+  **The source was two exercises in one notebook.** Cells 0-18 were a
+  continuation of the previous day's *animal* mapping exercise — index the
+  wildebeest BAM, call a VCF against the goat reference, filter it, view it with
+  tview and mpileup, then the genotype-likelihood shiny app. That is the same
+  material as the closing section of #13 `ngs_intro_animal`, so it was **dropped**
+  and only the human ANGSD low-depth exercise (cells 19-98) was kept. This also
+  means the exercise no longer mixes animal and human data, which is why it sits
+  in the human track.
+
+  Consequently `/course/popgen25/NGSInference/fasta` (goat reference) and
+  `sams/` (the wildebeest BAM) are not needed and were not copied.
+
+  **Data:** `data/NGSinference/` (2.1 G, 236/236 files) from
+  `/course/popgen25/NGSInference/data` — 100 BAMs across 5 populations plus the
+  reference and ancestral sequences. This directory was **missed by the original
+  data survey**: the notebook writes `/course/popgen25` with a single path
+  segment, and the survey's pattern required two.
+
+  **Bugs fixed in the code:**
+  - `grep -1 -` and `grep -v -1 -` were counting missing genotypes wrongly: `-1`
+    is parsed as grep's context option, not as the pattern. Now `grep -c -- -1`.
+  - a bare `print header` line in a bash cell, which is not a command and would
+    error. Now a comment.
+  - the association run wrote to `Results/$POP.EDAR`, where `$POP` was left over
+    from an earlier loop and therefore equal to `NAM` — it silently **overwrote**
+    the per-population NAM results. Now writes `Results/NAM_EAS.EDAR`.
+  - the p-value cell had the test statistic `2.739244` typed in by hand from an
+    old run. It now reads the statistic out of the output file.
+  - a malformed markdown link to Matteo Fumagalli's original exercises.
+  - doubled slashes in six figure URLs.
+
+  **Paths** centralised per R16: `DATA`, `WORK_DIR`, `REF`, `ANC`, `CHROM`,
+  `EDAR_SITE`, `EXAMPLE_SITE`, `NIND`. The work dir was `~/current_folder` and
+  `~/popgen25_NGSinference`; it is now `~/ngs_inference_human`, read back from a
+  dotfile by the two R cells.
+
+  **Figures** moved into `ngs/figures/` and served from this repo instead of
+  `summer2023/NGSinference/`. The two FastQC screenshots used by #12/#13 moved
+  there too.
+
+  **Typos:** yesterdays, roughty, thare, "are are called", follwoing, obversed,
+  "Native amerians", accross, Fumagilli, "chin protusion", "Column knownEM if
+  the estimated".

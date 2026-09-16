@@ -1,0 +1,106 @@
+[
+  {
+    "question": "-doPost 1 and -doPost 2 use different priors for the genotype posterior. What is the difference?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "-doPost 1 uses the estimated allele frequency with Hardy-Weinberg as prior; -doPost 2 uses a uniform prior",
+        "correct": true,
+        "feedback": "Correct \u2014 the frequency prior pulls calls towards the population."
+      },
+      {
+        "answer": "-doPost 1 is faster",
+        "correct": false,
+        "feedback": "Speed is not the difference."
+      },
+      {
+        "answer": "-doPost 2 calls only homozygotes",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "They differ only in the output format",
+        "correct": false,
+        "feedback": "No \u2014 the numbers differ."
+      }
+    ]
+  },
+  {
+    "question": "In the .geno output, what does -1 mean?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A missing genotype \u2014 it could not be called",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "A homozygous reference genotype",
+        "correct": false,
+        "feedback": "That would be 0."
+      },
+      {
+        "answer": "A deletion",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "A triallelic site",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "Most sites have at least one missing genotype. Why?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The mean depth is only about 2-3X, so for many individuals there is too little data to call confidently",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The reference genome is incomplete",
+        "correct": false,
+        "feedback": "Not the reason here."
+      },
+      {
+        "answer": "ANGSD only calls SNPs",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "The BAM files are truncated",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "Raising the posterior cutoff for calling a genotype has which effect?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Fewer genotypes are called, but the ones that are called are more reliable",
+        "correct": true,
+        "feedback": "Correct \u2014 always this trade-off."
+      },
+      {
+        "answer": "More genotypes are called, and more reliably",
+        "correct": false,
+        "feedback": "You cannot have both."
+      },
+      {
+        "answer": "It has no effect at low depth",
+        "correct": false,
+        "feedback": "It has a large effect at low depth."
+      },
+      {
+        "answer": "It changes the allele frequency estimate only",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  }
+]

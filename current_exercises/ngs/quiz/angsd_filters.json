@@ -1,0 +1,80 @@
+[
+  {
+    "question": "-minInd 5 was used. What does it do?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Keeps only sites with data from at least 5 individuals",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Keeps only the first 5 individuals",
+        "correct": false,
+        "feedback": "No \u2014 it is a per-site filter."
+      },
+      {
+        "answer": "Requires at least 5 reads",
+        "correct": false,
+        "feedback": "That is -setMinDepth."
+      },
+      {
+        "answer": "Discards the 5 worst samples",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "Why set a MAXIMUM depth (-setMaxDepth) as well as a minimum?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Unusually high depth often means repetitive or collapsed regions where reads are misplaced",
+        "correct": true,
+        "feedback": "Correct \u2014 more data is not always better."
+      },
+      {
+        "answer": "To make the analysis run faster",
+        "correct": false,
+        "feedback": "Speed is not the point."
+      },
+      {
+        "answer": "Because ANGSD cannot handle more than 100 reads",
+        "correct": false,
+        "feedback": "It can."
+      },
+      {
+        "answer": "To remove PCR duplicates",
+        "correct": false,
+        "feedback": "That is a separate step."
+      }
+    ]
+  },
+  {
+    "question": "-uniqueOnly 1 and -only_proper_pairs 1 both remove reads. What do they target?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Reads that map to more than one place, and pairs that did not map in the expected orientation and distance",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Reads with low base quality",
+        "correct": false,
+        "feedback": "That is -minQ."
+      },
+      {
+        "answer": "Duplicate reads",
+        "correct": false,
+        "feedback": "That is handled elsewhere."
+      },
+      {
+        "answer": "Reads outside the target region",
+        "correct": false,
+        "feedback": "That is -r."
+      }
+    ]
+  }
+]
