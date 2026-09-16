@@ -343,10 +343,16 @@ the other exercises do not shift.
   `treemix` parts of `/course/popgen23/ben/fstats_tutorial`. The 1.9 G raw genotype
   directory is not needed: the $F_2$ statistics are precomputed.
 
-### 33. [ ] `chromopainter_finestructure_human.ipynb`
+### 33. [x] `chromopainter_finestructure_human.ipynb`
 - **From:** `summer2024/exercises/ChromoPainterFineSTRUCTUREPractical.ipynb` (2024-08-21)
 - **Supersedes:** none — only copy
-- **Companion:** `CopenhagenPopgenWorkshop2024_ChromoPainterFineSTRUCTUREPracticalSOLN.pdf`
+- **Companion:** `summer2024/exercises/CopenhagenPopgenWorkshop2024_ChromoPainterFineSTRUCTUREPracticalSOLN.pdf`
+- **Note:** ChromoPainter paints each genome as a mosaic of the others; fineSTRUCTURE
+  clusters from the chunk counts by MCMC; then GLOBETROTTER and SOURCEFIND infer the
+  ancestry of the admixed target. Compiles its software from source.
+- **Data:** `data/current_data/chromopainter/` — a single 15 M tarball, unpacked by the
+  setup cell.
+- **Leads to** #34, which uses the ChromoPainter output from part 2.
 
 ### 34. [x] `dating_admixture_human.ipynb`
 - **From:** `summer2024/exercises/DatingAdmixture.ipynb` (2024-08-21)
@@ -381,13 +387,16 @@ the other exercises do not shift.
 - **Data:** the 5 VCFs it reads were copied from `kenya2026_harvi/sfs/inputdata/` to a
   cleaned `data/sfs/` folder (291 M, all `cmp`-identical).
 
-### 39. [ ] `psmc_demography_animal.ipynb`
+### 39. [x] `psmc_demography_animal.ipynb`
 - **From:** `kenya2026/exercises/Day2/psmc_kenya2026.ipynb` (2026-08-19)
 - **Supersedes:** `kenya2026/exercises/post_course/day2_afternoon_psmc.ipynb` (2026-08-25)
+- **Data:** both PSMC exercises now read one shared folder, `data/psmc/`
+  (485 M: `data/` simulated + 1000 Genomes, `animal/` wildebeest, `images/`,
+  `scripts/`, `software/` with the psmc binary and its utils).
 - **Note:** PSMC on simulated data, then on **real wildebeest samples**. Same structure as
   #62; the two differ in which real individuals are analysed.
 
-### 62. [ ] `psmc_demography_human.ipynb`
+### 62. [x] `psmc_demography_human.ipynb`
 - **From:** `summer2025/exercises/Day5_demography.ipynb` (2025-08-07)
 - **Supersedes:**
   - `summer2024/exercises/summer2024-PSMC_tutorial_2024.ipynb` (2024-08-23)
@@ -617,6 +626,13 @@ data/sfs/                                                              291 M
   simld_{a,b,c}_for_sfs.vcf.gz   3 simulated scenarios, unfolded sfs
   blackwildebeest_chr1.vcf.gz             folded sfs, real data
   bluewildebeest_whitebeard_chr1.vcf.gz   folded sfs, real data
+
+data/psmc/                                        shared by #39 and #62   485 M
+  data/       simulated + 1000 Genomes psmcfa/psmc, wildebeest bcf for the bonus
+  animal/     wildebeest psmcfa and precomputed psmc results
+  images/     popsize, bootstrap, 1kg_chr1, NA12718 figures
+  scripts/    vcf2psmcfa.py
+  software/   the psmc binary and utils/psmc_plot.pl
 ```
 
 `chr21.fa.gz` was missing its `.fai`/`.gzi` index in the original course folder,

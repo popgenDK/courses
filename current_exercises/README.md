@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**33 of 55 exercises built.**
+**36 of 55 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -109,7 +109,7 @@ Exercises that build an EM algorithm from scratch.
 | 30 | `f_stats_human.ipynb` | f2/f3/f4 statistics for testing population relationships, plus qpAdm, on ancient and modern humans from the AADR. | ⬜ planned | _to generate_ |
 | 31 | `gene_flow_dstat_animal.ipynb` | Gene flow and D-statistics (ABBA-BABA) from scratch on simulated data, then f4 on wildebeest. | ⬜ planned | _to generate_ |
 | 32 | [`admixture_graphs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_graphs_human.ipynb) | qpgraph and treemix on precomputed F2 statistics for 33 world populations. | ✅ built | _to generate_ |
-| 33 | `chromopainter_finestructure_human.ipynb` | Chromosome painting and fineSTRUCTURE. | ⬜ planned | _to generate_ |
+| 33 | [`chromopainter_finestructure_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/chromopainter_finestructure_human.ipynb) | Chromosome painting with ChromoPainter, clustering with fineSTRUCTURE, then GLOBETROTTER and SOURCEFIND. | ✅ built | _to generate_ |
 | 34 | [`dating_admixture_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/dating_admixture_human.ipynb) | Dating admixture with ALDER, MALDER, fastGLOBETROTTER and MOSAIC, then AdaptMix for selection. | ✅ built | _to generate_ |
 
 ### Demography and the coalescent — `demography/`
@@ -119,8 +119,8 @@ Exercises that build an EM algorithm from scratch.
 | 35 | [`coalescence.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/coalescence.ipynb) | The coalescent: simulating and interpreting gene trees. | ✅ built | _to generate_ |
 | 36 | [`wright_fisher.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/wright_fisher.ipynb) | Wright-Fisher simulations of drift. | ✅ built | ⚠️ _to regenerate_ |
 | 38 | [`sfs_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/sfs_animal.ipynb) | The SFS from real wildlife sequencing data. | ✅ built | ⚠️ _to regenerate_ |
-| 39 | `psmc_demography_animal.ipynb` | PSMC on simulated data, then on real wildebeest samples. | ⬜ planned | _to generate_ |
-| 62 | `psmc_demography_human.ipynb` | PSMC on simulated data, then on two 1000 Genomes individuals, CEU and Luhya. | ⬜ planned | _to generate_ |
+| 39 | [`psmc_demography_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_animal.ipynb) | PSMC on simulated data, then on real wildebeest samples. | ✅ built | ⚠️ _to regenerate_ |
+| 62 | [`psmc_demography_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_human.ipynb) | PSMC on simulated data, then on two 1000 Genomes individuals, CEU and Luhya. | ✅ built | ⚠️ _to regenerate_ |
 
 ### Selection — `selection/`
 
@@ -496,7 +496,7 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**33 of 55 exercises built.** Numbering runs to 57 because two pairs are each one
+**36 of 55 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 

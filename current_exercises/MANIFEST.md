@@ -28,6 +28,9 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 35 | `demography/coalescence.ipynb` | `kenya2026/exercises/Day2/Coalescence_short_WoA.ipynb` | 2026-08-15 | yes — setup cell added, helper repointed | 2 older copies (see EXERCISES.md) |
 | 36 | `demography/wright_fisher.ipynb` | `summer2025/exercises/Day1_morning_WrightFisherTutorial.ipynb` | 2025-08-03 | yes — helper repointed, one wording fix | none |
 | 38 | `demography/sfs_animal.ipynb` | `kenya2026/exercises/Day2/SFS_WoA.ipynb` | 2026-08-15 | yes — path cell added, paths, folded-axis label | `kenya2026/.../post_course/day2_morning_sfs.ipynb` (2026-08-25) |
+| 39 | `demography/psmc_demography_animal.ipynb` | `kenya2026/exercises/Day2/psmc_kenya2026.ipynb` | 2026-08-19 | yes — paths, work folder, chdir bug, quizzes moved in | `kenya2026/.../post_course/day2_afternoon_psmc.ipynb` (2026-08-25) |
+| 62 | `demography/psmc_demography_human.ipynb` | `summer2025/exercises/Day5_demography.ipynb` | 2025-08-07 | yes — paths, work folder, chdir bug | 3 older copies (see EXERCISES.md) |
+| — | `demography/quiz/psmc_*.json` (3 files) | `/davidData/users/thomas/workshop/psmc_quizzes/` | 2026 | renamed only | none |
 | — | `data/scripts/simulateWF.R` | `/course/popgen25/software/simulateWF.R` | 2025 | no — copied verbatim | none |
 | 19 | `em_algorithms/pca_em_human.ipynb` | `advBinf/exercises/advBinf_PCA_EM.ipynb` | 2026-09-16 | yes — 3 quizzes, 14 question blocks | none |
 | 24 | `em_algorithms/admixture_em_human.ipynb` | `advBinf/exercises/advBinf_admixture_EM.ipynb` | 2026-09-14 | yes — 2 quizzes | none |
@@ -971,3 +974,80 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 
   Python cells were not executed (no data, and they need the `sos` kernel to run in
   order); they are 12 lines of numpy/matplotlib with no inputs.
+
+- **#39 `psmc_demography_animal.ipynb` and #62 `psmc_demography_human.ipynb`
+  (2026-09-16).** The two PSMC exercises, animal and human, both in `demography/`. 62
+  and 51 cells, SoS kernelspec (Bash plus Python for viewing the plots). The teaching
+  content, the PSMC commands and the question blocks are unchanged.
+
+  They are the **same exercise on different species**, which is why both are kept (R2):
+  simulated data first, then #39 goes to three wildebeest samples and #62 to two 1000
+  Genomes individuals (NA12718 CEU, NA19471 Luhya). #62 ends with a wildebeest bonus that
+  #39 covers properly.
+
+  **One shared data folder, `data/psmc/` (485 M),** rather than one per exercise, since
+  they overlap almost completely — the same layout idea as `data/NGSintro/`:
+
+  ```
+  data/psmc/
+    data/       simulated + 1000 Genomes psmcfa/psmc, and the wildebeest bcf for #62's bonus
+    animal/     wildebeest psmcfa and precomputed psmc results (from kenya2026_rasmus)
+    images/     popsize, bootstrap, 1kg_chr1, NA12718 figures
+    scripts/    vcf2psmcfa.py
+    software/   the psmc binary and utils/psmc_plot.pl
+  ```
+
+  Between them the two notebooks previously read from **five** places, including
+  `/course/popgen25/software`, `/course/kenya2026/rasmus/psmc/data` and
+  `/davidData/users/thomas/workshop/psmc_quizzes/`. Now each names one folder.
+
+  **Three more symlinks pointing outside the data store, found and fixed.** The copied
+  `popgen25_demography/data/` contained:
+  - `NA12718_chr1.psmc` and `NA19471_chr1.psmc` -> `/course/popgen24/shyam/psmc_tutorial/analysis/`
+    (a *different instructor's* directory), and
+  - `CTauTzS_8872.chr27.filtered.bcf.gz` -> `/davidData/users/thomas/workshop/`
+
+  All three are **load-bearing**: the two `.psmc` files are what #62 offers students who
+  do not want to wait 10 minutes for PSMC, and the bcf is the input to its wildebeest
+  bonus. They resolved only because those directories still exist. Dereferenced into real
+  files in `data/psmc/data/`, so the folder now has **zero symlinks**.
+
+  **A real bug in both:** the Python setup cell did `os.chdir("demography")` — a
+  *relative* path, while the bash cell next to it did `cd ~; mkdir -p demography; cd
+  demography`. The Python cell therefore only worked if the notebook server happened to
+  start in `$HOME`, and silently put the Python cells in a different directory from the
+  bash cells otherwise. Both now use
+  `os.chdir(os.path.expanduser("~/<exercise name>"))`.
+
+  **Other changes:**
+  - work folder `~/demography` became `~/psmc_demography_animal` and
+    `~/psmc_demography_human`. They shared one folder before, and now that both exercises
+    exist side by side they would have overwritten each other's `s1_1.psmcfa`,
+    `combined_coarsePattern.psmc` and plots.
+  - `TOOLS_PATH` pointed at the whole 1.8 G software tree, with `PSMC=${TOOLS_PATH}/psmc/psmc`.
+    It now points at `data/psmc/software`, so `PSMC=${TOOLS_PATH}/psmc` and
+    `PSMC_PLOT=${TOOLS_PATH}/utils/psmc_plot.pl`.
+  - the Python image cells cannot see the bash variables, so the setup cell defines
+    `IMAGES_PATH` on the Python side too, and the four `mpimg.imread` calls use it.
+    A comment says why the path is defined twice.
+  - #39's three quizzes came out of `/davidData/users/thomas/workshop/psmc_quizzes/` into
+    `demography/quiz/`, loaded by raw-GitHub URL (R8), renamed
+    `psmc_quiz1_input_and_heterozygosity.json` -> `psmc_input_heterozygosity.json` and so
+    on. 13 questions across the three.
+
+  **Smoke-tested against the new folder** — the whole toolchain with real data, exit 0:
+  `vcf2psmcfa.py` on `threeinds.recode.vcf.gz` produced a valid psmcfa; `psmc -p "4+5*3+4"`
+  ran to completion (RS/PA records present); `psmc_plot.pl` plus `pdftoppm` produced the
+  `.pdf` and `-1.png` the notebooks display; the three precomputed wildebeest `.psmc`
+  files copy; the human psmcfa, the two precomputed `.psmc` and the 176 M bcf all read;
+  and all four figures load in matplotlib.
+
+  **Not run:** the full notebooks under the SoS kernel, and the real 10-minute PSMC runs
+  on the 1000 Genomes and wildebeest samples. Every command in those cells is the same
+  binary and options exercised above, on data verified present.
+
+  **Note on `data/psmc/data/`:** 202 M of its 410 M is not referenced by either
+  notebook — `exercise_2.vcf.gz` (90 M, which looks like it belongs to a different
+  exercise entirely) and chr5/chr21 alternatives of the 1000 Genomes files. Left in place
+  rather than trimmed, since the chr5/chr21 sets are plausible swap-ins for the same
+  exercise, but say the word if you want the folder cut to only what is read.

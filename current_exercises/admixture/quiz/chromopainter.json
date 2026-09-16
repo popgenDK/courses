@@ -1,0 +1,132 @@
+[
+  {
+    "question": "Chromosome painting uses haplotypes rather than allele frequencies. What does that buy you?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Sensitivity to recent, fine-scale structure \u2014 who shares long haplotype chunks with whom, which frequencies average away",
+        "correct": true,
+        "feedback": "Correct: this is why fineSTRUCTURE resolves structure that ADMIXTURE and PCA cannot."
+      },
+      {
+        "answer": "Faster computation",
+        "correct": false,
+        "feedback": "It is considerably slower."
+      },
+      {
+        "answer": "It works on unphased data",
+        "correct": false,
+        "feedback": "It needs phased haplotypes and a recombination map."
+      },
+      {
+        "answer": "It needs fewer individuals",
+        "correct": false,
+        "feedback": "Not the advantage."
+      }
+    ]
+  },
+  {
+    "question": "The ChromoPainter output is a matrix of chunk counts. What does entry (i,j) mean?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "How much of individual i's genome was copied from individual j",
+        "correct": true,
+        "feedback": "Correct \u2014 and it is not symmetric."
+      },
+      {
+        "answer": "The genetic distance between i and j",
+        "correct": false,
+        "feedback": "It is a copying count, not a distance."
+      },
+      {
+        "answer": "Whether i and j are in the same population",
+        "correct": false,
+        "feedback": "That is what fineSTRUCTURE infers from it."
+      },
+      {
+        "answer": "The number of SNPs shared by i and j",
+        "correct": false,
+        "feedback": "Chunks, not SNPs."
+      }
+    ]
+  },
+  {
+    "question": "fineSTRUCTURE uses MCMC where ADMIXTURE optimises a likelihood. Why?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The number of clusters and the assignment are both unknown, so it samples over partitions rather than fitting a fixed K",
+        "correct": true,
+        "feedback": "Correct \u2014 you do not have to choose K in advance."
+      },
+      {
+        "answer": "MCMC is faster",
+        "correct": false,
+        "feedback": "It is slower."
+      },
+      {
+        "answer": "The likelihood has no maximum",
+        "correct": false,
+        "feedback": "It does."
+      },
+      {
+        "answer": "To avoid needing a reference panel",
+        "correct": false,
+        "feedback": "Neither method uses one here."
+      }
+    ]
+  },
+  {
+    "question": "Two independent MCMC runs are compared. What are you checking?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Convergence \u2014 if two chains from different seeds reach different answers, neither has explored the space properly",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "That the data were read correctly",
+        "correct": false,
+        "feedback": "Not what this tests."
+      },
+      {
+        "answer": "The speed of the sampler",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "Whether K was chosen correctly",
+        "correct": false,
+        "feedback": "fineSTRUCTURE does not take a fixed K."
+      }
+    ]
+  },
+  {
+    "question": "GLOBETROTTER and SOURCEFIND give different proportions on the same painting. What is the sensible reading?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Both are estimates under different models, so agreement is evidence and disagreement is a warning to report uncertainty",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The one with the larger proportions is right",
+        "correct": false,
+        "feedback": "No basis for that."
+      },
+      {
+        "answer": "The data must be wrong",
+        "correct": false,
+        "feedback": "Methods can differ on good data."
+      },
+      {
+        "answer": "SOURCEFIND is always more accurate",
+        "correct": false,
+        "feedback": "Neither is always better."
+      }
+    ]
+  }
+]
