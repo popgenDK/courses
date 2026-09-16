@@ -425,12 +425,24 @@ the other exercises do not shift.
 ### 63. [x] `sfs_fst_pbs_human.ipynb`
 - **From:** written for this set
 - **Supersedes:**
-  - `summer2024/exercises/SelectionScans.ipynb` (2024-08-22) — human, frequency and
-    haplotype methods
+  - `summer2024/exercises/SelectionScans.ipynb` cells 0-18 (2024-08-22) — the
+    frequency-statistics half only. Its haplotype half is #66 and its PBS scan is #65
   - `kenya2026/exercises/Day4/SelectionScans_22nd.ipynb` cells 0-24 (2026-08-22) — the
     frequency-statistics half of that notebook, 49% similar to summer2024. Cells 25-37,
     the genome-wide PBS scan, are **not** covered by this exercise — see #65
 - **Note:** SFS, Fst and PBS on human data with ANGSD. **Low depth**, genotype likelihoods.
+
+### 66. [x] `selection_haplotype_human.ipynb`
+- **From:** `summer2024/exercises/SelectionScans.ipynb` cells 19-35 (2024-08-22),
+  "Exercise II: Haplotype-based methods"
+- **Supersedes:** none — only copy
+- **Note:** extended haplotype homozygosity — `selscan --ihs` and `--xpehh` on the lactase
+  region, with normalisation within allele-frequency bins. The **only** exercise in the set
+  covering haplotype-based selection; the others are all frequency-based.
+- **Correction:** summer2024 was recorded as superseded by #63. #63 replaces its
+  frequency-statistics half only. This haplotype half was covered by nothing.
+- **Data:** `data/current_data/selection/haplotype/` (135 M) — phased CEU/YRI/CHB VCFs
+  around LCT, a genetic map in cM, the selscan binary and the precomputed output.
 
 ### 65. [x] `selection_pbs_scan_human.ipynb`
 - **From:** `kenya2026/exercises/Day4/SelectionScans_22nd.ipynb` cells 25-37 (2026-08-22),

@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**46 of 59 exercises built.**
+**48 of 60 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -129,6 +129,7 @@ See also [`pca/pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 63 | [`sfs_fst_pbs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/sfs_fst_pbs_human.ipynb) | SFS, Fst and PBS on human data with ANGSD. **Human**: CEU and YRI. **Low depth**: genotype likelihoods (ANGSD). | ✅ built | _to generate_ |
+| 66 | [`selection_haplotype_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_haplotype_human.ipynb) | Extended haplotype homozygosity: selscan iHS and XP-EHH on the lactase region. **Human**: CEU 41, YRI 48, CHB 48. **Called genotypes, phased**, with a genetic map. | ✅ built | _to generate_ |
 | 65 | [`selection_pbs_scan_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_pbs_scan_human.ipynb) | Genome-wide PBS scan: Manhattan plot, zoom into peaks, find the gene, check the lactase region. **Human**: NAT, CHB, CEU, YRI. **Called genotypes**, PBS precomputed in 50 kb windows. | ✅ built | ⚠️ _to regenerate_ |
 | 40 | [`selection_scans_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_scans_animal.ipynb) | Fst and PBS selection scan on wildlife. **Wildebeest**: 24 individuals, blue and black. **Called genotypes** (VCF). | ✅ built | ⚠️ _to regenerate_ |
 | 41 | [`selection_maize.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_maize.ipynb) | Tajima's D and PBS for domestication and highland adaptation. **Maize** and its wild relative parviglumis, 50 samples. **Low depth**: genotype likelihoods (ANGSD/SAF). | ✅ built | ⚠️ _to regenerate_ |
@@ -147,7 +148,7 @@ See also [`pca/pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 46 | `gwas_intro_human.ipynb` | Introduction to GWAS: association testing and QC. **Human**. **Called genotypes** (plink). | ⬜ planned | _to generate_ |
+| 46 | [`gwas_intro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_intro_human.ipynb) | Introduction to GWAS: association testing and QC. **Human**. **Called genotypes** (plink). | ✅ built | ⚠️ _to regenerate_ |
 | 47 | `gwas_sumstats_human.ipynb` | Working with GWAS summary statistics. **Human**. **Summary statistics only** — no individual genotypes. | ⬜ planned | _to generate_ |
 | 48 | `gwas_analysis_human.ipynb` | A full GWAS analysis pipeline. **Human**: 1000 Genomes and UK Biobank. **Called genotypes**. | ⬜ planned | _to generate_ |
 | 49 | `gene_based_testing_human.ipynb` | Gene-based and rare-variant testing. **Human**. **Called genotypes** (exome), analysed through summary statistics. | ⬜ planned | _to generate_ |
@@ -417,8 +418,12 @@ Replaces 3 older copies:
 **63. `sfs_fst_pbs_human.ipynb`**  
 From: written for this set  
 Replaces 2 older copies:
-  - [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) (2024-08-22) — human, frequency and haplotype methods
+  - [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) cells 0-18 (2024-08-22) — the frequency-statistics half only. Its haplotype half is #66 and its PBS scan is #65
   - [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 0-24 (2026-08-22) — the frequency-statistics half of that notebook, 49% similar to summer2024. Cells 25-37, the genome-wide PBS scan, are **not** covered by this exercise — see #65
+
+**66. `selection_haplotype_human.ipynb`**  
+From: [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) cells 19-35 (2024-08-22), "Exercise II: Haplotype-based methods"  
+Replaces: nothing — this is the only copy
 
 **65. `selection_pbs_scan_human.ipynb`**  
 From: [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 25-37 (2026-08-22), "Exercise II: Whole-genome PBS with 1000 Genomes"  
@@ -518,7 +523,7 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**46 of 59 exercises built.** Numbering runs to 57 because two pairs are each one
+**48 of 60 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 

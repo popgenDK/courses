@@ -1,0 +1,158 @@
+[
+  {
+    "question": "What does extended haplotype homozygosity measure?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "How far along the chromosome carriers of an allele still share an unbroken, identical haplotype",
+        "correct": true,
+        "feedback": "Correct \u2014 a sweep leaves a long shared stretch that recombination has not yet broken."
+      },
+      {
+        "answer": "How many heterozygous sites an individual has",
+        "correct": false,
+        "feedback": "That is individual heterozygosity."
+      },
+      {
+        "answer": "The allele frequency",
+        "correct": false,
+        "feedback": "Frequency is what the other family of statistics uses."
+      },
+      {
+        "answer": "The recombination rate",
+        "correct": false,
+        "feedback": "That is the map, which is an input."
+      }
+    ]
+  },
+  {
+    "question": "Haplotype methods need *phased* genotypes. Why?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "They read along a single chromosome; without phase you cannot tell which alleles sit together on the same haplotype",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Because phasing removes errors",
+        "correct": false,
+        "feedback": "It does not."
+      },
+      {
+        "answer": "Because selscan cannot read VCFs otherwise",
+        "correct": false,
+        "feedback": "Phase is the real requirement."
+      },
+      {
+        "answer": "They do not \u2014 it only makes them faster",
+        "correct": false,
+        "feedback": "Unphased data makes them meaningless."
+      }
+    ]
+  },
+  {
+    "question": "A genetic map in centimorgans is supplied rather than using physical positions. What goes wrong without it?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Regions of low recombination keep long haplotypes for ordinary reasons, and would look selected everywhere",
+        "correct": true,
+        "feedback": "Correct \u2014 homozygosity has to be measured against recombination distance."
+      },
+      {
+        "answer": "The positions would be in the wrong order",
+        "correct": false,
+        "feedback": "Physical order is fine."
+      },
+      {
+        "answer": "Nothing \u2014 the map is optional",
+        "correct": false,
+        "feedback": "It changes the result substantially."
+      },
+      {
+        "answer": "The allele frequencies would be wrong",
+        "correct": false,
+        "feedback": "Unrelated."
+      }
+    ]
+  },
+  {
+    "question": "iHS is normalised within allele-frequency bins. Why is that necessary?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Expected haplotype length depends on allele frequency, so raw scores are not comparable between a rare and a common variant",
+        "correct": true,
+        "feedback": "Correct \u2014 that is what the binning corrects for."
+      },
+      {
+        "answer": "To make the values sum to one",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "To remove low-quality SNPs",
+        "correct": false,
+        "feedback": "That is a separate filter."
+      },
+      {
+        "answer": "To speed up the computation",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "iHS compares the two alleles at the same site; XP-EHH compares the same site between two populations. What can XP-EHH detect that iHS cannot?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A sweep that has gone to or near fixation, where there is no longer a contrasting allele within the population to compare against",
+        "correct": true,
+        "feedback": "Correct \u2014 that is the reason to use a second population."
+      },
+      {
+        "answer": "A sweep at very low frequency",
+        "correct": false,
+        "feedback": "Both struggle there."
+      },
+      {
+        "answer": "Selection on standing variation only",
+        "correct": false,
+        "feedback": "Not the distinction."
+      },
+      {
+        "answer": "Nothing \u2014 they are equivalent",
+        "correct": false,
+        "feedback": "They answer different questions."
+      }
+    ]
+  },
+  {
+    "question": "The exercise uses the lactase region on purpose. Why is that a good choice?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It is a known strong recent sweep in Europeans and not in West Africans, so it is a positive control with a built-in negative",
+        "correct": true,
+        "feedback": "Correct \u2014 CEU should show the signal and YRI should not."
+      },
+      {
+        "answer": "It is the only region with phased data",
+        "correct": false,
+        "feedback": "Not the reason."
+      },
+      {
+        "answer": "It has no recombination",
+        "correct": false,
+        "feedback": "It does recombine."
+      },
+      {
+        "answer": "Because lactase is easy to sequence",
+        "correct": false,
+        "feedback": "Not relevant."
+      }
+    ]
+  }
+]
