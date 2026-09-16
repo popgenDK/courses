@@ -137,7 +137,7 @@ See also [`pca/pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 42 | [`fst_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/fst_animal.ipynb) | Pairwise Fst from called genotypes with plink2, then from genotype likelihoods with SAF. **Blue and black wildebeest** (95 individuals, 9 groups), then **Greenland reindeer** (3 populations). **Both**: plink on called genotypes, then SAF on genotype likelihoods. | ✅ built | _to generate_ |
-| 43 | [`relatedness_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_animal.ipynb) | Relatedness and kinship estimation. **Reindeer**. **Called genotypes**. | ✅ built | _to generate_ |
+| 43 | [`relatedness_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_animal.ipynb) | A full relatedness pipeline: LD pruning, KING-robust kinship in plink2, a 2D SFS with ANGSD, then relateAdmix for admixture-aware relatedness. **Reindeer**. **Both**: called genotypes for KING, genotype likelihoods for the SFS. | ✅ built | _to generate_ |
 | 45 | `heterozygosity_roh_animal.ipynb` | Heterozygosity and runs of homozygosity. **Blue wildebeest**. **Called genotypes**. | ⬜ planned | _to generate_ |
 
 ### GWAS and human complex traits — `gwas/`
