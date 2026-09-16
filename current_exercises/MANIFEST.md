@@ -358,3 +358,10 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   **Typos:** yesterdays, roughty, thare, "are are called", follwoing, obversed,
   "Native amerians", accross, Fumagilli, "chin protusion", "Column knownEM if
   the estimated".
+
+  **Attribution.** The exercise is a modified version of Matteo Fumagalli's
+  low-depth NGS practical (github.com/mfumagalli/Copenhagen). The source
+  notebook credited him only in a passing sentence with a broken link. It now
+  carries a callout at the top and a **Credit** section at the end naming him,
+  linking the original, and citing the EDAR papers (Sabeti 2007, Adhikari 2016)
+  and ANGSD (Korneliussen 2014).
