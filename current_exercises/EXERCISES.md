@@ -433,6 +433,7 @@ predates this work.
 |---|---|---|---|
 | [x] | `1000G/` | already present | 73 G |
 | [x] | `BSA/` | `/davidData/data/BSA` | 1.2 G |
+| [x] | `NGSintro/` | curated for exercises #12/#13 (see below) | 465 M |
 | [x] | `geneticMap/` | `/course/scripts/geneticMap` | 480 M |
 | [x] | `thomas_workshop/` | `/davidData/users/thomas/workshop` | 77 G |
 | [x] | `kenyaWorkshop_anders/` | `/course/kenyaWorkshop/anders` | 76 G |
@@ -458,6 +459,27 @@ predates this work.
 | [x] | `popgen24_garrett/` | `/course/popgen24/garrett` | 55 M |
 | [x] | `novo23_wes/` | `/course/novo23/wes` | 46 M |
 | [x] | `novo23_scripts/` | `/course/novo23/scripts` | 5.5 M |
+
+### Cleaned, per-exercise data folders
+
+`data/` is being reorganised so each exercise reads from a folder named after it,
+rather than from a folder named after the course it happened to be taught in.
+The bulk directories copied above stay for now as the source material.
+
+Done so far:
+
+```
+data/NGSintro/
+  animal/    wildebeest FASTQ pair + goat reference with bwa index   335 M
+  human/     NA19238 chr21 FASTQ pair + chr21 reference with index   115 M
+  software/  picard.jar                                              15 M
+```
+
+`chr21.fa.gz` was missing its `.fai`/`.gzi` index in the original course folder,
+which `samtools tview` and `bcftools mpileup -f` both need. It was generated
+when the clean folder was built.
+
+`fastqc` is not shipped — it is on PATH at `/usr/bin/fastqc`.
 
 ### Data still to trace
 

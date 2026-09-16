@@ -208,3 +208,29 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   0.03/0.20/0.55/0.22. No `.html` render is shipped; say the word if you want one
   rendered from a filled-in copy as the published solution, the way
   `advBinf/exercises/*.html` works.
+
+- **NGS intro repointed at a clean data folder (2026-09-16).** Exercises should
+  not read from a folder named after the course they came from, so the data was
+  curated into `data/NGSintro/{animal,human,software}` and both notebooks now
+  point there. The working directories lost their course names too:
+
+  | | before | after |
+  |---|---|---|
+  | animal data | `data/kenya2026_anders/NGSintro_day1` | `data/NGSintro/animal` |
+  | animal work dir | `~/kenya2026/NGSintro` | `~/ngs_intro_animal` |
+  | human data | `data/chinacourse2026_shared/data/NGSIntro` | `data/NGSintro/human` |
+  | human work dir | `~/sysu2026_day2_ngsintro` | `~/ngs_intro_human` |
+
+  The human setup cell's four-way `ROOT_PATH`/`TOOL_PATH`/`SHARED_PATH`/
+  `INPUT_PATH` split collapsed to `DATA` + `SOFTWARE`. `picard.jar` was
+  byte-identical in both course folders, so one copy is shared. `FASTQC=fastqc`
+  is now a variable rather than a hardcoded tool path.
+
+  Two FastQC screenshots still loaded from `kenya2024/` and `chinaCourse2025/`.
+  They were copied to `ngs/fastqc_report_animal.png` and
+  `ngs/fastqc_report_human.png` so the exercises are self-contained.
+
+  **Fixed along the way:** `chr21.fa.gz` had no `.fai`/`.gzi` index in the
+  original course folder, although `samtools tview` and `bcftools mpileup -f`
+  both need one. Generated in the clean folder; all 7 index files are now
+  present for both references.
