@@ -1,0 +1,158 @@
+[
+  {
+    "question": "In LD score regression, what does the intercept estimate?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Confounding - population stratification and cryptic relatedness, which lift every SNP regardless of its LD score",
+        "correct": true,
+        "feedback": "Correct. An intercept of 1 means no confounding."
+      },
+      {
+        "answer": "The heritability",
+        "correct": false,
+        "feedback": "That is the slope."
+      },
+      {
+        "answer": "The number of causal variants",
+        "correct": false,
+        "feedback": "Not directly estimated."
+      },
+      {
+        "answer": "The genetic correlation",
+        "correct": false,
+        "feedback": "That needs bivariate LD score regression."
+      }
+    ]
+  },
+  {
+    "question": "And what does the slope estimate?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The polygenic signal, which converts to the SNP heritability - a SNP tagging many others carries more signal",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The confounding",
+        "correct": false,
+        "feedback": "That is the intercept."
+      },
+      {
+        "answer": "The sample size",
+        "correct": false,
+        "feedback": "Sample size enters as a scaling factor, but is not what the slope measures."
+      },
+      {
+        "answer": "The LD score itself",
+        "correct": false,
+        "feedback": "That is the predictor, not the estimate."
+      }
+    ]
+  },
+  {
+    "question": "A GWAS has a lambda_GC of 1.15. Why is that not by itself evidence that something is wrong?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Real polygenic inheritance inflates lambda too - with a highly polygenic trait and a large sample, an inflated lambda is expected, not alarming",
+        "correct": true,
+        "feedback": "Correct, and separating the two is exactly what LD score regression was invented for."
+      },
+      {
+        "answer": "Because 1.15 is within the normal random range",
+        "correct": false,
+        "feedback": "With millions of SNPs it is far outside the random range."
+      },
+      {
+        "answer": "Because lambda is only meaningful above 2",
+        "correct": false,
+        "feedback": "No such threshold."
+      },
+      {
+        "answer": "Because lambda is not affected by structure",
+        "correct": false,
+        "feedback": "It very much is."
+      }
+    ]
+  },
+  {
+    "question": "Why must the LD reference panel match the ancestry of the GWAS?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "LD patterns differ between populations, so scores from the wrong panel mis-measure how much each SNP tags and bias both the slope and the intercept",
+        "correct": true,
+        "feedback": "Correct - hence the East Asian panel for Biobank Japan."
+      },
+      {
+        "answer": "Because allele frequencies must match exactly",
+        "correct": false,
+        "feedback": "Frequencies matter less than the correlation structure."
+      },
+      {
+        "answer": "It does not matter as long as the SNPs overlap",
+        "correct": false,
+        "feedback": "It matters a great deal."
+      },
+      {
+        "answer": "Because the software cannot read other panels",
+        "correct": false,
+        "feedback": "It can; the answer would just be wrong."
+      }
+    ]
+  },
+  {
+    "question": "GCTA estimates SNP heritability from genotypes; a twin study usually reports a higher number. Why?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "SNP heritability only captures what the genotyped common SNPs tag - rare variants and anything they fail to tag is missing",
+        "correct": true,
+        "feedback": "Correct. This is the 'missing heritability' gap."
+      },
+      {
+        "answer": "Twin studies are simply wrong",
+        "correct": false,
+        "feedback": "They estimate a different, broader quantity."
+      },
+      {
+        "answer": "GCTA uses fewer individuals",
+        "correct": false,
+        "feedback": "Sample size affects the standard error, not the expectation."
+      },
+      {
+        "answer": "Twin studies measure the environment instead",
+        "correct": false,
+        "feedback": "They try to separate it out."
+      }
+    ]
+  },
+  {
+    "question": "Why does GCTA build a genetic relationship matrix before testing for association in this dataset?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The individuals are related, and a test that treats them as independent would produce inflated p-values",
+        "correct": true,
+        "feedback": "Correct - the GRM lets the mixed model absorb the relatedness."
+      },
+      {
+        "answer": "To speed up the computation",
+        "correct": false,
+        "feedback": "It makes it slower."
+      },
+      {
+        "answer": "To impute missing genotypes",
+        "correct": false,
+        "feedback": "Different problem."
+      },
+      {
+        "answer": "Because the phenotype is quantitative",
+        "correct": false,
+        "feedback": "The issue is relatedness, not the trait type."
+      }
+    ]
+  }
+]

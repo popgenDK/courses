@@ -1,0 +1,106 @@
+[
+  {
+    "question": "The parents are second cousins and no one else in the family is affected. What inheritance model does that point to?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Recessive - related parents are much more likely to pass on two copies of the same rare variant",
+        "correct": true,
+        "feedback": "Correct: consanguinity is the classic clue for a recessive disease."
+      },
+      {
+        "answer": "Dominant, because only one copy is needed",
+        "correct": false,
+        "feedback": "A dominant variant would usually show up in earlier generations."
+      },
+      {
+        "answer": "X-linked, because the child is affected",
+        "correct": false,
+        "feedback": "Nothing here points to the X chromosome."
+      },
+      {
+        "answer": "Mitochondrial",
+        "correct": false,
+        "feedback": "That would be inherited only from the mother, and would not involve the parents being related."
+      }
+    ]
+  },
+  {
+    "question": "Why filter on the gnomAD allele frequency at all?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A variant that causes a rare disease cannot itself be common in the population - the disease would then be common too",
+        "correct": true,
+        "feedback": "Correct, and that is exactly the calculation in Q2."
+      },
+      {
+        "answer": "Common variants are usually genotyping errors",
+        "correct": false,
+        "feedback": "Rare variants are the error-prone ones."
+      },
+      {
+        "answer": "To make the table smaller",
+        "correct": false,
+        "feedback": "Not the scientific reason."
+      },
+      {
+        "answer": "gnomAD frequencies are more accurate for rare variants",
+        "correct": false,
+        "feedback": "They are less accurate for rare variants."
+      }
+    ]
+  },
+  {
+    "question": "Why does a recessive disease allow a *higher* frequency cutoff than a dominant one at the same prevalence?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Only homozygotes are affected, so the allele can be much commoner before the disease becomes common: AF is the square root of the prevalence, not the prevalence itself",
+        "correct": true,
+        "feedback": "Correct - sqrt(0.001) is about 0.03, while the dominant cutoff is about 0.0005."
+      },
+      {
+        "answer": "Recessive variants are always older",
+        "correct": false,
+        "feedback": "Age is not what the calculation uses."
+      },
+      {
+        "answer": "Because recessive variants are less damaging",
+        "correct": false,
+        "feedback": "They can be just as damaging."
+      },
+      {
+        "answer": "It does not - the cutoff is the same",
+        "correct": false,
+        "feedback": "It differs by nearly two orders of magnitude."
+      }
+    ]
+  },
+  {
+    "question": "The consequence list is ordered from transcript_ablation down to synonymous_variant. What does choosing 'stop_gained or worse' do?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Keeps only the five most severe categories, all of which destroy or truncate the protein",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Keeps everything except synonymous variants",
+        "correct": false,
+        "feedback": "That would be a much looser filter."
+      },
+      {
+        "answer": "Keeps only stop_gained",
+        "correct": false,
+        "feedback": "'Or worse' includes everything above it in the list."
+      },
+      {
+        "answer": "Keeps the missense variants too",
+        "correct": false,
+        "feedback": "Missense sits below stop_gained in the list."
+      }
+    ]
+  }
+]

@@ -603,37 +603,99 @@ kenya2026 notebooks split them. The source stays untouched in `kenya2026/`.
   `/home/student/<user>/GWAS/data/`, which does not exist here. Added as-is by request,
   with every path collected into the setup cell.
 
-### 50. [ ] `wes_family_diabetes_human.ipynb`
+### 50. [x] `wes_famdiab_human.ipynb` — **⚠️ data not on this server, added verbatim**
 - **From:** `novCourse2024/3WESfamdiab.ipynb` (2025-07-08)
 - **Supersedes:** none — only copy
+- **Note:** a trio with MODY. Read the VCF by eye to work out which sample is the
+  mother and which the daughter, then annotate the variants with the online
+  **Ensembl VEP** tool and pick the causal one. **Run partly in a web browser.**
+- **Missing:** `hnf1a.vcf` and the pedigree/VEP screenshots (`images/`), which
+  were distributed with the original course and are in no archive.
+- **⚠️ Data not on this server, so the notebook is a verbatim copy.** By request
+  (2026-09-16), exercises whose data is missing are **not edited at all** — no
+  header, no path centralisation, no added questions or quizzes. Whether they run
+  does not matter; the point is that the material is not lost. Fix them when the
+  data turns up.
 
-### 51. [ ] `wes_familial_hypercholesterolemia_human.ipynb`
+### 51. [x] `wes_fh_human.ipynb`
 - **From:** `novCourse2024/4WESfh.ipynb` (2025-07-08)
 - **Supersedes:** none — only copy
+- **Note:** rare recessive familial hypercholesterolemia in a family of four with
+  second-cousin parents. Filter an annotated exome on gnomAD frequency and
+  predicted consequence; the frequency cutoff is derived from the prevalence.
+- **Data: COPIED** to `data/current_data/wes/ex02.wes.rds` (from `/course/novo23/wes/`)
+- **Note:** the pedigree images (`images/1.jpg`, `images/2.jpg`) are in no archive,
+  so the family is described in the header text instead.
+- **Converted from `ir` to SoS** with per-cell kernels so the quiz can run (R17).
 
-### 52. [ ] `wes_diabetes_human.ipynb`
+### 52. [x] `wes_diabetes_human.ipynb`
 - **From:** `novCourse2024/5WESdiab.ipynb` (2025-07-08)
 - **Supersedes:** none — only copy
+- **Note:** four unrelated diabetes patients, each with a different damaging
+  variant in a different known gene — genetic heterogeneity, and why a GWAS
+  would find none of them.
+- **Data: COPIED** to `data/current_data/wes/ex03.wes.rds` (from `/course/novo23/wes/`)
+- **Converted from `ir` to SoS** with per-cell kernels so the quiz can run (R17).
 
-### 53. [ ] `heritability_ldscore_human.ipynb`
+### 53. [x] `heritability_ldscore_human.ipynb`
 - **From:** `chinacourse2026/Day5_Morning_heribilty_and_ldscore.ipynb` (2026-08-07)
 - **Supersedes:**
   - `chinaCourse2025/Day5_heritability_exercise.ipynb` (2025-07-26)
   - `chinaCourse2025/Day5_Afternoon_Genetic_correlation_Partitioned_Heritability.ipynb` (2025-07-26)
+- **Note:** heritability estimated twice — GCTA REML on a genetic relationship
+  matrix from family genotypes, and LD score regression on published summary
+  statistics. The comparison is the point: the LDSC **intercept** separates
+  confounding from polygenicity, which λ_GC cannot do.
+- **Data: COPIED** to `data/current_data/heritability_ldscore/` — `quantfam.zip`
+  and the Biobank Japan HDL/LDL summary statistics with `eas_ldscores` and
+  `w_hm3.snplist` (from `/course/chinacourse2026/shared/data/`).
+- **⚠️ Software gap:** `gcta64` is installed, but the **LDSC conda environment is
+  not** (`/home/jonas/miniconda3` no longer exists). The two `munge_sumstats.py`
+  cells will fail. Their output, the `.sumstats.gz` files, ships with the data, so
+  everything downstream still runs; the notebook says so at that point.
 
-### 54. [ ] `prs_height_human.ipynb`
+### 54. [x] `prs_height_human.ipynb` — **⚠️ data not on this server, added verbatim**
 - **From:** `chinaCourse2025/Day6_Morning1_PRS_height_pipeline.ipynb` (2025-07-26)
 - **Supersedes:** none — only copy
+- **Note:** three PGS Catalog scores (height, IGF-1, birth weight) harmonised
+  against array genotypes and computed with `plink --score`, then compared with
+  measured height and BMI.
+- **Missing:** the same `European_1w` dataset as #48, plus the `PRS_data/PGS*.txt.gz`
+  weights.
+- **⚠️ Data not on this server, so the notebook is a verbatim copy.** By request
+  (2026-09-16), exercises whose data is missing are **not edited at all** — no
+  header, no path centralisation, no added questions or quizzes. Whether they run
+  does not matter; the point is that the material is not lost. Fix them when the
+  data turns up.
 
-### 55. [ ] `mendelian_randomization_human.ipynb`
+### 55. [x] `mendelian_randomization_human.ipynb`
 - **From:** `chinaCourse2025/Day6_Morning2_MR.ipynb` (2025-07-26)
 - **Supersedes:**
   - `bgi23/MR-exercise.ipynb` (2023-11-10)
   - `bgi23/MR.real_data.exercise.ipynb` (2023-11-10)
+- **Note:** two-sample MR of BMI on coronary heart disease with `TwoSampleMR` —
+  harmonisation, the MR estimators, the F-statistic, pleiotropy and heterogeneity
+  tests, forest/funnel/leave-one-out plots, and the IVW estimate written out by
+  hand at the end.
+- **Data: COPIED** to `data/current_data/mendelian_randomization/` — the IEU
+  OpenGWAS RDS files `ieu-a-2.rds` (BMI, exposure) and `ieu-a-7-out.rds` (CHD,
+  outcome), **found in the bgi23 archive** at `bgi23/malthe/friday/`, not where the
+  chinaCourse2025 notebook expected them. The `extract_instruments()` call that
+  would fetch them over the network is kept as a comment.
 
-### 56. [ ] `mendelian_randomization_proteomics_human.ipynb`
+### 56. [x] `proteomics_mr_human.ipynb` — **⚠️ data not on this server, added verbatim**
 - **From:** `chinaCourse2025/Day6_Afternoon_Proteomics_MR.ipynb` (2025-07-26)
 - **Supersedes:** none — only copy
+- **Note:** three exercises — proteome-wide summary-data MR of plasma proteins on
+  ischaemic stroke (cis+trans, then cis-pQTLs only), **colocalization** to tell a
+  shared causal variant from two neighbouring ones, and individual-level
+  proteomics MR in a UK Biobank stroke cohort.
+- **Missing:** the whole `/home/student/Proteomics_MR/` tree, which is in no archive.
+- **⚠️ Data not on this server, so the notebook is a verbatim copy.** By request
+  (2026-09-16), exercises whose data is missing are **not edited at all** — no
+  header, no path centralisation, no added questions or quizzes. Whether they run
+  does not matter; the point is that the material is not lost. Fix them when the
+  data turns up.
 
 ---
 

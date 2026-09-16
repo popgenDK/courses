@@ -1,0 +1,158 @@
+[
+  {
+    "question": "What makes a genetic variant a valid instrument for MR?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It is associated with the exposure, it affects the outcome only through the exposure, and it is not associated with confounders",
+        "correct": true,
+        "feedback": "Correct - these are the three IV assumptions, and only the first can be tested directly."
+      },
+      {
+        "answer": "It is genome-wide significant for the outcome",
+        "correct": false,
+        "feedback": "That would be the wrong way round - it must be associated with the exposure."
+      },
+      {
+        "answer": "It is common in the population",
+        "correct": false,
+        "feedback": "Helpful for power, but not one of the assumptions."
+      },
+      {
+        "answer": "It lies in a coding region",
+        "correct": false,
+        "feedback": "Not required."
+      }
+    ]
+  },
+  {
+    "question": "Why is Mendelian randomization able to say something about causation when an observational study cannot?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Genotypes are fixed at conception and assigned essentially at random with respect to lifestyle and environment, so they cannot be affected by the outcome or by the usual confounders",
+        "correct": true,
+        "feedback": "Correct - this is why it is called a natural randomised trial."
+      },
+      {
+        "answer": "Because the sample sizes are larger",
+        "correct": false,
+        "feedback": "Size does not fix confounding."
+      },
+      {
+        "answer": "Because summary statistics are more reliable than raw data",
+        "correct": false,
+        "feedback": "They are not."
+      },
+      {
+        "answer": "Because the TwoSampleMR package corrects for confounding statistically",
+        "correct": false,
+        "feedback": "The design, not the software, is what does the work."
+      }
+    ]
+  },
+  {
+    "question": "What is horizontal pleiotropy, and why does it break MR?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A variant affects the outcome through a pathway other than the exposure, which violates the exclusion restriction and biases the causal estimate",
+        "correct": true,
+        "feedback": "Correct - it is the assumption that is hardest to rule out."
+      },
+      {
+        "answer": "A variant affects several traits in the same pathway",
+        "correct": false,
+        "feedback": "That is vertical pleiotropy, which is fine for MR."
+      },
+      {
+        "answer": "A variant is in LD with another variant",
+        "correct": false,
+        "feedback": "LD is handled by clumping."
+      },
+      {
+        "answer": "A variant has a different frequency in the two studies",
+        "correct": false,
+        "feedback": "That is a harmonisation issue, not pleiotropy."
+      }
+    ]
+  },
+  {
+    "question": "The MR-Egger intercept is significantly different from zero. What does that suggest?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Directional horizontal pleiotropy - the instruments have an average effect on the outcome that does not go through the exposure, so the IVW estimate is biased",
+        "correct": true,
+        "feedback": "Correct, and this is exactly what mr_pleiotropy_test reports."
+      },
+      {
+        "answer": "The instruments are too weak",
+        "correct": false,
+        "feedback": "Instrument strength is what the F-statistic measures."
+      },
+      {
+        "answer": "The data were not harmonised",
+        "correct": false,
+        "feedback": "Harmonisation problems show up in the allele frequency plot."
+      },
+      {
+        "answer": "There is no causal effect",
+        "correct": false,
+        "feedback": "It says the estimate is untrustworthy, not that the effect is zero."
+      }
+    ]
+  },
+  {
+    "question": "A mean F-statistic well above 10 tells you that:",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The instruments are strong, so weak-instrument bias towards the observational association is not a major worry",
+        "correct": true,
+        "feedback": "Correct - it addresses only the first IV assumption."
+      },
+      {
+        "answer": "There is no horizontal pleiotropy",
+        "correct": false,
+        "feedback": "F says nothing about pleiotropy."
+      },
+      {
+        "answer": "The causal effect is significant",
+        "correct": false,
+        "feedback": "Different question entirely."
+      },
+      {
+        "answer": "The two studies do not overlap",
+        "correct": false,
+        "feedback": "Sample overlap is a separate concern."
+      }
+    ]
+  },
+  {
+    "question": "In the leave-one-out plot, the overall estimate collapses when one particular SNP is removed. How should you react?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Treat the result as driven by a single variant and investigate that locus - one SNP carrying the whole signal is a warning sign, not a finding",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Remove it and report the rest, with no further comment",
+        "correct": false,
+        "feedback": "You should at least say so and look at what the locus does."
+      },
+      {
+        "answer": "Nothing - leave-one-out plots always look like that",
+        "correct": false,
+        "feedback": "A robust result barely moves."
+      },
+      {
+        "answer": "Conclude the effect is stronger than IVW suggests",
+        "correct": false,
+        "feedback": "The opposite."
+      }
+    ]
+  }
+]

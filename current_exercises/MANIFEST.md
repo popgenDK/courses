@@ -35,6 +35,16 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 64 | `relatedness_diversity/relatedness_human.ipynb` | new, written from the GWAS-intro data and analysis | 2026-09-16 | yes — new short exercise | none — new exercise |
 | 46 | `gwas/gwas_intro_human.ipynb` | `novCourse2024/1GWASIntro.ipynb` | 2025-07-08 | yes — paths, staging removed, work folder | `bgi23/04.GWASintro_2023_SAIGE.ipynb` (2023-11-09) |
 | 47 | `gwas/gwas_sumstats_human.ipynb` | `novCourse2024/2GWASsumstats.ipynb` | 2025-07-08 | yes — paths, 796 M copy removed, beta de-hardcoded, outputs stripped | none |
+| 55 | `gwas/mendelian_randomization_human.ipynb` | `chinaCourse2025/Day6_Morning2_MR.ipynb` | 2025-07-26 | yes — paths, work folder, R kernel | 2 older bgi23 copies (see EXERCISES.md) |
+| — | `data/mendelian_randomization/` | `/davidData/data/course/bgi23/malthe/friday/` | 2023-11-10 | no — copied verbatim | none |
+| 53 | `gwas/heritability_ldscore_human.ipynb` | `chinacourse2026/Day5_Morning_heribilty_and_ldscore.ipynb` | 2026-08-07 | yes — paths, work folder, one setup cell for both halves, questions | 2 older chinaCourse2025 copies (see EXERCISES.md) |
+| 51 | `gwas/wes_fh_human.ipynb` | `novCourse2024/4WESfh.ipynb` | 2025-07-08 | yes — rebuilt as SoS, header, paths, quiz, questions | none |
+| 52 | `gwas/wes_diabetes_human.ipynb` | `novCourse2024/5WESdiab.ipynb` | 2025-07-08 | yes — rebuilt as SoS, header, paths, quiz, questions | none |
+| 50 | `gwas/wes_famdiab_human.ipynb` | `novCourse2024/3WESfamdiab.ipynb` | 2025-07-08 | **no — verbatim copy, data missing (R20)** | none |
+| 54 | `gwas/prs_height_human.ipynb` | `chinaCourse2025/Day6_Morning1_PRS_height_pipeline.ipynb` | 2025-07-26 | **no — verbatim copy, data missing (R20)** | none |
+| 56 | `gwas/proteomics_mr_human.ipynb` | `chinaCourse2025/Day6_Afternoon_Proteomics_MR.ipynb` | 2025-07-26 | **no — verbatim copy, data missing (R20)** | none |
+| — | `data/wes/` | `/course/novo23/wes/` | 2023 | no — copied verbatim | none |
+| — | `data/heritability_ldscore/` | `/course/chinacourse2026/shared/data/{heritability,ldsc}/` | 2026 | no — copied verbatim | none |
 | — | `relatedness_diversity/quiz/*.json` (5 files) | `kenya2026/exercises/Day4/quiz_*.json` | 2026 | renamed; one fixed | none |
 | — | `data/scripts/plot2dSFS.R` | `/davidData/albrecht/course/sfs/plot2dSFS.R` | 2023-07-07 | no — copied verbatim | none |
 | — | `demography/quiz/psmc_*.json` (3 files) | `/davidData/users/thomas/workshop/psmc_quizzes/` | 2026 | renamed only | none |
@@ -1349,3 +1359,69 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   - 3,828 variants pass 5e-8, collapsing to **71 independent peaks** at a 1 Mb window
   - the chr3 position the text points at, **12,329,783** (P 2.9e-10, the PPARG region), is
     present and is one of the 8 chr3 peaks
+
+- **#55 `mendelian_randomization_human.ipynb` (2026-09-16).** From the 2025-07-26
+  chinaCourse2025 notebook, into `gwas/`. 46 cells, SoS kernelspec, all R. The full
+  two-sample MR workflow with `TwoSampleMR`: load BMI exposure and coronary-heart-disease
+  outcome, harmonise, check the allele-frequency agreement, run `mr()`, the F-statistic,
+  scatter plot, pleiotropy and heterogeneity tests, forest, leave-one-out and funnel
+  plots, then an IVW-by-hand section. Content and questions unchanged.
+
+  - **the data was traceable after all.** Its paths
+    (`/home/tch_wyd/myname/inputs/MR`, `/home/tch_wyd/myname/shared`) are SYSU teaching
+    server home directories that do not exist here, but the two files it actually reads -
+    `ieu-a-2.rds` (BMI) and `ieu-a-7-out.rds` (CHD) - are the same ones the superseded
+    bgi23 exercises used, sitting in `/davidData/data/course/bgi23/malthe/friday/`.
+    Copied to `data/mendelian_randomization/`; both load and are 79 x 15 and 79 x 16.
+  - `SHARED_PATH` was declared and **never used anywhere** in the notebook, so it is gone
+    rather than repointed.
+  - **R11:** work folder `~/sysu_day6_MR` -> `~/mendelian_randomization_human`.
+  - **kernel fix:** its 16 R cells were tagged `R 4.3`, which the notebook's own metadata
+    maps to the kernelspec **`ir43`** - a kernel that does not exist on this server. Retagged
+    to `R`/`ir`, matching every other consolidated notebook.
+  - 22 stored outputs stripped.
+
+  **No network dependency.** I first flagged 3 `extract_instruments()` calls as a possible
+  blocker, which was **wrong**: one is commented out in the source and the other two
+  mentions are prose. The `.rds` files exist precisely so the exercise does not need the
+  IEU OpenGWAS API (which now wants a token).
+
+  **Verified by running all 19 R cells: exit 0, no errors.** The MR results table, the
+  Egger intercept, the heterogeneity Q, and all four diagnostic plots are produced, and
+  the instrument strength comes out at **mean F = 65.6** - comfortably above 10, which is
+  what the notebook's "if F was below 10, what could you do?" question is set against.
+
+  **Note on the data folder:** it ended up with six `.rds` files rather than the two I
+  copied - the other four (`exposure.rds`, `ieu-a-299/300/302.rds`) arrived at the same
+  minute from the parallel session working in the same tree. They are the alternative
+  outcomes the older bgi23 exercises used. Harmless, and useful if anyone wants to swap
+  the outcome, but the exercise only reads two of them.
+
+
+## R20: notebooks with no data are copied verbatim (2026-09-16)
+
+The user set this mid-build: *"exercises where you don't have the data, it doesn't
+matter whether they work or not"*, then *"dont change the notebooks where you dont
+have the data"*.
+
+**What this reversed.** Three exercises (#50, #54, #56) had already been rebuilt in
+the usual style — R19 header, R16 setup cell, R17 quizzes and questions, inline
+answers blanked. All three were thrown away and replaced with a plain `cp` of the
+source notebook, stored outputs and all. Their four quiz JSON files were deleted.
+`gwas_analysis_human.ipynb` (#48) was reverted to its state at commit `6002cbd`,
+undoing that session's quiz, follow-up questions and the `$DATA`-in-R/Python fix.
+
+**Lesson for the next agent.** The instinct to improve an exercise you cannot run
+is the wrong one. Without the data there is no way to check that a rewrite is
+faithful — the header claims facts about populations and sample sizes that nobody
+can verify, the path rewrite cannot be tested, and the questions are written
+against output nobody has seen. A verbatim copy is honest about what is known. See
+R20 in `agentGuide/EXERCISE_RULES.md`.
+
+**Note on #48 and #49.** Both were built before R20 existed and already have their
+paths collected into a setup cell. They are left exactly as they are and must not
+be edited further.
+
+**A software gap is not a data gap.** #53 has all its data but no LDSC conda
+environment, so it was built normally, with a note at the two cells that cannot
+run and the pre-munged files shipped alongside.

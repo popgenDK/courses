@@ -1,0 +1,106 @@
+[
+  {
+    "question": "Why would a GWAS not find the variants you identified in this exercise?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "They are far too rare - a GWAS tests common variants, and has essentially no power at frequencies of 0.001 or below",
+        "correct": true,
+        "feedback": "Correct. This is exactly the gap that exome sequencing fills."
+      },
+      {
+        "answer": "GWAS cannot test loss-of-function variants",
+        "correct": false,
+        "feedback": "It can, if they are common enough."
+      },
+      {
+        "answer": "GWAS arrays only cover non-coding regions",
+        "correct": false,
+        "feedback": "They cover coding regions too."
+      },
+      {
+        "answer": "Because the individuals are unrelated",
+        "correct": false,
+        "feedback": "GWAS relies on unrelated individuals."
+      }
+    ]
+  },
+  {
+    "question": "Four unrelated patients each carry a different damaging variant in a different known diabetes gene. What does that pattern illustrate?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Genetic heterogeneity - the same clinical picture can be caused by different genes in different people",
+        "correct": true,
+        "feedback": "Correct, and it is why a single-variant test would miss all of them."
+      },
+      {
+        "answer": "That the variants are probably sequencing errors",
+        "correct": false,
+        "feedback": "They are in known genes and are damaging."
+      },
+      {
+        "answer": "That diabetes is a monogenic disease",
+        "correct": false,
+        "feedback": "Common diabetes is polygenic; these are monogenic cases within it."
+      },
+      {
+        "answer": "That the four patients must be related after all",
+        "correct": false,
+        "feedback": "They carry different variants."
+      }
+    ]
+  },
+  {
+    "question": "Why is the frequency cutoff 0.001 here rather than the ~0.03 of the previous exercise?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "These are unrelated patients and the model is a single dominant or highly penetrant variant, so the allele must be much rarer than a recessive one at the same prevalence",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Because there are four individuals instead of four family members",
+        "correct": false,
+        "feedback": "The number of people is not what sets the cutoff."
+      },
+      {
+        "answer": "Because gnomAD is more complete now",
+        "correct": false,
+        "feedback": "Not the reason."
+      },
+      {
+        "answer": "It is arbitrary",
+        "correct": false,
+        "feedback": "It follows from the inheritance model and the prevalence."
+      }
+    ]
+  },
+  {
+    "question": "Running the filter with max_gnomad_AF = 1 and 'synonymous_variant or worse' returns almost every variant. Why start there?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "To see the size of the unfiltered problem - it makes clear that the filtering, not the sequencing, is what finds the answer",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Because that is the correct answer to Q1",
+        "correct": false,
+        "feedback": "No, you are asked to tighten the filters."
+      },
+      {
+        "answer": "To check the file loaded",
+        "correct": false,
+        "feedback": "The line count above already did that."
+      },
+      {
+        "answer": "Because synonymous variants are the most damaging",
+        "correct": false,
+        "feedback": "They are the least damaging in this list."
+      }
+    ]
+  }
+]

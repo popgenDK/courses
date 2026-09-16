@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**51 of 59 exercises built.**
+**58 of 59 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -149,15 +149,15 @@ See also [`pca/pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK
 |---|---|---|---|---|
 | 46 | [`gwas_intro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_intro_human.ipynb) | Introduction to GWAS: association testing and QC. **Human**. **Called genotypes** (plink). | ✅ built | ⚠️ _to regenerate_ |
 | 47 | [`gwas_sumstats_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_sumstats_human.ipynb) | Working with GWAS summary statistics. **Human**. **Summary statistics only** — no individual genotypes. | ✅ built | ⚠️ _to regenerate_ |
-| 48 | [`gwas_analysis_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_analysis_human.ipynb) | A full GWAS: first association, QQ plot, QC, PCA and Tracy-Widom, a linear mixed model with regenie with and without PCs, gene-based tests, and power. **Human**: a European cohort. **Called genotypes**. **⚠️ the data is not on this server**. | ✅ built | ⚠️ _to regenerate_ |
-| 49 | [`gene_based_testing_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gene_based_testing_human.ipynb) | Rare-variant gene-based testing with regenie: annotation, set list and mask files, then SKAT and ACAT, plus power calculations. **Human**: whole-exome data for Charcot-Marie-Tooth disease, a binary trait. **Called genotypes** (exome). **⚠️ the data is not on this server**. | ✅ built | ⚠️ _to regenerate_ |
-| 50 | `wes_family_diabetes_human.ipynb` | Exome sequencing: a family study of diabetes. **Human**. **Called genotypes** (exome VCF). | ⬜ planned | _to generate_ |
-| 51 | `wes_familial_hypercholesterolemia_human.ipynb` | Exome sequencing: familial hypercholesterolemia. **Human**. **Called genotypes** (exome VCF). | ⬜ planned | _to generate_ |
-| 52 | `wes_diabetes_human.ipynb` | Exome sequencing: diabetes. **Human**. **Called genotypes** (exome VCF). | ⬜ planned | _to generate_ |
-| 53 | `heritability_ldscore_human.ipynb` | Heritability and LD score regression. **Human**. **Summary statistics** (LD score regression). | ⬜ planned | _to generate_ |
-| 54 | `prs_height_human.ipynb` | Polygenic risk scores for height. **Human**: UK Biobank. **Called genotypes**. | ⬜ planned | _to generate_ |
-| 55 | `mendelian_randomization_human.ipynb` | Mendelian randomization. **Human**. **Summary statistics only** — no individual genotypes. | ⬜ planned | _to generate_ |
-| 56 | `mendelian_randomization_proteomics_human.ipynb` | Mendelian randomization with proteomics data. **Human**. **Summary statistics only** — no individual genotypes. | ⬜ planned | _to generate_ |
+| 48 | [`gwas_analysis_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_analysis_human.ipynb) | A GWAS end to end: first pass, QQ plot, QC, PCA and Tracy-Widom, regenie mixed model with and without PCs, gene-based tests, power. **Human**: simulated UK Biobank, standing height. **Called genotypes**. &#9888; Data missing &mdash; do not edit further. | ✅ built | ⚠️ _to regenerate_ |
+| 49 | [`gene_based_testing_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gene_based_testing_human.ipynb) | Rare-variant gene-based testing with regenie: annotation, set list and mask files, then SKAT and ACAT. **Human**: whole-exome, Charcot-Marie-Tooth disease (binary trait). **Called genotypes**. &#9888; Data missing &mdash; do not edit further. | ✅ built | ⚠️ _to regenerate_ |
+| 50 | [`wes_famdiab_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_famdiab_human.ipynb) | A trio with MODY: read the VCF by eye, then annotate with Ensembl VEP. **Human**: 3 individuals, *HNF1A*. **Called genotypes**. &#9888; Data missing &mdash; added verbatim, unedited. | ✅ built | ⚠️ _to regenerate_ |
+| 51 | [`wes_fh_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_fh_human.ipynb) | Rare recessive familial hypercholesterolemia: filter an exome on gnomAD frequency and predicted consequence. **Human**: a family of four with second-cousin parents. **Called genotypes** (annotated whole-exome). | ✅ built | ⚠️ _to regenerate_ |
+| 52 | [`wes_diabetes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_diabetes_human.ipynb) | Four unrelated diabetes patients, four different genes &mdash; genetic heterogeneity, and why a GWAS finds none of them. **Human**: 4 unrelated individuals. **Called genotypes** (annotated whole-exome). | ✅ built | ⚠️ _to regenerate_ |
+| 53 | [`heritability_ldscore_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/heritability_ldscore_human.ipynb) | Heritability twice over: GCTA REML on a genetic relationship matrix, and LD score regression on summary statistics. **Human**: a simulated family cohort (**called genotypes**) and Biobank Japan HDL/LDL (**summary statistics**, East Asian). | ✅ built | ⚠️ _to regenerate_ |
+| 54 | [`prs_height_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/prs_height_human.ipynb) | Three PGS Catalog scores (height, IGF-1, birth weight) computed with plink and compared with measured height and BMI. **Human**: UK Biobank, European ancestry. **Called genotypes** (array, not imputed). &#9888; Data missing &mdash; added verbatim, unedited. | ✅ built | ⚠️ _to regenerate_ |
+| 55 | [`mendelian_randomization_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/mendelian_randomization_human.ipynb) | Two-sample Mendelian randomization of BMI on coronary heart disease: harmonisation, the estimators, F-statistic, pleiotropy and heterogeneity. **Human**, European: GIANT BMI and CARDIoGRAMplusC4D CHD. **Summary statistics** only. | ✅ built | ⚠️ _to regenerate_ |
+| 56 | [`proteomics_mr_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/proteomics_mr_human.ipynb) | Proteome-wide MR of plasma proteins on ischaemic stroke, cis-pQTLs, colocalization and a UK Biobank cohort. **Human**, European. **Summary statistics** plus **called genotypes**. &#9888; Data missing &mdash; added verbatim, unedited. | ✅ built | ⚠️ _to regenerate_ |
 
 
 ## Where each exercise comes from
@@ -484,11 +484,11 @@ Replaces: nothing — this is the only copy
 From: [`chinaCourse2025/Day3_Gene_Based_Testing_2025_Afternoon.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day3_Gene_Based_Testing_2025_Afternoon.ipynb) (2025-07-26)  
 Replaces: nothing — this is the only copy
 
-**50. `wes_family_diabetes_human.ipynb`**  
+**50. `wes_famdiab_human.ipynb`**  
 From: [`novCourse2024/3WESfamdiab.ipynb`](https://github.com/popgenDK/courses/blob/main/novCourse2024/3WESfamdiab.ipynb) (2025-07-08)  
 Replaces: nothing — this is the only copy
 
-**51. `wes_familial_hypercholesterolemia_human.ipynb`**  
+**51. `wes_fh_human.ipynb`**  
 From: [`novCourse2024/4WESfh.ipynb`](https://github.com/popgenDK/courses/blob/main/novCourse2024/4WESfh.ipynb) (2025-07-08)  
 Replaces: nothing — this is the only copy
 
@@ -512,14 +512,14 @@ Replaces 2 older copies:
   - [`bgi23/MR-exercise.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/MR-exercise.ipynb) (2023-11-10)
   - [`bgi23/MR.real_data.exercise.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/MR.real_data.exercise.ipynb) (2023-11-10)
 
-**56. `mendelian_randomization_proteomics_human.ipynb`**  
+**56. `proteomics_mr_human.ipynb`**  
 From: [`chinaCourse2025/Day6_Afternoon_Proteomics_MR.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day6_Afternoon_Proteomics_MR.ipynb) (2025-07-26)  
 Replaces: nothing — this is the only copy
 
 
 ## Status
 
-**51 of 59 exercises built.** Numbering runs to 57 because two pairs are each one
+**58 of 59 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 
