@@ -1,0 +1,27 @@
+[{
+        "question": "Which will affect genotype calls",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Base quality of reads",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Sequencing depths of reads",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Genotype priors in calculating genotype probability",
+                "correct": true,
+                "feedback": "Correct."
+            },
+            {
+                "answer": "Your computing environment",
+                "correct": false,
+                "feedback": "False."
+            }
+        ]
+    }
+    ]

@@ -20,6 +20,8 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 13 | `ngs/ngs_intro_animal.ipynb` | `kenya2026/exercises/Day1/Kenya2026_NGSintro.ipynb` | 2026-08-17 | yes — quizzes, questions, typos, paths | 6 older copies (see EXERCISES.md) |
 | — | `ngs/quiz/*.json` (10 files) | new + `kenya2024/.../quiz{1..4}.json` | 2026-09-16 | new quiz bank | kenya2024 quiz1-4 |
 | 14 | `ngs/ngs_inference_human.ipynb` | `summer2025/exercises/Day2_NGS_Inference.ipynb` | 2025-08-04 | yes — split, quizzes, questions, bug fixes, paths | `summer2024/exercises/NGS_inference.ipynb`, `summer2023/NGSinference/` |
+| 15 | `genotype_calling_imputation/genotype_calling_and_imputation_human.ipynb` | `advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb` | 2026-09-09 | yes — paths, work folder, quizzes moved in | 2 older copies (see EXERCISES.md) |
+| — | `genotype_calling_imputation/quiz/*.json` (3 files) | `/course/data/popgen25_imputation/quiz/call_genotypes_quiz{1,2,3}.json` | 2025-08-05 | renamed only | none |
 | 19 | `em_algorithms/pca_em_human.ipynb` | `advBinf/exercises/advBinf_PCA_EM.ipynb` | 2026-09-16 | yes — 3 quizzes, 14 question blocks | none |
 | 24 | `em_algorithms/admixture_em_human.ipynb` | `advBinf/exercises/advBinf_admixture_EM.ipynb` | 2026-09-14 | yes — 2 quizzes | none |
 | 37 | `em_algorithms/sfs_model.ipynb` | `advBinf/exercises/advBinf_SFSmodel.ipynb` | 2026-09-16 | yes — quiz bank moved in, typo | `advBinf/exercises/SFS.md` (2024-09-20) |
@@ -457,3 +459,64 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   A reminder for the exercises still to come: **check the kernel before adding a
   quiz.** A notebook whose `kernelspec` is not `sos` cannot run a Python quiz
   cell.
+
+- **#15 `genotype_calling_and_imputation_human.ipynb`** — copied from the 2026-09-09
+  advBinf notebook. The source is a recent, well-written rewrite (5,700 words, 22
+  `**Follow-up**` question blocks, a tool comparison table), so **the text, the
+  structure and every command are unchanged**. 85 cells, SoS kernel kept (it mixes
+  Bash, R and Python cells), committed without outputs. The work is all R4/R8/R11:
+
+  - **R4** — `COURSE_PATH=/course/popgen25` became
+    `DATA_PATH=/course/data/popgen25_imputation` and
+    `SOFTWARE_PATH=/course/data/popgen25_software`. The notebook already funnelled
+    every path through one cell that writes an `env.sh`, which later cells re-`source`,
+    so this is a two-line change and no other cell contains a full path.
+  - **R11** — the working folder `~/advBinfImputation` became
+    `~/genotype_calling_imputation_human` (24 further cells updated to match).
+  - **R8** — the three quiz files came out of the data folder and now sit in
+    `genotype_calling_imputation/quiz/`, loaded by raw-GitHub URL like the `ngs/`
+    notebooks. Renamed for meaning: `call_genotypes_quiz1/2/3.json` ->
+    `imputation_calling.json`, `imputation_strategies.json`,
+    `imputation_concordance.json`. The `cp -sf $DATA_PATH/quiz/*.json .` line is gone.
+
+  **Two dangling symlinks worked around.** `resources/CEU-chr20-final.b38.txt.gz` (the
+  QUILT2 genetic map) and `resources/plink.chr20.GRCh38.rename.map` (the Beagle 5 map)
+  are *symlinks* in the data store pointing at `../../software/...`. That resolved in
+  the old `/course/popgen25/` layout but dangles in the copied one, because the sibling
+  is now `popgen25_software/`, not `software/`. They are the only two broken links in
+  the whole 293 GB store (`find /course/data -xtype l`). Rather than touch the shared
+  store, the notebook now points `QUILT2_MAP` and `BEAGLE5_MAP` at the real files under
+  `$SOFTWARE_PATH`, which were copied correctly — so nothing is duplicated and the
+  exercise works as is. **Optional cleanup, needs your go-ahead** (writing to
+  `/course/data` was refused): replacing those two links with real copies would satisfy
+  R5 properly.
+
+  **Smoke-tested** with the work folder redirected into a scratch dir: the notebook's
+  own setup-check cell reports every program, jar, map, VCF and BAM present with no
+  errors, and the cheap data cells run — 30 individuals in the bamlist, mean depth
+  3.3-3.9x, a readable pileup, and 1,144 SNP-chip sites against 79,788 panel sites.
+  The expensive cells (bcftools ~3 min, ANGSD ~3 min, QUILT2 ~2 min) were not run.
+
+  Still on the bulk data folders `popgen25_imputation/` and `popgen25_software/` rather
+  than a cleaned per-exercise folder like `data/NGSintro/`. Making one needs a copy
+  inside `/course/data`, which I could not do.
+
+- **The PCA exercises were checked for duplication (2026-09-16).** #21 and #22
+  turned out to be **the same exercise listed twice**:
+
+  | Compared | Result |
+  |---|---|
+  | `advBinf_PCA_bonus.ipynb` vs `Day5_PCA_2.Call_genotype.ipynb` | **33 of 34 cells identical** — only the working folder differs (`~/advBinf/pca` vs `~/popgen25_pca`) |
+  | `Kenya2026_PCA.ipynb` (animal) vs `advBinf_PCA_bonus.ipynb` (bonus) | 5 shared cells — genuinely different exercises |
+  | `advBinf_PCA.ipynb` (human) vs `Kenya2026_PCA.ipynb` (animal) | 4 shared cells — the MDS/PCA-from-scratch intro |
+  | human vs bonus | 1 shared cell |
+
+  Tracing the lineage back, `summer2024-PCA-CalledGenotypes.ipynb` and
+  `chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb` are earlier versions of the
+  same wildebeest exercise. **Despite the name, none of them is about calling
+  genotypes** — the content is PCAone on wildebeest data, reading in admixture
+  proportions, and an IBS tree from plink distances. The "CalledGenotypes" name
+  came from a course label that no longer matches the content.
+
+  Merged into one entry, #21+22, under the "bonus" name. `pca/` now has 3
+  exercises: human, animal, and the animal bonus.

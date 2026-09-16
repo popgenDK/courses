@@ -1,0 +1,60 @@
+[
+  {
+    "question": "Do you think which is the best genotype imputation method?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "QUILT2.",
+        "correct": true,
+	"feedback": "Correct."
+      },
+      {
+        "answer": "BEAGLE5.",
+        "correct": true,
+	"feedback": "Correct."
+      },
+      {
+        "answer": "BEAGLE4.",
+        "correct": true,
+	"feedback": "Correct."
+      }
+    ]
+  },
+  {
+    "question": "Do you think if genotype imputation will improve genotype calls?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "NO. genotype imputation is not needed if I have >30X data",
+        "correct": true,
+	"feedback": "Correct."
+      },
+      {
+        "answer": "Yes. genotype imputaion is needed for my 3X data",
+        "correct": true,
+	"feedback": "Correct."
+      }
+    ]
+  },
+  {
+    "question": "Which of the following study design will you agree to?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "1000 samples with 1x sequencing data, run Beagle4.1/QUILT2 genotype imputation",
+        "correct": true,
+	"feedback": "Correct."
+      },
+      {
+        "answer": "100 samples with 1x sequencing data, run Angsd genotype calling without genotype imputation",
+        "correct": false,
+	"feedback": "Not Correct. this will give you bad genotype calls"
+      },
+      {
+        "answer": "30 samples with 30x sequencing data, run Bcftools genotype calling without imputation",
+        "correct": true,
+	"feedback": "Correct."
+      }
+    ]
+  }
+]

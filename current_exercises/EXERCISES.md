@@ -148,7 +148,7 @@ Exercises that build an EM algorithm from scratch.
 
 # genotype_calling_imputation/
 
-### 15. [ ] `genotype_calling_and_imputation_human.ipynb` — **merged exercise**
+### 15. [x] `genotype_calling_and_imputation_human.ipynb` — **merged exercise**
 - **From:** `advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb` (2026-09-09)
 - **Supersedes:**
   - `advBinf/exercises/genotype calling and haplotype Imputation.ipynb` (2025-09-12)
@@ -183,13 +183,21 @@ Exercises that build an EM algorithm from scratch.
   - `kenya2026/exercises/post_course/day4_morning_pca.ipynb` (2026-08-25)
   - `kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb` (2024-08-09)
 
-### 21. [ ] `pca_bonus_animal.ipynb`
+### 21+22. [ ] `pca_bonus_animal.ipynb` — **one exercise, was listed twice**
 - **From:** `advBinf/exercises/advBinf_PCA_bonus.ipynb` (2026-09-16)
-- **Supersedes:** `chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb` (2025-07-28)
-
-### 22. [ ] `pca_called_genotypes_animal.ipynb`
-- **From:** `summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb` (2025-08-06)
-- **Supersedes:** `summer2024/exercises/summer2024-PCA-CalledGenotypes.ipynb` (2024-08-20)
+- **Supersedes:**
+  - `summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb` (2025-08-06)
+  - `chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb` (2025-07-28)
+  - `summer2024/exercises/summer2024-PCA-CalledGenotypes.ipynb` (2024-08-20)
+- **Note:** #21 and #22 were the **same exercise** under different course names.
+  `advBinf_PCA_bonus.ipynb` and `Day5_PCA_2.Call_genotype.ipynb` are identical in
+  33 of their 34 cells — the only difference is the working folder
+  (`~/advBinf/pca` vs `~/popgen25_pca`). Tracing further back,
+  `summer2024-PCA-CalledGenotypes.ipynb` and `chinaCourse2025/..._PCA_bonus.ipynb`
+  are earlier versions of the same wildebeest exercise. Despite the name, none of
+  them is about calling genotypes: the content is PCAone on wildebeest data,
+  reading in admixture proportions, and an IBS tree from plink distances.
+  Kept once, under the "bonus" name, which matches the content.
 
 ---
 

@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**15 of 55 exercises built.**
+**16 of 54 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -83,7 +83,7 @@ Exercises that build an EM algorithm from scratch.
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 15 | `genotype_calling_and_imputation_human.ipynb` | SNP calling, genotype calling and haplotype imputation in one exercise. | ⬜ planned | _to generate_ |
+| 15 | [`genotype_calling_and_imputation_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/genotype_calling_and_imputation_human.ipynb) | SNP calling, genotype calling and haplotype imputation in one exercise. | ✅ built | ⚠️ _to regenerate_ |
 | 16 | `imputation_human.ipynb` | Genotype imputation with a reference panel (QUILT). | ⬜ planned | _to generate_ |
 
 ### PCA — `pca/`
@@ -92,8 +92,7 @@ Exercises that build an EM algorithm from scratch.
 |---|---|---|---|---|
 | 18 | `pca_human.ipynb` | Principal component analysis of genotype data. | ⬜ planned | _to generate_ |
 | 20 | `pca_animal.ipynb` | PCA on wildlife genotype data. | ⬜ planned | _to generate_ |
-| 21 | `pca_bonus_animal.ipynb` | PCA bonus: extra datasets and interpretation. | ⬜ planned | _to generate_ |
-| 22 | `pca_called_genotypes_animal.ipynb` | PCA from called genotypes, and how calling affects the result. | ⬜ planned | _to generate_ |
+| 21+22 | `pca_bonus_animal.ipynb` |  | ⬜ planned | _to generate_ |
 
 ### Admixture, local ancestry and gene flow — `admixture/`
 
@@ -302,14 +301,11 @@ Replaces 2 older copies:
   - [`kenya2026/exercises/post_course/day4_morning_pca.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day4_morning_pca.ipynb) (2026-08-25)
   - [`kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb) (2024-08-09)
 
-**21. `pca_bonus_animal.ipynb`**  
+**21+22. `pca_bonus_animal.ipynb`**  
 From: [`advBinf/exercises/advBinf_PCA_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA_bonus.ipynb) (2026-09-16)  
-Replaces 1 older copy:
+Replaces 3 older copies:
+  - [`summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb) (2025-08-06)
   - [`chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb) (2025-07-28)
-
-**22. `pca_called_genotypes_animal.ipynb`**  
-From: [`summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb) (2025-08-06)  
-Replaces 1 older copy:
   - [`summer2024/exercises/summer2024-PCA-CalledGenotypes.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/summer2024-PCA-CalledGenotypes.ipynb) (2024-08-20)
 
 
@@ -507,7 +503,7 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**15 of 55 exercises built.** Numbering runs to 57 because #6 and #7 were
+**16 of 54 exercises built.** Numbering runs to 57 because #6 and #7 were
 merged into a single exercise, and #17 (SHAPEIT phasing) was removed from scope.
 
 | | |
