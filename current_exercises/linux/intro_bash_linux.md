@@ -32,7 +32,7 @@ commands shown in the grey boxes one at a time and read what comes back.
 
 ```bash
 mkdir -p IntroToBash
-cp /course/data/popgenmsc26_exercises/linux/Exercises.zip IntroToBash/
+cp /course/data/current_data/popgenmsc26_exercises/linux/Exercises.zip IntroToBash/
 echo "Practice workspace created at: $(pwd)/IntroToBash"
 ```
 

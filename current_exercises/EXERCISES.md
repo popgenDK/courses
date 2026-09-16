@@ -467,7 +467,27 @@ Paths still to fix inside them:
   inside its `pdff()` helper — a personal path that should become a temp file.
 - `admixFun.R` has no paths; copied clean.
 
-# Data consolidation into `data/` (= `/course/data/`)
+# Data
+
+Exercise data lives in **`data/current_data/`** (= `/course/data/current_data/`),
+one folder per exercise or per source. `data` is a symlink in the repo root
+pointing at `/course/data/`.
+
+```
+data/
+  current_data/     everything the exercises read
+    NGSintro/         animal/ human/ software/
+    NGSinference/
+    PCA/              animal/ human_called/ human_lowdepth/
+    geneticMap/       reference data for the locus zoom plot
+    scripts/          helper R libraries that exercises source()
+    BSA/
+    <course folders>  raw material for the exercises not yet built
+  1000G/            predates this work
+  popgen25_imputation/, imputation/   left in place for now
+```
+
+# Data consolidation (source material)
 
 Real `cp` copies. **Completed 2026-09-16**: 24 directories, 24 OK, 0 warnings,
 0 failures, 0 skipped. Every copy verified identical file counts before and
@@ -520,6 +540,12 @@ data/NGSintro/
   animal/    wildebeest FASTQ pair + goat reference with bwa index   335 M
   human/     NA19238 chr21 FASTQ pair + chr21 reference with index   115 M
   software/  picard.jar                                              15 M
+
+data/imputation/
+  bams/       31 low-depth CEU bams + indexes (30 study + 1 NIPT)      223 M
+  vcfs/       ref panel, truth set, fake SNP chip, QUILT2, example      28 M
+  resources/  GRCh38 + .fai, QUILT2 and Beagle 5 genetic maps          3.1 G
+  software/   beagle 4.1 + 5.5 jars, QUILT distribution                 64 M
 ```
 
 `chr21.fa.gz` was missing its `.fai`/`.gzi` index in the original course folder,

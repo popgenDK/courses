@@ -127,7 +127,7 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 
   Added a short note at the top saying it is run in a terminal. Data path
   repointed from `/course/popgenmsc26/exercises/linux/Exercises.zip` to
-  `/course/data/popgenmsc26_exercises/linux/Exercises.zip` (verified present).
+  `/course/data/current_data/popgenmsc26_exercises/linux/Exercises.zip` (verified present).
   The CC-BY-SA license and Kristian Rother attribution are preserved verbatim.
 
 - **#12 / #13 the two NGS intro notebooks** — built 2026-09-16.
@@ -170,8 +170,8 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   where both ends map".
 
   **Paths** repointed to the data store: `/davidData/data/course/kenya2026/anders`
-  -> `/course/data/kenya2026_anders`, `/course/chinacourse2026/shared` ->
-  `/course/data/chinacourse2026_shared`. Both verified present. The human setup
+  -> `/course/data/current_data/kenya2026_anders`, `/course/chinacourse2026/shared` ->
+  `/course/data/current_data/chinacourse2026_shared`. Both verified present. The human setup
   cell no longer copies `quiz*.json` from the old shared folder.
 
   **Caveat:** the quiz URLs only resolve once `current_exercises/` is pushed to
@@ -469,7 +469,7 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 
   - **R4** — `COURSE_PATH=/course/popgen25` became
     `DATA_PATH=/course/data/popgen25_imputation` and
-    `SOFTWARE_PATH=/course/data/popgen25_software`. The notebook already funnelled
+    `SOFTWARE_PATH=/course/data/current_data/popgen25_software`. The notebook already funnelled
     every path through one cell that writes an `env.sh`, which later cells re-`source`,
     so this is a two-line change and no other cell contains a full path.
   - **R11** — the working folder `~/advBinfImputation` became
@@ -480,17 +480,16 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
     `imputation_calling.json`, `imputation_strategies.json`,
     `imputation_concordance.json`. The `cp -sf $DATA_PATH/quiz/*.json .` line is gone.
 
-  **Two dangling symlinks worked around.** `resources/CEU-chr20-final.b38.txt.gz` (the
-  QUILT2 genetic map) and `resources/plink.chr20.GRCh38.rename.map` (the Beagle 5 map)
-  are *symlinks* in the data store pointing at `../../software/...`. That resolved in
-  the old `/course/popgen25/` layout but dangles in the copied one, because the sibling
-  is now `popgen25_software/`, not `software/`. They are the only two broken links in
-  the whole 293 GB store (`find /course/data -xtype l`). Rather than touch the shared
-  store, the notebook now points `QUILT2_MAP` and `BEAGLE5_MAP` at the real files under
-  `$SOFTWARE_PATH`, which were copied correctly — so nothing is duplicated and the
-  exercise works as is. **Optional cleanup, needs your go-ahead** (writing to
-  `/course/data` was refused): replacing those two links with real copies would satisfy
-  R5 properly.
+  **Two dangling symlinks, now fixed at the root.**
+  `resources/CEU-chr20-final.b38.txt.gz` (the QUILT2 genetic map) and
+  `resources/plink.chr20.GRCh38.rename.map` (the Beagle 5 map) were *symlinks* in the
+  data store pointing at `../../software/...`. That resolved in the old
+  `/course/popgen25/` layout but dangled in the copied one, because the sibling is
+  `popgen25_software/`, not `software/`. They were the only two broken links in the
+  whole 293 GB store (`find /course/data -xtype l`). Both are now **real files** in
+  `data/imputation/resources/`, verified byte-identical with `cmp`, so R5 holds and the
+  notebooks need no workaround — the map paths are back to their original relative
+  `resources/...` form.
 
   **Smoke-tested** with the work folder redirected into a scratch dir: the notebook's
   own setup-check cell reports every program, jar, map, VCF and BAM present with no
@@ -498,9 +497,8 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   3.3-3.9x, a readable pileup, and 1,144 SNP-chip sites against 79,788 panel sites.
   The expensive cells (bcftools ~3 min, ANGSD ~3 min, QUILT2 ~2 min) were not run.
 
-  Still on the bulk data folders `popgen25_imputation/` and `popgen25_software/` rather
-  than a cleaned per-exercise folder like `data/NGSintro/`. Making one needs a copy
-  inside `/course/data`, which I could not do.
+  Reads from the cleaned per-exercise folder `data/imputation/` (see below), not from
+  the bulk course folders.
 
 - **The PCA exercises were checked for duplication (2026-09-16).** #21 and #22
   turned out to be **the same exercise listed twice**:
@@ -680,3 +678,43 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 
   New quizzes: `pca_selection_qq`, `pca_selection_hit`, `pca_animal_structure`,
   `pca_ld_pruning`.
+
+- **`data/imputation/` — cleaned per-exercise data folder (2026-09-16), 3.4 G.** Both
+  #15 and #16 now read everything from this one folder, so their path cell names a
+  single directory instead of two bulk course folders:
+
+  ```
+  data/imputation/
+    bams/        31 low-depth CEU bams + indexes (30 study samples + the NIPT sample)   223 M
+    vcfs/        reference panel, truth set, fake SNP chip, precomputed QUILT2, example  28 M
+    resources/   GRCh38 reference + .fai, and the QUILT2 and Beagle 5 genetic maps      3.1 G
+    software/    beagle 4.1 and 5.5 jars, and the QUILT distribution (QUILT2.R)          64 M
+  ```
+
+  Assembled with real `cp` from `popgen25_imputation/` and `popgen25_software/` (R5).
+  **Zero symlinks and zero dangling links** (`find -type l` / `-xtype l`): the two
+  broken map links were dereferenced into real files on the way in. Verified by `cmp`
+  against the originals — the 3.1 G reference genome and both maps are byte-identical,
+  and the file counts match (62 bam files, 10 vcf files, 172 QUILT files).
+
+  Deliberately **not** copied from `popgen25_imputation/`: `quiz/` (the quiz json now
+  travels with the exercise, R8), `outputs/` (7.9 M of precomputed results the
+  exercises do not read) and `Day2_Imputation.ipynb` (a course notebook, not data).
+  Only the software the two exercises actually invoke was taken from
+  `popgen25_software/`, not the whole 1.8 G tree.
+
+  The bulk folders `popgen25_imputation/` and `popgen25_software/` are untouched and
+  still in the data-copy list; other exercises may need them.
+
+- **Data moved into `data/current_data/` (2026-09-16).** Everything copied during
+  the consolidation now sits under `current_data/`, keeping the folder names the
+  exercises already use. 291 G, moved rather than copied since it is the same
+  filesystem, so it was instant.
+
+  Left in place at `/course/data/`: `1000G/` (predates this work),
+  `popgen25_imputation/` and `imputation/` — **the imputation data, held back by
+  request** while those notebooks are being written.
+
+  Every path in every built exercise was repointed and then checked to resolve:
+  9 files, 15 paths. The two imputation notebooks were correctly left untouched,
+  since their data did not move.

@@ -526,8 +526,13 @@ exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) 
 
 ## Data
 
-Everything is under `data/` -> `/course/data/`. Helper R libraries that
-exercises `source()` live in `data/scripts/`. Nothing outside `data/` should be
-read by an exercise. The symlink itself is not in git — it resolves only on the
-popgen server.
+Exercise data lives under **`data/current_data/`** (`data` is a symlink in the
+repo root pointing at `/course/data/`). Each built exercise has its own folder
+there — `NGSintro/`, `NGSinference/`, `PCA/` — alongside shared support such as
+`geneticMap/` and `scripts/`, the helper R libraries that exercises `source()`.
+The remaining folders are raw material for exercises not yet built, and get
+curated as each one is done.
+
+Nothing outside `data/` should be read by an exercise. The symlink itself is not
+in git — it resolves only on the popgen server.
 
