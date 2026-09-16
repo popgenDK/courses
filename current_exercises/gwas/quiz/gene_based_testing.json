@@ -1,0 +1,158 @@
+[
+  {
+    "question": "Why does a single-variant GWAS have almost no power for rare variants?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Each rare variant is carried by very few people, so there is not enough information at any one site to reach significance",
+        "correct": true,
+        "feedback": "Correct \u2014 which is why the variants in a gene are tested together."
+      },
+      {
+        "answer": "Rare variants are not genotyped accurately",
+        "correct": false,
+        "feedback": "Accuracy is a separate concern."
+      },
+      {
+        "answer": "Rare variants have no effect on traits",
+        "correct": false,
+        "feedback": "They often have larger effects."
+      },
+      {
+        "answer": "The multiple-testing burden is lower",
+        "correct": false,
+        "feedback": "It is not lower, and that is not the issue."
+      }
+    ]
+  },
+  {
+    "question": "A gene-based test needs an annotation file, a set list and a mask. What does the mask decide?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Which functional classes of variant are included in a test \u2014 for example only predicted loss-of-function, or also missense",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Which samples to keep",
+        "correct": false,
+        "feedback": "That is sample QC."
+      },
+      {
+        "answer": "Which genes to test",
+        "correct": false,
+        "feedback": "That is the set list."
+      },
+      {
+        "answer": "The significance threshold",
+        "correct": false,
+        "feedback": "Set separately."
+      }
+    ]
+  },
+  {
+    "question": "A burden test sums the rare variants in a gene. What does it assume, and when does that fail?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "That they all act in the same direction; it loses power when a gene contains both damaging and protective variants",
+        "correct": true,
+        "feedback": "Correct \u2014 this is why SKAT exists."
+      },
+      {
+        "answer": "That they are all common",
+        "correct": false,
+        "feedback": "The opposite."
+      },
+      {
+        "answer": "That the trait is quantitative",
+        "correct": false,
+        "feedback": "Burden tests work for both."
+      },
+      {
+        "answer": "Nothing \u2014 it makes no assumptions",
+        "correct": false,
+        "feedback": "It makes a strong one."
+      }
+    ]
+  },
+  {
+    "question": "SKAT is a variance-component test and ACAT combines p-values. When is ACAT the better choice?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "When you want to combine evidence across different tests or variant sets without assuming a single model",
+        "correct": true,
+        "feedback": "Correct \u2014 ACAT is robust and cheap to compute."
+      },
+      {
+        "answer": "When all variants act in the same direction",
+        "correct": false,
+        "feedback": "That favours a burden test."
+      },
+      {
+        "answer": "When the sample size is very small",
+        "correct": false,
+        "feedback": "Not the deciding factor."
+      },
+      {
+        "answer": "Only for quantitative traits",
+        "correct": false,
+        "feedback": "It applies to both."
+      }
+    ]
+  },
+  {
+    "question": "The null model here is fitted with approximate Firth correction, which the quantitative-trait version did not use. What is it for?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Case/control imbalance \u2014 with few cases and rare variants, standard logistic regression gives badly inflated p-values",
+        "correct": true,
+        "feedback": "Correct, and it is why binary traits need different handling."
+      },
+      {
+        "answer": "Speeding up the fit",
+        "correct": false,
+        "feedback": "It costs time."
+      },
+      {
+        "answer": "Correcting for population structure",
+        "correct": false,
+        "feedback": "That is what the LOCO predictions do."
+      },
+      {
+        "answer": "Handling missing genotypes",
+        "correct": false,
+        "feedback": "Not its role."
+      }
+    ]
+  },
+  {
+    "question": "regenie runs in two steps. What does step 1 produce?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A null model with per-chromosome (LOCO) predictions of the trait, which step 2 then conditions on",
+        "correct": true,
+        "feedback": "Correct \u2014 leaving out the chromosome being tested avoids proximal contamination."
+      },
+      {
+        "answer": "The single-variant association results",
+        "correct": false,
+        "feedback": "That is step 2."
+      },
+      {
+        "answer": "The annotation files",
+        "correct": false,
+        "feedback": "Those are inputs."
+      },
+      {
+        "answer": "The gene-based p-values",
+        "correct": false,
+        "feedback": "Also step 2."
+      }
+    ]
+  }
+]

@@ -586,9 +586,22 @@ kenya2026 notebooks split them. The source stays untouched in `kenya2026/`.
 - **Overlap to check later:** Exercise E (gene-based testing) may duplicate #49
   `gene_based_testing_human`, which comes from the afternoon notebook of the same day.
 
-### 49. [ ] `gene_based_testing_human.ipynb`
+### 49. [x] `gene_based_testing_human.ipynb` — **⚠️ data not on this server**
 - **From:** `chinaCourse2025/Day3_Gene_Based_Testing_2025_Afternoon.ipynb` (2025-07-26)
 - **Supersedes:** none — only copy
+- **Note:** rare-variant gene-based testing with `regenie` — annotation, set list and mask
+  files, then SKAT and ACAT — on **whole-exome data for a binary trait**
+  (Charcot-Marie-Tooth disease), with a Firth-corrected null model. Ends with power
+  calculations.
+- **Overlap with #48, checked:** 45 of its 54 source cells repeat Exercises D, E and F of
+  the morning notebook, 38 of them identically. What differs is the **data and the trait**:
+  #48 runs on array genotypes with a quantitative phenotype, this one on exome data with a
+  binary disease trait, which is why the null model needs Firth correction and why
+  gene-based tests are used at all. Kept as a separate exercise on that basis; the header
+  says so and points back to #48.
+- **⚠️ The data is missing,** same as #48 — the notebook expects
+  `/home/student/<user>/GWAS/data/`, which does not exist here. Added as-is by request,
+  with every path collected into the setup cell.
 
 ### 50. [ ] `wes_family_diabetes_human.ipynb`
 - **From:** `novCourse2024/3WESfamdiab.ipynb` (2025-07-08)
