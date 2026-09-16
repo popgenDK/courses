@@ -13,7 +13,7 @@ Dates are the last git commit touching the source file.
 
 ```
 current_exercises/
-  linux/  statistics/  sequence_analysis/  shiny/
+  linux/  shiny/
   ngs/  genotype_calling_imputation/
   pca/  admixture/  local_ancestry/  gene_flow/
   demography/  selection/  relatedness_diversity/
@@ -44,20 +44,6 @@ and #17 was removed from scope. Done so far: 16.
 
 ---
 
-# sequence_analysis/
-
-### 8. [ ] `motif_discovery.R` — **DEFERRED by request (2026-09-16)**
-- **From:** `BSA/motif_discovery_ex.R` (2025-10-22)
-- **Supersedes:** none — only copy
-- **Data: COPIED** to `data/BSA/` — `motif_discovery/PUM2.top500.fa` and
-  `pHMM/globins4.fasta`. The `~/work/COURSES/BIO/BSA` paths in the script are the
-  workgroup share mounted into home directories.
-- **Remaining blocker:** the source is an instructor working/solution draft, not
-  a student-facing exercise — answers are inline as comments and lines 100-102
-  (`enrichment0: # tgta / lambda0`) are not valid R. Decide whether to ship it as
-  a solution script or rewrite it as an exercise.
-
----
 
 # shiny/ — R Shiny apps
 

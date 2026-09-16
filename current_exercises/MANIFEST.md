@@ -104,20 +104,15 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   Note: those URLs only resolve once `current_exercises/` is pushed to
   `popgenDK/courses` on `main`.
 
-- **#12 `motif_discovery.R` — DEFERRED by request (2026-09-16), not copied.** The data has now been
-  **found**: `/davidData/data/BSA` (1.2 G) is the `COURSES/BIO/BSA` workgroup
-  share that gets mounted into home directories as `~/work/COURSES/BIO/BSA`, so
-  the script's paths were never a laptop path after all. Both files are present:
-  `motif_discovery/PUM2.top500.fa` and `pHMM/globins4.fasta`.
-
-  The data is now **copied** to `data/BSA/` (2026-09-16, 84/84 files verified),
-  so the three path references can be rewritten to
-  `data/BSA/motif_discovery/PUM2.top500.fa` and `data/BSA/pHMM/globins4.fasta`.
-
-  One blocker remains: `BSA/motif_discovery_ex.R` is an instructor
-  working/solution draft rather than a student-facing exercise — it has the
-  answers inline as comments and lines 100-102 are not valid R.
-
+- **#8 `motif_discovery.R` — REMOVED from scope (2026-09-16), by request.** It was
+  deferred earlier because `BSA/motif_discovery_ex.R` is an instructor
+  working/solution draft rather than a student exercise: the answers are inline as
+  comments and lines 100-102 (`enrichment0: # tgta / lambda0`) are not valid R. It
+  has now been dropped from `EXERCISES.md`, the README and the exercise count, and
+  the empty `sequence_analysis/` folder was deleted. The source script is still in
+  `BSA/` and its data is still at `data/current_data/BSA/`
+  (`motif_discovery/PUM2.top500.fa`, `pHMM/globins4.fasta`), so nothing is lost if
+  it is ever rewritten as an exercise.
 - **Helper libraries live in the data folder, not here (2026-09-16).**
   `admixFun.R`, `newPlotPlink.R` and `online.R` are function libraries that
   exercises `source()`, not exercises, so all three sit in `data/scripts/`:
