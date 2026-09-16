@@ -1,0 +1,76 @@
+[
+  {
+    "question": "How many individuals are in the dataset?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 111,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "default",
+        "feedback": "Not quite. Check the number of lines in the FAM file."
+      }
+    ]
+  },
+  {
+    "question": "How many SNPs are in the dataset?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 2818432,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "default",
+        "feedback": "Not quite. Check the number of lines in the BIM file."
+      }
+    ]
+  },
+  {
+    "question": "How many populations are represented?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 12,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "default",
+        "feedback": "Not quite. Count the unique population labels in the FAM file."
+      }
+    ]
+  },
+  {
+    "question": "Which population has the highest number of individuals?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Kangerlussuaq-Sisimiut",
+        "correct": true,
+        "feedback": "Correct. It has 21 individuals."
+      },
+      {
+        "answer": "Akia/Maniitsoq",
+        "correct": false,
+        "feedback": "Not quite. Akia/Maniitsoq has 15 individuals."
+      },
+      {
+        "answer": "South_Greenland",
+        "correct": false,
+        "feedback": "Not quite. South_Greenland has 14 individuals."
+      },
+      {
+        "answer": "Neria",
+        "correct": false,
+        "feedback": "Not quite. Neria has 13 individuals."
+      }
+    ]
+  }
+]

@@ -419,33 +419,40 @@ the other exercises do not shift.
 
 # selection/
 
-### 40. [ ] `selection_scans_animal.ipynb`
-- **From:** `kenya2026/exercises/Day4/SelectionScans_22nd.ipynb` (2026-08-22)
+**Four exercises**, and they differ in *which species* and in whether the genotypes are
+**called** or the data are **low depth genotype likelihoods**.
+
+### 63. [x] `sfs_fst_pbs_human.ipynb`
+- **From:** written for this set
 - **Supersedes:**
-  - `kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb` (2026-08-25)
-  - `summer2023/selectionScan/README.md` (2023)
+  - `summer2024/exercises/SelectionScans.ipynb` (2024-08-22) — human, frequency and
+    haplotype methods
+  - `kenya2026/exercises/Day4/SelectionScans_22nd.ipynb` cells 0-37 (2026-08-22) — the
+    human half of that notebook, 49% similar to summer2024
+- **Note:** SFS, Fst and PBS on human data with ANGSD. **Low depth**, genotype likelihoods.
 
-### 63. [x] `sfs_fst_pbs_human.ipynb` — **new, not from the repo**
-- **From:** the web page `https://www.popgen.dk/albrecht/phdcourse/html/EMBO2021sfs.html`
-  (updated 2021-03-22), converted to an SoS notebook by request (2026-09-16).
-- **Supersedes:** none — this exercise was not in the repo in any form.
-- **Note:** the human counterpart of the `selection/` folder, which otherwise holds only
-  animal exercises. SFS (1D and 2D) from genotype likelihoods, pairwise Fst, then a PBS
-  sliding-window scan that lands on the lactase region — CEU/JPT/YRI from 1000 Genomes,
-  10 individuals each at 2-6X.
-- **Data:** `data/sfs_fst_pbs/` (2.4 G), copied from `/davidData/albrecht/course/sfs/`.
-  The `plot2dSFS.R` helper went to `data/scripts/` per R14.
-- **Shiny bonus dropped by request (2026-09-16).** The page's last section launched a
-  Shiny PBS browser; it needed the `rCharts` package, which is not installed and is
-  GitHub-only and unmaintained, and its export wrote to a home directory that no longer
-  exists. The section is not in the notebook, which therefore reads **entirely** from
-  `data/`. The app itself is untouched at `/davidData/albrecht/course/selectionScan/` if
-  it is ever wanted back.
+### 40. [x] `selection_scans_animal.ipynb`
+- **From:** `kenya2026/exercises/Day4/SelectionScans_22nd.ipynb` cells 38-50 (2026-08-22)
+- **Supersedes:** `kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb` (2026-08-25)
+- **Note:** the wildebeest half of the kenya notebook — Hudson Fst and PBS on 24
+  individuals in three groups. **Called genotypes** (VCF). Black wildebeest is a separate
+  species and plays the outgroup role.
 
-### 41. [ ] `selection_scans_popgen_animal.ipynb`
+### 41. [x] `selection_maize.ipynb`
 - **From:** `summer2025/exercises/Day4_SelectionPopGen2025.ipynb` (2025-08-06)
-- **Supersedes:** `summer2024/exercises/SelectionScans.ipynb` (2024-08-22)
-- **Note:** a different exercise from #40, not an older version of it — both kept
+- **Supersedes:** none — only copy
+- **Note:** **maize**, not an animal despite the old `_animal` name. Tajima's D and PBS
+  from **low depth genotype likelihoods** with ANGSD. **Zero** cells in common with any
+  other selection exercise.
+
+**Also a selection scan:** [`pca/pca_low_depth_selection_human.ipynb`](#) (#59) scans along
+a principal component rather than using Fst. It lives in `pca/` because it continues
+directly from the PCA exercise.
+
+**The species split, confirmed by cell comparison:** summer2024 is human; summer2025 is
+**maize**; the kenya notebook is a **mix** whose human half is 49% similar to summer2024
+and whose wildebeest half shares nothing with it. The old plan had #41 (`_animal`, maize)
+superseding summer2024 (human), which share **0%** of their cells.
 
 ---
 
@@ -464,10 +471,16 @@ the other exercises do not shift.
   Replaced the post-course download machinery (`wget` of a zip into
   `$KENYA2026_WORK_DIR`) with a standard setup cell.
 
-### 43. [ ] `relatedness_animal.ipynb`
+### 43. [x] `relatedness_animal.ipynb`
 - **From:** `kenya2026/exercises/Day5/Related.ipynb` (2026-08-23)
 - **Supersedes:** `kenya2026/exercises/post_course/day5_morning_relatedness.ipynb` (2026-08-25)
 - **Paired with:** #44, the merged Related&Fst form
+- **Data:** `data/relatedness/` (1.5 G) — Reindeer plink fileset, the PCAone residuals,
+  the precomputed ADMIXTURE K=2 output and the `relateAdmix` binary. The two R plotting
+  helpers went to `data/scripts/` per R14.
+- **Fixed a broken quiz:** `kenya2026/exercises/Day4/quiz_dataset_summary.json` has a
+  trailing comma and is **not valid JSON**, so the notebook's first quiz has never
+  loaded. Fixed in the copy.
 
 **Retired slot: #44 `relatedness_and_fst_animal`.** Removed by request, 2026-09-16.
 `kenya2026/exercises/Day4/Related&Fst.ipynb` (2026-08-22) combined the two analyses in one
@@ -664,6 +677,13 @@ data/sfs_fst_pbs/                                                       2.4 G
   smallerbams/     30 bams + indexes, 10 each CEU/JPT/YRI, reduced genome
   chr5_33M_v2/     30 bams, the 1 Mb region on chromosome 5
   precomputed/     saf files, so the angsd step can be skipped
+
+data/relatedness/                                                      1.5 G
+  Reindeer.{bed,bim,fam}   111 reindeer, 2.8 M SNPs, 12 Greenland populations
+  pcaone.residuals/.mbim   precomputed PCAone residuals for the LD pruning step
+  Reindeer_pruned.2.{P,Q}  precomputed ADMIXTURE K=2, in case the run is too slow
+  population.tsv           population labels for the PCA plot
+  relateAdmix              the relateAdmix binary
 ```
 
 `chr21.fa.gz` was missing its `.fai`/`.gzi` index in the original course folder,

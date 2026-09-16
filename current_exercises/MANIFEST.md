@@ -1154,7 +1154,22 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
     African one, as it should
   - global weighted Fst: **JPT-CEU 0.085** (most closely related), YRI-CEU 0.121,
     **YRI-JPT 0.157** (most distant) — the textbook ordering the two Fst questions expect
-  - the background scan produced 104 windows of 50 kb
+  - the background scan produced 104 windows of 50 kb, and the chromosome 5 region 66
+  - **the chr5 region is emphatically extreme**, which is the payoff of the exercise:
+    `PBS_CEU` peaks at **0.490** at chr5:33,945,000, against a genome-wide background
+    maximum of 0.145 — **3.4x** the most extreme background window. In the same window
+    `PBS_YRI` is 0.210 and `PBS_JPT` 0.125, so "in which population is this locus under
+    selection?" answers cleanly: CEU. And both CEU comparisons are elevated
+    (`wFst_YRI_CEU` 0.427, `wFst_JPT_CEU` 0.433) while `wFst_YRI_JPT` is not (0.227),
+    which is exactly why there are two Fst peaks and only one PBS peak.
+  - `precomputed/` (106 M) holds the saf files and 1D spectra from this run, and
+    `realSFS` reads them back correctly, so the shortcut cell works
+
+  **Correction to an earlier note of mine:** I first described the chr5 peak as the
+  lactase region. It is not — chr5:33.9 Mb is a **pigmentation** locus. The lactase
+  example (chr2 136.5 Mb, via MCM6) belonged to the Shiny bonus, which is not included.
+  The exercise text itself never named the gene, and does not now; it sends students to
+  the UCSC browser to find it, which is the point of the question.
 
   **The page's Shiny bonus is not included (dropped by request, 2026-09-16).** Its last
   section launched a genome-wide PBS browser as a Shiny app. It is not runnable on this

@@ -1,0 +1,132 @@
+[
+  {
+    "question": "Why should one usually retain the higher-quality individual from each close-relative pair?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "It reduces dependence while preserving the sample with more reliable data",
+        "correct": true,
+        "feedback": "Correct. Coverage, missingness, and metadata quality can guide the choice."
+      },
+      {
+        "answer": "It guarantees that population structure disappears",
+        "correct": false,
+        "feedback": "Removing relatives does not remove population structure."
+      },
+      {
+        "answer": "It increases the number of close-relative pairs",
+        "correct": false,
+        "feedback": "The purpose is to reduce close relatedness in the retained set."
+      }
+    ]
+  },
+  {
+    "question": "What can close relatives do to an ordinary PCA?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "Create family-driven axes or distort population patterns",
+        "correct": true,
+        "feedback": "Correct. Recent pedigree sharing can influence the covariance structure."
+      },
+      {
+        "answer": "Change diploid samples into haploids",
+        "correct": false,
+        "feedback": "Relatedness does not alter ploidy."
+      },
+      {
+        "answer": "Force every eigenvalue to zero",
+        "correct": false,
+        "feedback": "PCA remains defined, but its interpretation can be distorted."
+      }
+    ]
+  },
+  {
+    "question": "What does PLINK2 --king-cutoff-table do in this exercise?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "Selects a set of individuals without relationships above the specified kinship cutoff",
+        "correct": true,
+        "feedback": "Correct. PLINK2 removes samples to break close-relative connections."
+      },
+      {
+        "answer": "Deletes SNPs with high FST",
+        "correct": false,
+        "feedback": "It acts on related individuals, not differentiated SNPs."
+      },
+      {
+        "answer": "Re-estimates sequencing base qualities",
+        "correct": false,
+        "feedback": "PLINK2 is operating on called genotypes."
+      }
+    ]
+  },
+  {
+    "question": "Why compare PCA before and after close-relative filtering?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "To see whether recent family structure was influencing the population-level PCA pattern",
+        "correct": true,
+        "feedback": "Correct. Family sharing can create or distort principal-component patterns."
+      },
+      {
+        "answer": "To verify that the genome became longer",
+        "correct": false,
+        "feedback": "Sample filtering cannot change genome length."
+      },
+      {
+        "answer": "To force all populations to overlap",
+        "correct": false,
+        "feedback": "Real population structure may remain after relatives are removed."
+      }
+    ]
+  },
+  {
+    "question": "Which information can help choose which member of a related pair to retain?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "None of the other options is correct",
+        "correct": false,
+        "feedback": "One of the other options gives the correct answer."
+      },
+      {
+        "answer": "Genotype missingness, sequencing coverage, metadata quality, and study design",
+        "correct": true,
+        "feedback": "Correct. Retention should be based on data quality and analytical priorities."
+      },
+      {
+        "answer": "Always remove the alphabetically first sample",
+        "correct": false,
+        "feedback": "Alphabetical order has no biological or quality justification."
+      },
+      {
+        "answer": "Always remove both individuals",
+        "correct": false,
+        "feedback": "Usually one high-quality representative can be retained."
+      }
+    ]
+  }
+]

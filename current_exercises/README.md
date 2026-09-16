@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**40 of 56 exercises built.**
+**43 of 56 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -45,7 +45,7 @@ preview.
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 8 | `motif_discovery.R` | Motif enrichment with Markov background models. **Human** PUM2 binding sites. | ⏸️ deferred | n/a |
+| 8 | `motif_discovery.R` | Motif enrichment with Markov background models. **Human** PUM2 binding sites. Sequences, not genotypes. | ⏸️ deferred | n/a |
 
 ### Shiny apps — `shiny/`
 
@@ -53,8 +53,8 @@ Interactive R Shiny apps. Launch one in R with the `source(...)` line at the top
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 9 | [`needleman_wunsch_dna.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/needleman_wunsch_dna.R) | Needleman-Wunsch pairwise alignment of **DNA**, as a Shiny app. | ✅ built | n/a |
-| 10 | [`needleman_wunsch_blosum50.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/needleman_wunsch_blosum50.R) | Needleman-Wunsch pairwise alignment of **protein** with BLOSUM50, as a Shiny app. | ✅ built | n/a |
+| 9 | [`needleman_wunsch_dna.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/needleman_wunsch_dna.R) | Needleman-Wunsch pairwise alignment of **DNA**, as a Shiny app. Sequences, not genotypes. | ✅ built | n/a |
+| 10 | [`needleman_wunsch_blosum50.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/needleman_wunsch_blosum50.R) | Needleman-Wunsch pairwise alignment of **protein** with BLOSUM50, as a Shiny app. Sequences, not genotypes. | ✅ built | n/a |
 | 11 | [`dotplot.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/dotplot.R) | Dot plot of two sequences from FASTA files you upload. Any species. | ✅ built | n/a |
 | 3 | [`stats_binomial.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/stats_binomial.R) | The binomial distribution, as an interactive Shiny app. No data. | ✅ built | n/a |
 | 4 | [`stats_normal.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/stats_normal.R) | The normal distribution, as an interactive Shiny app. No data. | ✅ built | n/a |
@@ -75,42 +75,42 @@ Exercises that build an EM algorithm from scratch.
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 12 | [`ngs_intro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_human.ipynb) | FASTQ &rarr; QC &rarr; bwa mapping &rarr; SAM/BAM &rarr; VCF. **Human**: NA19238 (YRI, Nigeria), chr21. | ✅ built | ⚠️ _to regenerate_ |
-| 13 | [`ngs_intro_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_animal.ipynb) | FASTQ &rarr; QC &rarr; bwa mapping &rarr; SAM/BAM &rarr; VCF. **Blue wildebeest**, mapped to a **goat** reference. | ✅ built | ⚠️ _to regenerate_ |
-| 14 | [`ngs_inference_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_inference_human.ipynb) | Low-depth inference with ANGSD: genotype likelihoods, calling, allele frequencies, SNP calling at EDAR. **Human**: 100 individuals from LWK, TSI, CHB, PEL, NAM. | ✅ built | ⚠️ _to regenerate_ |
+| 12 | [`ngs_intro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_human.ipynb) | FASTQ &rarr; QC &rarr; bwa mapping &rarr; SAM/BAM &rarr; VCF. **Human**: NA19238 (YRI, Nigeria), chr21. Reads, not genotypes. | ✅ built | ⚠️ _to regenerate_ |
+| 13 | [`ngs_intro_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_animal.ipynb) | FASTQ &rarr; QC &rarr; bwa mapping &rarr; SAM/BAM &rarr; VCF. **Blue wildebeest**, mapped to a **goat** reference. Reads, not genotypes. | ✅ built | ⚠️ _to regenerate_ |
+| 14 | [`ngs_inference_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_inference_human.ipynb) | Low-depth inference with ANGSD: genotype likelihoods, calling, allele frequencies, SNP calling at EDAR. **Human**: 100 individuals from LWK, TSI, CHB, PEL, NAM. **Low depth** (~2-3x): genotype likelihoods, never called. | ✅ built | ⚠️ _to regenerate_ |
 
 ### Genotype calling and imputation — `genotype_calling_imputation/`
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 15 | [`genotype_calling_and_imputation_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/genotype_calling_and_imputation_human.ipynb) | SNP calling, genotype calling and imputation compared. **Human**: 30 CEU samples, 3 Mb of chr20. | ✅ built | ⚠️ _to regenerate_ |
-| 16 | [`imputation_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/imputation_human.ipynb) | Genotype imputation with a reference panel. **Human**: 30 CEU samples, 3 Mb of chr20. | ✅ built | ⚠️ _to regenerate_ |
+| 15 | [`genotype_calling_and_imputation_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/genotype_calling_and_imputation_human.ipynb) | SNP calling, genotype calling and imputation compared. **Human**: 30 CEU samples, 3 Mb of chr20. **Low depth**: the point is comparing calling with imputation. | ✅ built | ⚠️ _to regenerate_ |
+| 16 | [`imputation_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/imputation_human.ipynb) | Genotype imputation with a reference panel. **Human**: 30 CEU samples, 3 Mb of chr20. **Low depth**: imputation instead of calling. | ✅ built | ⚠️ _to regenerate_ |
 
 ### PCA — `pca/`
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 58 | [`pca_mds_and_svd.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_mds_and_svd.ipynb) | MDS and PCA worked by hand: distances, cmdscale, the SVD, the covariance matrix, variance explained. No data &mdash; a 5x7 matrix typed in. | ✅ built | _to generate_ |
-| 18 | [`pca_low_depth_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_human.ipynb) | PCAngsd on genotype likelihoods. **Human**: 435 individuals from ASW, CEU, CHB, MXL, YRI. | ✅ built | ⚠️ _to regenerate_ |
-| 59 | [`pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_selection_human.ipynb) | PC-based selection scan with PCAngsd. **Human**: 424 Europeans from CEU, GBR, IBS, TSI. | ✅ built | ⚠️ _to regenerate_ |
-| 22 | [`pca_called_genotypes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_human.ipynb) | PCAone on LD-pruned called genotypes, read against admixture proportions. **Human**: 192 individuals, 16 populations. | ✅ built | ⚠️ _to regenerate_ |
-| 20 | [`pca_called_genotypes_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_animal.ipynb) | PCAone on called genotypes, LD pruning adjusted for structure, and an IBS tree. **Blue wildebeest**: 73 individuals, 7 localities. | ✅ built | ⚠️ _to regenerate_ |
+| 18 | [`pca_low_depth_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_human.ipynb) | PCAngsd on genotype likelihoods. **Human**: 435 individuals from ASW, CEU, CHB, MXL, YRI. **Low depth**: genotype likelihoods. | ✅ built | ⚠️ _to regenerate_ |
+| 59 | [`pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_selection_human.ipynb) | PC-based selection scan with PCAngsd. **Human**: 424 Europeans from CEU, GBR, IBS, TSI. **Low depth**: genotype likelihoods. | ✅ built | ⚠️ _to regenerate_ |
+| 22 | [`pca_called_genotypes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_human.ipynb) | PCAone on LD-pruned called genotypes, read against admixture proportions. **Human**: 192 individuals, 16 populations. **Called genotypes** (LD-pruned plink). | ✅ built | ⚠️ _to regenerate_ |
+| 20 | [`pca_called_genotypes_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_animal.ipynb) | PCAone on called genotypes, LD pruning adjusted for structure, and an IBS tree. **Blue wildebeest**: 73 individuals, 7 localities. **Called genotypes** (plink). | ✅ built | ⚠️ _to regenerate_ |
 
 ### Admixture, local ancestry and gene flow — `admixture/`
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 23 | [`admixture_low_depth_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_low_depth_human.ipynb) | NGSadmix on genotype likelihoods, evalAdmix and the choice of K. **Human**: 435 individuals from ASW, CEU, CHB, MXL, YRI. | ✅ built | ⚠️ _to regenerate_ |
-| 60 | [`admixture_reference_panel_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_reference_panel_human.ipynb) | fastNGSadmix: the ancestry of a single individual against a fixed panel. **Human**: 7 reference populations, 195 individuals. | ✅ built | ⚠️ _to regenerate_ |
-| 61 | [`admixture_called_genotypes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_human.ipynb) | ADMIXTURE on called genotypes, convergence across seeds, and evalAdmix. **Human**: 192 individuals, 16 populations. | ✅ built | ⚠️ _to regenerate_ |
-| 25 | [`admixture_called_genotypes_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_animal.ipynb) | ADMIXTURE on called genotypes, seeds, K and model fit. **Blue wildebeest**: 73 individuals, 7 localities. | ✅ built | ⚠️ _to regenerate_ |
-| 28 | [`local_ancestry_flare_mosaic_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_flare_mosaic_human.ipynb) | Local ancestry with FLARE and MOSAIC, 20 vs 200 generations since admixture. Simulated **human-like** admixed genomes. | ✅ built | ⚠️ _to regenerate_ |
-| 29 | [`local_ancestry_hapla_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_hapla_human.ipynb) | Local ancestry with hapla cluster/admix/fatash. Simulated **human**, then real **cattle** (chr25, 314 individuals). | ✅ built | _to generate_ |
-| 30 | [`f_stats_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/f_stats_human.ipynb) | f2, f3 and f4 statistics and qpAdm. **Human**: 1,646 individuals in 98 populations, ancient and modern, from the AADR. | ✅ built | ⚠️ _to regenerate_ |
-| 31 | [`gene_flow_dstat_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/gene_flow_dstat_animal.ipynb) | D-statistics (ABBA-BABA) built from scratch on simulated **human/Neanderthal** data, then f4 on **blue and black wildebeest**. | ✅ built | ⚠️ _to regenerate_ |
-| 32 | [`admixture_graphs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_graphs_human.ipynb) | Fitting admixture graphs with qpgraph, and estimating them with treemix. **Human**: 33 world populations. | ✅ built | _to generate_ |
-| 33 | [`chromopainter_finestructure_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/chromopainter_finestructure_human.ipynb) | Chromosome painting with ChromoPainter, clustering with fineSTRUCTURE, then GLOBETROTTER and SOURCEFIND. **Human**: 16 populations, 256 individuals. | ✅ built | _to generate_ |
-| 34 | [`dating_admixture_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/dating_admixture_human.ipynb) | Dating admixture with ALDER, MALDER, fastGLOBETROTTER and MOSAIC, then AdaptMix for selection. **Human**: 16 populations plus a simulated admixed group. | ✅ built | _to generate_ |
+| 23 | [`admixture_low_depth_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_low_depth_human.ipynb) | NGSadmix on genotype likelihoods, evalAdmix and the choice of K. **Human**: 435 individuals from ASW, CEU, CHB, MXL, YRI. **Low depth**: genotype likelihoods. | ✅ built | ⚠️ _to regenerate_ |
+| 60 | [`admixture_reference_panel_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_reference_panel_human.ipynb) | fastNGSadmix: the ancestry of a single individual against a fixed panel. **Human**: 7 reference populations, 195 individuals. **Low depth**: genotype likelihoods for one individual. | ✅ built | ⚠️ _to regenerate_ |
+| 61 | [`admixture_called_genotypes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_human.ipynb) | ADMIXTURE on called genotypes, convergence across seeds, and evalAdmix. **Human**: 192 individuals, 16 populations. **Called genotypes** (LD-pruned plink). | ✅ built | ⚠️ _to regenerate_ |
+| 25 | [`admixture_called_genotypes_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_animal.ipynb) | ADMIXTURE on called genotypes, seeds, K and model fit. **Blue wildebeest**: 73 individuals, 7 localities. **Called genotypes** (plink). | ✅ built | ⚠️ _to regenerate_ |
+| 28 | [`local_ancestry_flare_mosaic_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_flare_mosaic_human.ipynb) | Local ancestry with FLARE and MOSAIC, 20 vs 200 generations since admixture. Simulated **human-like** admixed genomes. **Called genotypes** (phased). | ✅ built | ⚠️ _to regenerate_ |
+| 29 | [`local_ancestry_hapla_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_hapla_human.ipynb) | Local ancestry with hapla cluster/admix/fatash. Simulated **human**, then real **cattle** (chr25, 314 individuals). **Called genotypes** (phased). | ✅ built | _to generate_ |
+| 30 | [`f_stats_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/f_stats_human.ipynb) | f2, f3 and f4 statistics and qpAdm. **Human**: 1,646 individuals in 98 populations, ancient and modern, from the AADR. **Called genotypes**, precomputed F2. | ✅ built | ⚠️ _to regenerate_ |
+| 31 | [`gene_flow_dstat_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/gene_flow_dstat_animal.ipynb) | D-statistics (ABBA-BABA) built from scratch on simulated **human/Neanderthal** data, then f4 on **blue and black wildebeest**. **Called genotypes**. | ✅ built | ⚠️ _to regenerate_ |
+| 32 | [`admixture_graphs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_graphs_human.ipynb) | Fitting admixture graphs with qpgraph, and estimating them with treemix. **Human**: 33 world populations. **Called genotypes**, precomputed F2. | ✅ built | _to generate_ |
+| 33 | [`chromopainter_finestructure_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/chromopainter_finestructure_human.ipynb) | Chromosome painting with ChromoPainter, clustering with fineSTRUCTURE, then GLOBETROTTER and SOURCEFIND. **Human**: 16 populations, 256 individuals. **Called genotypes** (phased haplotypes + recombination map). | ✅ built | _to generate_ |
+| 34 | [`dating_admixture_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/dating_admixture_human.ipynb) | Dating admixture with ALDER, MALDER, fastGLOBETROTTER and MOSAIC, then AdaptMix for selection. **Human**: 16 populations plus a simulated admixed group. **Called genotypes** (phased). | ✅ built | _to generate_ |
 
 ### Demography and the coalescent — `demography/`
 
@@ -118,41 +118,43 @@ Exercises that build an EM algorithm from scratch.
 |---|---|---|---|---|
 | 35 | [`coalescence.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/coalescence.ipynb) | The coalescent: simulating and interpreting gene trees. Simulated data. | ✅ built | _to generate_ |
 | 36 | [`wright_fisher.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/wright_fisher.ipynb) | Wright-Fisher simulations of drift. Simulated data. | ✅ built | ⚠️ _to regenerate_ |
-| 38 | [`sfs_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/sfs_animal.ipynb) | The site frequency spectrum from real sequencing data. **Blue wildebeest**. | ✅ built | ⚠️ _to regenerate_ |
-| 39 | [`psmc_demography_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_animal.ipynb) | PSMC demographic history. **Blue wildebeest**. | ✅ built | ⚠️ _to regenerate_ |
-| 62 | [`psmc_demography_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_human.ipynb) | PSMC demographic history. **Human**: NA12718 (CEU) and NA19471 (Luhya, Kenya). | ✅ built | ⚠️ _to regenerate_ |
+| 38 | [`sfs_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/sfs_animal.ipynb) | The site frequency spectrum from real sequencing data. **Blue wildebeest**. **Low depth**: SFS from genotype likelihoods. | ✅ built | ⚠️ _to regenerate_ |
+| 39 | [`psmc_demography_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_animal.ipynb) | PSMC demographic history. **Blue wildebeest**. **Called genotypes**: PSMC needs high coverage. | ✅ built | ⚠️ _to regenerate_ |
+| 62 | [`psmc_demography_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_human.ipynb) | PSMC demographic history. **Human**: NA12718 (CEU) and NA19471 (Luhya, Kenya). **Called genotypes**: PSMC needs high coverage. | ✅ built | ⚠️ _to regenerate_ |
 
 ### Selection — `selection/`
 
+See also [`pca/pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_selection_human.ipynb) — a selection scan built on the principal components rather than on Fst, kept with the PCA exercises because it continues directly from them.
+
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 40 | `selection_scans_animal.ipynb` | Selection scans on wildlife data. **Blue wildebeest**, with a **human** comparison. | ⬜ planned | _to generate_ |
-| 63 | [`sfs_fst_pbs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/sfs_fst_pbs_human.ipynb) | SFS, Fst and a PBS selection scan from genotype likelihoods. **CEU/JPT/YRI** at 2-6X, landing on the lactase region. | ✅ built | _to generate_ |
-| 41 | `selection_scans_popgen_animal.ipynb` | Selection scans: population-genetic statistics along the genome. **Maize**. | ⬜ planned | _to generate_ |
+| 63 | [`sfs_fst_pbs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/sfs_fst_pbs_human.ipynb) | SFS, Fst and PBS on human data with ANGSD. **Human**: CEU and YRI. **Low depth**: genotype likelihoods (ANGSD). | ✅ built | _to generate_ |
+| 40 | [`selection_scans_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_scans_animal.ipynb) | Fst and PBS selection scan on wildlife. **Wildebeest**: 24 individuals, blue and black. **Called genotypes** (VCF). | ✅ built | ⚠️ _to regenerate_ |
+| 41 | [`selection_maize.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_maize.ipynb) | Tajima's D and PBS for domestication and highland adaptation. **Maize** and its wild relative parviglumis, 50 samples. **Low depth**: genotype likelihoods (ANGSD/SAF). | ✅ built | ⚠️ _to regenerate_ |
 
 ### Relatedness and genetic diversity — `relatedness_diversity/`
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 42 | [`fst_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/fst_animal.ipynb) | Pairwise Fst from called genotypes with plink2, then from genotype likelihoods with SAF. **Blue and black wildebeest** (95 individuals, 9 groups), then **Greenland reindeer** (3 populations). | ✅ built | _to generate_ |
-| 43 | `relatedness_animal.ipynb` | Relatedness and kinship estimation. **Reindeer**. | ⬜ planned | _to generate_ |
-| 45 | `heterozygosity_roh_animal.ipynb` | Heterozygosity and runs of homozygosity. **Blue wildebeest**. | ⬜ planned | _to generate_ |
+| 42 | [`fst_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/fst_animal.ipynb) | Pairwise Fst from called genotypes with plink2, then from genotype likelihoods with SAF. **Blue and black wildebeest** (95 individuals, 9 groups), then **Greenland reindeer** (3 populations). **Both**: plink on called genotypes, then SAF on genotype likelihoods. | ✅ built | _to generate_ |
+| 43 | [`relatedness_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_animal.ipynb) | Relatedness and kinship estimation. **Reindeer**. **Called genotypes**. | ✅ built | _to generate_ |
+| 45 | `heterozygosity_roh_animal.ipynb` | Heterozygosity and runs of homozygosity. **Blue wildebeest**. **Called genotypes**. | ⬜ planned | _to generate_ |
 
 ### GWAS and human complex traits — `gwas/`
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 46 | `gwas_intro_human.ipynb` | Introduction to GWAS: association testing and QC. **Human**. | ⬜ planned | _to generate_ |
-| 47 | `gwas_sumstats_human.ipynb` | Working with GWAS summary statistics. **Human**. | ⬜ planned | _to generate_ |
-| 48 | `gwas_analysis_human.ipynb` | A full GWAS analysis pipeline. **Human**: 1000 Genomes and UK Biobank. | ⬜ planned | _to generate_ |
-| 49 | `gene_based_testing_human.ipynb` | Gene-based and rare-variant testing. **Human**. | ⬜ planned | _to generate_ |
-| 50 | `wes_family_diabetes_human.ipynb` | Exome sequencing: a family study of diabetes. **Human**. | ⬜ planned | _to generate_ |
-| 51 | `wes_familial_hypercholesterolemia_human.ipynb` | Exome sequencing: familial hypercholesterolemia. **Human**. | ⬜ planned | _to generate_ |
-| 52 | `wes_diabetes_human.ipynb` | Exome sequencing: diabetes. **Human**. | ⬜ planned | _to generate_ |
-| 53 | `heritability_ldscore_human.ipynb` | Heritability and LD score regression. **Human**. | ⬜ planned | _to generate_ |
-| 54 | `prs_height_human.ipynb` | Polygenic risk scores for height. **Human**: UK Biobank. | ⬜ planned | _to generate_ |
-| 55 | `mendelian_randomization_human.ipynb` | Mendelian randomization. **Human**. | ⬜ planned | _to generate_ |
-| 56 | `mendelian_randomization_proteomics_human.ipynb` | Mendelian randomization with proteomics data. **Human**. | ⬜ planned | _to generate_ |
+| 46 | `gwas_intro_human.ipynb` | Introduction to GWAS: association testing and QC. **Human**. **Called genotypes** (plink). | ⬜ planned | _to generate_ |
+| 47 | `gwas_sumstats_human.ipynb` | Working with GWAS summary statistics. **Human**. **Summary statistics only** — no individual genotypes. | ⬜ planned | _to generate_ |
+| 48 | `gwas_analysis_human.ipynb` | A full GWAS analysis pipeline. **Human**: 1000 Genomes and UK Biobank. **Called genotypes**. | ⬜ planned | _to generate_ |
+| 49 | `gene_based_testing_human.ipynb` | Gene-based and rare-variant testing. **Human**. **Called genotypes** (exome), analysed through summary statistics. | ⬜ planned | _to generate_ |
+| 50 | `wes_family_diabetes_human.ipynb` | Exome sequencing: a family study of diabetes. **Human**. **Called genotypes** (exome VCF). | ⬜ planned | _to generate_ |
+| 51 | `wes_familial_hypercholesterolemia_human.ipynb` | Exome sequencing: familial hypercholesterolemia. **Human**. **Called genotypes** (exome VCF). | ⬜ planned | _to generate_ |
+| 52 | `wes_diabetes_human.ipynb` | Exome sequencing: diabetes. **Human**. **Called genotypes** (exome VCF). | ⬜ planned | _to generate_ |
+| 53 | `heritability_ldscore_human.ipynb` | Heritability and LD score regression. **Human**. **Summary statistics** (LD score regression). | ⬜ planned | _to generate_ |
+| 54 | `prs_height_human.ipynb` | Polygenic risk scores for height. **Human**: UK Biobank. **Called genotypes**. | ⬜ planned | _to generate_ |
+| 55 | `mendelian_randomization_human.ipynb` | Mendelian randomization. **Human**. **Summary statistics only** — no individual genotypes. | ⬜ planned | _to generate_ |
+| 56 | `mendelian_randomization_proteomics_human.ipynb` | Mendelian randomization with proteomics data. **Human**. **Summary statistics only** — no individual genotypes. | ⬜ planned | _to generate_ |
 
 
 ## Where each exercise comes from
@@ -409,20 +411,20 @@ Replaces 3 older copies:
 
 ### `selection/`
 
-**40. `selection_scans_animal.ipynb`**  
-From: [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) (2026-08-22)  
-Replaces 2 older copies:
-  - [`kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb) (2026-08-25)
-  - [`summer2023/selectionScan/README.md`](https://github.com/popgenDK/courses/blob/main/summer2023/selectionScan/README.md) (2023)
-
 **63. `sfs_fst_pbs_human.ipynb`**  
-From: the web page `https://www.popgen.dk/albrecht/phdcourse/html/EMBO2021sfs.html` (updated 2021-03-22), converted to an SoS notebook by request (2026-09-16).  
-Replaces: nothing — this is the only copy
+From: written for this set  
+Replaces 2 older copies:
+  - [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) (2024-08-22) — human, frequency and haplotype methods
+  - [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 0-37 (2026-08-22) — the human half of that notebook, 49% similar to summer2024
 
-**41. `selection_scans_popgen_animal.ipynb`**  
-From: [`summer2025/exercises/Day4_SelectionPopGen2025.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_SelectionPopGen2025.ipynb) (2025-08-06)  
+**40. `selection_scans_animal.ipynb`**  
+From: [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 38-50 (2026-08-22)  
 Replaces 1 older copy:
-  - [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) (2024-08-22)
+  - [`kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb) (2026-08-25)
+
+**41. `selection_maize.ipynb`**  
+From: [`summer2025/exercises/Day4_SelectionPopGen2025.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_SelectionPopGen2025.ipynb) (2025-08-06)  
+Replaces: nothing — this is the only copy
 
 
 ### `relatedness_diversity/`
@@ -501,7 +503,7 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**40 of 56 exercises built.** Numbering runs to 57 because two pairs are each one
+**43 of 56 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 

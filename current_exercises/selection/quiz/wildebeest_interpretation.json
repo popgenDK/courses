@@ -1,0 +1,106 @@
+[
+  {
+    "question": "The scaffold 1 differentiation block contains high PBS values on both the black and B-Etosha branches. What is the safest interpretation?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The pairwise Fst peak cannot be attributed cleanly to only one terminal branch.",
+        "correct": true,
+        "feedback": "Correct. PBS decomposes the pairwise signal, and here more than one branch contributes within the broad region."
+      },
+      {
+        "answer": "Only the Maasai Mara branch can explain the entire peak.",
+        "correct": false,
+        "feedback": "Not quite. Maasai Mara is locally elevated, but the strongest scaffold 1 components occur on the black and B-Etosha branches."
+      },
+      {
+        "answer": "The region proves that identical selection occurred independently in all three populations.",
+        "correct": false,
+        "feedback": "Not quite. PBS peaks are candidates, and introgression or a non-tree history can produce complicated branch patterns."
+      },
+      {
+        "answer": "PBS cannot be calculated when two branches are elevated.",
+        "correct": false,
+        "feedback": "Not quite. The calculation is valid, but the biological interpretation requires caution."
+      }
+    ]
+  },
+  {
+    "question": "What does a negative PBS estimate most reasonably indicate in this scan?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Sampling variation, gene flow, or another non-tree process has made the three transformed pairwise distances non-additive.",
+        "correct": true,
+        "feedback": "Correct. A negative estimated branch is a warning that the simple three-population tree does not fit that window perfectly."
+      },
+      {
+        "answer": "A population has a negative number of chromosomes.",
+        "correct": false,
+        "feedback": "Not quite. The negative value is an estimated branch statistic, not a literal chromosome count."
+      },
+      {
+        "answer": "The plotting code has reversed the genomic coordinates.",
+        "correct": false,
+        "feedback": "Not quite. Negative PBS can arise mathematically when the three population distances are not additive."
+      },
+      {
+        "answer": "It is definitive evidence of balancing selection.",
+        "correct": false,
+        "feedback": "Not quite. Negative PBS is not specific to balancing selection and often reflects sampling or non-tree population history."
+      }
+    ]
+  },
+  {
+    "question": "Why did this exercise retain all available scaffold 1 variants rather than thin them before estimating 100 kb window Fst and PBS?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Removing informative variants would increase sampling noise in the window estimates without being needed for this calculation.",
+        "correct": true,
+        "feedback": "Correct. Unlike analyses that require approximately independent markers, these windowed allele-frequency statistics benefit from retaining the available sites."
+      },
+      {
+        "answer": "Fst cannot be calculated from fewer than one million variants per scaffold.",
+        "correct": false,
+        "feedback": "Not quite. Fst can be calculated from fewer sites, but estimates generally become noisier."
+      },
+      {
+        "answer": "Thinning would automatically phase every genotype.",
+        "correct": false,
+        "feedback": "Not quite. Removing markers does not infer haplotype phase."
+      },
+      {
+        "answer": "Thinning is only possible in human genomes.",
+        "correct": false,
+        "feedback": "Not quite. Thinning can be applied in any species, but whether it is appropriate depends on the analysis."
+      }
+    ]
+  },
+  {
+    "question": "How should the dashed 99th-percentile lines in the student-generated scaffold 1 plots be interpreted?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "They identify the top 1% of windows on scaffold 1 for each statistic, not a genome-wide significance threshold.",
+        "correct": true,
+        "feedback": "Correct. The reference distribution contains scaffold 1 windows only; the pre-generated whole-genome plots use genome-wide empirical percentiles."
+      },
+      {
+        "answer": "They prove that every point above the line was produced by positive selection.",
+        "correct": false,
+        "feedback": "Not quite. An empirical outlier threshold identifies candidates, but demography, structural variation, and technical effects remain possible explanations."
+      },
+      {
+        "answer": "They are fixed theoretical PBS values that apply equally to every species and population.",
+        "correct": false,
+        "feedback": "Not quite. Each line is calculated empirically from the observed windows for that particular comparison or branch."
+      },
+      {
+        "answer": "They mark windows containing exactly 1% missing genotypes.",
+        "correct": false,
+        "feedback": "Not quite. The lines summarize the statistic's distribution, not genotype missingness."
+      }
+    ]
+  }
+]
