@@ -21,7 +21,7 @@ current_exercises/
 data -> /course/data/
 ```
 
-**57 exercises.** Done so far: 9.
+**56 exercises** (numbering runs to 57; #6 and #7 are one exercise). Done so far: 12.
 
 ---
 

@@ -4,6 +4,8 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
+**12 of 56 exercises built.**
+
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
 
@@ -46,7 +48,7 @@ preview.
 |---|---|---|---|---|
 | 3 | [`stats_binomial.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/statistics/stats_binomial.R) | The binomial distribution in R. | ✅ built | n/a |
 | 4 | [`stats_normal.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/statistics/stats_normal.R) | The normal distribution in R. | ✅ built | n/a |
-| 5 | `em_algorithm.ipynb` | The EM algorithm, worked through from first principles. | ⬜ planned | _to generate_ |
+| 5 | [`em_algorithm.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/statistics/em_algorithm.ipynb) | The EM algorithm from first principles: two coins, allele frequencies from genotype likelihoods, and the binomial. | ✅ built | ⚠️ _to regenerate_ |
 | 6+7 | [`haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/statistics/haplotype_frequencies.ipynb) | Estimating haplotype frequencies from genotypes with an EM algorithm. | ✅ built | ⚠️ _to regenerate_ |
 
 ### Sequence analysis — `sequence_analysis/`
@@ -69,7 +71,7 @@ preview.
 |---|---|---|---|---|
 | 12 | [`ngs_intro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_human.ipynb) | FASTQ &rarr; QC &rarr; bwa mapping &rarr; SAM/BAM &rarr; VCF, on human 1000G data (NA19238, chr21). | ✅ built | ⚠️ _to regenerate_ |
 | 13 | [`ngs_intro_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_animal.ipynb) | FASTQ &rarr; QC &rarr; bwa mapping &rarr; SAM/BAM &rarr; VCF, on wildebeest data mapped to a goat reference. | ✅ built | ⚠️ _to regenerate_ |
-| 14 | `ngs_inference_human.ipynb` | Genotype likelihoods and inference from low-depth data, starting from BAMs. | ⬜ planned | _to generate_ |
+| 14 | [`ngs_inference_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_inference_human.ipynb) | Low-depth NGS inference with ANGSD: genotype likelihoods, genotype calling, allele frequencies and SNP calling at EDAR. | ✅ built | ⚠️ _to regenerate_ |
 
 ### Genotype calling and imputation — `genotype_calling_imputation/`
 
@@ -163,6 +165,7 @@ preview.
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 57 | `scrna_seurat_human.ipynb` | Single-cell RNA-seq analysis with Seurat. | ⬜ planned | — |
+
 
 ## Where each exercise comes from
 
@@ -518,15 +521,16 @@ Replaces: nothing — this is the only copy
 From: `bgi23/scRNA_Seurat_Yano.ipynb` (2023-11-08)  
 Replaces: nothing — this is the only copy
 
+
 ## Status
 
-**10 of 56 exercises built.** The rest are notebooks, and their data is
-already in place. Numbering runs to 57 because #6 and #7 were merged into a
-single exercise.
+**12 of 56 exercises built.** Numbering runs to 57 because #6 and #7 were
+merged into a single exercise.
 
 | | |
 |---|---|
-| Data consolidation | ✅ complete — 24 directories, 0 failures, `/course/data/` is 363 G |
+| Data consolidation | ✅ complete — `/course/data/` holds every dataset the exercises need |
+| Per-exercise data folders | `data/NGSintro/`, `data/NGSinference/` done; the rest still in bulk course folders |
 | Solution HTML | ⬜ none generated yet |
 | Deferred | #8 `motif_discovery.R` — source is an instructor solution draft, not a student exercise |
 
