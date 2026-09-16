@@ -379,3 +379,17 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   apps, and `em_algorithm.ipynb` and `haplotype_frequencies.ipynb` to a new
   `em_algorithms/` folder, since both are about building an EM algorithm from
   scratch.
+
+- **Themes reorganised (2026-09-16).** Five exercises that build an EM algorithm
+  are now grouped together, and the gene-flow material folded into admixture:
+
+  | Moved | From | To |
+  |---|---|---|
+  | #19 `pca_em_human.ipynb` | `pca/` | `em_algorithms/` |
+  | #24 `admixture_em_human.ipynb` | `admixture/` | `em_algorithms/` |
+  | #37 `sfs_model.ipynb` | `demography/` | `em_algorithms/` |
+  | #28, #29 local ancestry | `local_ancestry/` | `admixture/` |
+  | #30-#34 f-stats, D-stats, admixture graphs, ChromoPainter, dating admixture | `gene_flow/` | `admixture/` |
+
+  `local_ancestry/` and `gene_flow/` no longer exist. `em_algorithms/` now holds
+  5 exercises and `admixture/` holds 11.

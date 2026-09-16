@@ -67,6 +67,9 @@ Exercises that build an EM algorithm from scratch.
 |---|---|---|---|---|
 | 5 | [`em_algorithm.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/em_algorithm.ipynb) | The EM algorithm from first principles: two coins, allele frequencies from genotype likelihoods, and the binomial. | ✅ built | ⚠️ _to regenerate_ |
 | 6+7 | [`haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/haplotype_frequencies.ipynb) | Estimating haplotype frequencies from genotypes with an EM algorithm. | ✅ built | ⚠️ _to regenerate_ |
+| 19 | `pca_em_human.ipynb` | The EM algorithms behind EMU and PCAngsd. | ⬜ planned | _to generate_ |
+| 24 | `admixture_em_human.ipynb` | The EM algorithm behind ADMIXTURE. | ⬜ planned | _to generate_ |
+| 37 | `sfs_model.ipynb` | Modelling the site frequency spectrum. | ⬜ planned | _to generate_ |
 
 ### NGS data and mapping — `ngs/`
 
@@ -89,32 +92,20 @@ Exercises that build an EM algorithm from scratch.
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 18 | `pca_human.ipynb` | Principal component analysis of genotype data. | ⬜ planned | _to generate_ |
-| 19 | `pca_em_human.ipynb` | The EM algorithms behind EMU and PCAngsd. | ⬜ planned | _to generate_ |
 | 20 | `pca_animal.ipynb` | PCA on wildlife genotype data. | ⬜ planned | _to generate_ |
 | 21 | `pca_bonus_animal.ipynb` | PCA bonus: extra datasets and interpretation. | ⬜ planned | _to generate_ |
 | 22 | `pca_called_genotypes_animal.ipynb` | PCA from called genotypes, and how calling affects the result. | ⬜ planned | _to generate_ |
 
-### Admixture and population structure — `admixture/`
+### Admixture, local ancestry and gene flow — `admixture/`
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 23 | `admixture_human.ipynb` | Admixture proportions with ADMIXTURE/NGSadmix. | ⬜ planned | _to generate_ |
-| 24 | `admixture_em_human.ipynb` | The EM algorithm behind ADMIXTURE. | ⬜ planned | _to generate_ |
 | 25 | `admixture_animal.ipynb` | Admixture proportions on wildlife data. | ⬜ planned | _to generate_ |
 | 26 | `admixture_bonus_animal.ipynb` | Admixture bonus: evaluating fit with evalAdmix. | ⬜ planned | _to generate_ |
 | 27 | `population_structure_ii_human.ipynb` | Population structure II: deeper structure inference on 1000G data. | ⬜ planned | _to generate_ |
-
-### Local ancestry — `local_ancestry/`
-
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
 | 28 | `local_ancestry_human.ipynb` | Local ancestry inference and evaluation. | ⬜ planned | _to generate_ |
 | 29 | `local_ancestry_hapla_human.ipynb` | Local ancestry with hapla. | ⬜ planned | _to generate_ |
-
-### Gene flow and population relationships — `gene_flow/`
-
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
 | 30 | `f_stats_human.ipynb` | f2/f3/f4 statistics for testing population relationships. | ⬜ planned | _to generate_ |
 | 31 | `gene_flow_dstat_animal.ipynb` | Gene flow and D-statistics (ABBA-BABA). | ⬜ planned | _to generate_ |
 | 32 | `admixture_graphs_human.ipynb` | Fitting admixture graphs with qpGraph. | ⬜ planned | _to generate_ |
@@ -127,7 +118,6 @@ Exercises that build an EM algorithm from scratch.
 |---|---|---|---|---|
 | 35 | `coalescence.ipynb` | The coalescent: simulating and interpreting gene trees. | ⬜ planned | _to generate_ |
 | 36 | `wright_fisher.ipynb` | Wright-Fisher simulations of drift. | ⬜ planned | _to generate_ |
-| 37 | `sfs_model.ipynb` | Modelling the site frequency spectrum. | ⬜ planned | _to generate_ |
 | 38 | `sfs_animal.ipynb` | The SFS from real wildlife sequencing data. | ⬜ planned | _to generate_ |
 | 39 | `psmc_demography_animal.ipynb` | Demographic history with PSMC. | ⬜ planned | _to generate_ |
 
@@ -236,6 +226,19 @@ From: [`advBinf/exercises/solution_haplotype_frequencies.ipynb`](https://github.
 Replaces 1 older copy:
   - [`advBinf/exercises/haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/haplotype_frequencies.ipynb) (2025-09-12) — the exercise half, which was too hard to work through
 
+**19. `pca_em_human.ipynb`**  
+From: [`advBinf/exercises/advBinf_PCA_EM.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA_EM.ipynb) (2026-09-16)  
+Replaces: nothing — this is the only copy
+
+**24. `admixture_em_human.ipynb`**  
+From: [`advBinf/exercises/advBinf_admixture_EM.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture_EM.ipynb) (2026-09-14)  
+Replaces: nothing — this is the only copy
+
+**37. `sfs_model.ipynb`**  
+From: [`advBinf/exercises/advBinf_SFSmodel.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_SFSmodel.ipynb) (2026-09-16)  
+Replaces 1 older copy:
+  - [`advBinf/exercises/SFS.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/SFS.md) (2024-09-20)
+
 
 ### `ngs/`
 
@@ -298,10 +301,6 @@ Replaces 5 older copies:
   - [`advBinf/exercises/PCA.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/PCA.md) (2024-09-17)
   - [`summer2024/exercises/summer2024-PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/summer2024-PCA.ipynb) (2024-08-20)
 
-**19. `pca_em_human.ipynb`**  
-From: [`advBinf/exercises/advBinf_PCA_EM.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA_EM.ipynb) (2026-09-16)  
-Replaces: nothing — this is the only copy
-
 **20. `pca_animal.ipynb`**  
 From: [`kenya2026/exercises/Day3/Kenya2026_PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Kenya2026_PCA.ipynb) (2026-08-17)  
 Replaces 2 older copies:
@@ -331,10 +330,6 @@ Replaces 6 older copies:
   - [`bgi23/Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/Admixture.ipynb) (2023-11-02)
   - [`summer2023/InfererPopStructure/admixExercise_popgen23.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/InfererPopStructure/admixExercise_popgen23.ipynb) (2023-08-08)
 
-**24. `admixture_em_human.ipynb`**  
-From: [`advBinf/exercises/advBinf_admixture_EM.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture_EM.ipynb) (2026-09-14)  
-Replaces: nothing — this is the only copy
-
 **25. `admixture_animal.ipynb`**  
 From: [`kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb) (2026-08-21)  
 Replaces 4 older copies:
@@ -356,9 +351,6 @@ Replaces 3 older copies:
   - [`summer2023/popstructureII/popstructII2023.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/popstructureII/popstructII2023.ipynb) (2023-08-08)
   - [`summer2023/popstructureII/index.md`](https://github.com/popgenDK/courses/blob/main/summer2023/popstructureII/index.md) (2023-08-08)
 
-
-### `local_ancestry/`
-
 **28. `local_ancestry_human.ipynb`**  
 From: [`chinacourse2026/Day4_admix_eval_LAI.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_admix_eval_LAI.ipynb) (2026-07-30)  
 Replaces 1 older copy:
@@ -367,9 +359,6 @@ Replaces 1 older copy:
 **29. `local_ancestry_hapla_human.ipynb`**  
 From: [`advBinf/exercises/Hapla_LAI_exercise.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/Hapla_LAI_exercise.ipynb) (2025-10-07)  
 Replaces: nothing — this is the only copy
-
-
-### `gene_flow/`
 
 **30. `f_stats_human.ipynb`**  
 From: [`summer2025/exercises/Day3_f_stats.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_f_stats.ipynb) (2025-08-05)  
@@ -406,11 +395,6 @@ Replaces 2 older copies:
 **36. `wright_fisher.ipynb`**  
 From: [`summer2025/exercises/Day1_morning_WrightFisherTutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_morning_WrightFisherTutorial.ipynb) (2025-08-03)  
 Replaces: nothing — this is the only copy
-
-**37. `sfs_model.ipynb`**  
-From: [`advBinf/exercises/advBinf_SFSmodel.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_SFSmodel.ipynb) (2026-09-16)  
-Replaces 1 older copy:
-  - [`advBinf/exercises/SFS.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/SFS.md) (2024-09-20)
 
 **38. `sfs_animal.ipynb`**  
 From: [`kenya2026/exercises/Day2/SFS_WoA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day2/SFS_WoA.ipynb) (2026-08-15)  

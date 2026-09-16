@@ -102,6 +102,18 @@ Exercises that build an EM algorithm from scratch.
   pair is replaced by a single scaffolded notebook rebuilt from the solution.
   There is no `haplotype_frequencies_solution.ipynb`.
 
+### 19. [ ] `pca_em_human.ipynb`
+- **From:** `advBinf/exercises/advBinf_PCA_EM.ipynb` (2026-09-16)
+- **Supersedes:** none — new exercise (EMU / PCAngsd EM algorithms)
+
+### 24. [ ] `admixture_em_human.ipynb`
+- **From:** `advBinf/exercises/advBinf_admixture_EM.ipynb` (2026-09-14)
+- **Supersedes:** none — new exercise (EM algorithm behind ADMIXTURE)
+
+### 37. [ ] `sfs_model.ipynb`
+- **From:** `advBinf/exercises/advBinf_SFSmodel.ipynb` (2026-09-16)
+- **Supersedes:** `advBinf/exercises/SFS.md` (2024-09-20)
+
 ---
 
 # ngs/
@@ -168,10 +180,6 @@ Exercises that build an EM algorithm from scratch.
   - `advBinf/exercises/PCA.md` (2024-09-17)
   - `summer2024/exercises/summer2024-PCA.ipynb` (2024-08-20)
 
-### 19. [ ] `pca_em_human.ipynb`
-- **From:** `advBinf/exercises/advBinf_PCA_EM.ipynb` (2026-09-16)
-- **Supersedes:** none — new exercise (EMU / PCAngsd EM algorithms)
-
 ### 20. [ ] `pca_animal.ipynb`
 - **From:** `kenya2026/exercises/Day3/Kenya2026_PCA.ipynb` (2026-08-17)
 - **Supersedes:**
@@ -200,10 +208,6 @@ Exercises that build an EM algorithm from scratch.
   - `bgi23/Admixture.ipynb` (2023-11-02)
   - `summer2023/InfererPopStructure/admixExercise_popgen23.ipynb` (2023-08-08)
 
-### 24. [ ] `admixture_em_human.ipynb`
-- **From:** `advBinf/exercises/advBinf_admixture_EM.ipynb` (2026-09-14)
-- **Supersedes:** none — new exercise (EM algorithm behind ADMIXTURE)
-
 ### 25. [ ] `admixture_animal.ipynb`
 - **From:** `kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb` (2026-08-21)
 - **Supersedes:**
@@ -225,10 +229,6 @@ Exercises that build an EM algorithm from scratch.
   - `summer2023/popstructureII/popstructII2023.ipynb` (2023-08-08)
   - `summer2023/popstructureII/index.md` (2023-08-08)
 
----
-
-# local_ancestry/
-
 ### 28. [ ] `local_ancestry_human.ipynb`
 - **From:** `chinacourse2026/Day4_admix_eval_LAI.ipynb` (2026-07-30)
 - **Supersedes:** `summer2025/exercises/Day4_Morning_LocalAncestry.ipynb` (2025-08-06)
@@ -236,10 +236,6 @@ Exercises that build an EM algorithm from scratch.
 ### 29. [ ] `local_ancestry_hapla_human.ipynb`
 - **From:** `advBinf/exercises/Hapla_LAI_exercise.ipynb` (2025-10-07)
 - **Supersedes:** none — only copy (hapla-based, distinct from #28)
-
----
-
-# gene_flow/
 
 ### 30. [ ] `f_stats_human.ipynb`
 - **From:** `summer2025/exercises/Day3_f_stats.ipynb` (2025-08-05)
@@ -278,10 +274,6 @@ Exercises that build an EM algorithm from scratch.
 ### 36. [ ] `wright_fisher.ipynb`
 - **From:** `summer2025/exercises/Day1_morning_WrightFisherTutorial.ipynb` (2025-08-03)
 - **Supersedes:** none — only copy
-
-### 37. [ ] `sfs_model.ipynb`
-- **From:** `advBinf/exercises/advBinf_SFSmodel.ipynb` (2026-09-16)
-- **Supersedes:** `advBinf/exercises/SFS.md` (2024-09-20)
 
 ### 38. [ ] `sfs_animal.ipynb`
 - **From:** `kenya2026/exercises/Day2/SFS_WoA.ipynb` (2026-08-15)
