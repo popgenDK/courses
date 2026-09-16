@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**47 of 59 exercises built.**
+**49 of 59 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -148,8 +148,8 @@ See also [`pca/pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 46 | [`gwas_intro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_intro_human.ipynb) | Introduction to GWAS: association testing and QC. **Human**. **Called genotypes** (plink). | ✅ built | ⚠️ _to regenerate_ |
-| 47 | `gwas_sumstats_human.ipynb` | Working with GWAS summary statistics. **Human**. **Summary statistics only** — no individual genotypes. | ⬜ planned | _to generate_ |
-| 48 | `gwas_analysis_human.ipynb` | A full GWAS analysis pipeline. **Human**: 1000 Genomes and UK Biobank. **Called genotypes**. | ⬜ planned | _to generate_ |
+| 47 | [`gwas_sumstats_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_sumstats_human.ipynb) | Working with GWAS summary statistics. **Human**. **Summary statistics only** — no individual genotypes. | ✅ built | ⚠️ _to regenerate_ |
+| 48 | [`gwas_analysis_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_analysis_human.ipynb) | A full GWAS: first association, QQ plot, QC, PCA and Tracy-Widom, a linear mixed model with regenie with and without PCs, gene-based tests, and power. **Human**: a European cohort. **Called genotypes**. **⚠️ the data is not on this server**. | ✅ built | ⚠️ _to regenerate_ |
 | 49 | `gene_based_testing_human.ipynb` | Gene-based and rare-variant testing. **Human**. **Called genotypes** (exome), analysed through summary statistics. | ⬜ planned | _to generate_ |
 | 50 | `wes_family_diabetes_human.ipynb` | Exome sequencing: a family study of diabetes. **Human**. **Called genotypes** (exome VCF). | ⬜ planned | _to generate_ |
 | 51 | `wes_familial_hypercholesterolemia_human.ipynb` | Exome sequencing: familial hypercholesterolemia. **Human**. **Called genotypes** (exome VCF). | ⬜ planned | _to generate_ |
@@ -519,7 +519,7 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**47 of 59 exercises built.** Numbering runs to 57 because two pairs are each one
+**49 of 59 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 

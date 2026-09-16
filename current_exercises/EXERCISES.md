@@ -560,13 +560,31 @@ kenya2026 notebooks split them. The source stays untouched in `kenya2026/`.
   which removes all 15). Left as taught — `--geno 0.05` drops the affected SNPs anyway and
   the intended chr4 result still comes out — but see MANIFEST.
 
-### 47. [ ] `gwas_sumstats_human.ipynb`
+### 47. [x] `gwas_sumstats_human.ipynb`
 - **From:** `novCourse2024/2GWASsumstats.ipynb` (2025-07-08)
 - **Supersedes:** none — only copy
+- **Data:** the 796 M Mahajan T2D summary statistics, read in place from
+  `data/novo23_gwas/sumstats/`. Deliberately **not** given a cleaned per-exercise folder:
+  it is a single large file already inside `data/`, and copying it again to rename it
+  would waste 796 M. The original copied it into the student's home directory.
 
-### 48. [ ] `gwas_analysis_human.ipynb`
+### 48. [x] `gwas_analysis_human.ipynb` — **⚠️ data not on this server**
 - **From:** `chinaCourse2025/Day3_GWAS_Analysis_2025_Morning.ipynb` (2025-07-26)
-- **Supersedes:** none — only copy (distinct from #46 / #47)
+- **Supersedes:** none — only copy
+- **Note:** six exercises A-F: a first GWAS, the QQ plot, QC, PCA and Tracy-Widom, a
+  linear mixed model with `regenie` run with and without the top 20 PCs, gene-based
+  testing with SKAT/ACAT, and GWAS power. 122 cells.
+- **⚠️ The data is missing.** The notebook was written for a course machine where each
+  student had `European_1w` under `/home/student/<user>/GWAS/data/`. That folder does not
+  exist here and the dataset is in none of the course archives — the `chinacourse2025` zip
+  for this day holds only the notebook and the lecture PDFs. **Added as-is by request**, so
+  the material is not lost.
+- **What was still done:** all 43 data references and the conda activation were collected
+  into the setup cell, so pointing `DATA` at the files is the only edit needed once they
+  are found. Kernel names were normalised — the source declared `R4.4` and
+  `Python 3.12 (py312)`, which do not exist on this server, so no cell would have run.
+- **Overlap to check later:** Exercise E (gene-based testing) may duplicate #49
+  `gene_based_testing_human`, which comes from the afternoon notebook of the same day.
 
 ### 49. [ ] `gene_based_testing_human.ipynb`
 - **From:** `chinaCourse2025/Day3_Gene_Based_Testing_2025_Afternoon.ipynb` (2025-07-26)

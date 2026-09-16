@@ -34,6 +34,7 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 43 | `relatedness_diversity/relatedness_animal.ipynb` | `kenya2026/exercises/Day5/Related.ipynb` | 2026-08-23 | yes — paths, setup cell, quizzes moved in, broken quiz JSON fixed | `kenya2026/.../post_course/day5_morning_relatedness.ipynb` (2026-08-25) |
 | 64 | `relatedness_diversity/relatedness_human.ipynb` | new, written from the GWAS-intro data and analysis | 2026-09-16 | yes — new short exercise | none — new exercise |
 | 46 | `gwas/gwas_intro_human.ipynb` | `novCourse2024/1GWASIntro.ipynb` | 2025-07-08 | yes — paths, staging removed, work folder | `bgi23/04.GWASintro_2023_SAIGE.ipynb` (2023-11-09) |
+| 47 | `gwas/gwas_sumstats_human.ipynb` | `novCourse2024/2GWASsumstats.ipynb` | 2025-07-08 | yes — paths, 796 M copy removed, beta de-hardcoded, outputs stripped | none |
 | — | `relatedness_diversity/quiz/*.json` (5 files) | `kenya2026/exercises/Day4/quiz_*.json` | 2026 | renamed; one fixed | none |
 | — | `data/scripts/plot2dSFS.R` | `/davidData/albrecht/course/sfs/plot2dSFS.R` | 2023-07-07 | no — copied verbatim | none |
 | — | `demography/quiz/psmc_*.json` (3 files) | `/davidData/users/thomas/workshop/psmc_quizzes/` | 2026 | renamed only | none |
@@ -1310,3 +1311,41 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   The threshold was **not changed**, since changing it changes the numbers students see;
   flagging it instead. If it was meant to be `0.055`, or to match the `0.2` used above,
   that is a one-character edit.
+
+- **#47 `gwas_sumstats_human.ipynb` (2026-09-16).** From the 2025-07-08 novCourse2024
+  notebook, into `gwas/`. 28 cells, SoS kernelspec (Bash + R). Exploring published GWAS
+  summary statistics: the Mahajan et al. 2018 type-2-diabetes meta-analysis, 13.58 M
+  variants. Manhattan and QQ plots, the top locus, converting beta to an odds ratio, a
+  LocusZoom-style regional plot, and counting independent peaks. Content and questions
+  unchanged.
+
+  - **it copied a 796 M file into `$HOME`.** The first cell was
+    `cp /course/novo23/gwas/sumstats/Mahajan...txt .`. The file is now read in place via
+    `$SUMSTATS`, and only the filtered 5.5 M-line `Mahajan.maf1.txt` is written, into
+    `~/gwas_sumstats_human`.
+  - **R14:** `newPlotPlink.R` (which supplies `manPlot`, `qqPlot` and `locusZoomNoLD`)
+    sourced from `data/scripts/`.
+  - **the top SNP's beta was hard-coded** as `beta <- -0.34`, two cells after the row it
+    comes from is printed. It is now `beta <- d$Beta[w]`, so it cannot drift from the data,
+    and the cell also prints the odds ratio for the minor allele, which the next question
+    asks for. The hard-coded value was in fact correct — verified against the data.
+  - **12 stored outputs stripped**, per the repo convention.
+  - the peak-finding loop runs a fixed `for(i in 1:100)` while the data yields 71 peaks.
+    Added `if(nrow(g)==0) break`. **This does not change the answer** — checked both ways,
+    the original neither errors nor miscounts, because `which.min` on an empty frame gives
+    a zero-length index and the `rbind` adds nothing. It just stops the loop instead of
+    spinning 29 more times.
+  - **No cleaned per-exercise data folder** for this one: the summary statistics are a
+    single 796 M file already inside `data/`, so pointing at
+    `novo23_gwas/sumstats/` satisfies R4 and avoids duplicating it. #48 will likely want
+    the same file.
+
+  **Verified by running it end to end** — the bash filtering plus all 12 R cells, exit 0,
+  no errors — and every number the notebook relies on is right:
+  - 13,583,104 variants filter to **5,504,041** at MAF > 1%
+  - the top SNP is **chr10:114,758,349** (the TCF7L2 locus), EAF 0.70, beta **-0.34**,
+    **P = 6.1e-203**, giving OR 0.712 for the effect allele and **1.405** for the minor
+    allele
+  - 3,828 variants pass 5e-8, collapsing to **71 independent peaks** at a 1 Mb window
+  - the chr3 position the text points at, **12,329,783** (P 2.9e-10, the PPARG region), is
+    present and is one of the 8 chr3 peaks
