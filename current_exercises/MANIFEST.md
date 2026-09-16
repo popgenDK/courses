@@ -602,7 +602,6 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   | 59 | `pca_low_depth_selection_human.ipynb` | genotype likelihoods (beagle) |
   | 22 | `pca_called_genotypes_human.ipynb` | LD-pruned plink genotypes |
   | 20 | `pca_called_genotypes_animal.ipynb` | wildebeest plink genotypes |
-  | 21 | `pca_called_genotypes_animal_bonus.ipynb` | wildebeest plink genotypes |
 
   **`chinacourse2026/Day4_Afternoon_PCA_1.ipynb` becomes two exercises**, cut at
   its `# PC-based selection` heading: the first half is PCAone on called
@@ -619,3 +618,29 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   earlier version and misdescribes the exercise. To be fixed when #20 is built.
 
   This takes the plan from 55 to 57 exercises.
+
+- **Correction (2026-09-16): #21 was the same exercise as #20.** I had kept
+  `advBinf_PCA_bonus.ipynb` and `Kenya2026_PCA.ipynb` apart because only 5 cells
+  matched exactly. Comparing them properly rather than by exact string equality:
+
+  | Threshold | Bonus cells matching the kenya wildebeest section |
+  |---|---|
+  | identical | 12 of 34 |
+  | >= 0.8 similar | 19 of 34 |
+  | >= 0.7 similar | 20 of 34 |
+
+  The 5-cell figure was an artefact of comparing whole cells for exact equality;
+  most of the shared cells differ only in a path or a variable name.
+
+  The real differences: the kenya version opens with the MDS/by-hand section
+  (now #58) and takes its LD-pruned file ready-made from the admixture exercise,
+  while the bonus version **computes the LD pruning itself** with `PCAone --ld`,
+  adjusting the LD measure for population structure, then re-runs the PCA on the
+  pruned data — about 7 cells the kenya version does not have.
+
+  Merged into #20, built from the bonus notebook as the newer and more complete
+  base. `pca/` is now exactly what was asked for: two called-genotype exercises
+  (#20 animal, #22 human), two low-depth ones (#18, #59), plus the theory (#58).
+
+  **Lesson for the remaining folders:** exact-match cell comparison understates
+  duplication badly. Use a similarity ratio.

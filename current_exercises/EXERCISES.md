@@ -179,8 +179,8 @@ Exercises that build an EM algorithm from scratch.
 
 # pca/
 
-Four main exercises — two on **called genotypes** and two on **low depth
-sequencing** — plus the shared theory section and one animal bonus.
+Four exercises — two on **called genotypes** and two on **low depth
+sequencing** — plus the shared theory section.
 
 ### 58. [ ] `pca_mds_and_svd.ipynb` — **new: the shared theory section**
 - **From:** extracted from `advBinf/exercises/advBinf_PCA.ipynb` cells 2-25 (2026-09-16)
@@ -221,28 +221,30 @@ sequencing** — plus the shared theory section and one animal bonus.
 - **Data:** `data/chinacourse2026_shared/`
 
 ### 20. [ ] `pca_called_genotypes_animal.ipynb`
-- **From:** `kenya2026/exercises/Day3/Kenya2026_PCA.ipynb` (2026-08-17)
-- **Supersedes:**
-  - `kenya2026/exercises/post_course/day4_morning_pca.ipynb` (2026-08-25)
-  - `kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb` (2024-08-09)
-- **Note:** `PCAone` on the wildebeest plink files, with an LD-pruning
-  comparison. Its heading "PCA for low depth sequencing using PCAngsd" is
-  **vestigial** — there is no PCAngsd command in the notebook; it runs on called
-  genotypes throughout. Fix the heading when building. The MDS/by-hand opening
-  moves to #58.
-
-### 21. [ ] `pca_called_genotypes_animal_bonus.ipynb`
 - **From:** `advBinf/exercises/advBinf_PCA_bonus.ipynb` (2026-09-16)
 - **Supersedes:**
+  - `kenya2026/exercises/Day3/Kenya2026_PCA.ipynb` (2026-08-17)
+  - `kenya2026/exercises/post_course/day4_morning_pca.ipynb` (2026-08-25)
   - `summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb` (2025-08-06)
   - `chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb` (2025-07-28)
   - `summer2024/exercises/summer2024-PCA-CalledGenotypes.ipynb` (2024-08-20)
-- **Note:** the bonus that goes with #20 — same wildebeest plink files, adding
-  evalAdmix and an IBS tree from plink distances. It shares 5 cells with #20.
-  Three of the files it supersedes were named "CalledGenotypes" or
-  "Call_genotype" by their courses; the content matches, but the exercise that
-  teaches called-genotype PCA on **human** data is #22.
+  - `kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb` (2024-08-09)
+- **Note:** `PCAone` on the wildebeest plink files, plotted against the admixture
+  proportions, then LD pruning and an IBS tree.
 
+  **This was previously listed twice, as #20 and #21.** The "bonus" notebook and
+  the kenya notebook are the same exercise: 20 of the bonus notebook's 34 cells
+  match the kenya one's wildebeest section, 12 of them identically. The
+  differences are that the kenya version opens with the MDS/by-hand section
+  (which moves to #58) and takes its LD-pruned file ready-made from the admixture
+  exercise, whereas the bonus version **computes the LD pruning itself** with
+  `PCAone --ld`, adjusting the LD measure for population structure, and then
+  re-runs the PCA on the pruned data.
+
+  Build from the bonus notebook, which is the newer and more complete of the two:
+  it already covers the kenya content and adds the LD-pruning section. Carry over
+  anything the kenya version phrases better.
+- **Data:** wildebeest plink files (`blue_wildebeest_thin`, `blue_wildebeest_noLD`)
 ---
 
 # admixture/
