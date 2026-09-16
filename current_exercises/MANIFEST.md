@@ -428,3 +428,12 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   be used to choose K).
 
   Still without quizzes: `em_algorithm.ipynb` and `haplotype_frequencies.ipynb`.
+
+- **Setup questions removed (2026-09-16).** Both NGS intro notebooks asked about
+  `cp -s` versus `cp` and how many files had appeared in the working folder,
+  straight after the cell that links the data in. Those are questions about
+  plumbing, not about the analysis, so they are gone (R17).
+
+  Coverage after removal: `ngs_intro_human` 27/31, `ngs_intro_animal` 28/31,
+  `ngs_inference_human` 34/37 — the shortfall is now entirely setup cells, which
+  is what it should be.
