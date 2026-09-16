@@ -419,8 +419,14 @@ the other exercises do not shift.
 
 # selection/
 
-**Four exercises**, and they differ in *which species* and in whether the genotypes are
-**called** or the data are **low depth genotype likelihoods**.
+**Five exercises**, differing in *which species*, in whether the genotypes are **called**
+or the data are **low depth genotype likelihoods**, and in whether the method is
+**frequency-based** or **haplotype-based**.
+
+`summer2024/exercises/SelectionScans.ipynb` turned out to hold **three** exercises, and is
+superseded piece by piece: cells 0-18 by #63, cells 19-35 by #66, cells 36-48 by #65.
+Cells 49-50 are an empty "EDAR" stub. `summer2023/selectionScan/README.md` is a README,
+not an exercise.
 
 ### 63. [x] `sfs_fst_pbs_human.ipynb`
 - **From:** written for this set
@@ -447,7 +453,8 @@ the other exercises do not shift.
 ### 65. [x] `selection_pbs_scan_human.ipynb`
 - **From:** `kenya2026/exercises/Day4/SelectionScans_22nd.ipynb` cells 25-37 (2026-08-22),
   "Exercise II: Whole-genome PBS with 1000 Genomes"
-- **Supersedes:** none — only copy
+- **Supersedes:** `summer2024/exercises/SelectionScans.ipynb` cells 36-48 (2024-08-22) —
+  the same scan, older
 - **Note:** genome-wide PBS on precomputed 50 kb windows for NAT, CHB, CEU and YRI:
   Manhattan plot, zoom into peaks, identify the gene, and check the lactase region as a
   positive control.
@@ -548,9 +555,16 @@ kenya2026 notebooks split them. The source stays untouched in `kenya2026/`.
 
 # gwas/
 
-### 46. [ ] `gwas_intro_human.ipynb`
+### 46. [x] `gwas_intro_human.ipynb`
 - **From:** `novCourse2024/1GWASIntro.ipynb` (2025-07-08)
 - **Supersedes:** `bgi23/04.GWASintro_2023_SAIGE.ipynb` (2023-11-09)
+- **Data:** `data/gwas_human/` (58 M), shared with #64 and the other GWAS exercises. The
+  `cp` + `tar -xf` staging into `$HOME` was dropped; the fileset is read in place and all
+  output goes to `~/gwas_intro_human`.
+- **Note on its QC step:** the final QC uses `--mind 0.55`, which removes only **1** of the
+  15 individuals missing ~50% of their genotypes (the MDS cell above it uses `--mind 0.2`,
+  which removes all 15). Left as taught — `--geno 0.05` drops the affected SNPs anyway and
+  the intended chr4 result still comes out — but see MANIFEST.
 
 ### 47. [ ] `gwas_sumstats_human.ipynb`
 - **From:** `novCourse2024/2GWASsumstats.ipynb` (2025-07-08)

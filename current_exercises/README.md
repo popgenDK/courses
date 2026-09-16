@@ -427,7 +427,8 @@ Replaces: nothing — this is the only copy
 
 **65. `selection_pbs_scan_human.ipynb`**  
 From: [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 25-37 (2026-08-22), "Exercise II: Whole-genome PBS with 1000 Genomes"  
-Replaces: nothing — this is the only copy
+Replaces 1 older copy:
+  - [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) cells 36-48 (2024-08-22) — the same scan, older
 
 **40. `selection_scans_animal.ipynb`**  
 From: [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 38-50 (2026-08-22)  

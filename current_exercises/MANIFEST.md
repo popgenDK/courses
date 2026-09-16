@@ -33,6 +33,7 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 63 | `selection/sfs_fst_pbs_human.ipynb` | web page `popgen.dk/albrecht/phdcourse/html/EMBO2021sfs.html` | 2021-03-22 | yes — written as a new SoS notebook | none — new exercise |
 | 43 | `relatedness_diversity/relatedness_animal.ipynb` | `kenya2026/exercises/Day5/Related.ipynb` | 2026-08-23 | yes — paths, setup cell, quizzes moved in, broken quiz JSON fixed | `kenya2026/.../post_course/day5_morning_relatedness.ipynb` (2026-08-25) |
 | 64 | `relatedness_diversity/relatedness_human.ipynb` | new, written from the GWAS-intro data and analysis | 2026-09-16 | yes — new short exercise | none — new exercise |
+| 46 | `gwas/gwas_intro_human.ipynb` | `novCourse2024/1GWASIntro.ipynb` | 2025-07-08 | yes — paths, staging removed, work folder | `bgi23/04.GWASintro_2023_SAIGE.ipynb` (2023-11-09) |
 | — | `relatedness_diversity/quiz/*.json` (5 files) | `kenya2026/exercises/Day4/quiz_*.json` | 2026 | renamed; one fixed | none |
 | — | `data/scripts/plot2dSFS.R` | `/davidData/albrecht/course/sfs/plot2dSFS.R` | 2023-07-07 | no — copied verbatim | none |
 | — | `demography/quiz/psmc_*.json` (3 files) | `/davidData/users/thomas/workshop/psmc_quizzes/` | 2026 | renamed only | none |
@@ -1256,3 +1257,56 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   Sections 4 and 5 of the notebook are that investigation: count the failures, find the
   individuals, measure missingness with `--missing`, plot it, and redo the estimate on the
   individuals with enough data.
+
+- **#46 `gwas_intro_human.ipynb` (2026-09-16).** From the 2025-07-08 novCourse2024
+  notebook, into `gwas/`. 32 cells, SoS kernelspec (Bash + R). The exercise is unchanged:
+  an unfiltered logistic GWAS to show what goes wrong, the QQ plot, then QC — `--genome`
+  for relatedness, `--cluster --mds-plot` for structure, a filtered re-run — ending on the
+  chr4 signal and a LocusZoom-style plot.
+
+  - **the `cp` + `tar -xf` staging is gone.** The original copied `GWASex.tar.gz` into
+    `$HOME`, untarred it there, and wrote every plink output straight into the home
+    directory. Now a path cell makes `~/gwas_intro_human` and the fileset is read in place
+    from `data/gwas_human/`. Four cells dropped: the two commands and their intro
+    paragraphs.
+  - **R4:** `--bfile data/gwa` -> `$DATA/gwa` in five plink cells; `ls data/`,
+    `head data/gwa.fam` and `tail data/gwa.fam` also repointed (they were left behind by
+    the staging removal and broke the notebook at its second cell on the first run - caught
+    by running it).
+  - **R14:** `newPlotPlink.R` sourced from `data/scripts/` instead of
+    `/course/novo23/scripts/`.
+  - the R cells `setwd()` into the working folder and set `DATA`; the 7 bash code cells
+    source `env.sh`.
+  - the closing link pointed at `2GWASsumstats.ipynb` in the old course folder; it now
+    names `gwas_sumstats_human.ipynb` (#47).
+  - `plotPlink` was **kept** here. The base-R instruction was given for the new short
+    relatedness exercise (#64); this notebook's plots are the source's own approach and the
+    helper already lives in `data/scripts/`.
+
+  **Verified by running it: 7 bash cells and 5 R cells, exit 0, no errors,** and the taught
+  result reproduces. The unfiltered GWAS analyses 488,756 variants on 356 people (156
+  cases, 200 controls) at a 0.9645 genotyping rate; after QC the top hit is
+  **chr4 SNP_A-1978655 at bp 119,229,342, OR 3.91, P 5.1e-06** — the same position the
+  LocusZoom cell has hard-coded, so the notebook is internally consistent.
+
+- **What the GWAS-intro data actually contains, found while verifying #46 and #64.** The
+  two exercises turn out to be looking at the same 15 individuals from opposite ends, and
+  the reason is worth recording:
+
+  - 15 of the 356 individuals are missing **49-55%** of their genotypes. They are the ones
+    whose relatedness estimates come back `nan` in #64.
+  - **all 15 are cases; none is a control.** Mean missingness is **6.5% in cases against
+    1.2% in controls** — a five-fold difference.
+
+  That is textbook differential missingness between case and control batches, and it is
+  precisely the artifact #46 is teaching: it is why the unfiltered GWAS produces an
+  inflated QQ plot, and why the QC step exists.
+
+  **A wrinkle in #46's QC, left as taught.** Its final QC cell uses `--mind 0.55`, which
+  removes exactly **1** of those 15 individuals — while the MDS cell a few cells earlier
+  uses `--mind 0.2`, which removes all 15. So the filtered analysis still carries 14 cases
+  with ~50% missing data. It reaches the intended answer anyway, because `--geno 0.05`
+  then drops 70,801 variants including the differentially-missing ones, leaving 318,914.
+  The threshold was **not changed**, since changing it changes the numbers students see;
+  flagging it instead. If it was meant to be `0.055`, or to match the `0.2` used above,
+  that is a one-character edit.
