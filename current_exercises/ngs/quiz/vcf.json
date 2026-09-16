@@ -1,0 +1,106 @@
+[
+  {
+    "question": "What does the genotype 0/1 mean in a VCF?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Heterozygous: one reference allele and one alternative allele",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Homozygous reference",
+        "correct": false,
+        "feedback": "That would be 0/0."
+      },
+      {
+        "answer": "Homozygous alternative",
+        "correct": false,
+        "feedback": "That would be 1/1."
+      },
+      {
+        "answer": "Missing genotype",
+        "correct": false,
+        "feedback": "That would be ./."
+      }
+    ]
+  },
+  {
+    "question": "bcftools call was run with -mv. What does the -v do?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Output only variant sites, leaving out positions that match the reference",
+        "correct": true,
+        "feedback": "Correct \u2014 that is why the VCF is far shorter than the genome."
+      },
+      {
+        "answer": "Print verbose progress messages",
+        "correct": false,
+        "feedback": "Not here."
+      },
+      {
+        "answer": "Validate the VCF against the reference",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "Include every position in the genome",
+        "correct": false,
+        "feedback": "That is what you get WITHOUT -v."
+      }
+    ]
+  },
+  {
+    "question": "Why were duplicate reads removed before calling variants?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "PCR duplicates are copies of the same original fragment, so they are not independent evidence and would inflate the apparent support for a variant",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Duplicates make the file too large to read",
+        "correct": false,
+        "feedback": "Size is not the reason."
+      },
+      {
+        "answer": "bcftools crashes on duplicates",
+        "correct": false,
+        "feedback": "It does not."
+      },
+      {
+        "answer": "Duplicates always have low base quality",
+        "correct": false,
+        "feedback": "They do not."
+      }
+    ]
+  },
+  {
+    "question": "You find a site with two different alternative alleles (a tri-allelic site) at low depth. What is the most likely explanation?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A sequencing or mapping error \u2014 genuine tri-allelic sites are rare",
+        "correct": true,
+        "feedback": "Correct \u2014 be suspicious, especially at low depth."
+      },
+      {
+        "answer": "The individual has three copies of the chromosome",
+        "correct": false,
+        "feedback": "Very unlikely and it would affect a whole chromosome."
+      },
+      {
+        "answer": "The reference genome is wrong at that position",
+        "correct": false,
+        "feedback": "Possible, but not the most likely explanation."
+      },
+      {
+        "answer": "It is always a real variant",
+        "correct": false,
+        "feedback": "No \u2014 treat these with caution."
+      }
+    ]
+  }
+]

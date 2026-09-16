@@ -1,0 +1,80 @@
+[
+  {
+    "question": "The BAM file is much smaller than the SAM file. Why?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "BAM is a compressed binary encoding of exactly the same information",
+        "correct": true,
+        "feedback": "Correct \u2014 nothing is lost."
+      },
+      {
+        "answer": "BAM stores fewer reads",
+        "correct": false,
+        "feedback": "No \u2014 the same reads are there."
+      },
+      {
+        "answer": "BAM throws away the base qualities",
+        "correct": false,
+        "feedback": "No \u2014 they are kept."
+      },
+      {
+        "answer": "BAM keeps only uniquely mapping reads",
+        "correct": false,
+        "feedback": "No \u2014 no filtering happens in the conversion."
+      }
+    ]
+  },
+  {
+    "question": "Why must a BAM file be sorted by position before it can be indexed?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The index lets tools jump straight to a genomic region, which only works if records are ordered by position",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Sorting compresses the file further",
+        "correct": false,
+        "feedback": "Compression is not the reason."
+      },
+      {
+        "answer": "samtools cannot read unsorted files at all",
+        "correct": false,
+        "feedback": "It can \u2014 it just cannot index them."
+      },
+      {
+        "answer": "Sorting removes duplicate reads",
+        "correct": false,
+        "feedback": "That is a separate step."
+      }
+    ]
+  },
+  {
+    "question": "The number of lines in the SAM file does not match the number of lines in the FASTQ file. Why not?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "FASTQ uses four lines per read, while SAM uses one line per alignment \u2014 plus header lines and any supplementary alignments",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "bwa discarded most of the reads",
+        "correct": false,
+        "feedback": "Unmapped reads are still written out."
+      },
+      {
+        "answer": "The FASTQ file was truncated",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "SAM stores only one mate of each pair",
+        "correct": false,
+        "feedback": "Both mates get a record."
+      }
+    ]
+  }
+]

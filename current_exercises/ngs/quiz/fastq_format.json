@@ -1,0 +1,140 @@
+[
+  {
+    "question": "A FASTQ record uses four lines. What is on the first line, the one starting with '@'?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The read name (ID)",
+        "correct": true,
+        "feedback": "Correct \u2014 it identifies the read."
+      },
+      {
+        "answer": "The read sequence",
+        "correct": false,
+        "feedback": "No, that is line 2."
+      },
+      {
+        "answer": "The base quality scores",
+        "correct": false,
+        "feedback": "No, that is line 4."
+      },
+      {
+        "answer": "A separator",
+        "correct": false,
+        "feedback": "No, that is line 3."
+      }
+    ]
+  },
+  {
+    "question": "What is on the second line of a FASTQ record?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The read sequence (the bases)",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The read name",
+        "correct": false,
+        "feedback": "No, that is line 1."
+      },
+      {
+        "answer": "The base quality scores",
+        "correct": false,
+        "feedback": "No, that is line 4."
+      },
+      {
+        "answer": "A separator",
+        "correct": false,
+        "feedback": "No, that is line 3."
+      }
+    ]
+  },
+  {
+    "question": "What is on the third line, the one starting with '+'?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A separator between the sequence and the quality scores",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The read name",
+        "correct": false,
+        "feedback": "No, that is line 1."
+      },
+      {
+        "answer": "The base quality scores",
+        "correct": false,
+        "feedback": "No, that is line 4."
+      },
+      {
+        "answer": "The mapping position",
+        "correct": false,
+        "feedback": "A FASTQ file has no mapping position \u2014 the reads are not mapped yet."
+      }
+    ]
+  },
+  {
+    "question": "What is on the fourth line?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The base quality scores, one character per base",
+        "correct": true,
+        "feedback": "Correct \u2014 that is why line 4 is the same length as line 2."
+      },
+      {
+        "answer": "The read sequence",
+        "correct": false,
+        "feedback": "No, that is line 2."
+      },
+      {
+        "answer": "A separator",
+        "correct": false,
+        "feedback": "No, that is line 3."
+      },
+      {
+        "answer": "The reference genome",
+        "correct": false,
+        "feedback": "The reference is in a separate FASTA file."
+      }
+    ]
+  },
+  {
+    "question": "How many lines does ONE read take up in a FASTQ file?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 4,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000000,
+          3
+        ],
+        "correct": false,
+        "feedback": "Too low \u2014 count the lines of a single record again."
+      },
+      {
+        "type": "range",
+        "range": [
+          5,
+          1000
+        ],
+        "correct": false,
+        "feedback": "Too high \u2014 count the lines of a single record again."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  }
+]

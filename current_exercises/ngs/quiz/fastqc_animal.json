@@ -1,0 +1,101 @@
+[
+  {
+    "question": "How long are the reads (number of bases)?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 150,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000000,
+          149
+        ],
+        "correct": false,
+        "feedback": "Too low."
+      },
+      {
+        "type": "range",
+        "range": [
+          151,
+          10000
+        ],
+        "correct": false,
+        "feedback": "Too high."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "What is the median base quality at most positions?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 36,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000000,
+          35
+        ],
+        "correct": false,
+        "feedback": "Too low."
+      },
+      {
+        "type": "range",
+        "range": [
+          37,
+          100
+        ],
+        "correct": false,
+        "feedback": "Too high."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "Which FastQC summaries show NO problem for this file?",
+    "type": "many_choice",
+    "answers": [
+      {
+        "answer": "Per sequence quality scores",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Per base sequence content",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Per sequence GC content",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Sequence Duplication Levels",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Adapter Content",
+        "correct": true,
+        "feedback": "Correct."
+      }
+    ]
+  }
+]

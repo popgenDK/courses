@@ -1,0 +1,114 @@
+[
+  {
+    "question": "Which FLAG value marks a read as a PCR or optical duplicate?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 1024,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000000,
+          1023
+        ],
+        "correct": false,
+        "feedback": "Too low."
+      },
+      {
+        "type": "range",
+        "range": [
+          1025,
+          100000
+        ],
+        "correct": false,
+        "feedback": "Too high."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "samtools view -f 4 selects reads that are ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "unmapped",
+        "correct": true,
+        "feedback": "Correct \u2014 flag 4 means the read did not map."
+      },
+      {
+        "answer": "mapped",
+        "correct": false,
+        "feedback": "That is -F 4, which excludes flag 4."
+      },
+      {
+        "answer": "duplicates",
+        "correct": false,
+        "feedback": "That is flag 1024."
+      },
+      {
+        "answer": "properly paired",
+        "correct": false,
+        "feedback": "That is flag 2."
+      }
+    ]
+  },
+  {
+    "question": "samtools view -f 2 keeps reads where ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "both mates mapped in a proper pair",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "the read is unmapped",
+        "correct": false,
+        "feedback": "That is flag 4."
+      },
+      {
+        "answer": "the read is a duplicate",
+        "correct": false,
+        "feedback": "That is flag 1024."
+      },
+      {
+        "answer": "the mapping quality is above 2",
+        "correct": false,
+        "feedback": "That is -q 2, a different option."
+      }
+    ]
+  },
+  {
+    "question": "What is the difference between -f and -F in samtools view?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "-f keeps reads that HAVE the flag, -F discards reads that have it",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "They are the same",
+        "correct": false,
+        "feedback": "They are opposites."
+      },
+      {
+        "answer": "-f is for FASTQ and -F for FASTA",
+        "correct": false,
+        "feedback": "Neither \u2014 both work on SAM/BAM."
+      },
+      {
+        "answer": "-f filters by mapping quality",
+        "correct": false,
+        "feedback": "That is -q."
+      }
+    ]
+  }
+]

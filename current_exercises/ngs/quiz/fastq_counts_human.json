@@ -1,0 +1,104 @@
+[
+  {
+    "question": "How many lines are in the first FASTQ file?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 687520,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000000,
+          687519
+        ],
+        "correct": false,
+        "feedback": "The number is higher."
+      },
+      {
+        "type": "range",
+        "range": [
+          687521,
+          100000000
+        ],
+        "correct": false,
+        "feedback": "The number is lower."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "How many reads are in that FASTQ file?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 171880,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000000,
+          171879
+        ],
+        "correct": false,
+        "feedback": "The number is higher. Remember there are four lines per read."
+      },
+      {
+        "type": "range",
+        "range": [
+          171881,
+          100000000
+        ],
+        "correct": false,
+        "feedback": "The number is lower. Remember there are four lines per read."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "How many lines are in the SECOND FASTQ file (the _2 file)?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 687520,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000000,
+          687519
+        ],
+        "correct": false,
+        "feedback": "The number is higher. Hint: paired-end files hold the same number of reads."
+      },
+      {
+        "type": "range",
+        "range": [
+          687521,
+          100000000
+        ],
+        "correct": false,
+        "feedback": "The number is lower. Hint: paired-end files hold the same number of reads."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  }
+]

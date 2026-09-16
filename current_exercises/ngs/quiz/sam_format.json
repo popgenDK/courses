@@ -1,0 +1,114 @@
+[
+  {
+    "question": "What does one line in the body of a SAM file represent?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "One alignment record: where a read (or read mate) maps, with flags, CIGAR, sequence and qualities",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "One read pair",
+        "correct": false,
+        "feedback": "Each mate gets its own line."
+      },
+      {
+        "answer": "One position in the reference genome",
+        "correct": false,
+        "feedback": "That is the pileup format, not SAM."
+      },
+      {
+        "answer": "One chromosome",
+        "correct": false,
+        "feedback": "No \u2014 chromosomes appear in the header."
+      }
+    ]
+  },
+  {
+    "question": "What does the CIGAR string describe?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "How the read aligns to the reference: matches, insertions, deletions and clipping",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The base quality scores",
+        "correct": false,
+        "feedback": "Those are in a separate column."
+      },
+      {
+        "answer": "The mapping quality",
+        "correct": false,
+        "feedback": "That is its own column."
+      },
+      {
+        "answer": "The read name",
+        "correct": false,
+        "feedback": "That is column 1."
+      }
+    ]
+  },
+  {
+    "question": "Which column of a SAM file holds the leftmost mapping POSITION?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 4,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000000,
+          3
+        ],
+        "correct": false,
+        "feedback": "Too low \u2014 count: QNAME, FLAG, RNAME, POS."
+      },
+      {
+        "type": "range",
+        "range": [
+          5,
+          20
+        ],
+        "correct": false,
+        "feedback": "Too high \u2014 count: QNAME, FLAG, RNAME, POS."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "Lines at the top of the file start with '@'. What are they?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The header, describing the reference sequences and the programs that made the file",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Reads that failed to map",
+        "correct": false,
+        "feedback": "Unmapped reads are ordinary records with a flag set."
+      },
+      {
+        "answer": "Comments that can safely be deleted",
+        "correct": false,
+        "feedback": "Tools rely on the header \u2014 do not delete it."
+      },
+      {
+        "answer": "The base qualities",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  }
+]

@@ -1,0 +1,88 @@
+[
+  {
+    "question": "In the samtools mpileup output, which column holds the number of reads covering the position?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 4,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000000,
+          3
+        ],
+        "correct": false,
+        "feedback": "Too low \u2014 the columns are chromosome, position, reference base, depth."
+      },
+      {
+        "type": "range",
+        "range": [
+          5,
+          20
+        ],
+        "correct": false,
+        "feedback": "Too high \u2014 the columns are chromosome, position, reference base, depth."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "Positions with no reads at all do not appear in the mpileup output. What does that mean for the depth distribution you just plotted?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Sites with depth 0 are missing, so the plot only describes positions that were covered",
+        "correct": true,
+        "feedback": "Correct \u2014 the uncovered part of the genome is invisible here."
+      },
+      {
+        "answer": "Nothing \u2014 every position in the genome is shown",
+        "correct": false,
+        "feedback": "Uncovered positions are simply not printed."
+      },
+      {
+        "answer": "The depths are all overestimated by one",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "Only duplicate reads are missing",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "At low sequencing depth, why are heterozygous sites the hardest to call correctly?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "With few reads you may sample only one of the two alleles, so a heterozygote looks homozygous",
+        "correct": true,
+        "feedback": "Correct \u2014 this is the central problem in low-depth sequencing."
+      },
+      {
+        "answer": "Heterozygous sites have lower base qualities",
+        "correct": false,
+        "feedback": "Base quality does not depend on genotype."
+      },
+      {
+        "answer": "The reference genome is always heterozygous",
+        "correct": false,
+        "feedback": "A reference is a single haploid sequence."
+      },
+      {
+        "answer": "bwa refuses to map reads at heterozygous sites",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  }
+]

@@ -1,0 +1,96 @@
+[
+  {
+    "question": "How long are the reads (number of bases)?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 100,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000000,
+          99
+        ],
+        "correct": false,
+        "feedback": "Too low."
+      },
+      {
+        "type": "range",
+        "range": [
+          101,
+          10000
+        ],
+        "correct": false,
+        "feedback": "Too high."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "What is the median base quality over most of the read?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 40,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000000,
+          39
+        ],
+        "correct": false,
+        "feedback": "Too low."
+      },
+      {
+        "type": "range",
+        "range": [
+          41,
+          100
+        ],
+        "correct": false,
+        "feedback": "Too high."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "Exactly one FastQC module is flagged with a warning for this file. Which one?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Per sequence GC content",
+        "correct": true,
+        "feedback": "Correct \u2014 the GC distribution deviates from the expected curve."
+      },
+      {
+        "answer": "Per base sequence quality",
+        "correct": false,
+        "feedback": "No, that one passes."
+      },
+      {
+        "answer": "Adapter Content",
+        "correct": false,
+        "feedback": "No, that one passes."
+      },
+      {
+        "answer": "Sequence Duplication Levels",
+        "correct": false,
+        "feedback": "No, that one passes."
+      }
+    ]
+  }
+]
