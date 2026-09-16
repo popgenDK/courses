@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**48 of 60 exercises built.**
+**47 of 59 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -139,9 +139,8 @@ See also [`pca/pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 42 | [`fst_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/fst_animal.ipynb) | Pairwise Fst from called genotypes with plink2, then from genotype likelihoods with SAF. **Blue and black wildebeest** (95 individuals, 9 groups), then **Greenland reindeer** (3 populations). **Both**: plink on called genotypes, then SAF on genotype likelihoods. | ✅ built | _to generate_ |
-| 64 | [`relatedness_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_human.ipynb) | Why relatedness matters before a GWAS: relatives break the independence assumption and inflate the test statistics. Pairwise IBD with plink, then removing relatives. **Human**: the GWAS case/control cohort. **Called genotypes**. | ✅ built | _to generate_ |
+| 64 | [`relatedness_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_human.ipynb) | Why relatedness matters before a GWAS: IBD sharing with plink --genome, a Z1-vs-Z0 plot and a PI_HAT histogram. No close relatives here, but 54 pairs come back nan - all involving individuals missing half their genotypes. **Human**: the GWAS case/control cohort. **Called genotypes**. | ✅ built | _to generate_ |
 | 43 | [`relatedness_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_animal.ipynb) | A full relatedness pipeline: LD pruning, KING-robust kinship in plink2, a 2D SFS with ANGSD, then relateAdmix for admixture-aware relatedness. **Reindeer**. **Both**: called genotypes for KING, genotype likelihoods for the SFS. | ✅ built | _to generate_ |
-| 64 | [`relatedness_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_human.ipynb) | Why relatedness matters before a GWAS: relatives break the independence assumption and inflate the test statistics. Pairwise IBD with plink, then removing relatives. **Human**: the GWAS case/control cohort. **Called genotypes**. | ✅ built | _to generate_ |
 | 45 | `heterozygosity_roh_animal.ipynb` | Heterozygosity and runs of homozygosity. **Blue wildebeest**. **Called genotypes**. | ⬜ planned | _to generate_ |
 
 ### GWAS and human complex traits — `gwas/`
@@ -457,10 +456,6 @@ From: [`kenya2026/exercises/Day5/Related.ipynb`](https://github.com/popgenDK/cou
 Replaces 1 older copy:
   - [`kenya2026/exercises/post_course/day5_morning_relatedness.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day5_morning_relatedness.ipynb) (2026-08-25)
 
-**64. `relatedness_human.ipynb`**  
-From: written for this set, using the GWAS-intro cohort  
-Replaces: nothing — this is the only copy
-
 **45. `heterozygosity_roh_animal.ipynb`**  
 From: [`kenya2026/exercises/post_course/day5_morning_heterozygosity_roh.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day5_morning_heterozygosity_roh.ipynb) (2026-08-25)  
 Replaces 4 older copies:
@@ -524,7 +519,7 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**48 of 60 exercises built.** Numbering runs to 57 because two pairs are each one
+**47 of 59 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 

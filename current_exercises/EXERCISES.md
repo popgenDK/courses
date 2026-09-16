@@ -507,6 +507,9 @@ superseding summer2024 (human), which share **0%** of their cells.
 - **From:** written new (2026-09-16), by request, using the data and the `plink --genome`
   analysis from #46 `gwas_intro_human.ipynb`.
 - **Supersedes:** none — new exercise, the human counterpart of #43.
+- **Why it exists:** a GWAS treats individuals as independent. Relatives share long
+  stretches of genome and so break that assumption, inflating the test statistics — which
+  is why you check relatedness *before* running the association. **Leads into** `gwas/`.
 - **Note:** deliberately short. IBD sharing with `plink --genome`, a Z1-vs-Z0 plot and a
   PI_HAT histogram in **base R** (no `plotPlink`), then the missingness problem the data
   turns out to have. States up front that this estimator assumes one homogeneous
@@ -533,15 +536,6 @@ superseding summer2024 (human), which share **0%** of their cells.
 `kenya2026/exercises/Day4/Related&Fst.ipynb` (2026-08-22) combined the two analyses in one
 notebook; they are kept separately as #42 Fst and #43 relatedness, which is how the newer
 kenya2026 notebooks split them. The source stays untouched in `kenya2026/`.
-
-### 64. [x] `relatedness_human.ipynb`
-- **From:** written for this set, using the GWAS-intro cohort
-- **Supersedes:** none — new exercise
-- **Note:** a short exercise on why relatedness matters **before** a GWAS: relatives
-  share long stretches of genome, so they violate the independence a GWAS assumes and
-  inflate the test statistics. Estimates pairwise IBD with plink and removes relatives.
-- **Data:** the same case/control cohort as the GWAS exercises. **Called genotypes**.
-- **Leads to** the `gwas/` exercises.
 
 ### 45. [ ] `heterozygosity_roh_animal.ipynb` — **post-course small-dataset version**
 - **From:** `kenya2026/exercises/post_course/day5_morning_heterozygosity_roh.ipynb` (2026-08-25)

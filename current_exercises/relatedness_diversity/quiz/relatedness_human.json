@@ -1,0 +1,132 @@
+[
+  {
+    "question": "A GWAS treats individuals as independent samples. What goes wrong if close relatives are included?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Relatives share long stretches of genome, so their genotypes are correlated at many SNPs at once and the test statistics come out too large",
+        "correct": true,
+        "feedback": "Correct \u2014 this is why relatedness is checked before the association."
+      },
+      {
+        "answer": "Nothing, as long as the sample size is large",
+        "correct": false,
+        "feedback": "Size does not fix correlated samples."
+      },
+      {
+        "answer": "The allele frequencies become wrong",
+        "correct": false,
+        "feedback": "They are only mildly affected; the inflation is the problem."
+      },
+      {
+        "answer": "The phenotypes cannot be compared",
+        "correct": false,
+        "feedback": "Not the issue."
+      }
+    ]
+  },
+  {
+    "question": "plink's `--genome` reports Z0, Z1, Z2 and PI_HAT. What is PI_HAT?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The estimated proportion of the genome shared identical by descent, roughly Z2 + Z1/2",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The probability that two individuals are related",
+        "correct": false,
+        "feedback": "It is a proportion of the genome, not a probability of relatedness."
+      },
+      {
+        "answer": "The number of shared SNPs",
+        "correct": false,
+        "feedback": "It is IBD, not identity by state."
+      },
+      {
+        "answer": "The kinship coefficient exactly",
+        "correct": false,
+        "feedback": "Kinship is half of it."
+      }
+    ]
+  },
+  {
+    "question": "Roughly what PI_HAT would you expect for a parent-offspring pair, and for full siblings?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "About 0.5 for both \u2014 they differ in how it splits between Z1 and Z2, not in the total",
+        "correct": true,
+        "feedback": "Correct: parent-offspring is almost all Z1, siblings are a mixture, which is why the Z1-vs-Z0 plot separates them."
+      },
+      {
+        "answer": "0.5 for parent-offspring and 0.25 for siblings",
+        "correct": false,
+        "feedback": "Full siblings also share half their genome on average."
+      },
+      {
+        "answer": "1.0 for both",
+        "correct": false,
+        "feedback": "That would be identical twins."
+      },
+      {
+        "answer": "0.25 for both",
+        "correct": false,
+        "feedback": "That is a second-degree relationship."
+      }
+    ]
+  },
+  {
+    "question": "This estimator assumes the sample comes from one homogeneous population. What happens if it does not?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Individuals from the same subpopulation look related to each other, because they share alleles for reasons other than recent common ancestry",
+        "correct": true,
+        "feedback": "Correct \u2014 which is why the animal exercise uses admixture-aware relatedness instead."
+      },
+      {
+        "answer": "Nothing, the estimator is robust to structure",
+        "correct": false,
+        "feedback": "It is not."
+      },
+      {
+        "answer": "Only the Z2 estimates are affected",
+        "correct": false,
+        "feedback": "All of them are."
+      },
+      {
+        "answer": "It cannot be run at all",
+        "correct": false,
+        "feedback": "It runs, and gives misleading answers."
+      }
+    ]
+  },
+  {
+    "question": "Some pairs come back as `nan`, all involving individuals missing about half their genotypes. What is the right response?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Filter on individual missingness first \u2014 an IBD estimate from half a genome is not trustworthy even when it does return a number",
+        "correct": true,
+        "feedback": "Correct: `--mind` removes exactly those individuals."
+      },
+      {
+        "answer": "Treat nan as zero relatedness",
+        "correct": false,
+        "feedback": "That silently keeps unreliable samples."
+      },
+      {
+        "answer": "Ignore it, since only a few pairs are affected",
+        "correct": false,
+        "feedback": "Those individuals are unreliable throughout, not only in the nan pairs."
+      },
+      {
+        "answer": "Rerun with a different random seed",
+        "correct": false,
+        "feedback": "It is not a stochastic problem."
+      }
+    ]
+  }
+]
