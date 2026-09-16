@@ -1,0 +1,80 @@
+[
+    {
+        "question": "We have n = 10 diploid individuals. How many categories does the unfolded SFS have?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "21",
+                "correct": true,
+                "feedback": "Correct. The sample carries 2n = 20 alleles, so the derived allele count can be 0,1,...,20 - that is 2n+1 = 21 categories."
+            },
+            {
+                "answer": "20",
+                "correct": false,
+                "feedback": "Almost - do not forget the category with zero derived alleles. The answer is 2n+1 = 21."
+            },
+            {
+                "answer": "10",
+                "correct": false,
+                "feedback": "That is the number of individuals. Each individual carries two alleles, so the count runs from 0 to 20."
+            },
+            {
+                "answer": "100000",
+                "correct": false,
+                "feedback": "That is the number of sites m in the simulation, not the number of categories."
+            }
+        ]
+    },
+    {
+        "question": "What does the value of the SFS in category z = 3 tell us?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The proportion of sites in the genome where the sample carries exactly 3 derived alleles",
+                "correct": true,
+                "feedback": "Correct. The SFS is a proportion of sites, which is why the whole vector sums to one."
+            },
+            {
+                "answer": "The proportion of sites where the population allele frequency is 3/2n",
+                "correct": false,
+                "feedback": "No. The SFS is about the count in our sample, not the frequency in the population. Sampling 10 individuals from a population with frequency 0.15 can easily give 1, 2, 3 or 4 derived alleles."
+            },
+            {
+                "answer": "The number of individuals that carry 3 derived alleles",
+                "correct": false,
+                "feedback": "No - an individual can carry at most 2 derived alleles at one site. The count is over the whole sample at one site."
+            },
+            {
+                "answer": "The probability that an individual is a heterozygote",
+                "correct": false,
+                "feedback": "No. That would be a function of the SFS, but not the SFS itself."
+            }
+        ]
+    },
+    {
+        "question": "Why do we simulate the population allele frequencies from a Beta(0.5, 2) distribution?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "It gives many rare variants and few common ones, which is the shape real data has",
+                "correct": true,
+                "feedback": "Correct. In real data the demographic history generates this shape; in a simulation we just choose a distribution with the right look."
+            },
+            {
+                "answer": "Because the beta distribution is the only distribution on the interval from 0 to 1",
+                "correct": false,
+                "feedback": "No, it is simply a convenient one - it is defined on [0,1] and its two parameters let us control the shape."
+            },
+            {
+                "answer": "Because allele frequencies must follow a beta distribution under Hardy-Weinberg equilibrium",
+                "correct": false,
+                "feedback": "No. Hardy-Weinberg says how genotypes are drawn given a frequency, and says nothing about how the frequencies themselves are distributed."
+            },
+            {
+                "answer": "Because it makes all frequencies equally likely",
+                "correct": false,
+                "feedback": "That would be Beta(1,1), the uniform distribution. Beta(0.5,2) is strongly skewed towards rare variants."
+            }
+        ]
+    }
+]

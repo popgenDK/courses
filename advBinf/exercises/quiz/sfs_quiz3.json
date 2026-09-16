@@ -1,0 +1,80 @@
+[
+    {
+        "question": "What is p(X_j | Z_j = z), the SAF?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "The probability of the sequencing data at site j given that the sample carries exactly z derived alleles",
+                "correct": true,
+                "feedback": "Correct. It is a likelihood - a function of the hidden state z - and it does not depend on the SFS."
+            },
+            {
+                "answer": "The probability that the sample carries z derived alleles given the data",
+                "correct": false,
+                "feedback": "That is the posterior, which is what the E-step computes. The SAF is the other way round: data given the count."
+            },
+            {
+                "answer": "The proportion of sites with z derived alleles",
+                "correct": false,
+                "feedback": "That is the SFS itself, which is the parameter we are estimating."
+            },
+            {
+                "answer": "The genotype likelihood of individual j",
+                "correct": false,
+                "feedback": "The index j is a site, not an individual. The SAF combines the genotype likelihoods of all n individuals at one site."
+            }
+        ]
+    },
+    {
+        "question": "Why can we not compute the SAF by summing over all genotype combinations directly?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "There are 3^n combinations, which is far too many for realistic sample sizes",
+                "correct": true,
+                "feedback": "Correct. For n = 100 individuals that is 3^100. Adding one individual at a time gives the same answer in a number of operations proportional to n^2."
+            },
+            {
+                "answer": "Because the genotype likelihoods are not independent between individuals",
+                "correct": false,
+                "feedback": "They are independent given the genotypes - that is exactly why the product over individuals in the formula is allowed."
+            },
+            {
+                "answer": "Because we do not know the genotypes",
+                "correct": false,
+                "feedback": "We do not need to know them - the sum is over all possible values. The problem is only that there are too many of them."
+            },
+            {
+                "answer": "Because the sum would not be a probability",
+                "correct": false,
+                "feedback": "It is a perfectly valid probability; the problem is purely that it cannot be computed in reasonable time."
+            }
+        ]
+    },
+    {
+        "question": "Why is the SAF computed only once, before the EM algorithm starts?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "It depends only on the genotype likelihoods, not on the SFS, so it does not change between iterations",
+                "correct": true,
+                "feedback": "Correct. That is what makes the EM cheap: each iteration only multiplies a fixed (2n+1) x m matrix by the current SFS."
+            },
+            {
+                "answer": "To save memory",
+                "correct": false,
+                "feedback": "It actually costs memory - a (2n+1) x m matrix is stored. It is saved time, not memory."
+            },
+            {
+                "answer": "Because the EM algorithm would otherwise not converge",
+                "correct": false,
+                "feedback": "Convergence is not the issue; recomputing the SAF every iteration would give the same answer, just much more slowly."
+            },
+            {
+                "answer": "Because the SAF is the same for all sites",
+                "correct": false,
+                "feedback": "No, the SAF is different for every site - that is why it has one column per site."
+            }
+        ]
+    }
+]

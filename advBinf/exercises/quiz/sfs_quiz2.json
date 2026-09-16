@@ -1,0 +1,80 @@
+[
+    {
+        "question": "The SFS from called genotypes is biased compared to the true SFS. What is the main reason?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "At low depth a heterozygote is often covered by reads from only one of its two alleles, so it is called as a homozygote",
+                "correct": true,
+                "feedback": "Correct. A site covered by a single read can never be called a heterozygote at all, so heterozygotes systematically turn into homozygotes."
+            },
+            {
+                "answer": "The sequencing errors create derived alleles that are not really there",
+                "correct": false,
+                "feedback": "Errors do add noise, but with an error rate of 1% that is a much smaller effect than the missed heterozygotes. Try setting error = 0 and see that the bias is still there."
+            },
+            {
+                "answer": "The genotype caller uses the wrong prior on the allele frequency",
+                "correct": false,
+                "feedback": "The caller here uses a flat prior, which is a choice, but the bias comes from the depth: with few reads no prior can recover the information that is not in the data."
+            },
+            {
+                "answer": "The EM algorithm has not converged",
+                "correct": false,
+                "feedback": "The genotype calling approach does not use an EM algorithm at all - it just takes the most likely genotype at each site."
+            }
+        ]
+    },
+    {
+        "question": "In which direction does calling genotypes distort the spectrum?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "Too few sites in the intermediate categories and too many in the extreme ones (0 and 2n)",
+                "correct": true,
+                "feedback": "Correct. Turning heterozygotes into homozygotes moves sites away from the middle of the spectrum towards both ends."
+            },
+            {
+                "answer": "Too many sites in the intermediate categories",
+                "correct": false,
+                "feedback": "The opposite - losing heterozygotes empties out the middle of the spectrum."
+            },
+            {
+                "answer": "The spectrum is shifted one category to the right",
+                "correct": false,
+                "feedback": "It is not a shift; heterozygotes can be miscalled in either direction, so sites move towards both ends."
+            },
+            {
+                "answer": "Only the category with zero derived alleles is affected",
+                "correct": false,
+                "feedback": "The whole spectrum is affected, although the extreme categories change the most."
+            }
+        ]
+    },
+    {
+        "question": "Someone suggests fixing the problem by throwing away all sites with depth below 10. What is the drawback?",
+        "type": "multiple_choice",
+        "answers": [
+            {
+                "answer": "At low average depth that removes most of the data, and the sites that survive are not a random subset",
+                "correct": true,
+                "feedback": "Correct. Filtering on depth is filtering on the data itself, which can bias the spectrum in a new way - and with 2X data there is almost nothing left."
+            },
+            {
+                "answer": "There is no drawback, this is the recommended approach",
+                "correct": false,
+                "feedback": "If you can afford to throw away that much data, you could have sequenced fewer individuals at higher depth in the first place. The whole point of the likelihood approach is to use the low depth data."
+            },
+            {
+                "answer": "It makes the SFS have fewer than 2n+1 categories",
+                "correct": false,
+                "feedback": "No, the number of categories is set by the number of individuals, not by which sites we keep."
+            },
+            {
+                "answer": "It makes the EM algorithm converge more slowly",
+                "correct": false,
+                "feedback": "Fewer sites would actually make each EM iteration faster - the problem is statistical, not computational."
+            }
+        ]
+    }
+]
