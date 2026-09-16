@@ -1,0 +1,18 @@
+# Symlinks are never committed to this repository.
+#
+# All of these point outside the repo and resolve only on the popgen server,
+# so committing them would give anyone cloning a dangling link.
+#
+# Git has no pattern for "ignore every symlink", so each one is listed here.
+# If you add a new symlink to the repo root, add it to this file too.
+# To check that none are tracked:
+#     git ls-files -s | awk '$1=="120000"'
+
+# the shared data store            data       -> /course/data/
+/data
+
+# notes for AI agents               agentGuide -> /course/agentGuide/
+/agentGuide
+
+# the BSA workgroup share           BSA/BSA    -> /davidData/data/BSA/
+/BSA/BSA
