@@ -437,3 +437,23 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   Coverage after removal: `ngs_intro_human` 27/31, `ngs_intro_animal` 28/31,
   `ngs_inference_human` 34/37 — the shortfall is now entirely setup cells, which
   is what it should be.
+
+- **Quizzes added to the last two EM notebooks, and a kernel bug fixed
+  (2026-09-16).** `em_algorithm.ipynb` gains 3 quizzes (one per section: the two
+  coins, allele frequencies from genotype likelihoods, the binomial) and
+  `haplotype_frequencies.ipynb` gains 2 (the model and ambiguity; the EM itself).
+  `em_algorithms/` now has 15 quiz files and every notebook in it carries
+  quizzes.
+
+  **The bug:** `jupyterquiz` is a Python package, but all four of these notebooks
+  had `kernelspec: ir` — pure R. A Python quiz cell in an R notebook is executed
+  as R and fails. That means the quizzes I had already added to
+  `pca_em_human.ipynb` and `admixture_em_human.ipynb` would not have run.
+
+  All four are converted to the SoS kernel that `sfs_model.ipynb` already used,
+  with every cell tagged: markdown `SoS`, code `R`, quiz `Python 3 (ipykernel)`.
+  Only then do mixed-language cells work.
+
+  A reminder for the exercises still to come: **check the kernel before adding a
+  quiz.** A notebook whose `kernelspec` is not `sos` cannot run a Python quiz
+  cell.

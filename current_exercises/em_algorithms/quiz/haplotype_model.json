@@ -1,0 +1,115 @@
+[
+  {
+    "question": "Two SNPs give four haplotypes: AB, aB, Ab, ab. How many ordered haplotype PAIRS are there for one individual?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 16,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000,
+          15
+        ],
+        "correct": false,
+        "feedback": "Too few \u2014 count every combination of a first and a second haplotype."
+      },
+      {
+        "type": "range",
+        "range": [
+          17,
+          1000
+        ],
+        "correct": false,
+        "feedback": "Too many \u2014 there are four choices for each of the two haplotypes."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "How many different combinations of the two GENOTYPES can be observed?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 9,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000,
+          8
+        ],
+        "correct": false,
+        "feedback": "Too few \u2014 each SNP has three genotypes."
+      },
+      {
+        "type": "range",
+        "range": [
+          10,
+          1000
+        ],
+        "correct": false,
+        "feedback": "Too many \u2014 each SNP has three genotypes."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "Which observed genotype is consistent with more than one haplotype pair, and is therefore the reason an EM algorithm is needed at all?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The double heterozygote: heterozygous at both SNPs",
+        "correct": true,
+        "feedback": "Correct \u2014 AB/ab and Ab/aB give exactly the same genotypes."
+      },
+      {
+        "answer": "The double homozygote",
+        "correct": false,
+        "feedback": "That determines the haplotypes uniquely."
+      },
+      {
+        "answer": "Heterozygous at one SNP only",
+        "correct": false,
+        "feedback": "That is also unambiguous."
+      },
+      {
+        "answer": "Every genotype is ambiguous",
+        "correct": false,
+        "feedback": "Only the double heterozygote is."
+      }
+    ]
+  },
+  {
+    "question": "Using the true frequencies in the notebook (AB = 0.03, aB = 0.20, Ab = 0.55, ab = 0.22), what is the frequency of allele A?",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "range",
+        "range": [
+          0.575,
+          0.585
+        ],
+        "correct": true,
+        "feedback": "Correct: 0.03 + 0.55 = 0.58."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Allele A sits on haplotypes AB and Ab, so add those two frequencies."
+      }
+    ]
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "question": "For N coin tosses with k heads, where is the maximum of the likelihood?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "At theta = k/N",
+        "correct": true,
+        "feedback": "Correct \u2014 set the derivative of the log likelihood to zero."
+      },
+      {
+        "answer": "At theta = 0.5 always",
+        "correct": false,
+        "feedback": "Only if k/N happens to be 0.5."
+      },
+      {
+        "answer": "At theta = k",
+        "correct": false,
+        "feedback": "That is not a frequency."
+      },
+      {
+        "answer": "There is no closed form",
+        "correct": false,
+        "feedback": "There is: k/N."
+      }
+    ]
+  },
+  {
+    "question": "The binomial coefficient N-choose-k is dropped from the likelihood. Why is that allowed?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It does not depend on theta, so it does not move the maximum",
+        "correct": true,
+        "feedback": "Correct \u2014 any factor free of the parameter can be dropped."
+      },
+      {
+        "answer": "It is always equal to one",
+        "correct": false,
+        "feedback": "It is not."
+      },
+      {
+        "answer": "It cancels in the log",
+        "correct": false,
+        "feedback": "It becomes an additive constant, which is the same argument, but it does not cancel."
+      },
+      {
+        "answer": "Because N is small",
+        "correct": false,
+        "feedback": "Size is irrelevant."
+      }
+    ]
+  },
+  {
+    "question": "Why work with the log likelihood rather than the likelihood?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The log is monotone, so the maximum is in the same place, and products become sums that are easier to differentiate and numerically stable",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The log likelihood has a different maximum that is easier to find",
+        "correct": false,
+        "feedback": "The maximum is in the same place."
+      },
+      {
+        "answer": "Because the likelihood can be negative",
+        "correct": false,
+        "feedback": "A likelihood is never negative."
+      },
+      {
+        "answer": "It is only a convention",
+        "correct": false,
+        "feedback": "There are real reasons."
+      }
+    ]
+  },
+  {
+    "question": "This third example has no latent variable. Why is it in an EM notebook?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It is the recap: it shows what a likelihood is and where its maximum lies, which is what EM is climbing towards when there is a latent variable",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Because EM is needed for the binomial too",
+        "correct": false,
+        "feedback": "It is not \u2014 there is an analytical solution."
+      },
+      {
+        "answer": "Because coins appear in the first example",
+        "correct": false,
+        "feedback": "That is a coincidence of the example."
+      },
+      {
+        "answer": "It is a mistake",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  }
+]

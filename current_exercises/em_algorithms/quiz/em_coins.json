@@ -1,0 +1,106 @@
+[
+  {
+    "question": "In the two-coin example, what is the latent variable Z?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Which coin, A or B, produced each sequence of 10 tosses",
+        "correct": true,
+        "feedback": "Correct \u2014 that is the one thing we cannot see."
+      },
+      {
+        "answer": "The number of heads in a sequence",
+        "correct": false,
+        "feedback": "That is the data X, and it is observed."
+      },
+      {
+        "answer": "The bias of each coin",
+        "correct": false,
+        "feedback": "Those are the parameters theta."
+      },
+      {
+        "answer": "The number of sequences",
+        "correct": false,
+        "feedback": "That is fixed at 5."
+      }
+    ]
+  },
+  {
+    "question": "`wA` is computed as lik[,1]*0.5 / (lik[,1]*0.5 + lik[,2]*0.5). What is it?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The posterior probability that coin A produced that sequence, given the current parameters",
+        "correct": true,
+        "feedback": "Correct \u2014 this is the E-step."
+      },
+      {
+        "answer": "The likelihood of the data under coin A",
+        "correct": false,
+        "feedback": "That is lik[,1]; wA is the normalised posterior."
+      },
+      {
+        "answer": "The prior probability of coin A",
+        "correct": false,
+        "feedback": "That is the 0.5."
+      },
+      {
+        "answer": "The updated estimate of coin A's bias",
+        "correct": false,
+        "feedback": "That comes in the M-step."
+      }
+    ]
+  },
+  {
+    "question": "What is `sum(data*wA)`?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The expected number of heads attributable to coin A, summed over all sequences",
+        "correct": true,
+        "feedback": "Correct \u2014 the posterior weights turn observed heads into expected counts."
+      },
+      {
+        "answer": "The total number of heads observed",
+        "correct": false,
+        "feedback": "That would be sum(data), without the weights."
+      },
+      {
+        "answer": "The number of sequences produced by coin A",
+        "correct": false,
+        "feedback": "That would be sum(wA)."
+      },
+      {
+        "answer": "The likelihood of coin A",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "The first version assumes each coin is used with probability 0.5. Bonus 2 estimates that probability as a third parameter. Where does it enter?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "As the prior in the E-step, replacing the two 0.5s, and it is updated in the M-step as sum(wA)/N",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Only in the M-step",
+        "correct": false,
+        "feedback": "It is the prior, so it enters the E-step too."
+      },
+      {
+        "answer": "It replaces the genotype likelihoods",
+        "correct": false,
+        "feedback": "There are no genotypes in this example."
+      },
+      {
+        "answer": "It has no effect on the result",
+        "correct": false,
+        "feedback": "It can change the answer."
+      }
+    ]
+  }
+]

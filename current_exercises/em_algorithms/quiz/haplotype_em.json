@@ -1,0 +1,106 @@
+[
+  {
+    "question": "In this model, what is the latent variable Z?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The pair of haplotypes an individual carries",
+        "correct": true,
+        "feedback": "Correct \u2014 we observe the genotypes, not which alleles are on the same chromosome."
+      },
+      {
+        "answer": "The genotype",
+        "correct": false,
+        "feedback": "The genotypes are observed."
+      },
+      {
+        "answer": "The allele frequency",
+        "correct": false,
+        "feedback": "That is derived from the parameter."
+      },
+      {
+        "answer": "The number of individuals",
+        "correct": false,
+        "feedback": "That is known."
+      }
+    ]
+  },
+  {
+    "question": "p(X_i | Z=z) is 0 if the genotypes are inconsistent with the haplotype pair and 1 otherwise. What does that make the E-step?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A renormalisation over only the haplotype pairs compatible with the observed genotypes",
+        "correct": true,
+        "feedback": "Correct \u2014 incompatible pairs get posterior zero."
+      },
+      {
+        "answer": "A weighted average of all 16 pairs regardless of the data",
+        "correct": false,
+        "feedback": "Incompatible pairs are excluded."
+      },
+      {
+        "answer": "The same as the M-step",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "Undefined when the genotype is a double heterozygote",
+        "correct": false,
+        "feedback": "That is exactly the case it handles."
+      }
+    ]
+  },
+  {
+    "question": "The faster version loops over the 9 genotype combinations rather than the 1000 individuals. Why is that exact rather than an approximation?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Individuals with the same two genotypes have identical likelihoods, so each combination can be computed once and weighted by its count",
+        "correct": true,
+        "feedback": "Correct \u2014 no information is lost."
+      },
+      {
+        "answer": "It is an approximation that is good enough for 1000 individuals",
+        "correct": false,
+        "feedback": "It is exact."
+      },
+      {
+        "answer": "It assumes Hardy-Weinberg equilibrium",
+        "correct": false,
+        "feedback": "That assumption is elsewhere in the model."
+      },
+      {
+        "answer": "It only works when the counts are large",
+        "correct": false,
+        "feedback": "It works for any counts."
+      }
+    ]
+  },
+  {
+    "question": "The M-step uses `countHaplotypes` to go from posteriors over haplotype PAIRS to counts of single HAPLOTYPES. Why is that step needed?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The posterior is over pairs, but the parameter theta is the frequency of single haplotypes, so the pair counts must be split between the two haplotypes",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "To normalise the posterior",
+        "correct": false,
+        "feedback": "The posterior is already normalised in the E-step."
+      },
+      {
+        "answer": "To remove the double heterozygotes",
+        "correct": false,
+        "feedback": "They are kept, split across both possibilities."
+      },
+      {
+        "answer": "To convert genotypes to haplotypes",
+        "correct": false,
+        "feedback": "The genotypes are not used at this point."
+      }
+    ]
+  }
+]

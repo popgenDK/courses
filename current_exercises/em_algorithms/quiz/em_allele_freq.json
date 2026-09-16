@@ -1,0 +1,106 @@
+[
+  {
+    "question": "In the allele frequency example, what is the latent variable?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The genotype of each individual",
+        "correct": true,
+        "feedback": "Correct \u2014 we see reads, not genotypes."
+      },
+      {
+        "answer": "The allele frequency",
+        "correct": false,
+        "feedback": "That is the parameter theta."
+      },
+      {
+        "answer": "The number of reads",
+        "correct": false,
+        "feedback": "That is observed."
+      },
+      {
+        "answer": "The sequencing error rate",
+        "correct": false,
+        "feedback": "That is fixed at 1% here."
+      }
+    ]
+  },
+  {
+    "question": "In `calculateLogLike`, `pZ <- c((1-theta)^2, 2*theta*(1-theta), theta^2)` is which term?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "p(Z=z|theta), the prior on the genotype under Hardy-Weinberg equilibrium",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "p(X|Z=z), the genotype likelihood",
+        "correct": false,
+        "feedback": "That is GL, computed from the reads."
+      },
+      {
+        "answer": "The posterior p(Z|X,theta)",
+        "correct": false,
+        "feedback": "That is the E-step, and it needs both terms."
+      },
+      {
+        "answer": "The log likelihood itself",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "Individuals 5 and 6 have no C reads at all. What does that do to their contribution?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Their genotype likelihoods strongly favour TT, so they pull the estimate towards a higher T frequency",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "They contribute nothing, because one allele is missing",
+        "correct": false,
+        "feedback": "They still have reads and still contribute."
+      },
+      {
+        "answer": "They are dropped from the likelihood",
+        "correct": false,
+        "feedback": "They are not."
+      },
+      {
+        "answer": "They make the likelihood flat",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "What would the estimate be if we had chosen to estimate the C allele frequency instead of the T?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "One minus the T frequency \u2014 the same fit, parameterised the other way round",
+        "correct": true,
+        "feedback": "Correct; the model is the same."
+      },
+      {
+        "answer": "The same number",
+        "correct": false,
+        "feedback": "Only if the estimate happened to be 0.5."
+      },
+      {
+        "answer": "It cannot be estimated",
+        "correct": false,
+        "feedback": "It can."
+      },
+      {
+        "answer": "The square of the T frequency",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  }
+]
