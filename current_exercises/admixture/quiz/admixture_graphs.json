@@ -1,0 +1,132 @@
+[
+  {
+    "question": "A neighbour-joining tree cannot represent admixture. What does an admixed population look like on one?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It is placed on a branch somewhere between its two source populations, as if it had split from an ancestor of both",
+        "correct": true,
+        "feedback": "Correct \u2014 the tree has no way to show two ancestries, so it compromises."
+      },
+      {
+        "answer": "It is left out of the tree",
+        "correct": false,
+        "feedback": "It is placed, just misleadingly."
+      },
+      {
+        "answer": "It appears twice",
+        "correct": false,
+        "feedback": "Each population appears once."
+      },
+      {
+        "answer": "It becomes the root",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "qpgraph fits a graph you specify rather than estimating one. What is the consequence?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A good fit shows your graph is consistent with the data, not that it is the only or the true graph",
+        "correct": true,
+        "feedback": "Correct \u2014 this is the central caution of the exercise."
+      },
+      {
+        "answer": "It proves the graph is correct",
+        "correct": false,
+        "feedback": "It does not; other graphs may fit equally well."
+      },
+      {
+        "answer": "It finds the best graph automatically",
+        "correct": false,
+        "feedback": "That is what treemix attempts."
+      },
+      {
+        "answer": "It only works for trees",
+        "correct": false,
+        "feedback": "It handles admixture edges."
+      }
+    ]
+  },
+  {
+    "question": "In the fitted output, the `z` column is the deviation between observed and fitted f-statistics in standard errors. A large |z| means:",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The graph fails to reproduce that statistic, so the model is missing something",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The statistic was estimated imprecisely",
+        "correct": false,
+        "feedback": "That is what the standard error itself captures."
+      },
+      {
+        "answer": "The populations are closely related",
+        "correct": false,
+        "feedback": "Unrelated to z."
+      },
+      {
+        "answer": "The graph fits well",
+        "correct": false,
+        "feedback": "The opposite."
+      }
+    ]
+  },
+  {
+    "question": "Adding migration edges in treemix always improves the fit. How should you choose how many to keep?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Stop when extra edges stop explaining meaningful residual variance, and check that the added edges are stable and interpretable",
+        "correct": true,
+        "feedback": "Correct \u2014 more edges always fit better, so fit alone cannot decide."
+      },
+      {
+        "answer": "Use the largest m you can compute",
+        "correct": false,
+        "feedback": "That overfits."
+      },
+      {
+        "answer": "Use m=1 always",
+        "correct": false,
+        "feedback": "Arbitrary."
+      },
+      {
+        "answer": "Choose the m with the lowest likelihood",
+        "correct": false,
+        "feedback": "Likelihood improves with m."
+      }
+    ]
+  },
+  {
+    "question": "Using Sardinian as a proxy for \"European\" and Mbuti for \"African\" assumes what?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "That one population stands in for the ancestry of a whole region, which can bias the fit if it is itself admixed or drifted",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Nothing \u2014 any population works equally well",
+        "correct": false,
+        "feedback": "The choice matters."
+      },
+      {
+        "answer": "That the populations are unadmixed by definition",
+        "correct": false,
+        "feedback": "That is the assumption being questioned, not a fact."
+      },
+      {
+        "answer": "That they have the same sample size",
+        "correct": false,
+        "feedback": "Not the issue."
+      }
+    ]
+  }
+]

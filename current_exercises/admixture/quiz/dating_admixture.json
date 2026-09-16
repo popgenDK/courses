@@ -1,0 +1,140 @@
+[
+  {
+    "question": "The simulated admixture event happened how many generations ago? (the true value, stated in the introduction)",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 30,
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "type": "range",
+        "range": [
+          -1000,
+          29
+        ],
+        "correct": false,
+        "feedback": "Too few \u2014 check the description of the simulated group."
+      },
+      {
+        "type": "range",
+        "range": [
+          31,
+          100000
+        ],
+        "correct": false,
+        "feedback": "Too many \u2014 check the description of the simulated group."
+      },
+      {
+        "type": "default",
+        "feedback": "Not correct. Try again."
+      }
+    ]
+  },
+  {
+    "question": "Why does the decay of admixture LD with genetic distance date the event?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Recombination breaks ancestry tracts at a roughly constant rate per generation, so the faster the decay, the older the admixture",
+        "correct": true,
+        "feedback": "Correct \u2014 this is the principle behind ALDER, MALDER and GLOBETROTTER."
+      },
+      {
+        "answer": "Mutations accumulate at a constant rate",
+        "correct": false,
+        "feedback": "That dates divergence, not admixture."
+      },
+      {
+        "answer": "Drift removes rare alleles over time",
+        "correct": false,
+        "feedback": "Not what these tools measure."
+      },
+      {
+        "answer": "Selection removes introgressed ancestry",
+        "correct": false,
+        "feedback": "That is what AdaptMix looks for, separately."
+      }
+    ]
+  },
+  {
+    "question": "MALDER differs from ALDER in that it ...",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "allows more than one admixture event, rather than assuming a single pulse",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "runs faster",
+        "correct": false,
+        "feedback": "Not the point of it."
+      },
+      {
+        "answer": "needs no reference populations",
+        "correct": false,
+        "feedback": "It still does."
+      },
+      {
+        "answer": "works on called genotypes only",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "The sources are represented by present-day 'surrogate' populations rather than the true ancestral ones. Why does the choice of surrogate matter?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A surrogate is only an approximation of the true source, and a poor one biases both the inferred proportions and the date",
+        "correct": true,
+        "feedback": "Correct \u2014 that is why the exercise asks you to try different combinations."
+      },
+      {
+        "answer": "It does not matter; any population works",
+        "correct": false,
+        "feedback": "It matters a great deal."
+      },
+      {
+        "answer": "It only changes the runtime",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "It only matters for MOSAIC",
+        "correct": false,
+        "feedback": "It affects all of them."
+      }
+    ]
+  },
+  {
+    "question": "AdaptMix tests whether ancestry proportions at a locus depart from the genome-wide average. What would cause such a departure other than selection?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Drift, or errors in the local ancestry inference itself \u2014 which is why a single outlier locus is weak evidence",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Nothing \u2014 any departure means selection",
+        "correct": false,
+        "feedback": "Too strong a conclusion."
+      },
+      {
+        "answer": "A higher mutation rate at that locus",
+        "correct": false,
+        "feedback": "Not the mechanism."
+      },
+      {
+        "answer": "Low sequencing depth",
+        "correct": false,
+        "feedback": "These are simulated genotypes."
+      }
+    ]
+  }
+]

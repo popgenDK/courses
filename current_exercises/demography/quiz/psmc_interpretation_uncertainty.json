@@ -1,0 +1,132 @@
+[
+  {
+    "question": "What is the most important limitation of estimating a PSMC curve from chromosome 27 alone?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It contains much less genomic information than a whole genome, so the curve is expected to be noisier and less representative.",
+        "correct": true,
+        "feedback": "Correct. Restricting the exercise to one chromosome saves time, but fewer independent genomic segments support the inferred history."
+      },
+      {
+        "answer": "PSMC can only infer the census size of chromosome 27.",
+        "correct": false,
+        "feedback": "Not quite. The model estimates a coalescent effective population-size history, but a single chromosome provides a limited sample of that history."
+      },
+      {
+        "answer": "Chromosome 27 cannot contain heterozygous sites.",
+        "correct": false,
+        "feedback": "Not quite. It can contain heterozygous sites; the issue is the smaller amount of data compared with a whole genome."
+      },
+      {
+        "answer": "Using one chromosome makes mutation rate and generation time unnecessary.",
+        "correct": false,
+        "feedback": "Not quite. Those assumptions are still required to scale the PSMC result into effective population size and calendar time."
+      }
+    ]
+  },
+  {
+    "question": "What should happen when 20% of true heterozygous sites are masked before running PSMC?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "PSMC sees less heterozygosity and tends to infer more recent coalescence and lower effective population size.",
+        "correct": true,
+        "feedback": "Correct. Missing true heterozygotes makes the two chromosome copies appear more similar than they really are, biasing the inferred history downward."
+      },
+      {
+        "answer": "PSMC sees more heterozygosity and must infer a larger effective population size.",
+        "correct": false,
+        "feedback": "Not quite. Masking true heterozygotes removes differences between the two chromosome copies rather than adding them."
+      },
+      {
+        "answer": "Only the plot color changes; the inferred curve cannot change.",
+        "correct": false,
+        "feedback": "Not quite. The heterozygosity pattern is the core PSMC signal, so systematic loss of heterozygotes affects the inference."
+      },
+      {
+        "answer": "The result becomes an exact estimate of census population size.",
+        "correct": false,
+        "feedback": "Not quite. Masking data does not turn coalescent effective population size into census size and instead introduces bias."
+      }
+    ]
+  },
+  {
+    "question": "Why do bootstrap PSMC curves often vary most in the most recent time intervals?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Few genomic segments have very recent coalescence times, so those intervals contain little information.",
+        "correct": true,
+        "feedback": "Correct. Resampling a limited number of informative recent segments produces high variance among bootstrap replicates."
+      },
+      {
+        "answer": "Recent DNA uses a different genetic code from ancient DNA.",
+        "correct": false,
+        "feedback": "Not quite. The genetic code does not change across the time intervals in a PSMC analysis."
+      },
+      {
+        "answer": "Bootstrapping deliberately removes all recent heterozygous sites.",
+        "correct": false,
+        "feedback": "Not quite. Bootstrapping resamples genomic chunks; it does not target sites from a particular time interval."
+      },
+      {
+        "answer": "The recent intervals always contain the largest number of independent coalescent events.",
+        "correct": false,
+        "feedback": "Not quite. The scarcity of very recent coalescent events is the reason recent effective population size is weakly resolved."
+      }
+    ]
+  },
+  {
+    "question": "What do the mutation-rate and generation-time values supplied during plotting mainly do?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "They scale the inferred quantities into effective population sizes and time in years.",
+        "correct": true,
+        "feedback": "Correct. The PSMC fit is in scaled units; assumptions about mutation rate and generation time determine the numerical axes of the plotted history."
+      },
+      {
+        "answer": "They add missing heterozygous sites back into the PSMCFA file.",
+        "correct": false,
+        "feedback": "Not quite. Scaling assumptions cannot repair missing or incorrectly called genotypes."
+      },
+      {
+        "answer": "They choose which individual column is read from the VCF.",
+        "correct": false,
+        "feedback": "Not quite. The sample is selected when the PSMCFA input is created, before plotting."
+      },
+      {
+        "answer": "They guarantee that the reconstructed demographic history is correct.",
+        "correct": false,
+        "feedback": "Not quite. They are necessary scaling assumptions, but they do not remove model limitations or uncertainty."
+      }
+    ]
+  },
+  {
+    "question": "How should a PSMC curve be described most carefully?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It is an inferred coalescent effective population-size history, not a direct record of census counts.",
+        "correct": true,
+        "feedback": "Correct. The curve summarizes coalescence patterns under the model and can also be influenced by population structure, data quality, and parameter choices."
+      },
+      {
+        "answer": "It is an exact count of animals alive in every generation.",
+        "correct": false,
+        "feedback": "Not quite. Effective population size and census population size are different quantities, and PSMC estimates are uncertain."
+      },
+      {
+        "answer": "Every step in the curve proves an instantaneous historical event.",
+        "correct": false,
+        "feedback": "Not quite. PSMC uses piecewise time intervals, so the shape is affected by time binning and limited temporal resolution."
+      },
+      {
+        "answer": "It is unaffected by population structure or errors in genotype calling.",
+        "correct": false,
+        "feedback": "Not quite. Both biological model violations and technical errors can affect the inferred curve."
+      }
+    ]
+  }
+]

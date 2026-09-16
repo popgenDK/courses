@@ -27,6 +27,7 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 31 | `gene_flow/gene_flow_dstat_animal.ipynb` | `kenya2026/exercises/Day3/Geneflow&Dstat.ipynb` | 2026-08-16 | yes — path cell added, paths, typos | `kenya2026/.../post_course/day3_afternoon_gene_flow_dstat.ipynb` (2026-08-25) |
 | 35 | `demography/coalescence.ipynb` | `kenya2026/exercises/Day2/Coalescence_short_WoA.ipynb` | 2026-08-15 | yes — setup cell added, helper repointed | 2 older copies (see EXERCISES.md) |
 | 36 | `demography/wright_fisher.ipynb` | `summer2025/exercises/Day1_morning_WrightFisherTutorial.ipynb` | 2025-08-03 | yes — helper repointed, one wording fix | none |
+| 38 | `demography/sfs_animal.ipynb` | `kenya2026/exercises/Day2/SFS_WoA.ipynb` | 2026-08-15 | yes — path cell added, paths, folded-axis label | `kenya2026/.../post_course/day2_morning_sfs.ipynb` (2026-08-25) |
 | — | `data/scripts/simulateWF.R` | `/course/popgen25/software/simulateWF.R` | 2025 | no — copied verbatim | none |
 | 19 | `em_algorithms/pca_em_human.ipynb` | `advBinf/exercises/advBinf_PCA_EM.ipynb` | 2026-09-16 | yes — 3 quizzes, 14 question blocks | none |
 | 24 | `em_algorithms/admixture_em_human.ipynb` | `advBinf/exercises/advBinf_admixture_EM.ipynb` | 2026-09-14 | yes — 2 quizzes | none |
@@ -937,3 +938,36 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 
   MOSAIC's scratch directory `~/.cache/fastfiles` is now a `FASTFILES` variable set
   in the setup cell rather than hardcoded mid-notebook.
+
+- **#38 `sfs_animal.ipynb` (2026-09-16).** From the 2026-08-15 kenya2026 notebook, into
+  `demography/`. 19 cells, SoS kernelspec — it mixes Python (the neutral 1/i expectation
+  and its barplot) with R (the real spectra), which is why the kernelspec stays SoS. The
+  teaching content and the six question blocks are unchanged.
+
+  - **it had no setup cell**, and hard-coded `/course/kenya2026/harvi/sfs/inputdata/`
+    *inside two different functions*, built up with `paste0`. Added a path cell after the
+    title and both reads now go through `DATA`, so the directory appears once.
+  - **Data: cleaned folder `data/sfs/`** (291 M, 5 files, all `cmp`-identical). The source
+    `sfs/inputdata/` held exactly the 5 VCFs the exercise reads, so this is a
+    straight lift out of the 293 M `kenya2026_harvi/` bulk folder.
+  - **Axis label corrected.** The two wildebeest panels plot a *folded* spectrum —
+    `calc_folded()` takes `pmin(alt_count, nchr - alt_count)` — but both were labelled
+    "Derived allele count". A folded spectrum has no derived/ancestral distinction, which
+    is the very thing Questions (5) asks about ("what information is lost when an SFS is
+    folded?"). Now "Minor allele count" in both panels. The simulated panels, which are
+    genuinely unfolded, keep "Derived allele count".
+
+  **Run end to end** (all 8 R cells, including the 115 M and 176 M wildebeest VCFs),
+  exit 0, no errors. The spectra come out as the exercise intends:
+  - scenario a decays roughly like 1/i (0.236, 0.113, 0.077, ...) — the neutral shape
+  - scenario b has a clear singleton excess (0.355) — growth
+  - scenario c is extreme and ragged (0.559 singletons, sparse tail), which is what
+    Questions (3) item 3 asks about ("does the curve for c look unusual?")
+  - no `NA` bins anywhere, so the genotype recoding is not silently dropping
+    multiallelic sites the way it would if the input had `2|0`-style codes
+  - wildebeest: 159,687 segregating sites for black against 76,928 for blue, and black's
+    folded spectrum *rises* after bin 1 (11384, 7604, 7454, 8320, 9257, 11056, ...) while
+    blue's decays monotonically — the contrast Questions (4) is built on
+
+  Python cells were not executed (no data, and they need the `sos` kernel to run in
+  order); they are 12 lines of numpy/matplotlib with no inputs.

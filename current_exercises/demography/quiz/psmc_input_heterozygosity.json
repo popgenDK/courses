@@ -1,0 +1,106 @@
+[
+  {
+    "question": "In the PSMCFA files made in this exercise, what does a K represent?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A 100 bp window containing at least one heterozygous site.",
+        "correct": true,
+        "feedback": "Correct. The conversion script records whether each fixed 100 bp window contains one or more heterozygous sites."
+      },
+      {
+        "answer": "A 100 bp window containing only homozygous alternate sites.",
+        "correct": false,
+        "feedback": "Not quite. K indicates the presence of a heterozygous site, not a window of homozygous alternate genotypes."
+      },
+      {
+        "answer": "A window that was excluded because every genotype was missing.",
+        "correct": false,
+        "feedback": "Not quite. Missing or unreliable sequence should be masked; K specifically marks a window with observed heterozygosity."
+      },
+      {
+        "answer": "A window inferred to have a constant effective population size.",
+        "correct": false,
+        "feedback": "Not quite. Population-size parameters are inferred later by PSMC; they are not encoded directly in the PSMCFA letters."
+      }
+    ]
+  },
+  {
+    "question": "Why can making PSMC input from a variant-only VCF be risky?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Positions absent from the VCF may be treated as homozygous even when they were not confidently callable.",
+        "correct": true,
+        "feedback": "Correct. Reliable PSMC input must distinguish confidently homozygous sequence from missing or low-quality sequence; a variant-only VCF may not preserve that distinction."
+      },
+      {
+        "answer": "A VCF cannot store heterozygous genotypes.",
+        "correct": false,
+        "feedback": "Not quite. VCF files can store heterozygous genotypes, but variant-only files may omit the information needed to define callable homozygous sequence."
+      },
+      {
+        "answer": "PSMC requires every site to contain an alternate allele.",
+        "correct": false,
+        "feedback": "Not quite. Long stretches without heterozygous sites are central to PSMC, but they must represent reliably observed sequence."
+      },
+      {
+        "answer": "VCF coordinates cannot be divided into 100 bp windows.",
+        "correct": false,
+        "feedback": "Not quite. VCF coordinates can be binned; the concern is whether omitted and retained positions carry enough callability and quality information."
+      }
+    ]
+  },
+  {
+    "question": "All else being equal, which simulated individual should tend to have more heterozygous windows?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The individual whose two chromosome copies tend to coalesce farther back in time.",
+        "correct": true,
+        "feedback": "Correct. A longer time to the common ancestor allows more mutations to accumulate between the two chromosome copies, producing more heterozygosity."
+      },
+      {
+        "answer": "The individual whose two chromosome copies always coalesce most recently.",
+        "correct": false,
+        "feedback": "Not quite. More recent coalescence leaves less time for mutations to create differences between the two copies."
+      },
+      {
+        "answer": "Whichever individual is listed first in the VCF header.",
+        "correct": false,
+        "feedback": "Not quite. Column order does not determine biological heterozygosity."
+      },
+      {
+        "answer": "All three individuals must have exactly the same number because the window size is fixed.",
+        "correct": false,
+        "feedback": "Not quite. A fixed window size makes the encoding comparable, but demographic history can produce different heterozygosity patterns."
+      }
+    ]
+  },
+  {
+    "question": "What is the main signal PSMC uses from one diploid individual?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "How heterozygous and non-heterozygous windows are distributed along the genome.",
+        "correct": true,
+        "feedback": "Correct. PSMC uses changes in heterozygosity along the two chromosome copies to infer changes in their local time to the most recent common ancestor."
+      },
+      {
+        "answer": "The allele frequency of every variant across hundreds of individuals.",
+        "correct": false,
+        "feedback": "Not quite. This PSMC analysis uses one diploid individual rather than a population allele-frequency spectrum."
+      },
+      {
+        "answer": "Only the total number of chromosomes in the reference assembly.",
+        "correct": false,
+        "feedback": "Not quite. Genome length matters for information content, but the key signal is the spatial pattern of heterozygosity."
+      },
+      {
+        "answer": "A list of known historical census sizes supplied by the user.",
+        "correct": false,
+        "feedback": "Not quite. PSMC infers a coalescent effective population-size history from sequence data; it is not given census sizes."
+      }
+    ]
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "question": "For the pattern 4+5*3+4, how many free population-size parameters are estimated? Enter a single number.",
+    "type": "numeric",
+    "answers": [
+      {
+        "type": "value",
+        "value": 7,
+        "correct": true,
+        "feedback": "Correct. The 4 intervals share one parameter, the five groups of 3 intervals contribute five parameters, and the final 4 intervals share one parameter: 1 + 5 + 1 = 7."
+      },
+      {
+        "type": "value",
+        "value": 23,
+        "correct": false,
+        "feedback": "23 is the number of atomic time intervals: 4 + (5 x 3) + 4. Those intervals are grouped into 1 + 5 + 1 = 7 free parameters."
+      },
+      {
+        "type": "default",
+        "feedback": "Count parameter groups rather than atomic intervals: one parameter for the first 4 intervals, five for the five groups of 3, and one for the final 4 intervals."
+      }
+    ]
+  },
+  {
+    "question": "What does the commonly used pattern 4+25*2+4+6 specify?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "64 atomic time intervals grouped into 28 free population-size parameters.",
+        "correct": true,
+        "feedback": "Correct. The pattern contains 4 + 50 + 4 + 6 = 64 atomic intervals and 1 + 25 + 1 + 1 = 28 parameter groups."
+      },
+      {
+        "answer": "64 independent individuals grouped into 28 populations.",
+        "correct": false,
+        "feedback": "Not quite. The notation controls time intervals within one PSMC model, not sample or population counts."
+      },
+      {
+        "answer": "41 atomic time intervals, each with its own parameter.",
+        "correct": false,
+        "feedback": "Not quite. Multiplication in the pattern describes repeated groups, and adjacent intervals within each group share a parameter."
+      },
+      {
+        "answer": "A fixed mutation rate of 4.25 x 10^-6.",
+        "correct": false,
+        "feedback": "Not quite. Mutation rate is used when scaling the results; this expression specifies the time-interval pattern."
+      }
+    ]
+  },
+  {
+    "question": "Why are several of the most recent or oldest atomic time intervals often assigned the same parameter?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Those parts of the history contain limited information, so grouping intervals can give more stable estimates.",
+        "correct": true,
+        "feedback": "Correct. The temporal extremes are weakly resolved; estimating fewer parameters there reduces unstable fitting to sparse information."
+      },
+      {
+        "answer": "Effective population size is known to be identical in the recent and ancient past for every species.",
+        "correct": false,
+        "feedback": "Not quite. Grouping is a modeling choice driven by resolution, not a biological rule that population size was constant."
+      },
+      {
+        "answer": "PSMC ignores heterozygous windows in those intervals.",
+        "correct": false,
+        "feedback": "Not quite. The data still contribute to the model; grouping changes how many separate parameters are estimated."
+      },
+      {
+        "answer": "The first and last intervals correspond to reference-genome gaps.",
+        "correct": false,
+        "feedback": "Not quite. These are time intervals in the model, not physical gaps along the reference genome."
+      }
+    ]
+  },
+  {
+    "question": "Why is the finest possible time partition not automatically the best choice?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Too many free parameters for the available information can produce noisy, unstable, or overfit curves.",
+        "correct": true,
+        "feedback": "Correct. Finer bins increase nominal resolution but each parameter must still be supported by enough genomic and recombination information."
+      },
+      {
+        "answer": "Adding time intervals always deletes heterozygous sites from the input.",
+        "correct": false,
+        "feedback": "Not quite. The PSMCFA input is unchanged; only the way the model partitions time is changed."
+      },
+      {
+        "answer": "A finer pattern changes a diploid individual into a haploid sample.",
+        "correct": false,
+        "feedback": "Not quite. Ploidy and time partitioning are separate features of the analysis."
+      },
+      {
+        "answer": "Every finer pattern must produce exactly the same curve as a coarse pattern.",
+        "correct": false,
+        "feedback": "Not quite. Results can change with the pattern, which is why convergence, stability, and biological plausibility should be checked."
+      }
+    ]
+  }
+]

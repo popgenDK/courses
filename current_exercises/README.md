@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**30 of 56 exercises built.**
+**33 of 55 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -108,9 +108,9 @@ Exercises that build an EM algorithm from scratch.
 | 29 | [`local_ancestry_hapla_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_hapla_human.ipynb) | hapla cluster/admix/fatash on simulated data, then a real cattle dataset. | ✅ built | _to generate_ |
 | 30 | `f_stats_human.ipynb` | f2/f3/f4 statistics for testing population relationships, plus qpAdm, on ancient and modern humans from the AADR. | ⬜ planned | _to generate_ |
 | 31 | `gene_flow_dstat_animal.ipynb` | Gene flow and D-statistics (ABBA-BABA) from scratch on simulated data, then f4 on wildebeest. | ⬜ planned | _to generate_ |
-| 32 | `admixture_graphs_human.ipynb` | Fitting admixture graphs with qpGraph. | ⬜ planned | _to generate_ |
+| 32 | [`admixture_graphs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_graphs_human.ipynb) | qpgraph and treemix on precomputed F2 statistics for 33 world populations. | ✅ built | _to generate_ |
 | 33 | `chromopainter_finestructure_human.ipynb` | Chromosome painting and fineSTRUCTURE. | ⬜ planned | _to generate_ |
-| 34 | `dating_admixture_human.ipynb` | Dating admixture events. | ⬜ planned | _to generate_ |
+| 34 | [`dating_admixture_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/dating_admixture_human.ipynb) | Dating admixture with ALDER, MALDER, fastGLOBETROTTER and MOSAIC, then AdaptMix for selection. | ✅ built | _to generate_ |
 
 ### Demography and the coalescent — `demography/`
 
@@ -118,8 +118,9 @@ Exercises that build an EM algorithm from scratch.
 |---|---|---|---|---|
 | 35 | [`coalescence.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/coalescence.ipynb) | The coalescent: simulating and interpreting gene trees. | ✅ built | _to generate_ |
 | 36 | [`wright_fisher.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/wright_fisher.ipynb) | Wright-Fisher simulations of drift. | ✅ built | ⚠️ _to regenerate_ |
-| 38 | `sfs_animal.ipynb` | The SFS from real wildlife sequencing data. | ⬜ planned | _to generate_ |
-| 39 | `psmc_demography_animal.ipynb` | Demographic history with PSMC. | ⬜ planned | _to generate_ |
+| 38 | [`sfs_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/sfs_animal.ipynb) | The SFS from real wildlife sequencing data. | ✅ built | ⚠️ _to regenerate_ |
+| 39 | `psmc_demography_animal.ipynb` | PSMC on simulated data, then on real wildebeest samples. | ⬜ planned | _to generate_ |
+| 62 | `psmc_demography_human.ipynb` | PSMC on simulated data, then on two 1000 Genomes individuals, CEU and Luhya. | ⬜ planned | _to generate_ |
 
 ### Selection — `selection/`
 
@@ -134,7 +135,6 @@ Exercises that build an EM algorithm from scratch.
 |---|---|---|---|---|
 | 42 | `fst_animal.ipynb` | Fst between populations (small dataset). | ⬜ planned | _to generate_ |
 | 43 | `relatedness_animal.ipynb` | Relatedness and kinship estimation. | ⬜ planned | _to generate_ |
-| 44 | `relatedness_and_fst_animal.ipynb` | Relatedness and Fst together (the merged version of the two above). | ⬜ planned | _to generate_ |
 | 45 | `heterozygosity_roh_animal.ipynb` | Heterozygosity and runs of homozygosity (small dataset). | ⬜ planned | _to generate_ |
 
 ### GWAS and human complex traits — `gwas/`
@@ -152,12 +152,6 @@ Exercises that build an EM algorithm from scratch.
 | 54 | `prs_height_human.ipynb` | Polygenic risk scores for height. | ⬜ planned | _to generate_ |
 | 55 | `mendelian_randomization_human.ipynb` | Mendelian randomization. | ⬜ planned | _to generate_ |
 | 56 | `mendelian_randomization_proteomics_human.ipynb` | Mendelian randomization with proteomics data. | ⬜ planned | _to generate_ |
-
-### Transcriptomics — `transcriptomics/`
-
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 57 | `scrna_seurat_human.ipynb` | Single-cell RNA-seq analysis with Seurat. | ⬜ planned | _to generate_ |
 
 
 ## Where each exercise comes from
@@ -401,9 +395,12 @@ Replaces 1 older copy:
 
 **39. `psmc_demography_animal.ipynb`**  
 From: [`kenya2026/exercises/Day2/psmc_kenya2026.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day2/psmc_kenya2026.ipynb) (2026-08-19)  
-Replaces 5 older copies:
+Replaces 1 older copy:
   - [`kenya2026/exercises/post_course/day2_afternoon_psmc.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day2_afternoon_psmc.ipynb) (2026-08-25)
-  - [`summer2025/exercises/Day5_demography.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_demography.ipynb) (2025-08-07)
+
+**62. `psmc_demography_human.ipynb`**  
+From: [`summer2025/exercises/Day5_demography.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_demography.ipynb) (2025-08-07)  
+Replaces 3 older copies:
   - [`summer2024/exercises/summer2024-PSMC_tutorial_2024.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/summer2024-PSMC_tutorial_2024.ipynb) (2024-08-23)
   - [`bgi23/PSMC_tutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/PSMC_tutorial.ipynb) (2023-11-07)
   - [`summer2023/DemographyInference/PSMC_tutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/DemographyInference/PSMC_tutorial.ipynb) (2023-08-10)
@@ -435,10 +432,6 @@ Replaces 2 older copies:
 From: [`kenya2026/exercises/Day5/Related.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day5/Related.ipynb) (2026-08-23)  
 Replaces 1 older copy:
   - [`kenya2026/exercises/post_course/day5_morning_relatedness.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day5_morning_relatedness.ipynb) (2026-08-25)
-
-**44. `relatedness_and_fst_animal.ipynb`**  
-From: [`kenya2026/exercises/Day4/Related&Fst.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/Related%26Fst.ipynb) (2026-08-22)  
-Replaces: nothing — this is the only copy
 
 **45. `heterozygosity_roh_animal.ipynb`**  
 From: [`kenya2026/exercises/post_course/day5_morning_heterozygosity_roh.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day5_morning_heterozygosity_roh.ipynb) (2026-08-25)  
@@ -501,16 +494,9 @@ From: [`chinaCourse2025/Day6_Afternoon_Proteomics_MR.ipynb`](https://github.com/
 Replaces: nothing — this is the only copy
 
 
-### `transcriptomics/`
-
-**57. `scrna_seurat_human.ipynb`**  
-From: [`bgi23/scRNA_Seurat_Yano.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/scRNA_Seurat_Yano.ipynb) (2023-11-08)  
-Replaces: nothing — this is the only copy
-
-
 ## Status
 
-**30 of 56 exercises built.** Numbering runs to 57 because two pairs are each one
+**33 of 55 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 

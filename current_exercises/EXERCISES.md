@@ -333,19 +333,31 @@ the other exercises do not shift.
   instructor home directory (77 G). Only the one 1.5 M subfolder is needed, so it and
   the two simulated-data files were copied to `data/geneflow/` (3.3 M total).
 
-### 32. [ ] `admixture_graphs_human.ipynb`
+### 32. [x] `admixture_graphs_human.ipynb`
 - **From:** `summer2023/DfFstats/popgen23.Admixture_Graphs_Tutorial.ipynb` (2023-08-10)
 - **Supersedes:** none — only copy
+- **Note:** `qpgraph` (fit a graph you specify) and `treemix` (estimate one), on
+  precomputed $F_2$ statistics for 33 world populations. The exercise keeps its worked
+  solutions at the end, clearly marked.
+- **Data:** `data/current_data/admixture_graphs/` — 131 M, the `fdata`, `software` and
+  `treemix` parts of `/course/popgen23/ben/fstats_tutorial`. The 1.9 G raw genotype
+  directory is not needed: the $F_2$ statistics are precomputed.
 
 ### 33. [ ] `chromopainter_finestructure_human.ipynb`
 - **From:** `summer2024/exercises/ChromoPainterFineSTRUCTUREPractical.ipynb` (2024-08-21)
 - **Supersedes:** none — only copy
 - **Companion:** `CopenhagenPopgenWorkshop2024_ChromoPainterFineSTRUCTUREPracticalSOLN.pdf`
 
-### 34. [ ] `dating_admixture_human.ipynb`
+### 34. [x] `dating_admixture_human.ipynb`
 - **From:** `summer2024/exercises/DatingAdmixture.ipynb` (2024-08-21)
 - **Supersedes:** none — only copy
-- **Companion:** `CopenhagenPopgenWorkshop2024_DatingAdmixturePracticalSOLN.pdf`
+- **Companion:** `summer2024/exercises/CopenhagenPopgenWorkshop2024_DatingAdmixturePracticalSOLN.pdf`
+- **Note:** four tools on the same simulated event — ALDER, MALDER, fastGLOBETROTTER and
+  MOSAIC to date it, then AdaptMix to test for selection on the admixed ancestry. The
+  exercise **compiles the software from source**, so several cells take minutes.
+- **Data:** `data/current_data/dating_admixture/` — a single 41 M tarball holding the data
+  and the tool sources. Unpacked by the setup cell.
+- **Continues from** #33 ChromoPainter/fineSTRUCTURE, which produces the input for part 2.
 
 ---
 
@@ -363,18 +375,34 @@ the other exercises do not shift.
 - **Helper:** both #35 and #36 `source()` `simulateWF.R`, now at `data/scripts/`
   per R14. It was only inside the 1.8 G `popgen25_software/` tree before.
 
-### 38. [ ] `sfs_animal.ipynb`
+### 38. [x] `sfs_animal.ipynb`
 - **From:** `kenya2026/exercises/Day2/SFS_WoA.ipynb` (2026-08-15)
 - **Supersedes:** `kenya2026/exercises/post_course/day2_morning_sfs.ipynb` (2026-08-25)
+- **Data:** the 5 VCFs it reads were copied from `kenya2026_harvi/sfs/inputdata/` to a
+  cleaned `data/sfs/` folder (291 M, all `cmp`-identical).
 
 ### 39. [ ] `psmc_demography_animal.ipynb`
 - **From:** `kenya2026/exercises/Day2/psmc_kenya2026.ipynb` (2026-08-19)
+- **Supersedes:** `kenya2026/exercises/post_course/day2_afternoon_psmc.ipynb` (2026-08-25)
+- **Note:** PSMC on simulated data, then on **real wildebeest samples**. Same structure as
+  #62; the two differ in which real individuals are analysed.
+
+### 62. [ ] `psmc_demography_human.ipynb`
+- **From:** `summer2025/exercises/Day5_demography.ipynb` (2025-08-07)
 - **Supersedes:**
-  - `kenya2026/exercises/post_course/day2_afternoon_psmc.ipynb` (2026-08-25)
-  - `summer2025/exercises/Day5_demography.ipynb` (2025-08-07)
   - `summer2024/exercises/summer2024-PSMC_tutorial_2024.ipynb` (2024-08-23)
   - `bgi23/PSMC_tutorial.ipynb` (2023-11-07)
   - `summer2023/DemographyInference/PSMC_tutorial.ipynb` (2023-08-10)
+- **Note:** PSMC on simulated data, then on **two 1000 Genomes individuals** — NA12718, a
+  CEU female of northern European ancestry, and NA19471, a Luhya female from Kenya —
+  comparing how their inferred effective population sizes differ. Ends with a wildebeest
+  bonus, which #39 covers properly.
+- **There are two PSMC exercises, human and animal.** The plan had only the animal one,
+  with `summer2025/Day5_demography.ipynb` listed as superseded by it. That was wrong: the
+  two share 58% of their cells because they are the **same exercise on different species**,
+  not because one is an older copy. The older notebooks really are superseded — summer2024
+  is 78% similar to summer2025, summer2023 85% similar to summer2024, and bgi23 and
+  summer2023 are human-only ancestors.
 
 ---
 
@@ -407,9 +435,10 @@ the other exercises do not shift.
 - **Supersedes:** `kenya2026/exercises/post_course/day5_morning_relatedness.ipynb` (2026-08-25)
 - **Paired with:** #44, the merged Related&Fst form
 
-### 44. [ ] `relatedness_and_fst_animal.ipynb` — **merged form of #42 + #43**
-- **From:** `kenya2026/exercises/Day4/Related&Fst.ipynb` (2026-08-22)
-- **Supersedes:** none — kept deliberately alongside the split versions
+**Retired slot: #44 `relatedness_and_fst_animal`.** Removed by request, 2026-09-16.
+`kenya2026/exercises/Day4/Related&Fst.ipynb` (2026-08-22) combined the two analyses in one
+notebook; they are kept separately as #42 Fst and #43 relatedness, which is how the newer
+kenya2026 notebooks split them. The source stays untouched in `kenya2026/`.
 
 ### 45. [ ] `heterozygosity_roh_animal.ipynb` — **post-course small-dataset version**
 - **From:** `kenya2026/exercises/post_course/day5_morning_heterozygosity_roh.ipynb` (2026-08-25)
@@ -470,15 +499,6 @@ the other exercises do not shift.
 ### 56. [ ] `mendelian_randomization_proteomics_human.ipynb`
 - **From:** `chinaCourse2025/Day6_Afternoon_Proteomics_MR.ipynb` (2025-07-26)
 - **Supersedes:** none — only copy
-
----
-
-# transcriptomics/
-
-### 57. [ ] `scrna_seurat_human.ipynb`
-- **From:** `bgi23/scRNA_Seurat_Yano.ipynb` (2023-11-08)
-- **Supersedes:** none — only copy
-- **Companion:** `bgi23/scRNA_check_files.ipynb` (2023-11-07), `bgi23/glioblastoma.html`
 
 ---
 
@@ -592,6 +612,11 @@ data/geneflow/                                                         3.3 M
   hum_nea_siml.vcf.gz      simulated CHIMP/AFR/EUR/NEA data, 81,486 sites
   hum_nea_siml.tsv         sample-to-population table
   wildebeest_fstats_wildebeestref/   precomputed f2 for the wildebeest f4
+
+data/sfs/                                                              291 M
+  simld_{a,b,c}_for_sfs.vcf.gz   3 simulated scenarios, unfolded sfs
+  blackwildebeest_chr1.vcf.gz             folded sfs, real data
+  bluewildebeest_whitebeard_chr1.vcf.gz   folded sfs, real data
 ```
 
 `chr21.fa.gz` was missing its `.fai`/`.gzi` index in the original course folder,
@@ -645,3 +670,10 @@ which is not in the data-copy list above, so removing it orphans nothing.
 
 - `data/` will need cleaning so its contents line up with the exercises. Deferred
   for now; the priority is settling which exercises are in.
+
+# Removed from scope
+
+**#57 `scrna_seurat_human`** (from `bgi23/scRNA_Seurat_Yano.ipynb`, 2023-11-08) —
+**removed by request, 2026-09-16.** Single-cell RNA-seq is not population genetics and
+does not belong in this set. The `transcriptomics/` theme is gone with it; the source
+notebook stays untouched in `bgi23/`.
