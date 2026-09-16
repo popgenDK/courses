@@ -21,7 +21,7 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | — | `ngs/quiz/*.json` (10 files) | new + `kenya2024/.../quiz{1..4}.json` | 2026-09-16 | new quiz bank | kenya2024 quiz1-4 |
 | 14 | `ngs/ngs_inference_human.ipynb` | `summer2025/exercises/Day2_NGS_Inference.ipynb` | 2025-08-04 | yes — split, quizzes, questions, bug fixes, paths | `summer2024/exercises/NGS_inference.ipynb`, `summer2023/NGSinference/` |
 | 15 | `genotype_calling_imputation/genotype_calling_and_imputation_human.ipynb` | `advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb` | 2026-09-09 | yes — paths, work folder, quizzes moved in | 2 older copies (see EXERCISES.md) |
-| — | `genotype_calling_imputation/quiz/*.json` (3 files) | `/course/data/popgen25_imputation/quiz/call_genotypes_quiz{1,2,3}.json` | 2025-08-05 | renamed only | none |
+| — | `genotype_calling_imputation/quiz/*.json` (3 files) | `/course/data/current_data/popgen25_imputation/quiz/call_genotypes_quiz{1,2,3}.json` | 2025-08-05 | renamed only | none |
 | 16 | `genotype_calling_imputation/imputation_human.ipynb` | `advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb` (imputation half) + `chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb` (3 sections) | 2026-09-09 | yes — new composition, calling sections dropped | 5 older copies (see EXERCISES.md) |
 | 19 | `em_algorithms/pca_em_human.ipynb` | `advBinf/exercises/advBinf_PCA_EM.ipynb` | 2026-09-16 | yes — 3 quizzes, 14 question blocks | none |
 | 24 | `em_algorithms/admixture_em_human.ipynb` | `advBinf/exercises/advBinf_admixture_EM.ipynb` | 2026-09-14 | yes — 2 quizzes | none |
@@ -468,7 +468,7 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   Bash, R and Python cells), committed without outputs. The work is all R4/R8/R11:
 
   - **R4** — `COURSE_PATH=/course/popgen25` became a single
-    `DATA_PATH=/course/data/imputation`, with `SOFTWARE_PATH=$DATA_PATH/software`. The
+    `DATA_PATH=/course/data/current_data/imputation`, with `SOFTWARE_PATH=$DATA_PATH/software`. The
     notebook already funnelled every path through one cell that writes an `env.sh`, which
     later cells re-`source`, so this is a two-line change and no other cell contains a
     full path. (It went via the bulk folders `popgen25_imputation` +
@@ -583,7 +583,7 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
     the end of the NIPT bonus
 
   Paths, work folder (`~/imputation_human`) and quiz URLs follow #15: a single
-  `DATA_PATH=/course/data/imputation` covering reads, VCFs, reference, maps and software.
+  `DATA_PATH=/course/data/current_data/imputation` covering reads, VCFs, reference, maps and software.
 
 - **Sample count fixed in #15 and #16.** Both said the study samples were **33** in four
   places while also saying **30** in six others. The bamlist has 30
@@ -738,9 +738,9 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   exercises already use. 291 G, moved rather than copied since it is the same
   filesystem, so it was instant.
 
-  Left in place at `/course/data/`: `1000G/` (predates this work),
-  `popgen25_imputation/` and `imputation/` — **the imputation data, held back by
-  request** while those notebooks are being written.
+  Left in place at `/course/data/`: `1000G/` (predates this work). The imputation
+  data was held back at the time and moved in once those notebooks were finished
+  — see below.
 
   Every path in every built exercise was repointed and then checked to resolve:
   9 files, 15 paths. The two imputation notebooks were correctly left untouched,
@@ -778,3 +778,13 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   reference, which is explained rather than left as a surprise.
 
   Your two imputation notebooks already met R19 and were left untouched.
+
+- **Imputation data moved in too (2026-09-16), now that those notebooks are
+  done.** `data/current_data/imputation/` (`bams/ resources/ software/ vcfs/`,
+  3.4 G) and the older bulk copy `popgen25_imputation/` (3.3 G).
+
+  Both imputation notebooks had already been consolidated onto the single clean
+  `imputation/` folder, so repointing them was one path each. Verified afterwards:
+  every `/course/data/...` path in every built exercise resolves.
+
+  `/course/data/` now holds just `current_data/` and `1000G/`.

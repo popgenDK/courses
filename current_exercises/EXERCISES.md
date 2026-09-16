@@ -479,12 +479,12 @@ data/
     NGSintro/         animal/ human/ software/
     NGSinference/
     PCA/              animal/ human_called/ human_lowdepth/
+    imputation/       bams/ resources/ software/ vcfs/
     geneticMap/       reference data for the locus zoom plot
     scripts/          helper R libraries that exercises source()
     BSA/
     <course folders>  raw material for the exercises not yet built
   1000G/            predates this work
-  popgen25_imputation/, imputation/   left in place for now
 ```
 
 # Data consolidation (source material)
