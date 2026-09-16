@@ -1,0 +1,106 @@
+[
+  {
+    "question": "PBS is computed for three populations. What does the order you give them change?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Which population's branch is measured \u2014 the first one is the target, the other two are comparisons",
+        "correct": true,
+        "feedback": "Correct, so reordering asks a different question of the same data."
+      },
+      {
+        "answer": "Nothing, PBS is symmetric",
+        "correct": false,
+        "feedback": "It is not symmetric."
+      },
+      {
+        "answer": "Only the colours in the plot",
+        "correct": false,
+        "feedback": "It changes the statistic."
+      },
+      {
+        "answer": "The window size",
+        "correct": false,
+        "feedback": "That is set separately."
+      }
+    ]
+  },
+  {
+    "question": "A genome-wide scan in 50 kb windows produces tens of thousands of values. Why is the most extreme window not automatically a selected locus?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "With that many windows, extreme values arise by chance; the scan ranks candidates, it does not test them",
+        "correct": true,
+        "feedback": "Correct \u2014 this is the central caution of any outlier scan."
+      },
+      {
+        "answer": "Because PBS is biased upwards",
+        "correct": false,
+        "feedback": "Not the reason."
+      },
+      {
+        "answer": "Because 50 kb is too small",
+        "correct": false,
+        "feedback": "Window size matters, but this is about multiple testing."
+      },
+      {
+        "answer": "It is \u2014 the top window is always real",
+        "correct": false,
+        "feedback": "It is not."
+      }
+    ]
+  },
+  {
+    "question": "A real sweep should look like what in the zoomed plot?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A block of neighbouring windows raised together, because linkage carries the signal across the region",
+        "correct": true,
+        "feedback": "Correct \u2014 an isolated single window is more often an artefact."
+      },
+      {
+        "answer": "One isolated window far above the rest",
+        "correct": false,
+        "feedback": "That pattern is suspicious."
+      },
+      {
+        "answer": "A uniform rise across the chromosome",
+        "correct": false,
+        "feedback": "That suggests something systematic, not a sweep."
+      },
+      {
+        "answer": "Nothing visible until you zoom to base-pair resolution",
+        "correct": false,
+        "feedback": "Sweeps span tens of kb."
+      }
+    ]
+  },
+  {
+    "question": "The lactase case is checked deliberately. What makes it a good test of the method?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It is a known, strong, recent European sweep, so a scan testing the European branch should recover it \u2014 a method that misses it is suspect",
+        "correct": true,
+        "feedback": "Correct: a positive control."
+      },
+      {
+        "answer": "It is the only gene under selection in humans",
+        "correct": false,
+        "feedback": "Far from it."
+      },
+      {
+        "answer": "It has no linked variation",
+        "correct": false,
+        "feedback": "It has a long haplotype, which is why it is detectable."
+      },
+      {
+        "answer": "It is selected in all four populations equally",
+        "correct": false,
+        "feedback": "Then PBS would not single out a branch."
+      }
+    ]
+  }
+]

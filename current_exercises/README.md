@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**44 of 57 exercises built.**
+**46 of 59 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -129,6 +129,7 @@ See also [`pca/pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 63 | [`sfs_fst_pbs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/sfs_fst_pbs_human.ipynb) | SFS, Fst and PBS on human data with ANGSD. **Human**: CEU and YRI. **Low depth**: genotype likelihoods (ANGSD). | ✅ built | _to generate_ |
+| 65 | [`selection_pbs_scan_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_pbs_scan_human.ipynb) | Genome-wide PBS scan: Manhattan plot, zoom into peaks, find the gene, check the lactase region. **Human**: NAT, CHB, CEU, YRI. **Called genotypes**, PBS precomputed in 50 kb windows. | ✅ built | ⚠️ _to regenerate_ |
 | 40 | [`selection_scans_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_scans_animal.ipynb) | Fst and PBS selection scan on wildlife. **Wildebeest**: 24 individuals, blue and black. **Called genotypes** (VCF). | ✅ built | ⚠️ _to regenerate_ |
 | 41 | [`selection_maize.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_maize.ipynb) | Tajima's D and PBS for domestication and highland adaptation. **Maize** and its wild relative parviglumis, 50 samples. **Low depth**: genotype likelihoods (ANGSD/SAF). | ✅ built | ⚠️ _to regenerate_ |
 
@@ -137,6 +138,7 @@ See also [`pca/pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 42 | [`fst_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/fst_animal.ipynb) | Pairwise Fst from called genotypes with plink2, then from genotype likelihoods with SAF. **Blue and black wildebeest** (95 individuals, 9 groups), then **Greenland reindeer** (3 populations). **Both**: plink on called genotypes, then SAF on genotype likelihoods. | ✅ built | _to generate_ |
+| 64 | [`relatedness_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_human.ipynb) | Why relatedness matters before a GWAS: relatives break the independence assumption and inflate the test statistics. Pairwise IBD with plink, then removing relatives. **Human**: the GWAS case/control cohort. **Called genotypes**. | ✅ built | _to generate_ |
 | 43 | [`relatedness_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_animal.ipynb) | A full relatedness pipeline: LD pruning, KING-robust kinship in plink2, a 2D SFS with ANGSD, then relateAdmix for admixture-aware relatedness. **Reindeer**. **Both**: called genotypes for KING, genotype likelihoods for the SFS. | ✅ built | _to generate_ |
 | 64 | [`relatedness_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_human.ipynb) | Why relatedness matters before a GWAS: relatives break the independence assumption and inflate the test statistics. Pairwise IBD with plink, then removing relatives. **Human**: the GWAS case/control cohort. **Called genotypes**. | ✅ built | _to generate_ |
 | 45 | `heterozygosity_roh_animal.ipynb` | Heterozygosity and runs of homozygosity. **Blue wildebeest**. **Called genotypes**. | ⬜ planned | _to generate_ |
@@ -416,7 +418,11 @@ Replaces 3 older copies:
 From: written for this set  
 Replaces 2 older copies:
   - [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) (2024-08-22) — human, frequency and haplotype methods
-  - [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 0-37 (2026-08-22) — the human half of that notebook, 49% similar to summer2024
+  - [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 0-24 (2026-08-22) — the frequency-statistics half of that notebook, 49% similar to summer2024. Cells 25-37, the genome-wide PBS scan, are **not** covered by this exercise — see #65
+
+**65. `selection_pbs_scan_human.ipynb`**  
+From: [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 25-37 (2026-08-22), "Exercise II: Whole-genome PBS with 1000 Genomes"  
+Replaces: nothing — this is the only copy
 
 **40. `selection_scans_animal.ipynb`**  
 From: [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 38-50 (2026-08-22)  
@@ -435,6 +441,10 @@ From: [`kenya2026/exercises/post_course/day4_morning_fst.ipynb`](https://github.
 Replaces 2 older copies:
   - [`kenya2026/exercises/Day4/Fst_Kenya2026.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/Fst_Kenya2026.ipynb) (2026-08-23)
   - [`kenya2024/exercises/day3_PopulationStructure/Day3_Fst_RH.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_Fst_RH.ipynb) (2024-08-09)
+
+**64. `relatedness_human.ipynb`**  
+From: written new (2026-09-16), by request, using the data and the `plink --genome` analysis from #46 `gwas_intro_human.ipynb`.  
+Replaces: nothing — this is the only copy
 
 **43. `relatedness_animal.ipynb`**  
 From: [`kenya2026/exercises/Day5/Related.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day5/Related.ipynb) (2026-08-23)  
@@ -508,7 +518,7 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**44 of 57 exercises built.** Numbering runs to 57 because two pairs are each one
+**46 of 59 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 

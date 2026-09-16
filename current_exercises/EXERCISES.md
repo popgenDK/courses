@@ -427,9 +427,22 @@ the other exercises do not shift.
 - **Supersedes:**
   - `summer2024/exercises/SelectionScans.ipynb` (2024-08-22) — human, frequency and
     haplotype methods
-  - `kenya2026/exercises/Day4/SelectionScans_22nd.ipynb` cells 0-37 (2026-08-22) — the
-    human half of that notebook, 49% similar to summer2024
+  - `kenya2026/exercises/Day4/SelectionScans_22nd.ipynb` cells 0-24 (2026-08-22) — the
+    frequency-statistics half of that notebook, 49% similar to summer2024. Cells 25-37,
+    the genome-wide PBS scan, are **not** covered by this exercise — see #65
 - **Note:** SFS, Fst and PBS on human data with ANGSD. **Low depth**, genotype likelihoods.
+
+### 65. [x] `selection_pbs_scan_human.ipynb`
+- **From:** `kenya2026/exercises/Day4/SelectionScans_22nd.ipynb` cells 25-37 (2026-08-22),
+  "Exercise II: Whole-genome PBS with 1000 Genomes"
+- **Supersedes:** none — only copy
+- **Note:** genome-wide PBS on precomputed 50 kb windows for NAT, CHB, CEU and YRI:
+  Manhattan plot, zoom into peaks, identify the gene, and check the lactase region as a
+  positive control.
+- **Correction:** #63 was originally recorded as superseding *all* of cells 0-37. It does
+  replace the frequency-statistics half, but **not** this genome-wide scan, which nothing
+  else covers. Split out as its own exercise.
+- **Data:** `data/current_data/selection/pbs_scan/` (7.3 G).
 
 ### 40. [x] `selection_scans_animal.ipynb`
 - **From:** `kenya2026/exercises/Day4/SelectionScans_22nd.ipynb` cells 38-50 (2026-08-22)
@@ -470,6 +483,21 @@ superseding summer2024 (human), which share **0%** of their cells.
 - **Data:** `data/current_data/fst/` — 8.0 G, of which 6.8 G is the reindeer SAF files.
   Replaced the post-course download machinery (`wget` of a zip into
   `$KENYA2026_WORK_DIR`) with a standard setup cell.
+
+### 64. [x] `relatedness_human.ipynb` — **new, short exercise**
+- **From:** written new (2026-09-16), by request, using the data and the `plink --genome`
+  analysis from #46 `gwas_intro_human.ipynb`.
+- **Supersedes:** none — new exercise, the human counterpart of #43.
+- **Note:** deliberately short. IBD sharing with `plink --genome`, a Z1-vs-Z0 plot and a
+  PI_HAT histogram in **base R** (no `plotPlink`), then the missingness problem the data
+  turns out to have. States up front that this estimator assumes one homogeneous
+  population, which holds for this cohort.
+- **Data:** `data/gwas_human/` (58 M) — `gwa.{bed,bim,fam}` + `pheno3.txt`, extracted from
+  `novo23_gwas/GWASex.tar.gz`. The same folder will serve #46-#48.
+- **What the data shows:** no close relatives at all (largest PI_HAT 0.148, 7 of 63,190
+  pairs above 0.08), but 54 pairs come back `nan` — all involving the 15 individuals
+  missing 49-55% of their genotypes. `--mind 0.2` removes exactly those 15 and the NaNs
+  go to zero.
 
 ### 43. [x] `relatedness_animal.ipynb`
 - **From:** `kenya2026/exercises/Day5/Related.ipynb` (2026-08-23)
@@ -693,6 +721,10 @@ data/relatedness/                                                      1.5 G
   Reindeer_pruned.2.{P,Q}  precomputed ADMIXTURE K=2, in case the run is too slow
   population.tsv           population labels for the PCA plot
   relateAdmix              the relateAdmix binary
+
+data/gwas_human/                              shared by #46-#48 and #64      58 M
+  gwa.{bed,bim,fam}   356 individuals, 499,264 SNPs, 200 controls / 156 cases
+  pheno3.txt          an extra phenotype used by the GWAS exercises
 ```
 
 `chr21.fa.gz` was missing its `.fai`/`.gzi` index in the original course folder,
