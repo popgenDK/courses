@@ -22,7 +22,8 @@
 ## PCA Wednesday morning 
 login to the notebook
   - [PCA](exercises/advBinf_PCA.ipynb) Download and upload to notebook ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA.html))
-    - [PCA bonus](exercises/advBinf_PCA_bonus.ipynb) Download and upload to notebook. Exercise if you have finished the main one ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA_bonus.html))
+    - [Bonus 1 - PCA bonus](exercises/advBinf_PCA_bonus.ipynb) Download and upload to notebook. Exercise if you have finished the main one ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA_bonus.html))
+    - [Bonus 2 - the PCA model notebook](exercises/advBinf_PCA_EM.ipynb) Download and upload to notebook. The EM algorithms behind EMU and PCAngsd: implement them yourself and see why mean imputation and genotype calling fail ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA_EM.html))
 
 ## SFS Wednesday afternoon
 - : login to the notebook
