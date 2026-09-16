@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**17 of 56 exercises built.**
+**22 of 56 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -90,11 +90,11 @@ Exercises that build an EM algorithm from scratch.
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 58 | `pca_mds_and_svd.ipynb` | MDS and PCA worked by hand: distances, cmdscale, normalising, the SVD, the covariance matrix and variance explained. No data needed. | ⬜ planned | _to generate_ |
-| 18 | `pca_low_depth_human.ipynb` | PCAngsd on genotype likelihoods from the 1000 Genomes populations. | ⬜ planned | _to generate_ |
-| 59 | `pca_low_depth_selection_human.ipynb` | PC-based selection with PCAngsd on genotype likelihoods. | ⬜ planned | _to generate_ |
-| 22 | `pca_called_genotypes_human.ipynb` | PCAone on LD-pruned called genotypes, plotted against the admixture proportions. | ⬜ planned | _to generate_ |
-| 20 | `pca_called_genotypes_animal.ipynb` | PCAone on called wildebeest genotypes, LD pruning adjusted for structure, and an IBS tree. | ⬜ planned | _to generate_ |
+| 58 | [`pca_mds_and_svd.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_mds_and_svd.ipynb) | MDS and PCA worked by hand: distances, cmdscale, normalising, the SVD, the covariance matrix and variance explained. No data needed. | ✅ built | _to generate_ |
+| 18 | [`pca_low_depth_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_human.ipynb) | PCAngsd on genotype likelihoods from the 1000 Genomes populations. | ✅ built | ⚠️ _to regenerate_ |
+| 59 | [`pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_selection_human.ipynb) | PC-based selection with PCAngsd on genotype likelihoods. | ✅ built | ⚠️ _to regenerate_ |
+| 22 | [`pca_called_genotypes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_human.ipynb) | PCAone on LD-pruned called genotypes, plotted against the admixture proportions. | ✅ built | ⚠️ _to regenerate_ |
+| 20 | [`pca_called_genotypes_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_animal.ipynb) | PCAone on called wildebeest genotypes, LD pruning adjusted for structure, and an IBS tree. | ✅ built | ⚠️ _to regenerate_ |
 
 ### Admixture, local ancestry and gene flow — `admixture/`
 
@@ -513,7 +513,7 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**17 of 56 exercises built.** Numbering runs to 57 because two pairs are each one
+**22 of 56 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 

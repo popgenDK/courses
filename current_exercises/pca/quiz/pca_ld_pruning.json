@@ -1,0 +1,106 @@
+[
+  {
+    "question": "Why can linkage disequilibrium distort a PCA?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A block of tightly linked SNPs all carry the same signal, so one genomic region can dominate a PC as if it were population structure",
+        "correct": true,
+        "feedback": "Correct \u2014 the classic example is a large inversion."
+      },
+      {
+        "answer": "LD makes the genotypes missing",
+        "correct": false,
+        "feedback": "It does not."
+      },
+      {
+        "answer": "LD lowers the sequencing depth",
+        "correct": false,
+        "feedback": "Unrelated."
+      },
+      {
+        "answer": "It cannot \u2014 PCA is unaffected by LD",
+        "correct": false,
+        "feedback": "It very much can."
+      }
+    ]
+  },
+  {
+    "question": "PCAone's `--ld` computes LD after adjusting for population structure. Why does that matter?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "In a structured sample, two unlinked SNPs can look correlated simply because both differ between populations; adjusting removes that and leaves real linkage",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "It makes the calculation faster",
+        "correct": false,
+        "feedback": "Speed is not the reason."
+      },
+      {
+        "answer": "It removes rare variants",
+        "correct": false,
+        "feedback": "That is a frequency filter."
+      },
+      {
+        "answer": "It corrects for sequencing error",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "What do you lose by pruning for LD before a PCA?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Data \u2014 fewer SNPs means a noisier estimate, so pruning too hard costs resolution",
+        "correct": true,
+        "feedback": "Correct: it is a trade-off, not a free improvement."
+      },
+      {
+        "answer": "Nothing at all",
+        "correct": false,
+        "feedback": "You always lose SNPs."
+      },
+      {
+        "answer": "The ability to detect admixture",
+        "correct": false,
+        "feedback": "Admixture is still visible."
+      },
+      {
+        "answer": "The population labels",
+        "correct": false,
+        "feedback": "Those are unaffected."
+      }
+    ]
+  },
+  {
+    "question": "After pruning, the first singular values change. What are singular values proportional to?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The variance each PC captures, so they say how much structure each axis explains",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The number of SNPs",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "The number of individuals",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "The sequencing depth",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  }
+]

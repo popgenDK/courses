@@ -1,0 +1,80 @@
+[
+  {
+    "question": "What does the PCA tell you that the ADMIXTURE bar plot does not?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "How far apart the groups are, and along how many independent axes they separate",
+        "correct": true,
+        "feedback": "Correct \u2014 ADMIXTURE gives proportions, the PCA gives distances and dimensionality."
+      },
+      {
+        "answer": "Which individuals are admixed",
+        "correct": false,
+        "feedback": "The bar plot shows that directly."
+      },
+      {
+        "answer": "The number of ancestral populations",
+        "correct": false,
+        "feedback": "Neither tells you that on its own."
+      },
+      {
+        "answer": "The sequencing depth",
+        "correct": false,
+        "feedback": "Neither shows that."
+      }
+    ]
+  },
+  {
+    "question": "An individual sitting between two clusters on PC1 and PC2 might be admixed. What else could put it there?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Being a member of a population that was not sampled, and so has no cluster of its own",
+        "correct": true,
+        "feedback": "Correct \u2014 an intermediate position is not proof of admixture."
+      },
+      {
+        "answer": "Nothing else \u2014 it must be admixed",
+        "correct": false,
+        "feedback": "Several things produce an intermediate position."
+      },
+      {
+        "answer": "Having a higher sequencing depth",
+        "correct": false,
+        "feedback": "Depth does not place an individual between clusters here; these are called genotypes."
+      },
+      {
+        "answer": "A mistake in plink",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "The first PCs separate the populations. What do the later PCs usually pick up in a dataset like this?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Finer or spurious structure: LD blocks, relatedness within a group, or noise",
+        "correct": true,
+        "feedback": "Correct \u2014 which is what the LD-pruning comparison explores."
+      },
+      {
+        "answer": "The oldest population splits",
+        "correct": false,
+        "feedback": "Those dominate the first PCs."
+      },
+      {
+        "answer": "The reference allele frequency",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "Nothing \u2014 later PCs are always empty",
+        "correct": false,
+        "feedback": "They are not empty, they are just harder to interpret."
+      }
+    ]
+  }
+]

@@ -644,3 +644,39 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 
   **Lesson for the remaining folders:** exact-match cell comparison understates
   duplication badly. Use a similarity ratio.
+
+- **The five PCA exercises built (2026-09-16).**
+
+  | # | File | cells | quizzes | questions after code |
+  |---|---|---|---|---|
+  | 58 | `pca_mds_and_svd.ipynb` | 30 | 1 | 9/11 |
+  | 18 | `pca_low_depth_human.ipynb` | 41 | 2 | 9/12 |
+  | 59 | `pca_low_depth_selection_human.ipynb` | 41 | 2 | 10/11 |
+  | 22 | `pca_called_genotypes_human.ipynb` | 30 | 4 | 6/8 |
+  | 20 | `pca_called_genotypes_animal.ipynb` | 44 | 2 | 11/13 |
+
+  **`advBinf_PCA.ipynb` split three ways.** Cells 2-25 became #58, 26-52 became
+  #18 and 53-77 became #59. That last section is a PC-based selection scan, and
+  comparing it with the China notebook's selection half showed 20 of 24 cells
+  matching at 0.7 similarity or better — the same exercise again. #59 is
+  therefore built from advBinf (the newer of the two) and supersedes the China
+  half, which leaves the China notebook contributing only #22.
+
+  **Data:** `data/PCA/{human_lowdepth,human_called,animal}` (461 M) from
+  `/course/popgen25/pca` plus the China plink files. `/course/popgen25/pca` was
+  a **third directory the original survey missed**, for the same reason as
+  `NGSInference`: the notebooks write `/course/popgen25` with one path segment.
+
+  **Fixed while building:** four quizzes inherited from the course folders had
+  `indiviudals`, `indvidual` and `Who many` in their questions; `informaiton`,
+  `prevous`, `keept`, `enviroment`, `Lest zoom`, "summaries the fist column" and
+  "We can not perform the PCA again" (which should read "can now") in the
+  notebooks. One quiz cell in #18 did `os.chdir` into the shared data folder
+  before loading its quiz, which both broke R16 and would have left the notebook
+  pointing at the wrong directory. The locus-zoom call in #59 hardcoded
+  `~/data_folder/geneticMap/hg38`; it now reads a `GENETIC_MAP` variable set in
+  the setup cell and passed to R through a dotfile, pointing at
+  `data/geneticMap/hg38`.
+
+  New quizzes: `pca_selection_qq`, `pca_selection_hit`, `pca_animal_structure`,
+  `pca_ld_pruning`.

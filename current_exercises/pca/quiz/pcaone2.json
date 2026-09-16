@@ -1,0 +1,28 @@
+[
+  {
+    "question": "Which files can you use to make PCA plots?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": ".eigvecs",
+        "correct": true,
+	"feedback": "Correct."
+      },
+      {
+        "answer": ".eigvecs2",
+        "correct": true,
+	"feedback": "Correct."
+      },
+      {
+        "answer": ".eigvals",
+        "correct": false,
+	"feedback": "Not Correct."
+      },
+      {
+        "answer": ".sigvals",
+        "correct": false,
+	"feedback": "Not Correct."
+      }
+    ]
+  }
+]

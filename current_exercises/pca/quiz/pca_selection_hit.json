@@ -1,0 +1,80 @@
+[
+  {
+    "question": "The strongest signal is a cluster of low p-values rather than one isolated site. Why is that expected under selection?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A selected variant drags nearby linked variants with it, so the signal spreads over the surrounding region",
+        "correct": true,
+        "feedback": "Correct \u2014 linkage is what makes a sweep visible."
+      },
+      {
+        "answer": "Because the sequencing depth is higher there",
+        "correct": false,
+        "feedback": "Depth does not cluster that way."
+      },
+      {
+        "answer": "Because the reference genome has an error there",
+        "correct": false,
+        "feedback": "That would give a narrow artefact, not a broad region."
+      },
+      {
+        "answer": "It is not expected \u2014 a single site would be the usual pattern",
+        "correct": false,
+        "feedback": "A lone site is more often an artefact than a sweep."
+      }
+    ]
+  },
+  {
+    "question": "What does the locus zoom plot add that the genome-wide scan does not?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The genes in the region, so the signal can be connected to something biological",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "A larger sample size",
+        "correct": false,
+        "feedback": "Same data."
+      },
+      {
+        "answer": "A correction for multiple testing",
+        "correct": false,
+        "feedback": "That is not what it does."
+      },
+      {
+        "answer": "The sequencing depth per site",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  },
+  {
+    "question": "This scan used European samples only. What does restricting to closely related individuals buy you?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Sensitivity to recent selection, because older signals are shared and cancel out between distant populations",
+        "correct": true,
+        "feedback": "Correct \u2014 this is why the exercise says 'very recent selection'."
+      },
+      {
+        "answer": "A larger effective sample size",
+        "correct": false,
+        "feedback": "It is smaller, if anything."
+      },
+      {
+        "answer": "Lower sequencing error",
+        "correct": false,
+        "feedback": "Unrelated."
+      },
+      {
+        "answer": "Nothing \u2014 any set of populations would do",
+        "correct": false,
+        "feedback": "The choice matters for what you can detect."
+      }
+    ]
+  }
+]

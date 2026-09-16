@@ -1,0 +1,80 @@
+[
+  {
+    "question": "In a QQ plot of the selection scan, what would it mean if the points followed the diagonal exactly?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "No site deviates more than expected by chance \u2014 no evidence of selection anywhere",
+        "correct": true,
+        "feedback": "Correct: observed and expected p-values agree."
+      },
+      {
+        "answer": "Every site is under selection",
+        "correct": false,
+        "feedback": "That would push points far off the line."
+      },
+      {
+        "answer": "The test has failed",
+        "correct": false,
+        "feedback": "A straight line is the null expectation, not a failure."
+      },
+      {
+        "answer": "The data are low depth",
+        "correct": false,
+        "feedback": "Depth is not what the QQ plot shows."
+      }
+    ]
+  },
+  {
+    "question": "The points depart from the diagonal at the top end. What are the two competing explanations?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Genuine selection at a few sites, or unmodelled structure and artefacts inflating the statistic",
+        "correct": true,
+        "feedback": "Correct \u2014 you cannot tell from the QQ plot alone, which is why you look at the region."
+      },
+      {
+        "answer": "Selection, or too few individuals",
+        "correct": false,
+        "feedback": "Sample size shifts power, not the shape at the extreme tail like this."
+      },
+      {
+        "answer": "Sequencing error, or the wrong reference genome",
+        "correct": false,
+        "feedback": "Neither produces this pattern specifically."
+      },
+      {
+        "answer": "Only selection \u2014 a departure is always real",
+        "correct": false,
+        "feedback": "It is not; inflation is common."
+      }
+    ]
+  },
+  {
+    "question": "The test statistic is compared with a chi-square distribution with 1 degree of freedom. What is being tested per site?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Whether the allele frequency changes along one principal component more than drift allows",
+        "correct": true,
+        "feedback": "Correct \u2014 one PC, one degree of freedom."
+      },
+      {
+        "answer": "Whether the site is in Hardy-Weinberg equilibrium",
+        "correct": false,
+        "feedback": "That is a different test."
+      },
+      {
+        "answer": "Whether the site is polymorphic",
+        "correct": false,
+        "feedback": "That is SNP calling."
+      },
+      {
+        "answer": "Whether the individuals are related",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  }
+]

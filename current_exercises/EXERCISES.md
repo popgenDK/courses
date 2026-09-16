@@ -182,7 +182,7 @@ Exercises that build an EM algorithm from scratch.
 Four exercises — two on **called genotypes** and two on **low depth
 sequencing** — plus the shared theory section.
 
-### 58. [ ] `pca_mds_and_svd.ipynb` — **new: the shared theory section**
+### 58. [x] `pca_mds_and_svd.ipynb` — **new: the shared theory section**
 - **From:** extracted from `advBinf/exercises/advBinf_PCA.ipynb` cells 2-25 (2026-09-16)
 - **Also appears in:**
   - `kenya2026/exercises/Day3/Kenya2026_PCA.ipynb` (2026-08-17) — same section
@@ -193,7 +193,7 @@ sequencing** — plus the shared theory section.
   It was repeated in several notebooks, so it becomes one exercise that the
   others point back to. **Needs no data** — the matrix is typed in.
 
-### 18. [ ] `pca_low_depth_human.ipynb`
+### 18. [x] `pca_low_depth_human.ipynb`
 - **From:** `advBinf/exercises/advBinf_PCA.ipynb` (2026-09-16), from cell 26 on
 - **Supersedes:**
   - `summer2025/exercises/Day5_PCA_1.ipynb` (2025-08-06)
@@ -203,7 +203,7 @@ sequencing** — plus the shared theory section.
 - **Note:** PCAngsd on genotype likelihoods (`1000G5pops.inputgl.beagle.gz`,
   `eu1000g.small.beagle.gz`). The MDS/by-hand opening moves to #58.
 
-### 59. [ ] `pca_low_depth_selection_human.ipynb`
+### 59. [x] `pca_low_depth_selection_human.ipynb`
 - **From:** `chinacourse2026/Day4_Afternoon_PCA_1.ipynb` (2026-09-14), the
   **PC-based selection** half (from the `# PC-based selection` heading)
 - **Supersedes:** none — only copy
@@ -211,7 +211,7 @@ sequencing** — plus the shared theory section.
   selection statistic back to chromosome and position.
 - **Data:** `data/chinacourse2026_shared/`
 
-### 22. [ ] `pca_called_genotypes_human.ipynb`
+### 22. [x] `pca_called_genotypes_human.ipynb`
 - **From:** `chinacourse2026/Day4_Afternoon_PCA_1.ipynb` (2026-09-14), the
   **first** half, up to the `# PC-based selection` heading
 - **Supersedes:** none — only copy
@@ -220,7 +220,7 @@ sequencing** — plus the shared theory section.
   against the admixture proportions.
 - **Data:** `data/chinacourse2026_shared/`
 
-### 20. [ ] `pca_called_genotypes_animal.ipynb`
+### 20. [x] `pca_called_genotypes_animal.ipynb`
 - **From:** `advBinf/exercises/advBinf_PCA_bonus.ipynb` (2026-09-16)
 - **Supersedes:**
   - `kenya2026/exercises/Day3/Kenya2026_PCA.ipynb` (2026-08-17)
@@ -480,6 +480,7 @@ predates this work.
 | [x] | `BSA/` | `/davidData/data/BSA` | 1.2 G |
 | [x] | `NGSintro/` | curated for exercises #12/#13 (see below) | 465 M |
 | [x] | `NGSinference/` | `/course/popgen25/NGSInference/data` — for #14 | 2.1 G |
+| [x] | `PCA/` | `/course/popgen25/pca` + china plink files — for #58/#18/#59/#22/#20 | 461 M |
 | [x] | `geneticMap/` | `/course/scripts/geneticMap` | 480 M |
 | [x] | `thomas_workshop/` | `/davidData/users/thomas/workshop` | 77 G |
 | [x] | `kenyaWorkshop_anders/` | `/course/kenyaWorkshop/anders` | 76 G |
