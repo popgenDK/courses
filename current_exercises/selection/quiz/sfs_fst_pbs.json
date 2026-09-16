@@ -1,0 +1,106 @@
+[
+  {
+    "question": "The exercise works from site allele frequency likelihoods (SAF) rather than called genotypes. Why does that matter for the SFS in particular?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Calling genotypes at low depth systematically loses heterozygotes and rare alleles, which distorts exactly the low-frequency end of the SFS the statistics read",
+        "correct": true,
+        "feedback": "Correct \u2014 this is the reason for the whole approach."
+      },
+      {
+        "answer": "SAF files are smaller",
+        "correct": false,
+        "feedback": "Size is not the reason."
+      },
+      {
+        "answer": "ANGSD cannot read VCFs",
+        "correct": false,
+        "feedback": "It can."
+      },
+      {
+        "answer": "It makes no difference, only speed",
+        "correct": false,
+        "feedback": "It changes the answer."
+      }
+    ]
+  },
+  {
+    "question": "Fst is computed for a pair of populations. What does PBS add?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It splits three pairwise Fst values into a branch length per population, so you can say which population the differentiation belongs to",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "It is a normalised version of Fst",
+        "correct": false,
+        "feedback": "Not the point."
+      },
+      {
+        "answer": "It works without an outgroup",
+        "correct": false,
+        "feedback": "It needs the third population."
+      },
+      {
+        "answer": "It tests for significance",
+        "correct": false,
+        "feedback": "It does not give a p-value."
+      }
+    ]
+  },
+  {
+    "question": "A locus has high Fst between CEU and YRI. Why is that alone weak evidence of selection?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Drift produces high-Fst loci by chance, so a scan needs the rest of the genome as a comparison and still only gives outliers, not proof",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Fst cannot detect selection at all",
+        "correct": false,
+        "feedback": "It can, as an outlier scan."
+      },
+      {
+        "answer": "High Fst always means selection",
+        "correct": false,
+        "feedback": "It does not."
+      },
+      {
+        "answer": "Only haplotype methods can detect selection",
+        "correct": false,
+        "feedback": "Both kinds are used."
+      }
+    ]
+  },
+  {
+    "question": "The 2D SFS is estimated for a pair of populations. What is it used for here?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It is the input for the Fst estimator \u2014 Fst is computed from the joint frequency spectrum",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "To date the population split",
+        "correct": false,
+        "feedback": "Not in this exercise."
+      },
+      {
+        "answer": "To call genotypes",
+        "correct": false,
+        "feedback": "No genotypes are called."
+      },
+      {
+        "answer": "To estimate the mutation rate",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  }
+]

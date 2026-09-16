@@ -1,0 +1,106 @@
+[
+  {
+    "question": "Tajima's D compares two estimates of theta. What does a strongly negative D indicate?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "An excess of rare variants relative to neutral expectation \u2014 consistent with a selective sweep or population expansion",
+        "correct": true,
+        "feedback": "Correct, and note that the two explanations are hard to tell apart from D alone."
+      },
+      {
+        "answer": "An excess of intermediate-frequency variants",
+        "correct": false,
+        "feedback": "That gives positive D."
+      },
+      {
+        "answer": "No variation",
+        "correct": false,
+        "feedback": "D is undefined without variation."
+      },
+      {
+        "answer": "Balancing selection",
+        "correct": false,
+        "feedback": "That tends to give positive D."
+      }
+    ]
+  },
+  {
+    "question": "Domestication affects every maize population. How does PBS help separate local highland adaptation from that shared signal?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A shared domestication signal lengthens all branches, while local adaptation lengthens only the highland branch",
+        "correct": true,
+        "feedback": "Correct \u2014 that is the reason for using three populations."
+      },
+      {
+        "answer": "PBS removes the domestication signal automatically",
+        "correct": false,
+        "feedback": "It does not remove anything; it apportions."
+      },
+      {
+        "answer": "PBS only works on wild populations",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "It does not help; only Tajima's D can",
+        "correct": false,
+        "feedback": "PBS is precisely what separates them."
+      }
+    ]
+  },
+  {
+    "question": "The window size for Tajima's D is changed part way through. What is the trade-off?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Small windows resolve narrow signals but are noisy; large windows are smoother but average a real sweep away",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Larger windows are always better",
+        "correct": false,
+        "feedback": "They can hide the signal."
+      },
+      {
+        "answer": "Window size has no effect on the result",
+        "correct": false,
+        "feedback": "The exercise shows that it does."
+      },
+      {
+        "answer": "Small windows are always better",
+        "correct": false,
+        "feedback": "They are very noisy."
+      }
+    ]
+  },
+  {
+    "question": "The ANGSD steps that produce the SAF files are left commented out, with the results supplied. Why are they shown at all?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "So you can see exactly how the input was produced and could reproduce it \u2014 the commands are part of the method, not boilerplate",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "They are leftovers that should be deleted",
+        "correct": false,
+        "feedback": "They are deliberately kept."
+      },
+      {
+        "answer": "They do not work",
+        "correct": false,
+        "feedback": "They work, they are just slow."
+      },
+      {
+        "answer": "To make the notebook longer",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  }
+]
