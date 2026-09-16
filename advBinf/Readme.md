@@ -21,8 +21,8 @@
 
 ## PCA Wednesday morning 
 login to the notebook
-  - [PCA](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_1.ipynb) Download and upload to notebook ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_1.html))
-    - [PCA bonus](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb) exercise if you have finished the main one ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_2.Call_genotype.html))
+  - [PCA](exercises/advBinf_PCA.ipynb) Download and upload to notebook ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA.html))
+    - [PCA bonus](exercises/advBinf_PCA_bonus.ipynb) Download and upload to notebook. Exercise if you have finished the main one ([solution html](https://html-preview.github.io/?url=https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA_bonus.html))
 
 ## SFS Wednesday afternoon
 - : login to the notebook
