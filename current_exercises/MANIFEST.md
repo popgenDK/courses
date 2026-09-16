@@ -25,6 +25,9 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 16 | `genotype_calling_imputation/imputation_human.ipynb` | `advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb` (imputation half) + `chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb` (3 sections) | 2026-09-09 | yes — new composition, calling sections dropped | 5 older copies (see EXERCISES.md) |
 | 30 | `gene_flow/f_stats_human.ipynb` | `summer2025/exercises/Day3_f_stats.ipynb` | 2025-08-05 | yes — paths, staging dirs removed, course branding | 2 older copies (see EXERCISES.md) |
 | 31 | `gene_flow/gene_flow_dstat_animal.ipynb` | `kenya2026/exercises/Day3/Geneflow&Dstat.ipynb` | 2026-08-16 | yes — path cell added, paths, typos | `kenya2026/.../post_course/day3_afternoon_gene_flow_dstat.ipynb` (2026-08-25) |
+| 35 | `demography/coalescence.ipynb` | `kenya2026/exercises/Day2/Coalescence_short_WoA.ipynb` | 2026-08-15 | yes — setup cell added, helper repointed | 2 older copies (see EXERCISES.md) |
+| 36 | `demography/wright_fisher.ipynb` | `summer2025/exercises/Day1_morning_WrightFisherTutorial.ipynb` | 2025-08-03 | yes — helper repointed, one wording fix | none |
+| — | `data/scripts/simulateWF.R` | `/course/popgen25/software/simulateWF.R` | 2025 | no — copied verbatim | none |
 | 19 | `em_algorithms/pca_em_human.ipynb` | `advBinf/exercises/advBinf_PCA_EM.ipynb` | 2026-09-16 | yes — 3 quizzes, 14 question blocks | none |
 | 24 | `em_algorithms/admixture_em_human.ipynb` | `advBinf/exercises/advBinf_admixture_EM.ipynb` | 2026-09-14 | yes — 2 quizzes | none |
 | 37 | `em_algorithms/sfs_model.ipynb` | `advBinf/exercises/advBinf_SFSmodel.ipynb` | 2026-09-16 | yes — quiz bank moved in, typo | `advBinf/exercises/SFS.md` (2024-09-20) |
@@ -867,3 +870,70 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   Also removed: three cells in the human notebook that read a
   `~/.sysu_admixture_paths` config file and re-did the setup, superseded by the
   standard setup cell (R16).
+
+- **#35 `coalescence.ipynb` and #36 `wright_fisher.ipynb` (2026-09-16).** Both in
+  `demography/`, both species-neutral so neither takes a `_human`/`_animal` suffix (R2).
+  Pure R under the SoS kernelspec, no data files at all — everything is simulated in the
+  notebook. The teaching content is unchanged.
+
+  **They share one helper.** Both `source()`d
+  `/course/popgen25/software/simulateWF.R`, which defines `WF_twoalleles`,
+  `WF_manyalleles` and `track_lineages`. Per **R14** a sourced function library is not an
+  exercise and lives in the data folder, so it is now `data/scripts/simulateWF.R`
+  (copied verbatim, `cmp`-identical), alongside `admixFun.R`, `newPlotPlink.R` and
+  `online.R`. Before this it existed only inside the 1.8 G `popgen25_software/` tree,
+  which is a software directory rather than a script library.
+
+  **#35, from the 2026-08-15 kenya2026 notebook** (24 cells): simulating a coalescence
+  tree for five samples step by step — sampling which lineages coalesce, the exponential
+  waiting times, and then the whole thing in a loop — followed by a backwards-in-time
+  Wright-Fisher section using `track_lineages` at N = 10, 7 and 20.
+  - it opened with a bare `## Environment setup` heading and **no setup cell**, while the
+    helper was `source()`d from a hard-coded path much further down (cell 19). Added the
+    path cell under that heading; the later cell now points at it.
+  - the two figures are external images from Fernando Racimo's public `CopenhagenTutorial`
+    repo. Kept, and both checked live (HTTP 200) — R11 keeps external links.
+
+  **#36, from the 2025-08-03 summer2025 notebook** (20 cells): Wright-Fisher forwards in
+  time with two alleles and with many alleles, then backwards in time with
+  `track_lineages`. Four empty code cells are left for the student on purpose.
+  - "Start running the R console and load the following R file" became "Run the cell
+    below to load the R functions used throughout this exercise" — it is a notebook.
+
+  **Both were run end to end** (every code cell, `set.seed(42)` for reproducibility),
+  exit 0, no errors:
+  - #35: the loop performs 4 coalescence events for 5 samples and ends on node 9, which
+    is the correct `n-1` events and `2n-1` final node; waiting times sampled from the
+    right exponential rates.
+  - #36: `WF_twoalleles(5,15)` returned blue counts ending at 10, i.e. `2N` — the blue
+    allele fixing, which is the outcome the first question asks students to tally.
+
+  **Note the overlap, which is in the sources, not introduced here:** #35's
+  "Wright Fisher / thinking backwards in time" section repeats #36's section 3 — the same
+  three `track_lineages` calls at N = 10, 7 and 20. The build list keeps both exercises,
+  so both keep the section.
+
+- **The two local ancestry exercises built (2026-09-16).**
+
+  | # | File | cells | questions after code |
+  |---|---|---|---|
+  | 28 | `local_ancestry_flare_mosaic_human.ipynb` | 108 | 28/34 |
+  | 29 | `local_ancestry_hapla_human.ipynb` | 57 | 21/27 |
+
+  **The three local-ancestry sources share nothing.** Compared cell by cell, the
+  summer2025 notebook (FLARE/MOSAIC), the advBinf hapla notebook and the China
+  tail have **zero** cells in common — three different tools. The plan had #28
+  superseding the summer2025 notebook, which was wrong: they are different
+  exercises, not versions of each other. The China tail is a 14-cell "short look"
+  at hapla/fatash from precomputed files, fully covered by #29.
+
+  **Data:** `data/current_data/local_ancestry/{flare_mosaic,hapla_cattle}`, 216 M.
+  `/course/popgen25/LocalAncestry` was a **fourth directory the original survey
+  missed** — same cause as the others, a single path segment after `/course`.
+
+  The hapla exercise ends on a real **cattle** dataset (*Bos taurus*, chr25, 314
+  individuals, BosTau9), which the header now says. `BosTau9.ids` is produced by
+  `hapla cluster --out`, not an input, so nothing is missing.
+
+  MOSAIC's scratch directory `~/.cache/fastfiles` is now a `FASTFILES` variable set
+  in the setup cell rather than hardcoded mid-notebook.

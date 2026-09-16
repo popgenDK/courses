@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**26 of 56 exercises built.**
+**30 of 56 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -104,8 +104,8 @@ Exercises that build an EM algorithm from scratch.
 | 60 | [`admixture_reference_panel_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_reference_panel_human.ipynb) | fastNGSadmix: the ancestry of a single individual against a fixed reference panel. | ✅ built | ⚠️ _to regenerate_ |
 | 61 | [`admixture_called_genotypes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_human.ipynb) | ADMIXTURE on LD-pruned called genotypes, convergence across seeds, and evalAdmix. | ✅ built | ⚠️ _to regenerate_ |
 | 25 | [`admixture_called_genotypes_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_animal.ipynb) | ADMIXTURE on called wildebeest genotypes, seeds, K and model fit. | ✅ built | ⚠️ _to regenerate_ |
-| 28 | `local_ancestry_human.ipynb` | Local ancestry inference and evaluation. | ⬜ planned | _to generate_ |
-| 29 | `local_ancestry_hapla_human.ipynb` | Local ancestry with hapla. | ⬜ planned | _to generate_ |
+| 28 | [`local_ancestry_flare_mosaic_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_flare_mosaic_human.ipynb) | FLARE and MOSAIC on simulated admixed genomes, 20 vs 200 generations since admixture. | ✅ built | ⚠️ _to regenerate_ |
+| 29 | [`local_ancestry_hapla_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_hapla_human.ipynb) | hapla cluster/admix/fatash on simulated data, then a real cattle dataset. | ✅ built | _to generate_ |
 | 30 | `f_stats_human.ipynb` | f2/f3/f4 statistics for testing population relationships, plus qpAdm, on ancient and modern humans from the AADR. | ⬜ planned | _to generate_ |
 | 31 | `gene_flow_dstat_animal.ipynb` | Gene flow and D-statistics (ABBA-BABA) from scratch on simulated data, then f4 on wildebeest. | ⬜ planned | _to generate_ |
 | 32 | `admixture_graphs_human.ipynb` | Fitting admixture graphs with qpGraph. | ⬜ planned | _to generate_ |
@@ -116,8 +116,8 @@ Exercises that build an EM algorithm from scratch.
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 35 | `coalescence.ipynb` | The coalescent: simulating and interpreting gene trees. | ⬜ planned | _to generate_ |
-| 36 | `wright_fisher.ipynb` | Wright-Fisher simulations of drift. | ⬜ planned | _to generate_ |
+| 35 | [`coalescence.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/coalescence.ipynb) | The coalescent: simulating and interpreting gene trees. | ✅ built | _to generate_ |
+| 36 | [`wright_fisher.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/wright_fisher.ipynb) | Wright-Fisher simulations of drift. | ✅ built | ⚠️ _to regenerate_ |
 | 38 | `sfs_animal.ipynb` | The SFS from real wildlife sequencing data. | ⬜ planned | _to generate_ |
 | 39 | `psmc_demography_animal.ipynb` | Demographic history with PSMC. | ⬜ planned | _to generate_ |
 
@@ -349,14 +349,14 @@ Replaces 6 older copies:
   - [`kenya2024/exercises/day3_PopulationStructure/Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Admixture.ipynb) (2024-08-07)
   - [`kenya2024/exercises/day3_PopulationStructure/Day3_Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_Admixture.ipynb) (2024-07-28)
 
-**28. `local_ancestry_human.ipynb`**  
-From: [`chinacourse2026/Day4_admix_eval_LAI.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_admix_eval_LAI.ipynb) (2026-07-30)  
-Replaces 1 older copy:
-  - [`summer2025/exercises/Day4_Morning_LocalAncestry.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_Morning_LocalAncestry.ipynb) (2025-08-06)
+**28. `local_ancestry_flare_mosaic_human.ipynb`**  
+From: [`summer2025/exercises/Day4_Morning_LocalAncestry.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_Morning_LocalAncestry.ipynb) (2025-08-06)  
+Replaces: nothing — this is the only copy
 
 **29. `local_ancestry_hapla_human.ipynb`**  
 From: [`advBinf/exercises/Hapla_LAI_exercise.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/Hapla_LAI_exercise.ipynb) (2025-10-07)  
-Replaces: nothing — this is the only copy
+Replaces 1 older copy:
+  - [`chinacourse2026/Day4_admix_eval_LAI.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_admix_eval_LAI.ipynb) cells 55-68 (2026-07-30) — a 14-cell "short look" at hapla/fatash using precomputed files, which this covers fully
 
 **30. `f_stats_human.ipynb`**  
 From: [`summer2025/exercises/Day3_f_stats.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_f_stats.ipynb) (2025-08-05)  
@@ -510,7 +510,7 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**26 of 56 exercises built.** Numbering runs to 57 because two pairs are each one
+**30 of 56 exercises built.** Numbering runs to 57 because two pairs are each one
 exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
 #17 (SHAPEIT phasing) was removed from scope.
 

@@ -290,6 +290,25 @@ mirroring the PCA folder, plus local ancestry and the gene-flow material.
   wrongly listed under #23: it is **wildebeest, called genotypes**, only 2 of its 48
   cells resemble #23, and it is 72% similar to this exercise. Moved here.
 
+### 28. [x] `local_ancestry_flare_mosaic_human.ipynb`
+- **From:** `summer2025/exercises/Day4_Morning_LocalAncestry.ipynb` (2025-08-06)
+- **Supersedes:** none — only copy
+- **Note:** FLARE and MOSAIC on simulated admixed genomes, comparing admixture 20 vs 200
+  generations ago against the known true tracts.
+
+### 29. [x] `local_ancestry_hapla_human.ipynb`
+- **From:** `advBinf/exercises/Hapla_LAI_exercise.ipynb` (2025-10-07)
+- **Supersedes:** `chinacourse2026/Day4_admix_eval_LAI.ipynb` cells 55-68 (2026-07-30) —
+  a 14-cell "short look" at hapla/fatash using precomputed files, which this covers fully
+- **Note:** hapla cluster / admix / fatash on data simulated with `msprime`, then the same
+  pipeline on a real cattle dataset (314 individuals, BosTau9 chr25).
+
+**These three local-ancestry sources share nothing.** Compared cell by cell, the
+summer2025 notebook, the advBinf hapla notebook and the China tail have **zero** cells in
+common — they use different tools (FLARE/MOSAIC, hapla/fatash, and a short hapla demo).
+The plan previously had #28 superseding the summer2025 notebook, which was wrong: they
+are different exercises, not versions of each other.
+
 **Retired slot: #27 `population_structure_ii_human`.** Not an admixture exercise and
 not built. `bgi23/BGI2023-populationStructureII.ipynb` has three sections — *Simple
 example of PCA and MDS*, *PCA for low depth sequencing using PCAngsd* and *PCAngsd and
@@ -297,14 +316,6 @@ selection* — and **53 of its 69 cells are identical to `advBinf_PCA.ipynb`**. 
 2023 ancestor of the PCA trio and is superseded by #58, #18 and #59 in `pca/`. It was
 filed under admixture because of its "population structure" title. The number is kept so
 the other exercises do not shift.
-
-### 28. [ ] `local_ancestry_human.ipynb`
-- **From:** `chinacourse2026/Day4_admix_eval_LAI.ipynb` (2026-07-30)
-- **Supersedes:** `summer2025/exercises/Day4_Morning_LocalAncestry.ipynb` (2025-08-06)
-
-### 29. [ ] `local_ancestry_hapla_human.ipynb`
-- **From:** `advBinf/exercises/Hapla_LAI_exercise.ipynb` (2025-10-07)
-- **Supersedes:** none — only copy (hapla-based, distinct from #28)
 
 ### 30. [x] `f_stats_human.ipynb`
 - **From:** `summer2025/exercises/Day3_f_stats.ipynb` (2025-08-05)
@@ -340,15 +351,17 @@ the other exercises do not shift.
 
 # demography/
 
-### 35. [ ] `coalescence.ipynb`
+### 35. [x] `coalescence.ipynb`
 - **From:** `kenya2026/exercises/Day2/Coalescence_short_WoA.ipynb` (2026-08-15)
 - **Supersedes:**
   - `kenya2026/exercises/post_course/day2_morning_coalescence.ipynb` (2026-08-25)
   - `summer2025/exercises/Day1_morning_CoalTutorial.ipynb` (2025-08-03)
 
-### 36. [ ] `wright_fisher.ipynb`
+### 36. [x] `wright_fisher.ipynb`
 - **From:** `summer2025/exercises/Day1_morning_WrightFisherTutorial.ipynb` (2025-08-03)
 - **Supersedes:** none — only copy
+- **Helper:** both #35 and #36 `source()` `simulateWF.R`, now at `data/scripts/`
+  per R14. It was only inside the 1.8 G `popgen25_software/` tree before.
 
 ### 38. [ ] `sfs_animal.ipynb`
 - **From:** `kenya2026/exercises/Day2/SFS_WoA.ipynb` (2026-08-15)
