@@ -21,8 +21,9 @@ current_exercises/
 data -> /course/data/
 ```
 
-**55 exercises** (numbering runs to 57; #6 and #7 are one exercise, and #17 was
-removed from scope). Done so far: 12.
+**54 exercises** in 54 entries. The numbering runs to 57 because two pairs are each
+one exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`)
+and #17 was removed from scope. Done so far: 16.
 
 ---
 
@@ -168,10 +169,9 @@ Exercises that build an EM algorithm from scratch.
 
 # pca/
 
-### 18. [ ] `pca_human.ipynb`
+### 18. [ ] `pca_human.ipynb` — **PCA from first principles**
 - **From:** `advBinf/exercises/advBinf_PCA.ipynb` (2026-09-16)
 - **Supersedes:**
-  - `chinacourse2026/Day4_Afternoon_PCA_1.ipynb` (2026-09-14)
   - `summer2025/exercises/Day5_PCA_1.ipynb` (2025-08-06)
   - `chinaCourse2025/Day4_Afternoon_PCA_main.ipynb` (2025-07-28)
   - `advBinf/exercises/PCA.md` (2024-09-17)
@@ -183,7 +183,7 @@ Exercises that build an EM algorithm from scratch.
   - `kenya2026/exercises/post_course/day4_morning_pca.ipynb` (2026-08-25)
   - `kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb` (2024-08-09)
 
-### 21+22. [ ] `pca_bonus_animal.ipynb` — **one exercise, was listed twice**
+### 21. [ ] `pca_bonus_animal.ipynb` — **one exercise, was listed twice**
 - **From:** `advBinf/exercises/advBinf_PCA_bonus.ipynb` (2026-09-16)
 - **Supersedes:**
   - `summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb` (2025-08-06)
@@ -197,7 +197,20 @@ Exercises that build an EM algorithm from scratch.
   are earlier versions of the same wildebeest exercise. Despite the name, none of
   them is about calling genotypes: the content is PCAone on wildebeest data,
   reading in admixture proportions, and an IBS tree from plink distances.
-  Kept once, under the "bonus" name, which matches the content.
+  Kept once, under the "bonus" name, which matches the content. The exercise
+  that genuinely *is* about called genotypes is the human one, #22.
+
+### 22. [ ] `pca_called_genotypes_human.ipynb`
+- **From:** `chinacourse2026/Day4_Afternoon_PCA_1.ipynb` (2026-09-14)
+- **Supersedes:** none — only copy
+- **Note:** a **different exercise** from #18, not an older version of it. #18
+  teaches PCA from scratch (MDS, the SVD by hand, then low-depth data). This one
+  starts from an LD-pruned file of **called genotypes**, runs PCAone, plots by
+  population and super-population against the admixture proportions, and then
+  does PC-based selection with PCAngsd on genotype likelihoods. It shares only
+  23 cells with #18, where `summer2025/Day5_PCA_1.ipynb` shares 74 — which is
+  what makes that one a version of #18 and this one its own exercise.
+- **Data:** `data/chinacourse2026_shared/`
 
 ---
 

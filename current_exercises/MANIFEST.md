@@ -518,5 +518,29 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   proportions, and an IBS tree from plink distances. The "CalledGenotypes" name
   came from a course label that no longer matches the content.
 
-  Merged into one entry, #21+22, under the "bonus" name. `pca/` now has 3
-  exercises: human, animal, and the animal bonus.
+  Merged into one entry under the "bonus" name.
+
+- **Correction (2026-09-16): there are four PCA exercises, not three.** I had
+  also listed `chinacourse2026/Day4_Afternoon_PCA_1.ipynb` as superseded by
+  `advBinf_PCA.ipynb`. It is not — it is a separate exercise:
+
+  | Compared with `advBinf_PCA.ipynb` | Identical cells |
+  |---|---|
+  | `summer2025/Day5_PCA_1.ipynb` | 74 of 78 — genuinely a version of it |
+  | `chinaCourse2025/Day4_Afternoon_PCA_main.ipynb` | 41 — an older version |
+  | `chinacourse2026/Day4_Afternoon_PCA_1.ipynb` | **23 — a different exercise** |
+
+  #18 teaches PCA from first principles: MDS, the SVD worked by hand, then
+  low-depth data. `chinacourse2026/Day4_Afternoon_PCA_1.ipynb` instead starts
+  from an **LD-pruned file of called genotypes**, runs PCAone, plots by
+  population and super-population against the admixture proportions, and then
+  does PC-based selection with PCAngsd. It is restored as #22
+  `pca_called_genotypes_human.ipynb`.
+
+  So the "called genotypes" name belongs to the **human** exercise. The
+  wildebeest lineage carried that name in `summer2024-PCA-CalledGenotypes.ipynb`
+  and `Day5_PCA_2.Call_genotype.ipynb`, but its content was never about calling
+  genotypes.
+
+  `pca/` has four exercises: human from first principles (#18), animal (#20),
+  animal bonus (#21), human called genotypes (#22).
