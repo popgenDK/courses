@@ -156,8 +156,18 @@ Exercises that build an EM algorithm from scratch.
   - `advBinf/exercises/SNPandGenotypeCalling.md` (2024-09-13)
 - **Paired with:** #16, the imputation half kept separately
 
-### 16. [ ] `imputation_human.ipynb` — **separate half of #15**
-- **From:** `chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb` (2026-09-09)
+### 16. [x] `imputation_human.ipynb` — **the imputation half of #15**
+- **From:** `advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb` (2026-09-09)
+  for the imputation sections, plus `chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb`
+  (2026-09-09) for the three sections only it has
+- **Scope decided 2026-09-16.** The chinacourse2026 notebook is not the imputation
+  half of #15 as first recorded — it is an older, thinner copy of the *whole* same
+  exercise (same CEU chr20 2-5 Mb data, same five tools in the same order, same three
+  quiz files, same R helpers, same NIPT bonus; 2,271 words and 0 follow-up questions
+  against #15's 5,704 and 22). Building it faithfully would have produced two
+  near-identical human notebooks, so #16 was built as the imputation-only half it is
+  named for: the calling sections belong to #15, and #16 starts from genotype
+  likelihoods.
 - **Supersedes:**
   - `summer2025/exercises/Day2_Imputation.ipynb` (2025-08-05)
   - `chinaCourse2025/Day2_Afternoon_QUILT_Imputation.ipynb` (2025-07-28)
@@ -169,48 +179,69 @@ Exercises that build an EM algorithm from scratch.
 
 # pca/
 
-### 18. [ ] `pca_human.ipynb` — **PCA from first principles**
-- **From:** `advBinf/exercises/advBinf_PCA.ipynb` (2026-09-16)
+Four main exercises — two on **called genotypes** and two on **low depth
+sequencing** — plus the shared theory section and one animal bonus.
+
+### 58. [ ] `pca_mds_and_svd.ipynb` — **new: the shared theory section**
+- **From:** extracted from `advBinf/exercises/advBinf_PCA.ipynb` cells 2-25 (2026-09-16)
+- **Also appears in:**
+  - `kenya2026/exercises/Day3/Kenya2026_PCA.ipynb` (2026-08-17) — same section
+  - `chinacourse2026/Day4_Afternoon_PCA_1.ipynb` (2026-09-14) — an MDS section near the end
+- **Note:** MDS and PCA worked by hand on the small genotype matrix from the
+  slides: `dist`, `cmdscale`, normalising the genotypes, the SVD by hand, the
+  covariance matrix, reconstructing the data and the variance explained per PC.
+  It was repeated in several notebooks, so it becomes one exercise that the
+  others point back to. **Needs no data** — the matrix is typed in.
+
+### 18. [ ] `pca_low_depth_human.ipynb`
+- **From:** `advBinf/exercises/advBinf_PCA.ipynb` (2026-09-16), from cell 26 on
 - **Supersedes:**
   - `summer2025/exercises/Day5_PCA_1.ipynb` (2025-08-06)
   - `chinaCourse2025/Day4_Afternoon_PCA_main.ipynb` (2025-07-28)
   - `advBinf/exercises/PCA.md` (2024-09-17)
   - `summer2024/exercises/summer2024-PCA.ipynb` (2024-08-20)
+- **Note:** PCAngsd on genotype likelihoods (`1000G5pops.inputgl.beagle.gz`,
+  `eu1000g.small.beagle.gz`). The MDS/by-hand opening moves to #58.
 
-### 20. [ ] `pca_animal.ipynb`
+### 59. [ ] `pca_low_depth_selection_human.ipynb`
+- **From:** `chinacourse2026/Day4_Afternoon_PCA_1.ipynb` (2026-09-14), the
+  **PC-based selection** half (from the `# PC-based selection` heading)
+- **Supersedes:** none — only copy
+- **Note:** `pcangsd --selection` on `eu1000g.small.beagle.gz`, then mapping the
+  selection statistic back to chromosome and position.
+- **Data:** `data/chinacourse2026_shared/`
+
+### 22. [ ] `pca_called_genotypes_human.ipynb`
+- **From:** `chinacourse2026/Day4_Afternoon_PCA_1.ipynb` (2026-09-14), the
+  **first** half, up to the `# PC-based selection` heading
+- **Supersedes:** none — only copy
+- **Note:** `PCAone` on the LD-pruned called genotypes
+  `human_autosomes_12pp_pcaoneLD02`, plotted by population and super-population
+  against the admixture proportions.
+- **Data:** `data/chinacourse2026_shared/`
+
+### 20. [ ] `pca_called_genotypes_animal.ipynb`
 - **From:** `kenya2026/exercises/Day3/Kenya2026_PCA.ipynb` (2026-08-17)
 - **Supersedes:**
   - `kenya2026/exercises/post_course/day4_morning_pca.ipynb` (2026-08-25)
   - `kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb` (2024-08-09)
+- **Note:** `PCAone` on the wildebeest plink files, with an LD-pruning
+  comparison. Its heading "PCA for low depth sequencing using PCAngsd" is
+  **vestigial** — there is no PCAngsd command in the notebook; it runs on called
+  genotypes throughout. Fix the heading when building. The MDS/by-hand opening
+  moves to #58.
 
-### 21. [ ] `pca_bonus_animal.ipynb` — **one exercise, was listed twice**
+### 21. [ ] `pca_called_genotypes_animal_bonus.ipynb`
 - **From:** `advBinf/exercises/advBinf_PCA_bonus.ipynb` (2026-09-16)
 - **Supersedes:**
   - `summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb` (2025-08-06)
   - `chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb` (2025-07-28)
   - `summer2024/exercises/summer2024-PCA-CalledGenotypes.ipynb` (2024-08-20)
-- **Note:** #21 and #22 were the **same exercise** under different course names.
-  `advBinf_PCA_bonus.ipynb` and `Day5_PCA_2.Call_genotype.ipynb` are identical in
-  33 of their 34 cells — the only difference is the working folder
-  (`~/advBinf/pca` vs `~/popgen25_pca`). Tracing further back,
-  `summer2024-PCA-CalledGenotypes.ipynb` and `chinaCourse2025/..._PCA_bonus.ipynb`
-  are earlier versions of the same wildebeest exercise. Despite the name, none of
-  them is about calling genotypes: the content is PCAone on wildebeest data,
-  reading in admixture proportions, and an IBS tree from plink distances.
-  Kept once, under the "bonus" name, which matches the content. The exercise
-  that genuinely *is* about called genotypes is the human one, #22.
-
-### 22. [ ] `pca_called_genotypes_human.ipynb`
-- **From:** `chinacourse2026/Day4_Afternoon_PCA_1.ipynb` (2026-09-14)
-- **Supersedes:** none — only copy
-- **Note:** a **different exercise** from #18, not an older version of it. #18
-  teaches PCA from scratch (MDS, the SVD by hand, then low-depth data). This one
-  starts from an LD-pruned file of **called genotypes**, runs PCAone, plots by
-  population and super-population against the admixture proportions, and then
-  does PC-based selection with PCAngsd on genotype likelihoods. It shares only
-  23 cells with #18, where `summer2025/Day5_PCA_1.ipynb` shares 74 — which is
-  what makes that one a version of #18 and this one its own exercise.
-- **Data:** `data/chinacourse2026_shared/`
+- **Note:** the bonus that goes with #20 — same wildebeest plink files, adding
+  evalAdmix and an IBS tree from plink distances. It shares 5 cells with #20.
+  Three of the files it supersedes were named "CalledGenotypes" or
+  "Call_genotype" by their courses; the content matches, but the exercise that
+  teaches called-genotype PCA on **human** data is #22.
 
 ---
 

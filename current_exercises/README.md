@@ -4,7 +4,7 @@ One current version of every exercise, organised by theme, with the human and
 animal versions of an analysis side by side. Everything reads its input from the
 shared data store `data/` (a symlink to `/course/data/`).
 
-**16 of 55 exercises built.**
+**17 of 57 exercises built.**
 
 - **The build list, with full provenance:** [`EXERCISES.md`](EXERCISES.md)
 - **What has been built and what changed in each file:** [`MANIFEST.md`](MANIFEST.md)
@@ -84,16 +84,18 @@ Exercises that build an EM algorithm from scratch.
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 15 | [`genotype_calling_and_imputation_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/genotype_calling_and_imputation_human.ipynb) | SNP calling, genotype calling and haplotype imputation in one exercise. | ✅ built | ⚠️ _to regenerate_ |
-| 16 | `imputation_human.ipynb` | Genotype imputation with a reference panel (QUILT). | ⬜ planned | _to generate_ |
+| 16 | [`imputation_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/imputation_human.ipynb) | Genotype imputation with a reference panel (QUILT). | ✅ built | ⚠️ _to regenerate_ |
 
 ### PCA — `pca/`
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 18 | `pca_human.ipynb` | PCA from first principles: MDS, the SVD by hand, then low-depth data with PCAngsd. | ⬜ planned | _to generate_ |
-| 20 | `pca_animal.ipynb` | PCA on wildlife genotype data. | ⬜ planned | _to generate_ |
-| 21 | `pca_bonus_animal.ipynb` | Wildebeest PCA bonus: PCAone, admixture proportions and an IBS tree from plink distances. | ⬜ planned | _to generate_ |
-| 22 | `pca_called_genotypes_human.ipynb` | PCA of called genotypes with PCAone, plotted against admixture proportions, then PC-based selection. | ⬜ planned | _to generate_ |
+| 58 | `pca_mds_and_svd.ipynb` | MDS and PCA worked by hand: distances, cmdscale, normalising, the SVD, the covariance matrix and variance explained. No data needed. | ⬜ planned | _to generate_ |
+| 18 | `pca_low_depth_human.ipynb` | PCAngsd on genotype likelihoods from the 1000 Genomes populations. | ⬜ planned | _to generate_ |
+| 59 | `pca_low_depth_selection_human.ipynb` | PC-based selection with PCAngsd on genotype likelihoods. | ⬜ planned | _to generate_ |
+| 22 | `pca_called_genotypes_human.ipynb` | PCAone on LD-pruned called genotypes, plotted against the admixture proportions. | ⬜ planned | _to generate_ |
+| 20 | `pca_called_genotypes_animal.ipynb` | PCAone on called wildebeest genotypes, with an LD-pruning comparison. | ⬜ planned | _to generate_ |
+| 21 | `pca_called_genotypes_animal_bonus.ipynb` | Bonus for the animal exercise: evalAdmix and an IBS tree from plink distances. | ⬜ planned | _to generate_ |
 
 ### Admixture, local ancestry and gene flow — `admixture/`
 
@@ -276,7 +278,7 @@ Replaces 2 older copies:
   - [`advBinf/exercises/SNPandGenotypeCalling.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/SNPandGenotypeCalling.md) (2024-09-13)
 
 **16. `imputation_human.ipynb`**  
-From: [`chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb) (2026-09-09)  
+From: [`advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb) (2026-09-09) for the imputation sections, plus [`chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb) (2026-09-09) for the three sections only it has  
 Replaces 5 older copies:
   - [`summer2025/exercises/Day2_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day2_Imputation.ipynb) (2025-08-05)
   - [`chinaCourse2025/Day2_Afternoon_QUILT_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day2_Afternoon_QUILT_Imputation.ipynb) (2025-07-28)
@@ -287,30 +289,38 @@ Replaces 5 older copies:
 
 ### `pca/`
 
-**18. `pca_human.ipynb`**  
-From: [`advBinf/exercises/advBinf_PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA.ipynb) (2026-09-16)  
+**58. `pca_mds_and_svd.ipynb`**  
+From: extracted from [`advBinf/exercises/advBinf_PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA.ipynb) cells 2-25 (2026-09-16)  
+Replaces: nothing — this is the only copy
+
+**18. `pca_low_depth_human.ipynb`**  
+From: [`advBinf/exercises/advBinf_PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA.ipynb) (2026-09-16), from cell 26 on  
 Replaces 4 older copies:
   - [`summer2025/exercises/Day5_PCA_1.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_1.ipynb) (2025-08-06)
   - [`chinaCourse2025/Day4_Afternoon_PCA_main.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Afternoon_PCA_main.ipynb) (2025-07-28)
   - [`advBinf/exercises/PCA.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/PCA.md) (2024-09-17)
   - [`summer2024/exercises/summer2024-PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/summer2024-PCA.ipynb) (2024-08-20)
 
-**20. `pca_animal.ipynb`**  
+**59. `pca_low_depth_selection_human.ipynb`**  
+From: [`chinacourse2026/Day4_Afternoon_PCA_1.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_Afternoon_PCA_1.ipynb) (2026-09-14), the **PC-based selection** half (from the `# PC-based selection` heading)  
+Replaces: nothing — this is the only copy
+
+**22. `pca_called_genotypes_human.ipynb`**  
+From: [`chinacourse2026/Day4_Afternoon_PCA_1.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_Afternoon_PCA_1.ipynb) (2026-09-14), the **first** half, up to the `# PC-based selection` heading  
+Replaces: nothing — this is the only copy
+
+**20. `pca_called_genotypes_animal.ipynb`**  
 From: [`kenya2026/exercises/Day3/Kenya2026_PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Kenya2026_PCA.ipynb) (2026-08-17)  
 Replaces 2 older copies:
   - [`kenya2026/exercises/post_course/day4_morning_pca.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day4_morning_pca.ipynb) (2026-08-25)
   - [`kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb) (2024-08-09)
 
-**21. `pca_bonus_animal.ipynb`**  
+**21. `pca_called_genotypes_animal_bonus.ipynb`**  
 From: [`advBinf/exercises/advBinf_PCA_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA_bonus.ipynb) (2026-09-16)  
 Replaces 3 older copies:
   - [`summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb) (2025-08-06)
   - [`chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb) (2025-07-28)
   - [`summer2024/exercises/summer2024-PCA-CalledGenotypes.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/summer2024-PCA-CalledGenotypes.ipynb) (2024-08-20)
-
-**22. `pca_called_genotypes_human.ipynb`**  
-From: [`chinacourse2026/Day4_Afternoon_PCA_1.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_Afternoon_PCA_1.ipynb) (2026-09-14)  
-Replaces: nothing — this is the only copy
 
 
 ### `admixture/`
@@ -507,8 +517,9 @@ Replaces: nothing — this is the only copy
 
 ## Status
 
-**16 of 55 exercises built.** Numbering runs to 57 because #6 and #7 were
-merged into a single exercise, and #17 (SHAPEIT phasing) was removed from scope.
+**17 of 57 exercises built.** Numbering runs to 57 because two pairs are each one
+exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) and
+#17 (SHAPEIT phasing) was removed from scope.
 
 | | |
 |---|---|

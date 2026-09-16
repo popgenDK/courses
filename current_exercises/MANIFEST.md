@@ -22,6 +22,7 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 14 | `ngs/ngs_inference_human.ipynb` | `summer2025/exercises/Day2_NGS_Inference.ipynb` | 2025-08-04 | yes — split, quizzes, questions, bug fixes, paths | `summer2024/exercises/NGS_inference.ipynb`, `summer2023/NGSinference/` |
 | 15 | `genotype_calling_imputation/genotype_calling_and_imputation_human.ipynb` | `advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb` | 2026-09-09 | yes — paths, work folder, quizzes moved in | 2 older copies (see EXERCISES.md) |
 | — | `genotype_calling_imputation/quiz/*.json` (3 files) | `/course/data/popgen25_imputation/quiz/call_genotypes_quiz{1,2,3}.json` | 2025-08-05 | renamed only | none |
+| 16 | `genotype_calling_imputation/imputation_human.ipynb` | `advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb` (imputation half) + `chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb` (3 sections) | 2026-09-09 | yes — new composition, calling sections dropped | 5 older copies (see EXERCISES.md) |
 | 19 | `em_algorithms/pca_em_human.ipynb` | `advBinf/exercises/advBinf_PCA_EM.ipynb` | 2026-09-16 | yes — 3 quizzes, 14 question blocks | none |
 | 24 | `em_algorithms/admixture_em_human.ipynb` | `advBinf/exercises/advBinf_admixture_EM.ipynb` | 2026-09-14 | yes — 2 quizzes | none |
 | 37 | `em_algorithms/sfs_model.ipynb` | `advBinf/exercises/advBinf_SFSmodel.ipynb` | 2026-09-16 | yes — quiz bank moved in, typo | `advBinf/exercises/SFS.md` (2024-09-20) |
@@ -544,3 +545,77 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 
   `pca/` has four exercises: human from first principles (#18), animal (#20),
   animal bonus (#21), human called genotypes (#22).
+
+- **#16 `imputation_human.ipynb` — built as the imputation half, not as a copy of its
+  recorded source (2026-09-16).** `EXERCISES.md` had it as "the separate imputation half
+  of #15", but its source,
+  `chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb`, is an older and thinner
+  copy of the *entire* #15 exercise: the same CEU chr20 2-5 Mb data, the same five tools
+  in the same order, the same three quiz json files, the same `find_match` and
+  `estimate_gt_tools` helpers, and the same NIPT bonus. 2,271 words with no follow-up
+  questions, against #15's 5,704 with 22. Its headings are also duplicated ("Genotype
+  calling without Imputation" appears twice) and typo'd ("pata preparation").
+
+  A faithful copy would have put two near-identical *human* notebooks side by side,
+  which R2 only allows for the human/animal split. **Asked and confirmed: build it as
+  the imputation-only half.** So it is a new composition, 68 cells:
+
+  - the imputation sections come from #15, the newest and much fuller version of the
+    same material (R1)
+  - the SNP and genotype **calling** sections are dropped — they are #15's job, and the
+    notebook says so at the top and links to it
+  - it opens with the input preparation those sections used to provide: the bamlist and
+    **one ANGSD run** for the genotype likelihoods Beagle 4.1 needs. ANGSD's own
+    genotype calls are kept as the **no-imputation baseline** for the comparison, which
+    is the question the exercise is really asking
+  - the comparison therefore has four methods, not five (`angsd`, `beagle4gl`,
+    `quilt2`, `beagle5gl`); `bcftools` and the UpSet SNP-discovery plot stay in #15
+  - `find_match` is defined here, since it lived in a calling cell in #15
+  - quizzes 2 and 3 travel with it (`imputation_strategies`, `imputation_concordance`);
+    quiz 1 is about calling and stays with #15
+
+  **The three things only the chinacourse version had are carried over**, since that is
+  the whole reason not to drop it:
+  - the reference-panel and genetic-map **input formats** section (IMPUTE hap/legend,
+    the map columns, bamlist, and the optional phasefile/posfile truth format), with
+    "pata preparation" fixed
+  - the `example.vcf.gz` walk-through, so the output fields are looked at in a real file
+  - the "how about imputing the **fetus**?" question, expanded into three questions at
+    the end of the NIPT bonus
+
+  Paths, work folder (`~/imputation_human`) and quiz URLs follow #15 — one data store,
+  `popgen25_imputation` plus `popgen25_software`, and the same two genetic maps pointed
+  at the software tree rather than the dangling symlinks.
+
+- **Sample count fixed in #15 and #16.** Both said the study samples were **33** in four
+  places while also saying **30** in six others. The bamlist has 30
+  (`ls bams/NA*.bam | wc -l` = 30, verified). The 33 was inherited from the chinacourse
+  notebook's opening line, "We will work on 33 European samples". All four now say 30.
+
+- **PCA renamed by data type, and the theory section split out (2026-09-16).**
+  Names now say which kind of data the exercise runs on:
+
+  | # | New name | Data |
+  |---|---|---|
+  | 58 | `pca_mds_and_svd.ipynb` | none — a matrix typed in from the slides |
+  | 18 | `pca_low_depth_human.ipynb` | genotype likelihoods (beagle) |
+  | 59 | `pca_low_depth_selection_human.ipynb` | genotype likelihoods (beagle) |
+  | 22 | `pca_called_genotypes_human.ipynb` | LD-pruned plink genotypes |
+  | 20 | `pca_called_genotypes_animal.ipynb` | wildebeest plink genotypes |
+  | 21 | `pca_called_genotypes_animal_bonus.ipynb` | wildebeest plink genotypes |
+
+  **`chinacourse2026/Day4_Afternoon_PCA_1.ipynb` becomes two exercises**, cut at
+  its `# PC-based selection` heading: the first half is PCAone on called
+  genotypes (#22), the second is `pcangsd --selection` on genotype likelihoods
+  (#59). It genuinely did both, which is why it resisted classification.
+
+  **The MDS/PCA-by-hand section becomes #58.** It was repeated in `advBinf_PCA`
+  (cells 2-25), `Kenya2026_PCA` and again near the end of the China notebook.
+  One copy now, in `pca/`, needing no data.
+
+  **Found while classifying:** `Kenya2026_PCA.ipynb` carries the heading "PCA for
+  low depth sequencing using PCAngsd" but contains **no PCAngsd command** — it
+  runs `PCAone` on plink files throughout. The heading is left over from an
+  earlier version and misdescribes the exercise. To be fixed when #20 is built.
+
+  This takes the plan from 55 to 57 exercises.
