@@ -1,0 +1,80 @@
+[
+  {
+    "question": "Why do we filter bases with low base quality before estimating heterozygosity?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Because sequencing errors can create false heterozygous sites.",
+        "correct": true,
+        "feedback": "Correct. A single erroneous base can make a homozygous site look heterozygous."
+      },
+      {
+        "answer": "Because low base quality means the read maps to the wrong chromosome.",
+        "correct": false,
+        "feedback": "Not quite. Mapping quality describes confidence in where the read maps; base quality describes confidence in a called base."
+      },
+      {
+        "answer": "Because heterozygosity can only be estimated from low-quality reads.",
+        "correct": false,
+        "feedback": "Not quite. Low-quality reads are usually a problem, not the target."
+      },
+      {
+        "answer": "Because base quality filtering removes all homozygous sites.",
+        "correct": false,
+        "feedback": "Not quite. It removes or ignores uncertain bases, not a genotype class."
+      }
+    ]
+  },
+  {
+    "question": "Why do we filter out sites with unusually high read depth?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "They may come from duplicated or repetitive regions where reads from multiple genomic regions pile up.",
+        "correct": true,
+        "feedback": "Correct. High depth can be a sign that reads from paralogous or repetitive regions are being collapsed onto one reference position."
+      },
+      {
+        "answer": "High depth always means the site is heterozygous.",
+        "correct": false,
+        "feedback": "Not quite. High depth can occur for technical reasons and does not by itself define genotype state."
+      },
+      {
+        "answer": "High depth means the reference allele is missing.",
+        "correct": false,
+        "feedback": "Not quite. Depth is the number of reads covering a site."
+      },
+      {
+        "answer": "High depth means the site is not part of chromosome 27.",
+        "correct": false,
+        "feedback": "Not quite. High depth can occur within the target chromosome."
+      }
+    ]
+  },
+  {
+    "question": "In this exercise, what does the good-sites BED file mainly define?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The genomic positions that are considered reliable enough to include.",
+        "correct": true,
+        "feedback": "Correct. It helps define the callable genomic space used as the denominator."
+      },
+      {
+        "answer": "Only sites that are heterozygous in the focal individual.",
+        "correct": false,
+        "feedback": "Not quite. It is not a list of heterozygous sites; it is a list of sites considered usable."
+      },
+      {
+        "answer": "Only sites under positive selection.",
+        "correct": false,
+        "feedback": "Not quite. This exercise uses it as a quality/callability filter."
+      },
+      {
+        "answer": "Only sites with missing data.",
+        "correct": false,
+        "feedback": "Not quite. The aim is to avoid unreliable sites, not select missing ones."
+      }
+    ]
+  }
+]

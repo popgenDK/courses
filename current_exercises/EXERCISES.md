@@ -537,7 +537,7 @@ superseding summer2024 (human), which share **0%** of their cells.
 notebook; they are kept separately as #42 Fst and #43 relatedness, which is how the newer
 kenya2026 notebooks split them. The source stays untouched in `kenya2026/`.
 
-### 45. [ ] `heterozygosity_roh_animal.ipynb` — **post-course small-dataset version**
+### 45. [x] `heterozygosity_roh_animal.ipynb` — **post-course small-dataset version**
 - **From:** `kenya2026/exercises/post_course/day5_morning_heterozygosity_roh.ipynb` (2026-08-25)
 - **Supersedes:**
   - `kenya2026/exercises/Day5/Day5_GeneticDiversity.ipynb` (2026-08-23)

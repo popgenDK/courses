@@ -1,0 +1,80 @@
+[
+  {
+    "question": "For individual heterozygosity across the callable genome, what should the denominator be?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "All sites that were considered callable after filtering.",
+        "correct": true,
+        "feedback": "Correct. Heterozygosity is the proportion of callable sites that are heterozygous."
+      },
+      {
+        "answer": "Only sites where an alternate allele was observed.",
+        "correct": false,
+        "feedback": "Not quite. That gives a SNP-only style estimate and ignores homozygous reference sites."
+      },
+      {
+        "answer": "The full genome length, regardless of missingness and filtering.",
+        "correct": false,
+        "feedback": "Not quite. Sites that cannot be reliably observed should not be treated as confidently homozygous."
+      },
+      {
+        "answer": "Only sites with exactly two reads.",
+        "correct": false,
+        "feedback": "Not quite. Depth filters define acceptable ranges, not a denominator of exactly two reads."
+      }
+    ]
+  },
+  {
+    "question": "In the AC counts for a diploid sample, what does AC=1 usually indicate?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "A heterozygous genotype with one reference and one alternate allele.",
+        "correct": true,
+        "feedback": "Correct. One alternate allele in a diploid genotype corresponds to a heterozygote."
+      },
+      {
+        "answer": "A homozygous reference genotype.",
+        "correct": false,
+        "feedback": "Not quite. Homozygous reference sites usually have no alternate allele."
+      },
+      {
+        "answer": "A homozygous alternate genotype.",
+        "correct": false,
+        "feedback": "Not quite. Homozygous alternate would have two alternate alleles."
+      },
+      {
+        "answer": "A missing genotype.",
+        "correct": false,
+        "feedback": "Not quite. Missingness is handled separately from the alternate allele count."
+      }
+    ]
+  },
+  {
+    "question": "Why is heterozygosity estimated from SNP-only sites usually much higher than heterozygosity estimated from all callable sites?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Because invariant homozygous sites have been removed from the denominator.",
+        "correct": true,
+        "feedback": "Correct. Selecting only variable sites makes heterozygous sites a much larger fraction of the denominator."
+      },
+      {
+        "answer": "Because SNP-only estimates include the whole genome twice.",
+        "correct": false,
+        "feedback": "Not quite. The problem is ascertainment of variable sites, not doubling the genome."
+      },
+      {
+        "answer": "Because all SNPs are heterozygous by definition.",
+        "correct": false,
+        "feedback": "Not quite. SNPs can be homozygous or heterozygous in a given individual."
+      },
+      {
+        "answer": "Because SNP-only estimates remove all sequencing errors automatically.",
+        "correct": false,
+        "feedback": "Not quite. SNP-only sets still need careful filtering."
+      }
+    ]
+  }
+]

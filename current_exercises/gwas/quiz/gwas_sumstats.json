@@ -1,0 +1,106 @@
+[
+  {
+    "question": "A summary statistics file has one row per SNP with an effect size, a standard error and a p-value. What can you NOT do with it?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Anything that needs individual-level data: computing relatedness, principal components, or checking an individual's genotype",
+        "correct": true,
+        "feedback": "Correct \u2014 that information is gone, which is why the files can be shared."
+      },
+      {
+        "answer": "Meta-analysis",
+        "correct": false,
+        "feedback": "That is a main use."
+      },
+      {
+        "answer": "Polygenic scores",
+        "correct": false,
+        "feedback": "These are built from summary statistics."
+      },
+      {
+        "answer": "LD score regression",
+        "correct": false,
+        "feedback": "Also built from summary statistics."
+      }
+    ]
+  },
+  {
+    "question": "Why are summary statistics shared publicly when genotypes usually are not?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "They carry no individual-level information, so they do not identify participants",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "They are smaller files",
+        "correct": false,
+        "feedback": "Convenient but not the reason."
+      },
+      {
+        "answer": "They are less useful, so nobody objects",
+        "correct": false,
+        "feedback": "They are extremely useful."
+      },
+      {
+        "answer": "Because journals require it and genotypes are just forgotten",
+        "correct": false,
+        "feedback": "The reason is privacy."
+      }
+    ]
+  },
+  {
+    "question": "The effect sizes come with standard errors. Why is the standard error as important as the estimate?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "An effect size without its uncertainty cannot be weighted, meta-analysed, or judged - a large estimate from a tiny study means little",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "It is only needed to compute the p-value",
+        "correct": false,
+        "feedback": "It is needed for much more."
+      },
+      {
+        "answer": "It is not important if the p-value is given",
+        "correct": false,
+        "feedback": "The p-value alone loses the scale of the effect."
+      },
+      {
+        "answer": "It only matters for binary traits",
+        "correct": false,
+        "feedback": "It matters for both."
+      }
+    ]
+  },
+  {
+    "question": "Filtering the file on minor allele frequency removes many rows. What is the justification?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Effect estimates at very rare variants are unstable in a study of this size, so they add noise rather than signal",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Rare variants are always genotyping errors",
+        "correct": false,
+        "feedback": "Many are real."
+      },
+      {
+        "answer": "To make the file smaller",
+        "correct": false,
+        "feedback": "Not the scientific reason."
+      },
+      {
+        "answer": "Because rare variants have no effect",
+        "correct": false,
+        "feedback": "They often have large effects, just poorly estimated here."
+      }
+    ]
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "question": "Why is the genome-wide significance threshold about 5e-8 rather than 0.05?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Roughly a million independent tests are being run, so 0.05 must be corrected for multiple testing",
+        "correct": true,
+        "feedback": "Correct \u2014 0.05 divided by about a million."
+      },
+      {
+        "answer": "Because p-values below 0.05 are never real",
+        "correct": false,
+        "feedback": "They are, but not with a million tests."
+      },
+      {
+        "answer": "It is set by the sample size",
+        "correct": false,
+        "feedback": "It depends on the number of tests, not the sample size."
+      },
+      {
+        "answer": "It is an arbitrary convention with no basis",
+        "correct": false,
+        "feedback": "It has a clear basis."
+      }
+    ]
+  },
+  {
+    "question": "A QQ plot of the p-values curves upward along its whole length, not just at the top. What does that suggest?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Inflation from something systematic - population structure, relatedness or poor QC - rather than real signal",
+        "correct": true,
+        "feedback": "Correct: real association lifts only the extreme tail."
+      },
+      {
+        "answer": "Strong true association at many loci",
+        "correct": false,
+        "feedback": "That would lift the tail, not the whole line."
+      },
+      {
+        "answer": "Too few SNPs",
+        "correct": false,
+        "feedback": "Not what this shows."
+      },
+      {
+        "answer": "The trait is not heritable",
+        "correct": false,
+        "feedback": "Unrelated."
+      }
+    ]
+  },
+  {
+    "question": "In this cohort there are 200 controls and 156 cases. What does that sample size mean for what you can detect?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Only variants of large effect; a few hundred individuals has very little power for typical common-variant effects",
+        "correct": true,
+        "feedback": "Correct \u2014 real GWAS use tens of thousands."
+      },
+      {
+        "answer": "Any effect, since the SNP count is high",
+        "correct": false,
+        "feedback": "More SNPs means more tests, not more power."
+      },
+      {
+        "answer": "Nothing - power depends only on allele frequency",
+        "correct": false,
+        "feedback": "Sample size matters greatly."
+      },
+      {
+        "answer": "It is enough for rare variants",
+        "correct": false,
+        "feedback": "Rare variants need even larger samples."
+      }
+    ]
+  },
+  {
+    "question": "A Manhattan plot shows one tall isolated point and no neighbouring support. How should you read it?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "With suspicion - a true association is usually supported by nearby SNPs in LD with it",
+        "correct": true,
+        "feedback": "Correct; a lone spike is often a genotyping artefact."
+      },
+      {
+        "answer": "As the strongest hit, since it is the highest",
+        "correct": false,
+        "feedback": "Height alone is not enough."
+      },
+      {
+        "answer": "As proof the SNP is causal",
+        "correct": false,
+        "feedback": "Association is not causation, and this is not even solid association."
+      },
+      {
+        "answer": "As evidence of population structure",
+        "correct": false,
+        "feedback": "Structure gives a broad lift, not a single spike."
+      }
+    ]
+  }
+]

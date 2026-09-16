@@ -1,0 +1,184 @@
+[
+  {
+    "question": "In the ROH density plot, what do the red vertical marks represent?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Heterozygous SNP genotypes in the plotted individual.",
+        "correct": true,
+        "feedback": "Correct. Red marks show where the focal individual is heterozygous at retained SNP markers."
+      },
+      {
+        "answer": "ROH segments inferred by PLINK.",
+        "correct": false,
+        "feedback": "Not quite. PLINK ROH segments are shown as black/grey horizontal lines."
+      },
+      {
+        "answer": "Regions with no SNP data.",
+        "correct": false,
+        "feedback": "Not quite. Regions with no or very low SNP data tend to appear as gaps or low SNP-density areas."
+      },
+      {
+        "answer": "Sites removed by the observed-heterozygosity filter.",
+        "correct": false,
+        "feedback": "Not quite. Removed sites are not present in the plotted PLINK data."
+      }
+    ]
+  },
+  {
+    "question": "In the ROH density plot, what do the black/grey horizontal segments represent?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Runs of homozygosity inferred by PLINK from the denser filtered marker set.",
+        "correct": true,
+        "feedback": "Correct. The displayed PNGs use the full filtered marker set, and the ROH segments come from the PLINK ROH call."
+      },
+      {
+        "answer": "All homozygous SNPs in the individual.",
+        "correct": false,
+        "feedback": "Not quite. Individual homozygous SNPs are not drawn as ROH segments; ROH require long consecutive homozygous tracts."
+      },
+      {
+        "answer": "Regions where reads failed to map to the reference genome.",
+        "correct": false,
+        "feedback": "Not quite. Low mapping or low SNP density can affect interpretation, but the black/grey lines are PLINK ROH calls."
+      },
+      {
+        "answer": "Chromosome boundaries.",
+        "correct": false,
+        "feedback": "Not quite. The scaffold/chromosome extent is shown by the blue track."
+      }
+    ]
+  },
+  {
+    "question": "What does the grey windowed track summarize in these plots?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The proportion of heterozygous retained SNPs in sliding windows of the full filtered marker set used for the displayed plots.",
+        "correct": true,
+        "feedback": "Correct. The displayed PNGs were precomputed from the full, unthinned filtered marker set; this is a SNP-marker proportion, not heterozygosity per callable base."
+      },
+      {
+        "answer": "Genome-wide heterozygosity per callable base from the BAM file.",
+        "correct": false,
+        "feedback": "Not quite. That would use a callable-base denominator; this track uses retained SNP markers in the plotting file."
+      },
+      {
+        "answer": "The local recombination rate.",
+        "correct": false,
+        "feedback": "Not quite. Recombination rate is not included in this plot."
+      },
+      {
+        "answer": "The number of missing genotypes in each window.",
+        "correct": false,
+        "feedback": "Not quite. Missing genotypes affect the calculation, but the grey track is the heterozygous proportion among non-missing SNPs."
+      }
+    ]
+  },
+  {
+    "question": "What do the blue and purple tracks mainly help you judge?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The scaffold extent and the local density of retained SNP markers.",
+        "correct": true,
+        "feedback": "Correct. The blue track gives the scaffold span in the plot, and the purple track summarizes retained SNP density in windows."
+      },
+      {
+        "answer": "Which ROH are caused by selection and which are caused by inbreeding.",
+        "correct": false,
+        "feedback": "Not quite. These tracks help interpret marker coverage, but they do not identify the biological cause of ROH."
+      },
+      {
+        "answer": "The exact recombination rate along each scaffold.",
+        "correct": false,
+        "feedback": "Not quite. Recombination rate is not plotted here."
+      },
+      {
+        "answer": "The allele balance of each heterozygous genotype.",
+        "correct": false,
+        "feedback": "Not quite. Allele balance was part of the original VCF filtering logic, but it is not shown in these PLINK plots."
+      }
+    ]
+  },
+  {
+    "question": "Why is there no ROH call at the right-hand end of scaffold 14 for CTauBwC__761?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "There are few or no retained SNPs there, so the data do not support an ROH call.",
+        "correct": true,
+        "feedback": "Correct. A blank or sparse region is not evidence for an ROH; it can simply be low marker density."
+      },
+      {
+        "answer": "The individual must be highly heterozygous in that region.",
+        "correct": false,
+        "feedback": "Not necessarily. With little marker information, absence of an ROH call is not the same as evidence for heterozygosity."
+      },
+      {
+        "answer": "PLINK never calls ROH near chromosome ends.",
+        "correct": false,
+        "feedback": "Not quite. ROH can be called near scaffold ends if there are enough informative markers."
+      },
+      {
+        "answer": "That region is definitely under balancing selection.",
+        "correct": false,
+        "feedback": "Not quite. The plot alone does not support that interpretation."
+      }
+    ]
+  },
+  {
+    "question": "For CTauZmE_2542, one large apparent ROH is split into two nearby segments. What is a cautious interpretation?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "It could be a real break, but it could also be caused by local heterozygous calls, missingness, marker density, or parameter choices.",
+        "correct": true,
+        "feedback": "Correct. A split ROH is a hypothesis to inspect, not automatically a biological boundary."
+      },
+      {
+        "answer": "The split proves there was a recombination event exactly at the gap.",
+        "correct": false,
+        "feedback": "Not quite. Recombination is one possible biological process, but the plot and PLINK call do not prove the exact cause."
+      },
+      {
+        "answer": "The split means both ROH segments are false positives.",
+        "correct": false,
+        "feedback": "Not necessarily. The segments may be real even if the boundary or split is uncertain."
+      },
+      {
+        "answer": "The split can be ignored because ROH callers are unaffected by genotyping error.",
+        "correct": false,
+        "feedback": "Not quite. Genotyping errors and missingness are exactly why ROH parameters and filtering matter."
+      }
+    ]
+  },
+  {
+    "question": "Why can removing suspicious high-heterozygosity SNPs increase inferred ROH length?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Because false heterozygous genotypes can break otherwise homozygous tracts into shorter pieces.",
+        "correct": true,
+        "feedback": "Correct. ROH callers tolerate some heterozygous calls, but too many false hets can interrupt a true ROH."
+      },
+      {
+        "answer": "Because removing SNPs makes all remaining genotypes homozygous by definition.",
+        "correct": false,
+        "feedback": "Not quite. Filtering removes problematic markers; it does not change every retained genotype into a homozygote."
+      },
+      {
+        "answer": "Because ROH are inferred only from missing data.",
+        "correct": false,
+        "feedback": "Not quite. Missing data may be tolerated, but ROH are based mainly on long stretches of homozygous genotypes."
+      },
+      {
+        "answer": "Because high heterozygosity always means recent inbreeding.",
+        "correct": false,
+        "feedback": "Not quite. High heterozygosity at a SNP across many individuals can also point to technical or mapping problems."
+      }
+    ]
+  }
+]
