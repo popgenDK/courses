@@ -1,0 +1,106 @@
+[
+  {
+    "question": "Admixture $F_3$(X;A,B) is significantly NEGATIVE. What does that mean?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "X is a mixture of populations related to A and B \u2014 a negative value is positive evidence of admixture",
+        "correct": true,
+        "feedback": "Correct: the allele frequencies in X are intermediate in a way drift alone cannot produce."
+      },
+      {
+        "answer": "X is an outgroup to A and B",
+        "correct": false,
+        "feedback": "That would not make it negative."
+      },
+      {
+        "answer": "A and B are admixed with each other",
+        "correct": false,
+        "feedback": "The test is about X."
+      },
+      {
+        "answer": "There is no admixture anywhere",
+        "correct": false,
+        "feedback": "The opposite."
+      }
+    ]
+  },
+  {
+    "question": "Admixture $F_3$(X;A,B) comes out POSITIVE. What can you conclude?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Nothing definite \u2014 a positive value is consistent with no admixture, but drift in X since the admixture can also mask a real event",
+        "correct": true,
+        "feedback": "Correct, and this asymmetry is the key point: the test can confirm but not exclude."
+      },
+      {
+        "answer": "X is definitely not admixed",
+        "correct": false,
+        "feedback": "Drift in X can hide real admixture."
+      },
+      {
+        "answer": "X is admixed",
+        "correct": false,
+        "feedback": "That would be a negative value."
+      },
+      {
+        "answer": "The standard error is too large",
+        "correct": false,
+        "feedback": "Not implied."
+      }
+    ]
+  },
+  {
+    "question": "Outgroup $F_3$(O;A,B) uses O as the outgroup. What is it measuring?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The drift shared by A and B since they split from O \u2014 a similarity measure, so larger means more closely related",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The drift private to A",
+        "correct": false,
+        "feedback": "That is not what the statistic isolates."
+      },
+      {
+        "answer": "Whether A is admixed",
+        "correct": false,
+        "feedback": "That is admixture F3, a different configuration."
+      },
+      {
+        "answer": "The distance between A and B",
+        "correct": false,
+        "feedback": "It is a similarity, not a distance."
+      }
+    ]
+  },
+  {
+    "question": "Why do all these tests need a blocked jackknife standard error?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Nearby SNPs are linked and so not independent; the jackknife over genome blocks gives an error bar that accounts for that",
+        "correct": true,
+        "feedback": "Correct \u2014 without it you cannot say whether a value differs from zero."
+      },
+      {
+        "answer": "To correct for missing data",
+        "correct": false,
+        "feedback": "Not its purpose."
+      },
+      {
+        "answer": "To speed up the computation",
+        "correct": false,
+        "feedback": "It costs time, not saves it."
+      },
+      {
+        "answer": "To make the statistics symmetric",
+        "correct": false,
+        "feedback": "No."
+      }
+    ]
+  }
+]

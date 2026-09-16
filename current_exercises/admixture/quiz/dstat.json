@@ -1,0 +1,106 @@
+[
+  {
+    "question": "In the ABBA-BABA test with topology (((P1,P2),P3),Outgroup), what does an excess of ABBA over BABA indicate?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Gene flow between P2 and P3",
+        "correct": true,
+        "feedback": "Correct \u2014 ABBA means P2 and P3 share the derived allele."
+      },
+      {
+        "answer": "Gene flow between P1 and P3",
+        "correct": false,
+        "feedback": "That is an excess of BABA."
+      },
+      {
+        "answer": "No gene flow",
+        "correct": false,
+        "feedback": "That is D close to zero."
+      },
+      {
+        "answer": "P3 is the outgroup",
+        "correct": false,
+        "feedback": "The outgroup is the fourth population."
+      }
+    ]
+  },
+  {
+    "question": "D is close to zero. What does that support?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The tree with no gene flow between P3 and either P1 or P2 \u2014 ABBA and BABA are equally frequent",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Gene flow with both P1 and P2 equally",
+        "correct": false,
+        "feedback": "Possible in principle but not what the test concludes."
+      },
+      {
+        "answer": "That the populations are identical",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "That the outgroup is wrong",
+        "correct": false,
+        "feedback": "Not tested by D."
+      }
+    ]
+  },
+  {
+    "question": "Why does the test need an outgroup at all?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "To tell the ancestral allele from the derived one, so that ABBA and BABA can be distinguished",
+        "correct": true,
+        "feedback": "Correct \u2014 without polarisation the two patterns are not defined."
+      },
+      {
+        "answer": "To increase the sample size",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "To correct for sequencing error",
+        "correct": false,
+        "feedback": "Not its role."
+      },
+      {
+        "answer": "To calibrate the mutation rate",
+        "correct": false,
+        "feedback": "No dating is involved."
+      }
+    ]
+  },
+  {
+    "question": "The $F_4$ statistic used on the wildebeest is closely related to D. What is the practical difference?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "$F_4$ is not normalised by the total number of ABBA/BABA sites, so it is on an absolute scale while D is between -1 and 1",
+        "correct": true,
+        "feedback": "Correct \u2014 they test the same thing, but D is easier to compare across datasets."
+      },
+      {
+        "answer": "$F_4$ needs no outgroup",
+        "correct": false,
+        "feedback": "It does."
+      },
+      {
+        "answer": "$F_4$ only works on simulated data",
+        "correct": false,
+        "feedback": "It is used here on real data."
+      },
+      {
+        "answer": "They test different hypotheses",
+        "correct": false,
+        "feedback": "They test the same one."
+      }
+    ]
+  }
+]

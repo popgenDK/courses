@@ -1066,3 +1066,28 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   Re-verified after deleting: the full toolchain still runs (vcf -> psmcfa -> psmc ->
   plot -> png), all 12 files the notebooks name are present, all 7 wildebeest files, all
   4 figures, and the bcf still opens under `bcftools view`.
+
+- **Gaps filled in the two gene-flow exercises (2026-09-16).**
+
+  | | before | after |
+  |---|---|---|
+  | `f_stats_human` quizzes | 0 | 2 |
+  | `f_stats_human` questions after code | 6/16 | 13/16 |
+  | `gene_flow_dstat_animal` quizzes | 0 | 1 |
+  | `gene_flow_dstat_animal` questions after code | 3/5 | 5/5 |
+
+  **`f_stats_human` opened on `# setup enviroment and data`** — the setup came before
+  the title, the same defect the PCA notebooks had, and with a typo. It now opens with
+  the R19 header and the setup follows.
+
+  Data descriptions taken from the files: the AADR subset is **1,646 individuals in 98
+  populations, 53 modern and 45 ancient**, with the `.HO` and `_HG` suffix convention
+  explained. The D-statistic exercise uses **AFR 100, EUR 100, NEA 2, CHIMP 1** for the
+  simulated part and the seven blue wildebeest localities plus black wildebeest and
+  hartebeest for the real part.
+
+  The new quizzes target what these statistics actually license you to conclude: that a
+  negative admixture $F_3$ is evidence while a positive one proves nothing, that qpAdm
+  rejects models rather than confirming them, that a negative qpAdm weight invalidates a
+  model whatever its p-value, and why the blocked jackknife standard error is what makes
+  any of it interpretable.

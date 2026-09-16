@@ -1,0 +1,106 @@
+[
+  {
+    "question": "The treeness test uses $F_4$(A,B;C,D). What does a value indistinguishable from zero mean?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "The four populations are consistent with an unrooted tree ((A,B),(C,D)) \u2014 no gene flow between the pairs",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "The populations are unrelated",
+        "correct": false,
+        "feedback": "No."
+      },
+      {
+        "answer": "There is gene flow",
+        "correct": false,
+        "feedback": "That would give a non-zero value."
+      },
+      {
+        "answer": "The data are too noisy",
+        "correct": false,
+        "feedback": "That is what the standard error tells you separately."
+      }
+    ]
+  },
+  {
+    "question": "In the symmetry test $F_4$(O,X;A,B) with known outgroup O, a significantly non-zero value means:",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "X shares more drift with one of A or B than with the other, so the two are not symmetric with respect to X",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "A and B are the same population",
+        "correct": false,
+        "feedback": "That would give zero."
+      },
+      {
+        "answer": "O is not a valid outgroup",
+        "correct": false,
+        "feedback": "A possible worry, but not what the statistic shows."
+      },
+      {
+        "answer": "X is admixed with O",
+        "correct": false,
+        "feedback": "Not what is tested."
+      }
+    ]
+  },
+  {
+    "question": "qpAdm returns weights and a p-value. What is the p-value testing?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Whether the proposed set of sources can explain the target given the reference populations \u2014 a low p-value rejects the model",
+        "correct": true,
+        "feedback": "Correct: qpAdm rejects models, it does not confirm them."
+      },
+      {
+        "answer": "Whether the weights are positive",
+        "correct": false,
+        "feedback": "That is a separate sanity check."
+      },
+      {
+        "answer": "Whether the target is admixed at all",
+        "correct": false,
+        "feedback": "That is F3."
+      },
+      {
+        "answer": "Whether the outgroups are correct",
+        "correct": false,
+        "feedback": "Not directly tested."
+      }
+    ]
+  },
+  {
+    "question": "A qpAdm model returns a weight that is negative. What should you do?",
+    "type": "multiple_choice",
+    "answers": [
+      {
+        "answer": "Treat the model as implausible \u2014 ancestry proportions cannot be negative, so the sources are wrong or incomplete",
+        "correct": true,
+        "feedback": "Correct."
+      },
+      {
+        "answer": "Round it to zero and continue",
+        "correct": false,
+        "feedback": "That hides the problem."
+      },
+      {
+        "answer": "Accept it if the p-value is high",
+        "correct": false,
+        "feedback": "A negative weight invalidates the model regardless."
+      },
+      {
+        "answer": "Add more target individuals",
+        "correct": false,
+        "feedback": "Not the issue."
+      }
+    ]
+  }
+]
