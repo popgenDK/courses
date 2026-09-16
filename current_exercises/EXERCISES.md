@@ -42,30 +42,6 @@ data -> /course/data/
 
 ---
 
-# statistics/
-
-### 3. [x] `stats_binomial.R`
-- **From:** `stat_molbio/binom.R` (2026-01-16)
-- **Supersedes:** none — only copy
-
-### 4. [x] `stats_normal.R`
-- **From:** `stat_molbio/normal.R` (2026-01-16)
-- **Supersedes:** none — only copy
-
-### 5. [x] `em_algorithm.ipynb`
-- **From:** `advBinf/exercises/advBinf_EM_algorithm.ipynb` (2026-09-09)
-- **Supersedes:** none — only copy
-
-### 6+7. [x] `haplotype_frequencies.ipynb`
-- **From:** `advBinf/exercises/solution_haplotype_frequencies.ipynb` (2025-09-12)
-- **Supersedes:** `advBinf/exercises/haplotype_frequencies.ipynb` (2025-09-12) —
-  the exercise half, which was too hard to work through
-- **One notebook, not two (by request, 2026-09-16).** The old exercise/solution
-  pair is replaced by a single scaffolded notebook rebuilt from the solution.
-  There is no `haplotype_frequencies_solution.ipynb`.
-
----
-
 # sequence_analysis/
 
 ### 8. [ ] `motif_discovery.R` — **DEFERRED by request (2026-09-16)**
@@ -99,6 +75,32 @@ Shiny server code lives in its own folder rather than under a theme (R13).
 - **From:** `BSA/dotplotShiny.R` (2025-08-30)
 - **Supersedes:** none — only copy
 - **Note:** FASTA supplied through a `fileInput` upload, no fixed data path
+
+---
+
+### 3. [x] `stats_binomial.R`
+- **From:** `stat_molbio/binom.R` (2026-01-16)
+- **Supersedes:** none — only copy
+
+### 4. [x] `stats_normal.R`
+- **From:** `stat_molbio/normal.R` (2026-01-16)
+- **Supersedes:** none — only copy
+
+# em_algorithms/
+
+Exercises that build an EM algorithm from scratch.
+
+### 5. [x] `em_algorithm.ipynb`
+- **From:** `advBinf/exercises/advBinf_EM_algorithm.ipynb` (2026-09-09)
+- **Supersedes:** none — only copy
+
+### 6+7. [x] `haplotype_frequencies.ipynb`
+- **From:** `advBinf/exercises/solution_haplotype_frequencies.ipynb` (2025-09-12)
+- **Supersedes:** `advBinf/exercises/haplotype_frequencies.ipynb` (2025-09-12) —
+  the exercise half, which was too hard to work through
+- **One notebook, not two (by request, 2026-09-16).** The old exercise/solution
+  pair is replaced by a single scaffolded notebook rebuilt from the solution.
+  There is no `haplotype_frequencies_solution.ipynb`.
 
 ---
 

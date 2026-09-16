@@ -12,10 +12,10 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
 | 9 | `shiny/needleman_wunsch_dna.R` | `BSA/NW_DNA.R` | 2025-09-02 | no — copied verbatim | none |
 | 10 | `shiny/needleman_wunsch_blosum50.R` | `BSA/needleman_wunsch_shiny_app_blosum_50.r` | 2025-08-30 | yes — self-`source()` URL repointed | none |
 | 11 | `shiny/dotplot.R` | `BSA/dotplotShiny.R` | 2025-08-30 | yes — self-`source()` URL repointed | none |
-| 3 | `statistics/stats_binomial.R` | `stat_molbio/binom.R` | 2026-01-16 | no — copied verbatim | none |
-| 4 | `statistics/stats_normal.R` | `stat_molbio/normal.R` | 2026-01-16 | no — copied verbatim | none |
-| 5 | `statistics/em_algorithm.ipynb` | `advBinf/exercises/advBinf_EM_algorithm.ipynb` | 2026-09-09 | yes — 3 bugs fixed, figure added, headings restructured, typos, citation | none |
-| 6+7 | `statistics/haplotype_frequencies.ipynb` | `advBinf/exercises/solution_haplotype_frequencies.ipynb` | 2025-09-12 | yes — rebuilt as one scaffolded notebook; print bug fixed | `advBinf/exercises/haplotype_frequencies.ipynb` (2025-09-12) |
+| 3 | `shiny/stats_binomial.R` | `stat_molbio/binom.R` | 2026-01-16 | yes — `library(shiny)` + `shinyApp()` added | none |
+| 4 | `shiny/stats_normal.R` | `stat_molbio/normal.R` | 2026-01-16 | yes — `library(shiny)` + `shinyApp()` added | none |
+| 5 | `em_algorithms/em_algorithm.ipynb` | `advBinf/exercises/advBinf_EM_algorithm.ipynb` | 2026-09-09 | yes — 3 bugs fixed, figure added, headings restructured, typos, citation | none |
+| 6+7 | `em_algorithms/haplotype_frequencies.ipynb` | `advBinf/exercises/solution_haplotype_frequencies.ipynb` | 2025-09-12 | yes — rebuilt as one scaffolded notebook; print bug fixed | `advBinf/exercises/haplotype_frequencies.ipynb` (2025-09-12) |
 | 12 | `ngs/ngs_intro_human.ipynb` | `chinacourse2026/Day2_Morning_NGSintro_human.ipynb` | 2026-09-14 | yes — quizzes, questions, figure, typos, paths | 5 older copies (see EXERCISES.md) |
 | 13 | `ngs/ngs_intro_animal.ipynb` | `kenya2026/exercises/Day1/Kenya2026_NGSintro.ipynb` | 2026-08-17 | yes — quizzes, questions, typos, paths | 6 older copies (see EXERCISES.md) |
 | — | `ngs/quiz/*.json` (10 files) | new + `kenya2024/.../quiz{1..4}.json` | 2026-09-16 | new quiz bank | kenya2024 quiz1-4 |
@@ -38,8 +38,16 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   Kept deliberately: the server name `emily.popgen.dk` (shared infrastructure,
   not course-specific) and the phrase "ask when you are here".
 
-- **#13 `stats_binomial.R`, #14 `stats_normal.R`** — no quizzes, no data paths,
-  no course branding, no file reads. Copied verbatim.
+- **#3 `stats_binomial.R`, #4 `stats_normal.R`** — these are **Shiny apps**, so
+  they live in `shiny/`, not with the statistics material. My first detection
+  pass missed them: it grepped for `shinyApp|library(shiny)|runApp`, and these
+  files contain none of those — they define `ui <- fluidPage(...)` and
+  `server <- function(input, output)` and then simply stop.
+
+  That is also a bug: without `library(shiny)` and a `shinyApp()` call, sourcing
+  either file defines two objects and launches nothing. Both were added, plus
+  the `source(...)` launch comment the other Shiny apps carry. All five apps in
+  `shiny/` now have both.
 
 - **#9, #10, #11 are all Shiny apps** and live in `shiny/`, not `shared/` (R13).
   All three were found by `grep -rliE 'shinyApp|library\(shiny\)|runApp'`; note
@@ -365,3 +373,9 @@ The full build list is [`EXERCISES.md`](EXERCISES.md); the rules are
   carries a callout at the top and a **Credit** section at the end naming him,
   linking the original, and citing the EDAR papers (Sabeti 2007, Adhikari 2016)
   and ANGSD (Korneliussen 2014).
+
+- **`statistics/` folder removed (2026-09-16).** Its four files moved:
+  `stats_binomial.R` and `stats_normal.R` to `shiny/` because they are Shiny
+  apps, and `em_algorithm.ipynb` and `haplotype_frequencies.ipynb` to a new
+  `em_algorithms/` folder, since both are about building an EM algorithm from
+  scratch.

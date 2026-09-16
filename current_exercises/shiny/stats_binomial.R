@@ -1,3 +1,9 @@
+# Shiny app exploring the binomial distribution.
+# Launch it in R with:
+#   source("https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/current_exercises/shiny/stats_binomial.R")
+
+library(shiny)
+
 
 # Define UI for application
 ui <- fluidPage(
@@ -66,3 +72,5 @@ server <- function(input, output) {
             col = ifelse(x == chosen_x, "red", "blue"))
   })
 }
+
+shinyApp(ui = ui, server = server)

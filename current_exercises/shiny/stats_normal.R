@@ -1,3 +1,9 @@
+# Shiny app exploring the normal distribution.
+# Launch it in R with:
+#   source("https://raw.githubusercontent.com/popgenDK/courses/refs/heads/main/current_exercises/shiny/stats_normal.R")
+
+library(shiny)
+
 # Define UI for application
 ui <- fluidPage(
 
@@ -67,3 +73,4 @@ server <- function(input, output) {
   })
 }
 
+shinyApp(ui = ui, server = server)

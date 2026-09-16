@@ -34,22 +34,12 @@ preview.
 
 ## Exercises
 
-
 ### Linux and the command line — `linux/`
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 1 | [`intro_linux.md`](https://github.com/popgenDK/courses/blob/main/current_exercises/linux/intro_linux.md) | Linux/bash basics: navigating, editing, permissions, pipes. Run in a terminal. | ✅ built | n/a |
 | 2 | [`intro_bash_linux.md`](https://github.com/popgenDK/courses/blob/main/current_exercises/linux/intro_bash_linux.md) | Bash scavenger hunt: directories, text processing, archives, processes. Run in a terminal. | ✅ built | n/a |
-
-### Statistics — `statistics/`
-
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 3 | [`stats_binomial.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/statistics/stats_binomial.R) | The binomial distribution in R. | ✅ built | n/a |
-| 4 | [`stats_normal.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/statistics/stats_normal.R) | The normal distribution in R. | ✅ built | n/a |
-| 5 | [`em_algorithm.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/statistics/em_algorithm.ipynb) | The EM algorithm from first principles: two coins, allele frequencies from genotype likelihoods, and the binomial. | ✅ built | ⚠️ _to regenerate_ |
-| 6+7 | [`haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/statistics/haplotype_frequencies.ipynb) | Estimating haplotype frequencies from genotypes with an EM algorithm. | ✅ built | ⚠️ _to regenerate_ |
 
 ### Sequence analysis — `sequence_analysis/`
 
@@ -59,11 +49,24 @@ preview.
 
 ### Shiny apps — `shiny/`
 
+Interactive R Shiny apps. Launch one in R with the `source(...)` line at the top of the file.
+
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 9 | [`needleman_wunsch_dna.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/needleman_wunsch_dna.R) | Needleman-Wunsch pairwise alignment, DNA (match/mismatch/gap). | ✅ built | n/a |
 | 10 | [`needleman_wunsch_blosum50.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/needleman_wunsch_blosum50.R) | Needleman-Wunsch pairwise alignment, protein (BLOSUM50). | ✅ built | n/a |
 | 11 | [`dotplot.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/dotplot.R) | Dot plot of two sequences from uploaded FASTA files. | ✅ built | n/a |
+| 3 | [`stats_binomial.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/stats_binomial.R) | The binomial distribution in R. | ✅ built | n/a |
+| 4 | [`stats_normal.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/stats_normal.R) | The normal distribution in R. | ✅ built | n/a |
+
+### EM algorithms — `em_algorithms/`
+
+Exercises that build an EM algorithm from scratch.
+
+| # | Exercise | What it covers | Status | Solution |
+|---|---|---|---|---|
+| 5 | [`em_algorithm.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/em_algorithm.ipynb) | The EM algorithm from first principles: two coins, allele frequencies from genotype likelihoods, and the binomial. | ✅ built | ⚠️ _to regenerate_ |
+| 6+7 | [`haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/haplotype_frequencies.ipynb) | Estimating haplotype frequencies from genotypes with an EM algorithm. | ✅ built | ⚠️ _to regenerate_ |
 
 ### NGS data and mapping — `ngs/`
 
@@ -79,7 +82,7 @@ preview.
 |---|---|---|---|---|
 | 15 | `genotype_calling_and_imputation_human.ipynb` | SNP calling, genotype calling and haplotype imputation in one exercise. | ⬜ planned | _to generate_ |
 | 16 | `imputation_human.ipynb` | Genotype imputation with a reference panel (QUILT). | ⬜ planned | _to generate_ |
-| 17 | `phasing_shapeit_human.ipynb` | Haplotype phasing with SHAPEIT. | ⬜ planned | — |
+| 17 | `phasing_shapeit_human.ipynb` | Haplotype phasing with SHAPEIT. | ⬜ planned | _to generate_ |
 
 ### PCA — `pca/`
 
@@ -99,14 +102,14 @@ preview.
 | 24 | `admixture_em_human.ipynb` | The EM algorithm behind ADMIXTURE. | ⬜ planned | _to generate_ |
 | 25 | `admixture_animal.ipynb` | Admixture proportions on wildlife data. | ⬜ planned | _to generate_ |
 | 26 | `admixture_bonus_animal.ipynb` | Admixture bonus: evaluating fit with evalAdmix. | ⬜ planned | _to generate_ |
-| 27 | `population_structure_ii_human.ipynb` | Population structure II: deeper structure inference on 1000G data. | ⬜ planned | — |
+| 27 | `population_structure_ii_human.ipynb` | Population structure II: deeper structure inference on 1000G data. | ⬜ planned | _to generate_ |
 
 ### Local ancestry — `local_ancestry/`
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
 | 28 | `local_ancestry_human.ipynb` | Local ancestry inference and evaluation. | ⬜ planned | _to generate_ |
-| 29 | `local_ancestry_hapla_human.ipynb` | Local ancestry with hapla. | ⬜ planned | — |
+| 29 | `local_ancestry_hapla_human.ipynb` | Local ancestry with hapla. | ⬜ planned | _to generate_ |
 
 ### Gene flow and population relationships — `gene_flow/`
 
@@ -114,15 +117,15 @@ preview.
 |---|---|---|---|---|
 | 30 | `f_stats_human.ipynb` | f2/f3/f4 statistics for testing population relationships. | ⬜ planned | _to generate_ |
 | 31 | `gene_flow_dstat_animal.ipynb` | Gene flow and D-statistics (ABBA-BABA). | ⬜ planned | _to generate_ |
-| 32 | `admixture_graphs_human.ipynb` | Fitting admixture graphs with qpGraph. | ⬜ planned | — |
-| 33 | `chromopainter_finestructure_human.ipynb` | Chromosome painting and fineSTRUCTURE. | ⬜ planned | — |
-| 34 | `dating_admixture_human.ipynb` | Dating admixture events. | ⬜ planned | — |
+| 32 | `admixture_graphs_human.ipynb` | Fitting admixture graphs with qpGraph. | ⬜ planned | _to generate_ |
+| 33 | `chromopainter_finestructure_human.ipynb` | Chromosome painting and fineSTRUCTURE. | ⬜ planned | _to generate_ |
+| 34 | `dating_admixture_human.ipynb` | Dating admixture events. | ⬜ planned | _to generate_ |
 
 ### Demography and the coalescent — `demography/`
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 35 | `coalescence.ipynb` | The coalescent: simulating and interpreting gene trees. | ⬜ planned | — |
+| 35 | `coalescence.ipynb` | The coalescent: simulating and interpreting gene trees. | ⬜ planned | _to generate_ |
 | 36 | `wright_fisher.ipynb` | Wright-Fisher simulations of drift. | ⬜ planned | _to generate_ |
 | 37 | `sfs_model.ipynb` | Modelling the site frequency spectrum. | ⬜ planned | _to generate_ |
 | 38 | `sfs_animal.ipynb` | The SFS from real wildlife sequencing data. | ⬜ planned | _to generate_ |
@@ -139,10 +142,10 @@ preview.
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 42 | `fst_animal.ipynb` | Fst between populations (small dataset). | ⬜ planned | — |
-| 43 | `relatedness_animal.ipynb` | Relatedness and kinship estimation. | ⬜ planned | — |
-| 44 | `relatedness_and_fst_animal.ipynb` | Relatedness and Fst together (the merged version of the two above). | ⬜ planned | — |
-| 45 | `heterozygosity_roh_animal.ipynb` | Heterozygosity and runs of homozygosity (small dataset). | ⬜ planned | — |
+| 42 | `fst_animal.ipynb` | Fst between populations (small dataset). | ⬜ planned | _to generate_ |
+| 43 | `relatedness_animal.ipynb` | Relatedness and kinship estimation. | ⬜ planned | _to generate_ |
+| 44 | `relatedness_and_fst_animal.ipynb` | Relatedness and Fst together (the merged version of the two above). | ⬜ planned | _to generate_ |
+| 45 | `heterozygosity_roh_animal.ipynb` | Heterozygosity and runs of homozygosity (small dataset). | ⬜ planned | _to generate_ |
 
 ### GWAS and human complex traits — `gwas/`
 
@@ -164,7 +167,7 @@ preview.
 
 | # | Exercise | What it covers | Status | Solution |
 |---|---|---|---|---|
-| 57 | `scrna_seurat_human.ipynb` | Single-cell RNA-seq analysis with Seurat. | ⬜ planned | — |
+| 57 | `scrna_seurat_human.ipynb` | Single-cell RNA-seq analysis with Seurat. | ⬜ planned | _to generate_ |
 
 
 ## Where each exercise comes from
@@ -192,26 +195,6 @@ Replaces 1 older copy:
   - [`kenya2026/exercises/post_course/day1_morning_bash_linux.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day1_morning_bash_linux.ipynb) (2026-08-25)
 
 
-### `statistics/`
-
-**3. `stats_binomial.R`**  
-From: [`stat_molbio/binom.R`](https://github.com/popgenDK/courses/blob/main/stat_molbio/binom.R) (2026-01-16)  
-Replaces: nothing — this is the only copy
-
-**4. `stats_normal.R`**  
-From: [`stat_molbio/normal.R`](https://github.com/popgenDK/courses/blob/main/stat_molbio/normal.R) (2026-01-16)  
-Replaces: nothing — this is the only copy
-
-**5. `em_algorithm.ipynb`**  
-From: [`advBinf/exercises/advBinf_EM_algorithm.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_EM_algorithm.ipynb) (2026-09-09)  
-Replaces: nothing — this is the only copy
-
-**6+7. `haplotype_frequencies.ipynb`**  
-From: [`advBinf/exercises/solution_haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/solution_haplotype_frequencies.ipynb) (2025-09-12)  
-Replaces 1 older copy:
-  - [`advBinf/exercises/haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/haplotype_frequencies.ipynb) (2025-09-12) — the exercise half, which was too hard to work through
-
-
 ### `sequence_analysis/`
 
 **8. `motif_discovery.R`**  
@@ -232,6 +215,26 @@ Replaces: nothing — this is the only copy
 **11. `dotplot.R`**  
 From: [`BSA/dotplotShiny.R`](https://github.com/popgenDK/courses/blob/main/BSA/dotplotShiny.R) (2025-08-30)  
 Replaces: nothing — this is the only copy
+
+**3. `stats_binomial.R`**  
+From: [`stat_molbio/binom.R`](https://github.com/popgenDK/courses/blob/main/stat_molbio/binom.R) (2026-01-16)  
+Replaces: nothing — this is the only copy
+
+**4. `stats_normal.R`**  
+From: [`stat_molbio/normal.R`](https://github.com/popgenDK/courses/blob/main/stat_molbio/normal.R) (2026-01-16)  
+Replaces: nothing — this is the only copy
+
+
+### `em_algorithms/`
+
+**5. `em_algorithm.ipynb`**  
+From: [`advBinf/exercises/advBinf_EM_algorithm.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_EM_algorithm.ipynb) (2026-09-09)  
+Replaces: nothing — this is the only copy
+
+**6+7. `haplotype_frequencies.ipynb`**  
+From: [`advBinf/exercises/solution_haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/solution_haplotype_frequencies.ipynb) (2025-09-12)  
+Replaces 1 older copy:
+  - [`advBinf/exercises/haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/haplotype_frequencies.ipynb) (2025-09-12) — the exercise half, which was too hard to work through
 
 
 ### `ngs/`
@@ -259,7 +262,7 @@ Replaces 6 older copies:
 From: [`summer2025/exercises/Day2_NGS_Inference.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day2_NGS_Inference.ipynb) (2025-08-04)  
 Replaces 2 older copies:
   - [`summer2024/exercises/NGS_inference.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/NGS_inference.ipynb) (2024-08-19)
-  - [`summer2023/NGSinference/README.md`](https://github.com/popgenDK/courses/blob/main/summer2023/NGSinference/README.md) + [`summer2023/NGSinference/solutions.md`](https://github.com/popgenDK/courses/blob/main/summer2023/NGSinference/solutions.md) (2023-08-05)
+  - [`summer2023/NGSinference/README.md`](https://github.com/popgenDK/courses/blob/main/summer2023/NGSinference/README.md) + `solutions.md` (2023-08-05)
 
 
 ### `genotype_calling_imputation/`
