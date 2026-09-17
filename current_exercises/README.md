@@ -75,26 +75,33 @@ Replaces:
 
 ### Shiny apps — `shiny/`
 
-Interactive R Shiny apps. Launch one in R with the `source(...)` line at the top of the file.
+Interactive R Shiny apps. Each is a single self-contained `.R` file, so the `source(...)` line below launches it straight from GitHub — nothing to clone, and no packages beyond the ones the app itself uses. (`shiny::runUrl()` does not apply here: it expects a zipped app directory, not a single file.)
+
+One app also has a **run in your browser** link. That is [shinylive](https://shinylive.io), which compiles the app to WebAssembly and runs it client-side with webR — no R installation and no server, with the whole app carried in the URL. Expect 10–30 seconds on first load while the R runtime downloads. webR does not carry every CRAN package, so not every app can be published this way.
 
 **9 · [`needleman_wunsch_dna.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/needleman_wunsch_dna.R)**  
 Needleman-Wunsch pairwise alignment of **DNA**, as a Shiny app. Sequences, not genotypes.  
+Run in R: `source("https://raw.githubusercontent.com/popgenDK/courses/main/current_exercises/shiny/needleman_wunsch_dna.R")`  
 *From [`BSA/NW_DNA.R`](https://github.com/popgenDK/courses/blob/main/BSA/NW_DNA.R) (2025-09-02) — the only copy*
 
 **10 · [`needleman_wunsch_blosum50.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/needleman_wunsch_blosum50.R)**  
 Needleman-Wunsch pairwise alignment of **protein** with BLOSUM50, as a Shiny app. Sequences, not genotypes.  
+Run in R: `source("https://raw.githubusercontent.com/popgenDK/courses/main/current_exercises/shiny/needleman_wunsch_blosum50.R")`  
 *From [`BSA/needleman_wunsch_shiny_app_blosum_50.r`](https://github.com/popgenDK/courses/blob/main/BSA/needleman_wunsch_shiny_app_blosum_50.r) (2025-08-30) — the only copy*
 
 **11 · [`dotplot.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/dotplot.R)**  
 Dot plot of two sequences from FASTA files you upload. Any species.  
+Run in R: `source("https://raw.githubusercontent.com/popgenDK/courses/main/current_exercises/shiny/dotplot.R")`  
 *From [`BSA/dotplotShiny.R`](https://github.com/popgenDK/courses/blob/main/BSA/dotplotShiny.R) (2025-08-30) — the only copy*
 
 **3 · [`stats_binomial.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/stats_binomial.R)**  
 The binomial distribution, as an interactive Shiny app. No data.  
+Run in R: `source("https://raw.githubusercontent.com/popgenDK/courses/main/current_exercises/shiny/stats_binomial.R")`  
 *From [`stat_molbio/binom.R`](https://github.com/popgenDK/courses/blob/main/stat_molbio/binom.R) (2026-01-16) — the only copy*
 
 **4 · [`stats_normal.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/stats_normal.R)**  
 The normal distribution, as an interactive Shiny app. No data.  
+Run in R: `source("https://raw.githubusercontent.com/popgenDK/courses/main/current_exercises/shiny/stats_normal.R")` · [run in your browser][shinylive-stats_normal]  
 *From [`stat_molbio/normal.R`](https://github.com/popgenDK/courses/blob/main/stat_molbio/normal.R) (2026-01-16) — the only copy*
 
 
@@ -624,3 +631,5 @@ curated as each one is done.
 Nothing outside `data/` should be read by an exercise. The symlink itself is not
 in git — it resolves only on the popgen server.
 
+
+[shinylive-stats_normal]: https://shinylive.io/r/app/#code=NobwRAdghgtgpmAXAAjFADugdAJTAGlQGMB7CAFzgqVQGJkBlACwEsIBPZDdZOAD3QAbEgCc2Ac2TkmcZBFEwog5ABMWAZ3JiARgFdyLMlgA6EegBkouiESbIW5exGQ5kAdwdNEp+smTqSXREiOAAKYzAmcnJ0dUQAeniRKDcscU9dPXU4YLJKCixSGHj0EnRxKgARAGl40iDs9SS4ADMmmSgVJsU2OqCRKnIAfX4cog04JvVWDnjNKHJ1IfkRRUFcCIBKU1NBFm1kkXZQ6bZ2bYgfZErWtlkAVQBJZBbRLkw9ogXDS4hdFmQAB4ALQvQT-FQABSgFXCvz89AAgh8WF8DGQpA5BHBTH4DORsdCIHBBOEwAA5BRKa4aLT7fQ-ZAAMWsRHREHUW3wO2cyHoDBYKjg2igIncnic6H06heb2kshWa1UtJ0DIx6FFsDglBEnN56kFwtFlnYgXIcL8fgNQpFIiJJItlr8f3gYiIjwgUvNEXgUEuBGQEQAsnA-chwroAAwAZm0RE23gDADclLpZABeZCRwiaOA8TORrAARk23N5TpdOVRHq9ZPUKgihAiDHIfpUopU1zgSZY3wxEZjRGjCcbyBT4IzyCLhBgbGQBeLOco+azxdLuKdcl0rurnv0ZL4o4iADVU7JQnxNrKxSpFVwIJ30IrE4Rx2n51ml3mP4WS2XN1uO7unu3pgAAjkeYAAIq6H6BjYuGYFXq8Ypgc+o5vpOhYAKwznOBYzlAfAftO-jLj+WCRiWG5+Ou8KWvyTAkG4XDIEIJCOCQLRSDIyqaKq7L3p28rIAM6i6IIizIFxPGyC0rLsnqTo9BA9qkjRlrseQADy+i1hEaiaJCwjkFyGl+EmOQigYMAACr8Dpen7gZio4JMEmmWAdEAZZIjWSwdkObpMTOWAT4KG54mSWZ5aWr5-mBXwjkhaBaERe50VeRpFy0aYFxXDcLR3P4OS+cgwjpEQpjZCIZUgi8Ck-KEbBeoQZpeleIA8giLihmyLCWbwAhiQaGLkCQyBfIIRASQssgiYq1KGXSejshui3KPVAxQP1lmhF1sW+s49UtfoAAkR0afWQKgqd5BnfWGnESdIFnYesVgTdkrnRB9F+HsmiOk6t4KB+IOrBeM6hhAOYqN5m7hasH6IzAkPIEdsPw06aVI5mOOo2BUN+pj2UbgAvvlvL0MFXqyaJGVSTJC1Uso8k2IpG7ted4MwJFHlfQMD45PZSX7RpGq5mSPNkoQd1vU2BCjnLGOBorAZy-WCtXumo4baEmxnTzOXIBT3XSU590o3zkkC1QQoiCL5oHU6EuUGSKMy99918Ar3Lq69KuNkrr2a6r2u6yz+tnSjxum-RXP3fj1uOFtdvCw5Yuxa7YQRPjnty4Tqt+7LAfQ77wdeg9Kha-OEerEoUf47HlM9cZHF0xtfErWq8cW4btJtynoKC-bg+Z8p0Nfcr0NXZ2L2V49sXPaC2RgaER3IKCAAsABUocbwA1Mgu+h9iEDiNIWBmiRkaRsbfi2CQ2QQEMy9e29Zs9QAwttlCsVp4sTJo2lj7dGZd-Bw0IOQdg6BJwREEKOUgyhMwRG0BOUcfBBBQG0B+CIh4AzsCwTglBYAbgcgcOwUcKlcEUhZjSfi9I1pZVitgvYxJQhJg-I-Z+r9CBIJoQMBsAZBBuE7JmAATPfNiJA2CLFCNwqgvDVCKnkUxHhoCVb1lLJNEgyDVaCNHOgWwJEACczdTBkx5KcDgyJ0ChH+B+f4OZSo5A-DVXyFwwBkwALpAA
