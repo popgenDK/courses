@@ -34,16 +34,11 @@ file and renders it. Nothing needs to be downloaded. If a preview fails to load
 — the largest render here is 4 MB and the service can time out — fall back to the
 `.html` file in the repo and open it locally.
 
-**39 of 51 are rendered so far** and are linked in the tables below. The
-remaining 12 are still to do:
-
-- **8 that should render** — the five `admixture/` exercises,
-  `pca/pca_called_genotypes_human`, `em_algorithms/haplotype_frequencies` and
-  `gwas/heritability_ldscore_human` (which stops at the LDSC step, since that
-  conda environment is not installed).
-- **4 that cannot** — `gwas_analysis_human`, `gene_based_testing_human`,
-  `prs_height_human` and `proteomics_mr_human`, whose data is not on this server.
-  These are expected to stay blank.
+**47 of 51 are rendered**, each linked beside its exercise below. The four
+without one — `gwas_analysis_human`, `gene_based_testing_human`,
+`prs_height_human` and `proteomics_mr_human` — have no data on this server, so
+they are expected to stay blank. `heritability_ldscore_human` renders as far as
+the LD score regression, which needs a conda environment that is not installed.
 
 The renders in the original course folders are of the *old* notebooks — before
 the quizzes, questions, typo fixes and path changes — so they are deliberately
@@ -53,472 +48,556 @@ not copied here.
 
 ### Linux and the command line — `linux/`
 
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 1 | [`intro_linux.md`](https://github.com/popgenDK/courses/blob/main/current_exercises/linux/intro_linux.md) | Linux and bash basics: navigating, editing, permissions, pipes. No data. Run in a terminal. | ✅ built | n/a |
-| 2 | [`intro_bash_linux.md`](https://github.com/popgenDK/courses/blob/main/current_exercises/linux/intro_bash_linux.md) | Bash scavenger hunt: directories, text processing, archives, processes. No data. Run in a terminal. | ✅ built | n/a |
+**1 · [`intro_linux.md`](https://github.com/popgenDK/courses/blob/main/current_exercises/linux/intro_linux.md)**  
+Linux and bash basics: navigating, editing, permissions, pipes. No data. Run in a terminal.  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
+
+From [`summer2025/BriefIntro2Linux.md`](https://github.com/popgenDK/courses/blob/main/summer2025/BriefIntro2Linux.md) (2025-07-23)
+
+Replaces:
+
+- [`summer2024/BriefIntro2Linux.md`](https://github.com/popgenDK/courses/blob/main/summer2024/BriefIntro2Linux.md) (2024-07-04)
+
+</details>
+
+**2 · [`intro_bash_linux.md`](https://github.com/popgenDK/courses/blob/main/current_exercises/linux/intro_bash_linux.md)**  
+Bash scavenger hunt: directories, text processing, archives, processes. No data. Run in a terminal.  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
+
+From [`kenya2026/exercises/Day1/IntroToBash.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/IntroToBash.ipynb) (2026-08-18)
+
+Replaces:
+
+- [`kenya2026/exercises/post_course/day1_morning_bash_linux.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day1_morning_bash_linux.ipynb) (2026-08-25)
+
+</details>
+
 
 ### Shiny apps — `shiny/`
 
 Interactive R Shiny apps. Launch one in R with the `source(...)` line at the top of the file.
 
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 9 | [`needleman_wunsch_dna.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/needleman_wunsch_dna.R) | Needleman-Wunsch pairwise alignment of **DNA**, as a Shiny app. Sequences, not genotypes. | ✅ built | n/a |
-| 10 | [`needleman_wunsch_blosum50.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/needleman_wunsch_blosum50.R) | Needleman-Wunsch pairwise alignment of **protein** with BLOSUM50, as a Shiny app. Sequences, not genotypes. | ✅ built | n/a |
-| 11 | [`dotplot.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/dotplot.R) | Dot plot of two sequences from FASTA files you upload. Any species. | ✅ built | n/a |
-| 3 | [`stats_binomial.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/stats_binomial.R) | The binomial distribution, as an interactive Shiny app. No data. | ✅ built | n/a |
-| 4 | [`stats_normal.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/stats_normal.R) | The normal distribution, as an interactive Shiny app. No data. | ✅ built | n/a |
+**9 · [`needleman_wunsch_dna.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/needleman_wunsch_dna.R)**  
+Needleman-Wunsch pairwise alignment of **DNA**, as a Shiny app. Sequences, not genotypes.  
+*From [`BSA/NW_DNA.R`](https://github.com/popgenDK/courses/blob/main/BSA/NW_DNA.R) (2025-09-02) — the only copy*
+
+**10 · [`needleman_wunsch_blosum50.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/needleman_wunsch_blosum50.R)**  
+Needleman-Wunsch pairwise alignment of **protein** with BLOSUM50, as a Shiny app. Sequences, not genotypes.  
+*From [`BSA/needleman_wunsch_shiny_app_blosum_50.r`](https://github.com/popgenDK/courses/blob/main/BSA/needleman_wunsch_shiny_app_blosum_50.r) (2025-08-30) — the only copy*
+
+**11 · [`dotplot.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/dotplot.R)**  
+Dot plot of two sequences from FASTA files you upload. Any species.  
+*From [`BSA/dotplotShiny.R`](https://github.com/popgenDK/courses/blob/main/BSA/dotplotShiny.R) (2025-08-30) — the only copy*
+
+**3 · [`stats_binomial.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/stats_binomial.R)**  
+The binomial distribution, as an interactive Shiny app. No data.  
+*From [`stat_molbio/binom.R`](https://github.com/popgenDK/courses/blob/main/stat_molbio/binom.R) (2026-01-16) — the only copy*
+
+**4 · [`stats_normal.R`](https://github.com/popgenDK/courses/blob/main/current_exercises/shiny/stats_normal.R)**  
+The normal distribution, as an interactive Shiny app. No data.  
+*From [`stat_molbio/normal.R`](https://github.com/popgenDK/courses/blob/main/stat_molbio/normal.R) (2026-01-16) — the only copy*
+
 
 ### EM algorithms — `em_algorithms/`
 
 Exercises that build an EM algorithm from scratch.
 
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 5 | [`em_algorithm.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/em_algorithm.ipynb) | The EM algorithm from first principles: two coins, allele frequencies from genotype likelihoods, and the binomial. Simulated data. | ✅ built | [`em_algorithm.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/em_algorithm.html) |
-| 6+7 | [`haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/haplotype_frequencies.ipynb) | An EM algorithm for haplotype frequencies from 2-SNP genotypes. Simulated: 1000 individuals. | ✅ built | [`haplotype_frequencies.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/haplotype_frequencies.html) |
-| 19 | [`pca_em_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/pca_em_human.ipynb) | The EM algorithms behind EMU and PCAngsd, and randomized SVD. Simulated: 60 individuals, 3 populations, 10,000 SNPs. | ✅ built | [`pca_em_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/pca_em_human.html) |
-| 24 | [`admixture_em_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/admixture_em_human.ipynb) | The EM algorithm behind ADMIXTURE and NGSadmix. Simulated: 50 individuals, 2 ancestral populations. | ✅ built | [`admixture_em_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/admixture_em_human.html) |
-| 37 | [`sfs_model.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/sfs_model.ipynb) | Estimating the site frequency spectrum from genotype likelihoods by EM. Simulated: 10 individuals, 100,000 sites. | ✅ built | [`sfs_model.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/sfs_model.html) |
+**5 · [`em_algorithm.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/em_algorithm.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/em_algorithm.html)  
+The EM algorithm from first principles: two coins, allele frequencies from genotype likelihoods, and the binomial. Simulated data.  
+*From [`advBinf/exercises/advBinf_EM_algorithm.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_EM_algorithm.ipynb) (2026-09-09) — the only copy*
+
+**6+7 · [`haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/haplotype_frequencies.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/haplotype_frequencies.html)  
+An EM algorithm for haplotype frequencies from 2-SNP genotypes. Simulated: 1000 individuals.  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
+
+From [`advBinf/exercises/solution_haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/solution_haplotype_frequencies.ipynb) (2025-09-12)
+
+Replaces:
+
+- [`advBinf/exercises/haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/haplotype_frequencies.ipynb) (2025-09-12) — the exercise half, which was too hard to work through
+
+</details>
+
+**19 · [`pca_em_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/pca_em_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/pca_em_human.html)  
+The EM algorithms behind EMU and PCAngsd, and randomized SVD. Simulated: 60 individuals, 3 populations, 10,000 SNPs.  
+*From [`advBinf/exercises/advBinf_PCA_EM.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA_EM.ipynb) (2026-09-16) — the only copy*
+
+**24 · [`admixture_em_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/admixture_em_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/admixture_em_human.html)  
+The EM algorithm behind ADMIXTURE and NGSadmix. Simulated: 50 individuals, 2 ancestral populations.  
+*From [`advBinf/exercises/advBinf_admixture_EM.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture_EM.ipynb) (2026-09-14) — the only copy*
+
+**37 · [`sfs_model.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/sfs_model.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/em_algorithms/sfs_model.html)  
+Estimating the site frequency spectrum from genotype likelihoods by EM. Simulated: 10 individuals, 100,000 sites.  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
+
+From [`advBinf/exercises/advBinf_SFSmodel.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_SFSmodel.ipynb) (2026-09-16)
+
+Replaces:
+
+- [`advBinf/exercises/SFS.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/SFS.md) (2024-09-20)
+
+</details>
+
 
 ### NGS data and mapping — `ngs/`
 
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 12 | [`ngs_intro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_human.ipynb) | FASTQ &rarr; QC &rarr; bwa mapping &rarr; SAM/BAM &rarr; VCF. **Human**: NA19238 (YRI, Nigeria), chr21. Reads, not genotypes. | ✅ built | [`ngs_intro_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_human.html) |
-| 13 | [`ngs_intro_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_animal.ipynb) | FASTQ &rarr; QC &rarr; bwa mapping &rarr; SAM/BAM &rarr; VCF. **Blue wildebeest**, mapped to a **goat** reference. Reads, not genotypes. | ✅ built | [`ngs_intro_animal.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_animal.html) |
-| 14 | [`ngs_inference_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_inference_human.ipynb) | Low-depth inference with ANGSD: genotype likelihoods, calling, allele frequencies, SNP calling at EDAR. **Human**: 100 individuals from LWK, TSI, CHB, PEL, NAM. **Low depth** (~2-3x): genotype likelihoods, never called. | ✅ built | [`ngs_inference_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_inference_human.html) |
+**12 · [`ngs_intro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_human.html)  
+FASTQ &rarr; QC &rarr; bwa mapping &rarr; SAM/BAM &rarr; VCF. **Human**: NA19238 (YRI, Nigeria), chr21. Reads, not genotypes.  
+<details><summary>Where it comes from — replaces 5 older copies</summary>
+
+From [`chinacourse2026/Day2_Morning_NGSintro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day2_Morning_NGSintro_human.ipynb) (2026-09-14)
+
+Replaces:
+
+- [`chinaCourse2025/Day2_Morning_NGSintro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day2_Morning_NGSintro_human.ipynb) (2025-08-04)
+- [`summer2025/exercises/Day1_afternoon_NGSintro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_afternoon_NGSintro_human.ipynb) (2025-08-04)
+- [`summer2024/exercises/NGSintro.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/NGSintro.ipynb) (2024-08-19)
+- [`bgi23/NGSintro.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/NGSintro.ipynb) (2023-10-30)
+- [`summer2023/IntroNGS/introNGSexercises.md`](https://github.com/popgenDK/courses/blob/main/summer2023/IntroNGS/introNGSexercises.md) (2023-08-07)
+
+</details>
+
+**13 · [`ngs_intro_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_animal.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_intro_animal.html)  
+FASTQ &rarr; QC &rarr; bwa mapping &rarr; SAM/BAM &rarr; VCF. **Blue wildebeest**, mapped to a **goat** reference. Reads, not genotypes.  
+<details><summary>Where it comes from — replaces 6 older copies</summary>
+
+From [`kenya2026/exercises/Day1/Kenya2026_NGSintro.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/Kenya2026_NGSintro.ipynb) (2026-08-17)
+
+Replaces:
+
+- [`kenya2026/exercises/post_course/day1_afternoon_ngs_intro.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day1_afternoon_ngs_intro.ipynb) (2026-08-25)
+- [`summer2025/exercises/Day1_afternoon_NGSintro_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_afternoon_NGSintro_animal.ipynb) (2025-08-04)
+- [`chinaCourse2025/Day2_Morning_NGSintro_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day2_Morning_NGSintro_animal.ipynb) (2025-08-04)
+- [`kenya2024/exercises/day1_NGSintro/Day1_NGSintroV4.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day1_NGSintro/Day1_NGSintroV4.ipynb) (2024-08-07)
+- [`kenya2024/exercises/day1_NGSintro/Day1_NGSintroV3.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day1_NGSintro/Day1_NGSintroV3.ipynb) (2024-07-26)
+- [`kenya2024/exercises/day1_NGSintro/Day1_NGSintroV2.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day1_NGSintro/Day1_NGSintroV2.ipynb) (2024-07-15)
+
+</details>
+
+**14 · [`ngs_inference_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_inference_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/ngs/ngs_inference_human.html)  
+Low-depth inference with ANGSD: genotype likelihoods, calling, allele frequencies, SNP calling at EDAR. **Human**: 100 individuals from LWK, TSI, CHB, PEL, NAM. **Low depth** (~2-3x): genotype likelihoods, never called.  
+<details><summary>Where it comes from — replaces 2 older copies</summary>
+
+From [`summer2025/exercises/Day2_NGS_Inference.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day2_NGS_Inference.ipynb) (2025-08-04)
+
+Replaces:
+
+- [`summer2024/exercises/NGS_inference.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/NGS_inference.ipynb) (2024-08-19)
+- [`summer2023/NGSinference/README.md`](https://github.com/popgenDK/courses/blob/main/summer2023/NGSinference/README.md) + `solutions.md` (2023-08-05)
+
+</details>
+
 
 ### Genotype calling and imputation — `genotype_calling_imputation/`
 
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 15 | [`genotype_calling_and_imputation_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/genotype_calling_and_imputation_human.ipynb) | SNP calling, genotype calling and imputation compared. **Human**: 30 CEU samples, 3 Mb of chr20. **Low depth**: the point is comparing calling with imputation. | ✅ built | [`genotype_calling_and_imputation_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/genotype_calling_and_imputation_human.html) |
-| 16 | [`imputation_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/imputation_human.ipynb) | Genotype imputation with a reference panel. **Human**: 30 CEU samples, 3 Mb of chr20. **Low depth**: imputation instead of calling. | ✅ built | [`imputation_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/imputation_human.html) |
+**15 · [`genotype_calling_and_imputation_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/genotype_calling_and_imputation_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/genotype_calling_and_imputation_human.html)  
+SNP calling, genotype calling and imputation compared. **Human**: 30 CEU samples, 3 Mb of chr20. **Low depth**: the point is comparing calling with imputation.  
+<details><summary>Where it comes from — replaces 2 older copies</summary>
+
+From [`advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb) (2026-09-09)
+
+Replaces:
+
+- [`advBinf/exercises/genotype calling and haplotype Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/genotype%20calling%20and%20haplotype%20Imputation.ipynb) (2025-09-12)
+- [`advBinf/exercises/SNPandGenotypeCalling.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/SNPandGenotypeCalling.md) (2024-09-13)
+
+</details>
+
+**16 · [`imputation_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/imputation_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/genotype_calling_imputation/imputation_human.html)  
+Genotype imputation with a reference panel. **Human**: 30 CEU samples, 3 Mb of chr20. **Low depth**: imputation instead of calling.  
+<details><summary>Where it comes from — replaces 5 older copies</summary>
+
+From [`advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb) (2026-09-09) for the imputation sections, plus [`chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb) (2026-09-09) for the three sections only it has
+
+Replaces:
+
+- [`summer2025/exercises/Day2_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day2_Imputation.ipynb) (2025-08-05)
+- [`chinaCourse2025/Day2_Afternoon_QUILT_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day2_Afternoon_QUILT_Imputation.ipynb) (2025-07-28)
+- [`bgi23/03.QUILT_Imputation_new.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/03.QUILT_Imputation_new.ipynb) (2023-11-09)
+- [`bgi23/03.QUILT_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/03.QUILT_Imputation.ipynb) (2023-11-09)
+- [`bgi23/02.Minimac4_Imputaion.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/02.Minimac4_Imputaion.ipynb) (2023-11-09)
+
+</details>
+
 
 ### PCA — `pca/`
 
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 58 | [`pca_mds_and_svd.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_mds_and_svd.ipynb) | MDS and PCA worked by hand: distances, cmdscale, the SVD, the covariance matrix, variance explained. No data &mdash; a 5x7 matrix typed in. | ✅ built | [`pca_mds_and_svd.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_mds_and_svd.html) |
-| 18 | [`pca_low_depth_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_human.ipynb) | PCAngsd on genotype likelihoods. **Human**: 435 individuals from ASW, CEU, CHB, MXL, YRI. **Low depth**: genotype likelihoods. | ✅ built | [`pca_low_depth_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_human.html) |
-| 59 | [`pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_selection_human.ipynb) | PC-based selection scan with PCAngsd. **Human**: 424 Europeans from CEU, GBR, IBS, TSI. **Low depth**: genotype likelihoods. | ✅ built | [`pca_low_depth_selection_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_selection_human.html) |
-| 22 | [`pca_called_genotypes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_human.ipynb) | PCAone on LD-pruned called genotypes, read against admixture proportions. **Human**: 192 individuals, 16 populations. **Called genotypes** (LD-pruned plink). | ✅ built | [`pca_called_genotypes_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_human.html) |
-| 20 | [`pca_called_genotypes_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_animal.ipynb) | PCAone on called genotypes, LD pruning adjusted for structure, and an IBS tree. **Blue wildebeest**: 73 individuals, 7 localities. **Called genotypes** (plink). | ✅ built | [`pca_called_genotypes_animal.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_animal.html) |
+**58 · [`pca_mds_and_svd.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_mds_and_svd.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_mds_and_svd.html)  
+MDS and PCA worked by hand: distances, cmdscale, the SVD, the covariance matrix, variance explained. No data &mdash; a 5x7 matrix typed in.  
+*From extracted from [`advBinf/exercises/advBinf_PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA.ipynb) cells 2-25 (2026-09-16) — the only copy*
+
+**18 · [`pca_low_depth_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_human.html)  
+PCAngsd on genotype likelihoods. **Human**: 435 individuals from ASW, CEU, CHB, MXL, YRI. **Low depth**: genotype likelihoods.  
+<details><summary>Where it comes from — replaces 4 older copies</summary>
+
+From [`advBinf/exercises/advBinf_PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA.ipynb) (2026-09-16), from cell 26 on
+
+Replaces:
+
+- [`summer2025/exercises/Day5_PCA_1.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_1.ipynb) (2025-08-06)
+- [`chinaCourse2025/Day4_Afternoon_PCA_main.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Afternoon_PCA_main.ipynb) (2025-07-28)
+- [`advBinf/exercises/PCA.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/PCA.md) (2024-09-17)
+- [`summer2024/exercises/summer2024-PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/summer2024-PCA.ipynb) (2024-08-20)
+
+</details>
+
+**59 · [`pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_selection_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_selection_human.html)  
+PC-based selection scan with PCAngsd. **Human**: 424 Europeans from CEU, GBR, IBS, TSI. **Low depth**: genotype likelihoods.  
+*From [`chinacourse2026/Day4_Afternoon_PCA_1.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_Afternoon_PCA_1.ipynb) (2026-09-14), the **PC-based selection** half (from the `# PC-based selection` heading) — the only copy*
+
+**22 · [`pca_called_genotypes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_human.html)  
+PCAone on LD-pruned called genotypes, read against admixture proportions. **Human**: 192 individuals, 16 populations. **Called genotypes** (LD-pruned plink).  
+*From [`chinacourse2026/Day4_Afternoon_PCA_1.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_Afternoon_PCA_1.ipynb) (2026-09-14), the **first** half, up to the `# PC-based selection` heading — the only copy*
+
+**20 · [`pca_called_genotypes_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_animal.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_called_genotypes_animal.html)  
+PCAone on called genotypes, LD pruning adjusted for structure, and an IBS tree. **Blue wildebeest**: 73 individuals, 7 localities. **Called genotypes** (plink).  
+<details><summary>Where it comes from — replaces 6 older copies</summary>
+
+From [`advBinf/exercises/advBinf_PCA_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA_bonus.ipynb) (2026-09-16)
+
+Replaces:
+
+- [`kenya2026/exercises/Day3/Kenya2026_PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Kenya2026_PCA.ipynb) (2026-08-17)
+- [`kenya2026/exercises/post_course/day4_morning_pca.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day4_morning_pca.ipynb) (2026-08-25)
+- [`summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb) (2025-08-06)
+- [`chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb) (2025-07-28)
+- [`summer2024/exercises/summer2024-PCA-CalledGenotypes.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/summer2024-PCA-CalledGenotypes.ipynb) (2024-08-20)
+- [`kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb) (2024-08-09)
+
+</details>
+
 
 ### Admixture, local ancestry and gene flow — `admixture/`
 
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 23 | [`admixture_low_depth_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_low_depth_human.ipynb) | NGSadmix on genotype likelihoods, evalAdmix and the choice of K. **Human**: 435 individuals from ASW, CEU, CHB, MXL, YRI. **Low depth**: genotype likelihoods. | ✅ built | [`admixture_low_depth_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_low_depth_human.html) |
-| 60 | [`admixture_reference_panel_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_reference_panel_human.ipynb) | fastNGSadmix: the ancestry of a single individual against a fixed panel. **Human**: 7 reference populations, 195 individuals. **Low depth**: genotype likelihoods for one individual. | ✅ built | [`admixture_reference_panel_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_reference_panel_human.html) |
-| 61 | [`admixture_called_genotypes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_human.ipynb) | ADMIXTURE on called genotypes, convergence across seeds, and evalAdmix. **Human**: 192 individuals, 16 populations. **Called genotypes** (LD-pruned plink). | ✅ built | [`admixture_called_genotypes_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_human.html) |
-| 25 | [`admixture_called_genotypes_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_animal.ipynb) | ADMIXTURE on called genotypes, seeds, K and model fit. **Blue wildebeest**: 73 individuals, 7 localities. **Called genotypes** (plink). | ✅ built | [`admixture_called_genotypes_animal.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_animal.html) |
-| 28 | [`local_ancestry_flare_mosaic_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_flare_mosaic_human.ipynb) | Local ancestry with FLARE and MOSAIC, 20 vs 200 generations since admixture. Simulated **human-like** admixed genomes. **Called genotypes** (phased). | ✅ built | [`local_ancestry_flare_mosaic_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_flare_mosaic_human.html) |
-| 29 | [`local_ancestry_hapla_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_hapla_human.ipynb) | Local ancestry with hapla cluster/admix/fatash. Simulated **human**, then real **cattle** (chr25, 314 individuals). **Called genotypes** (phased). | ✅ built | [`local_ancestry_hapla_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_hapla_human.html) |
-| 30 | [`f_stats_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/f_stats_human.ipynb) | f2, f3 and f4 statistics and qpAdm. **Human**: 1,646 individuals in 98 populations, ancient and modern, from the AADR. **Called genotypes**, precomputed F2. | ✅ built | [`f_stats_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/f_stats_human.html) |
-| 31 | [`gene_flow_dstat_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/gene_flow_dstat_animal.ipynb) | D-statistics (ABBA-BABA) built from scratch on simulated **human/Neanderthal** data, then f4 on **blue and black wildebeest**. **Called genotypes**. | ✅ built | [`gene_flow_dstat_animal.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/gene_flow_dstat_animal.html) |
-| 32 | [`admixture_graphs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_graphs_human.ipynb) | Fitting admixture graphs with qpgraph, and estimating them with treemix. **Human**: 33 world populations. **Called genotypes**, precomputed F2. | ✅ built | [`admixture_graphs_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_graphs_human.html) |
-| 33 | [`chromopainter_finestructure_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/chromopainter_finestructure_human.ipynb) | Chromosome painting with ChromoPainter, clustering with fineSTRUCTURE, then GLOBETROTTER and SOURCEFIND. **Human**: 16 populations, 256 individuals. **Called genotypes** (phased haplotypes + recombination map). | ✅ built | [`chromopainter_finestructure_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/chromopainter_finestructure_human.html) |
-| 34 | [`dating_admixture_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/dating_admixture_human.ipynb) | Dating admixture with ALDER, MALDER, fastGLOBETROTTER and MOSAIC, then AdaptMix for selection. **Human**: 16 populations plus a simulated admixed group. **Called genotypes** (phased). | ✅ built | [`dating_admixture_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/dating_admixture_human.html) |
+**23 · [`admixture_low_depth_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_low_depth_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_low_depth_human.html)  
+NGSadmix on genotype likelihoods, evalAdmix and the choice of K. **Human**: 435 individuals from ASW, CEU, CHB, MXL, YRI. **Low depth**: genotype likelihoods.  
+<details><summary>Where it comes from — replaces 5 older copies</summary>
+
+From [`advBinf/exercises/advBinf_admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture.ipynb) (2026-09-14), cells 5-70
+
+Replaces:
+
+- [`summer2025/exercises/Day3_Morning_Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_Morning_Admixture.ipynb) (2025-08-05)
+- [`advBinf/exercises/admixture.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/admixture.md) (2024-09-16)
+- [`summer2024/exercises/admixExercise_popgen24.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/admixExercise_popgen24.ipynb) (2024-08-19)
+- [`bgi23/Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/Admixture.ipynb) (2023-11-02)
+- [`summer2023/InfererPopStructure/admixExercise_popgen23.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/InfererPopStructure/admixExercise_popgen23.ipynb) (2023-08-08)
+
+</details>
+
+**60 · [`admixture_reference_panel_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_reference_panel_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_reference_panel_human.html)  
+fastNGSadmix: the ancestry of a single individual against a fixed panel. **Human**: 7 reference populations, 195 individuals. **Low depth**: genotype likelihoods for one individual.  
+*From [`advBinf/exercises/advBinf_admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture.ipynb) (2026-09-14), cells 71-93 — the only copy*
+
+**61 · [`admixture_called_genotypes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_human.html)  
+ADMIXTURE on called genotypes, convergence across seeds, and evalAdmix. **Human**: 192 individuals, 16 populations. **Called genotypes** (LD-pruned plink).  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
+
+From [`chinacourse2026/Day4_admix_eval_LAI.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_admix_eval_LAI.ipynb) (2026-07-30), cells 2-54
+
+Replaces:
+
+- [`chinaCourse2025/Day4_Morning_admixture_genotype.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Morning_admixture_genotype.ipynb) — **no**, see #25
+
+</details>
+
+**25 · [`admixture_called_genotypes_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_animal.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_called_genotypes_animal.html)  
+ADMIXTURE on called genotypes, seeds, K and model fit. **Blue wildebeest**: 73 individuals, 7 localities. **Called genotypes** (plink).  
+<details><summary>Where it comes from — replaces 6 older copies</summary>
+
+From [`advBinf/exercises/advBinf_admixture_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture_bonus.ipynb) (2026-09-14)
+
+Replaces:
+
+- [`kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb) (2026-08-21)
+- [`kenya2026/exercises/post_course/day3_morning_admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day3_morning_admixture.ipynb) (2026-08-25)
+- [`chinaCourse2025/Day4_Morning_admixture_genotype.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Morning_admixture_genotype.ipynb) (2025-07-28)
+- [`kenya2024/exercises/day3_PopulationStructure/Day3_AdmixtureV2.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_AdmixtureV2.ipynb) (2024-08-08)
+- [`kenya2024/exercises/day3_PopulationStructure/Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Admixture.ipynb) (2024-08-07)
+- [`kenya2024/exercises/day3_PopulationStructure/Day3_Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_Admixture.ipynb) (2024-07-28)
+
+</details>
+
+**28 · [`local_ancestry_flare_mosaic_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_flare_mosaic_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_flare_mosaic_human.html)  
+Local ancestry with FLARE and MOSAIC, 20 vs 200 generations since admixture. Simulated **human-like** admixed genomes. **Called genotypes** (phased).  
+*From [`summer2025/exercises/Day4_Morning_LocalAncestry.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_Morning_LocalAncestry.ipynb) (2025-08-06) — the only copy*
+
+**29 · [`local_ancestry_hapla_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_hapla_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/local_ancestry_hapla_human.html)  
+Local ancestry with hapla cluster/admix/fatash. Simulated **human**, then real **cattle** (chr25, 314 individuals). **Called genotypes** (phased).  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
+
+From [`advBinf/exercises/Hapla_LAI_exercise.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/Hapla_LAI_exercise.ipynb) (2025-10-07)
+
+Replaces:
+
+- [`chinacourse2026/Day4_admix_eval_LAI.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_admix_eval_LAI.ipynb) cells 55-68 (2026-07-30) — a 14-cell "short look" at hapla/fatash using precomputed files, which this covers fully
+
+</details>
+
+**30 · [`f_stats_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/f_stats_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/f_stats_human.html)  
+f2, f3 and f4 statistics and qpAdm. **Human**: 1,646 individuals in 98 populations, ancient and modern, from the AADR. **Called genotypes**, precomputed F2.  
+<details><summary>Where it comes from — replaces 2 older copies</summary>
+
+From [`summer2025/exercises/Day3_f_stats.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_f_stats.ipynb) (2025-08-05)
+
+Replaces:
+
+- [`summer2024/exercises/f_stats.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/f_stats.ipynb) (2024-08-21)
+- [`summer2023/DfFstats/popgen23_f_stats.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/DfFstats/popgen23_f_stats.ipynb) (2023-08-09)
+
+</details>
+
+**31 · [`gene_flow_dstat_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/gene_flow_dstat_animal.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/gene_flow_dstat_animal.html)  
+D-statistics (ABBA-BABA) built from scratch on simulated **human/Neanderthal** data, then f4 on **blue and black wildebeest**. **Called genotypes**.  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
+
+From [`kenya2026/exercises/Day3/Geneflow&Dstat.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Geneflow%26Dstat.ipynb) (2026-08-16)
+
+Replaces:
+
+- [`kenya2026/exercises/post_course/day3_afternoon_gene_flow_dstat.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day3_afternoon_gene_flow_dstat.ipynb) (2026-08-25)
+
+</details>
+
+**32 · [`admixture_graphs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_graphs_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/admixture_graphs_human.html)  
+Fitting admixture graphs with qpgraph, and estimating them with treemix. **Human**: 33 world populations. **Called genotypes**, precomputed F2.  
+*From [`summer2023/DfFstats/popgen23.Admixture_Graphs_Tutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/DfFstats/popgen23.Admixture_Graphs_Tutorial.ipynb) (2023-08-10) — the only copy*
+
+**33 · [`chromopainter_finestructure_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/chromopainter_finestructure_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/chromopainter_finestructure_human.html)  
+Chromosome painting with ChromoPainter, clustering with fineSTRUCTURE, then GLOBETROTTER and SOURCEFIND. **Human**: 16 populations, 256 individuals. **Called genotypes** (phased haplotypes + recombination map).  
+*From [`summer2024/exercises/ChromoPainterFineSTRUCTUREPractical.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/ChromoPainterFineSTRUCTUREPractical.ipynb) (2024-08-21) — the only copy*
+
+**34 · [`dating_admixture_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/dating_admixture_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/admixture/dating_admixture_human.html)  
+Dating admixture with ALDER, MALDER, fastGLOBETROTTER and MOSAIC, then AdaptMix for selection. **Human**: 16 populations plus a simulated admixed group. **Called genotypes** (phased).  
+*From [`summer2024/exercises/DatingAdmixture.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/DatingAdmixture.ipynb) (2024-08-21) — the only copy*
+
 
 ### Demography and the coalescent — `demography/`
 
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 35 | [`coalescence.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/coalescence.ipynb) | The coalescent: simulating and interpreting gene trees. Simulated data. | ✅ built | [`coalescence.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/demography/coalescence.html) |
-| 36 | [`wright_fisher.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/wright_fisher.ipynb) | Wright-Fisher simulations of drift. Simulated data. | ✅ built | [`wright_fisher.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/demography/wright_fisher.html) |
-| 38 | [`sfs_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/sfs_animal.ipynb) | The site frequency spectrum from real sequencing data. **Blue wildebeest**. **Low depth**: SFS from genotype likelihoods. | ✅ built | [`sfs_animal.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/demography/sfs_animal.html) |
-| 39 | [`psmc_demography_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_animal.ipynb) | PSMC demographic history. **Blue wildebeest**. **Called genotypes**: PSMC needs high coverage. | ✅ built | [`psmc_demography_animal.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_animal.html) |
-| 62 | [`psmc_demography_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_human.ipynb) | PSMC demographic history. **Human**: NA12718 (CEU) and NA19471 (Luhya, Kenya). **Called genotypes**: PSMC needs high coverage. | ✅ built | [`psmc_demography_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_human.html) |
+**35 · [`coalescence.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/coalescence.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/demography/coalescence.html)  
+The coalescent: simulating and interpreting gene trees. Simulated data.  
+<details><summary>Where it comes from — replaces 2 older copies</summary>
+
+From [`kenya2026/exercises/Day2/Coalescence_short_WoA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day2/Coalescence_short_WoA.ipynb) (2026-08-15)
+
+Replaces:
+
+- [`kenya2026/exercises/post_course/day2_morning_coalescence.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day2_morning_coalescence.ipynb) (2026-08-25)
+- [`summer2025/exercises/Day1_morning_CoalTutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_morning_CoalTutorial.ipynb) (2025-08-03)
+
+</details>
+
+**36 · [`wright_fisher.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/wright_fisher.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/demography/wright_fisher.html)  
+Wright-Fisher simulations of drift. Simulated data.  
+*From [`summer2025/exercises/Day1_morning_WrightFisherTutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_morning_WrightFisherTutorial.ipynb) (2025-08-03) — the only copy*
+
+**38 · [`sfs_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/sfs_animal.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/demography/sfs_animal.html)  
+The site frequency spectrum from real sequencing data. **Blue wildebeest**. **Low depth**: SFS from genotype likelihoods.  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
+
+From [`kenya2026/exercises/Day2/SFS_WoA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day2/SFS_WoA.ipynb) (2026-08-15)
+
+Replaces:
+
+- [`kenya2026/exercises/post_course/day2_morning_sfs.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day2_morning_sfs.ipynb) (2026-08-25)
+
+</details>
+
+**39 · [`psmc_demography_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_animal.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_animal.html)  
+PSMC demographic history. **Blue wildebeest**. **Called genotypes**: PSMC needs high coverage.  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
+
+From [`kenya2026/exercises/Day2/psmc_kenya2026.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day2/psmc_kenya2026.ipynb) (2026-08-19)
+
+Replaces:
+
+- [`kenya2026/exercises/post_course/day2_afternoon_psmc.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day2_afternoon_psmc.ipynb) (2026-08-25)
+
+</details>
+
+**62 · [`psmc_demography_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/demography/psmc_demography_human.html)  
+PSMC demographic history. **Human**: NA12718 (CEU) and NA19471 (Luhya, Kenya). **Called genotypes**: PSMC needs high coverage.  
+<details><summary>Where it comes from — replaces 3 older copies</summary>
+
+From [`summer2025/exercises/Day5_demography.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_demography.ipynb) (2025-08-07)
+
+Replaces:
+
+- [`summer2024/exercises/summer2024-PSMC_tutorial_2024.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/summer2024-PSMC_tutorial_2024.ipynb) (2024-08-23)
+- [`bgi23/PSMC_tutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/PSMC_tutorial.ipynb) (2023-11-07)
+- [`summer2023/DemographyInference/PSMC_tutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/DemographyInference/PSMC_tutorial.ipynb) (2023-08-10)
+
+</details>
+
 
 ### Selection — `selection/`
 
 See also [`pca/pca_low_depth_selection_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/pca/pca_low_depth_selection_human.ipynb) — a selection scan built on the principal components rather than on Fst, kept with the PCA exercises because it continues directly from them.
 
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 63 | [`sfs_fst_pbs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/sfs_fst_pbs_human.ipynb) | SFS, Fst and PBS on human data with ANGSD. **Human**: CEU and YRI. **Low depth**: genotype likelihoods (ANGSD). | ✅ built | [`sfs_fst_pbs_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/selection/sfs_fst_pbs_human.html) |
-| 66 | [`selection_haplotype_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_haplotype_human.ipynb) | Extended haplotype homozygosity: selscan iHS and XP-EHH on the lactase region. **Human**: CEU 41, YRI 48, CHB 48. **Called genotypes, phased**, with a genetic map. | ✅ built | [`selection_haplotype_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_haplotype_human.html) |
-| 65 | [`selection_pbs_scan_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_pbs_scan_human.ipynb) | Genome-wide PBS scan: Manhattan plot, zoom into peaks, find the gene, check the lactase region. **Human**: NAT, CHB, CEU, YRI. **Called genotypes**, PBS precomputed in 50 kb windows. | ✅ built | [`selection_pbs_scan_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_pbs_scan_human.html) |
-| 40 | [`selection_scans_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_scans_animal.ipynb) | Fst and PBS selection scan on wildlife. **Wildebeest**: 24 individuals, blue and black. **Called genotypes** (VCF). | ✅ built | [`selection_scans_animal.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_scans_animal.html) |
-| 41 | [`selection_maize.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_maize.ipynb) | Tajima's D and PBS for domestication and highland adaptation. **Maize** and its wild relative parviglumis, 50 samples. **Low depth**: genotype likelihoods (ANGSD/SAF). | ✅ built | [`selection_maize.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_maize.html) |
+**63 · [`sfs_fst_pbs_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/sfs_fst_pbs_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/selection/sfs_fst_pbs_human.html)  
+SFS, Fst and PBS on human data with ANGSD. **Human**: CEU and YRI. **Low depth**: genotype likelihoods (ANGSD).  
+<details><summary>Where it comes from — replaces 2 older copies</summary>
+
+From written for this set
+
+Replaces:
+
+- [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) cells 0-18 (2024-08-22) — the frequency-statistics half only. Its haplotype half is #66 and its PBS scan is #65
+- [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 0-24 (2026-08-22) — the frequency-statistics half of that notebook, 49% similar to summer2024. Cells 25-37, the genome-wide PBS scan, are **not** covered by this exercise — see #65
+
+</details>
+
+**66 · [`selection_haplotype_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_haplotype_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_haplotype_human.html)  
+Extended haplotype homozygosity: selscan iHS and XP-EHH on the lactase region. **Human**: CEU 41, YRI 48, CHB 48. **Called genotypes, phased**, with a genetic map.  
+*From [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) cells 19-35 (2024-08-22), "Exercise II: Haplotype-based methods" — the only copy*
+
+**65 · [`selection_pbs_scan_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_pbs_scan_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_pbs_scan_human.html)  
+Genome-wide PBS scan: Manhattan plot, zoom into peaks, find the gene, check the lactase region. **Human**: NAT, CHB, CEU, YRI. **Called genotypes**, PBS precomputed in 50 kb windows.  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
+
+From [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 25-37 (2026-08-22), "Exercise II: Whole-genome PBS with 1000 Genomes"
+
+Replaces:
+
+- [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) cells 36-48 (2024-08-22) — the same scan, older
+
+</details>
+
+**40 · [`selection_scans_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_scans_animal.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_scans_animal.html)  
+Fst and PBS selection scan on wildlife. **Wildebeest**: 24 individuals, blue and black. **Called genotypes** (VCF).  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
+
+From [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 38-50 (2026-08-22)
+
+Replaces:
+
+- [`kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb) (2026-08-25)
+
+</details>
+
+**41 · [`selection_maize.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_maize.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/selection/selection_maize.html)  
+Tajima's D and PBS for domestication and highland adaptation. **Maize** and its wild relative parviglumis, 50 samples. **Low depth**: genotype likelihoods (ANGSD/SAF).  
+*From [`summer2025/exercises/Day4_SelectionPopGen2025.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_SelectionPopGen2025.ipynb) (2025-08-06) — the only copy*
+
 
 ### Relatedness and genetic diversity — `relatedness_diversity/`
 
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 42 | [`fst_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/fst_animal.ipynb) | Pairwise Fst from called genotypes with plink2, then from genotype likelihoods with SAF. **Blue and black wildebeest** (95 individuals, 9 groups), then **Greenland reindeer** (3 populations). **Both**: plink on called genotypes, then SAF on genotype likelihoods. | ✅ built | [`fst_animal.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/fst_animal.html) |
-| 64 | [`relatedness_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_human.ipynb) | Why relatedness matters before a GWAS: IBD sharing with plink --genome, a Z1-vs-Z0 plot and a PI_HAT histogram. No close relatives here, but 54 pairs come back nan - all involving individuals missing half their genotypes. **Human**: the GWAS case/control cohort. **Called genotypes**. | ✅ built | [`relatedness_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_human.html) |
-| 43 | [`relatedness_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_animal.ipynb) | A full relatedness pipeline: LD pruning, KING-robust kinship in plink2, a 2D SFS with ANGSD, then relateAdmix for admixture-aware relatedness. **Reindeer**. **Both**: called genotypes for KING, genotype likelihoods for the SFS. | ✅ built | [`relatedness_animal.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_animal.html) |
-| 45 | [`heterozygosity_roh_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/heterozygosity_roh_animal.ipynb) | Heterozygosity and runs of homozygosity. **Blue wildebeest**. **Called genotypes**. | ✅ built | [`heterozygosity_roh_animal.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/heterozygosity_roh_animal.html) |
+**42 · [`fst_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/fst_animal.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/fst_animal.html)  
+Pairwise Fst from called genotypes with plink2, then from genotype likelihoods with SAF. **Blue and black wildebeest** (95 individuals, 9 groups), then **Greenland reindeer** (3 populations). **Both**: plink on called genotypes, then SAF on genotype likelihoods.  
+<details><summary>Where it comes from — replaces 2 older copies</summary>
+
+From [`kenya2026/exercises/post_course/day4_morning_fst.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day4_morning_fst.ipynb) (2026-08-25)
+
+Replaces:
+
+- [`kenya2026/exercises/Day4/Fst_Kenya2026.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/Fst_Kenya2026.ipynb) (2026-08-23)
+- [`kenya2024/exercises/day3_PopulationStructure/Day3_Fst_RH.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_Fst_RH.ipynb) (2024-08-09)
+
+</details>
+
+**64 · [`relatedness_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_human.html)  
+Why relatedness matters before a GWAS: IBD sharing with plink --genome, a Z1-vs-Z0 plot and a PI_HAT histogram. No close relatives here, but 54 pairs come back nan - all involving individuals missing half their genotypes. **Human**: the GWAS case/control cohort. **Called genotypes**.  
+*From written new (2026-09-16), by request, using the data and the `plink --genome` analysis from #46 `gwas_intro_human.ipynb`. — the only copy*
+
+**43 · [`relatedness_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_animal.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/relatedness_animal.html)  
+A full relatedness pipeline: LD pruning, KING-robust kinship in plink2, a 2D SFS with ANGSD, then relateAdmix for admixture-aware relatedness. **Reindeer**. **Both**: called genotypes for KING, genotype likelihoods for the SFS.  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
+
+From [`kenya2026/exercises/Day5/Related.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day5/Related.ipynb) (2026-08-23)
+
+Replaces:
+
+- [`kenya2026/exercises/post_course/day5_morning_relatedness.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day5_morning_relatedness.ipynb) (2026-08-25)
+
+</details>
+
+**45 · [`heterozygosity_roh_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/heterozygosity_roh_animal.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/relatedness_diversity/heterozygosity_roh_animal.html)  
+Heterozygosity and runs of homozygosity. **Blue wildebeest**. **Called genotypes**.  
+<details><summary>Where it comes from — replaces 4 older copies</summary>
+
+From [`kenya2026/exercises/post_course/day5_morning_heterozygosity_roh.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day5_morning_heterozygosity_roh.ipynb) (2026-08-25)
+
+Replaces:
+
+- [`kenya2026/exercises/Day5/Day5_GeneticDiversity.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day5/Day5_GeneticDiversity.ipynb) (2026-08-23)
+- [`kenya2024/exercises/day2/Day2_Inbreeding_ROH.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day2/Day2_Inbreeding_ROH.ipynb) (2024-08-08)
+- [`kenya2024/exercises/day2/Inbreeding_ROH.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day2/Inbreeding_ROH.ipynb) (2024-08-07)
+- [`kenya2024/exercises/Day1_GeneticDiversity/Day1_GeneticDiversity.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/Day1_GeneticDiversity/Day1_GeneticDiversity.ipynb) (2024-08-06)
+
+</details>
+
 
 ### GWAS and human complex traits — `gwas/`
 
-| # | Exercise | What it covers | Status | Solution |
-|---|---|---|---|---|
-| 46 | [`gwas_intro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_intro_human.ipynb) | Introduction to GWAS: association testing and QC. **Human**. **Called genotypes** (plink). | ✅ built | [`gwas_intro_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_intro_human.html) |
-| 47 | [`gwas_sumstats_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_sumstats_human.ipynb) | Working with GWAS summary statistics. **Human**. **Summary statistics only** — no individual genotypes. | ✅ built | [`gwas_sumstats_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_sumstats_human.html) |
-| 48 | [`gwas_analysis_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_analysis_human.ipynb) | A GWAS end to end: first pass, QQ plot, QC, PCA and Tracy-Widom, regenie mixed model with and without PCs, gene-based tests, power. **Human**: simulated UK Biobank, standing height. **Called genotypes**. &#9888; Data missing &mdash; do not edit further. | ✅ built | ⚠️ _to regenerate_ |
-| 49 | [`gene_based_testing_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gene_based_testing_human.ipynb) | Rare-variant gene-based testing with regenie: annotation, set list and mask files, then SKAT and ACAT. **Human**: whole-exome, Charcot-Marie-Tooth disease (binary trait). **Called genotypes**. &#9888; Data missing &mdash; do not edit further. | ✅ built | ⚠️ _to regenerate_ |
-| 50 | [`wes_famdiab_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_famdiab_human.ipynb) | A trio with MODY: read the VCF by eye, then annotate with Ensembl VEP. **Human**: 3 individuals, *HNF1A*. **Called genotypes**. &#9888; Data missing &mdash; added verbatim, unedited. | ✅ built | [`wes_famdiab_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_famdiab_human.html) |
-| 51 | [`wes_fh_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_fh_human.ipynb) | Rare recessive familial hypercholesterolemia: filter an exome on gnomAD frequency and predicted consequence. **Human**: a family of four with second-cousin parents. **Called genotypes** (annotated whole-exome). | ✅ built | [`wes_fh_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_fh_human.html) |
-| 52 | [`wes_diabetes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_diabetes_human.ipynb) | Four unrelated diabetes patients, four different genes &mdash; genetic heterogeneity, and why a GWAS finds none of them. **Human**: 4 unrelated individuals. **Called genotypes** (annotated whole-exome). | ✅ built | [`wes_diabetes_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_diabetes_human.html) |
-| 53 | [`heritability_ldscore_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/heritability_ldscore_human.ipynb) | Heritability twice over: GCTA REML on a genetic relationship matrix, and LD score regression on summary statistics. **Human**: a simulated family cohort (**called genotypes**) and Biobank Japan HDL/LDL (**summary statistics**, East Asian). | ✅ built | [`heritability_ldscore_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/heritability_ldscore_human.html) |
-| 54 | [`prs_height_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/prs_height_human.ipynb) | Three PGS Catalog scores (height, IGF-1, birth weight) computed with plink and compared with measured height and BMI. **Human**: UK Biobank, European ancestry. **Called genotypes** (array, not imputed). &#9888; Data missing &mdash; added verbatim, unedited. | ✅ built | ⚠️ _to regenerate_ |
-| 55 | [`mendelian_randomization_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/mendelian_randomization_human.ipynb) | Two-sample Mendelian randomization of BMI on coronary heart disease: harmonisation, the estimators, F-statistic, pleiotropy and heterogeneity. **Human**, European: GIANT BMI and CARDIoGRAMplusC4D CHD. **Summary statistics** only. | ✅ built | [`mendelian_randomization_human.html`](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/mendelian_randomization_human.html) |
-| 56 | [`proteomics_mr_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/proteomics_mr_human.ipynb) | Proteome-wide MR of plasma proteins on ischaemic stroke, cis-pQTLs, colocalization and a UK Biobank cohort. **Human**, European. **Summary statistics** plus **called genotypes**. &#9888; Data missing &mdash; added verbatim, unedited. | ✅ built | ⚠️ _to regenerate_ |
-
-
-## Where each exercise comes from
+**46 · [`gwas_intro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_intro_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_intro_human.html)  
+Introduction to GWAS: association testing and QC. **Human**. **Called genotypes** (plink).  
+<details><summary>Where it comes from — replaces 1 older copy</summary>
 
-Many of these exercises were taught in several courses and exist in three or four
-near-identical copies of different ages. Each entry gives the version that was
-taken (**From**) and **every** older copy it replaces, so nothing is lost track
-of. Dates are the last commit touching that file, and **every path is a link to
-that file in this repository** so you can read the version an exercise came from.
-
-The old course folders are left untouched — they remain the record of what was
-actually taught in a given year.
-
-
-### `linux/`
-
-**1. `intro_linux.md`**  
-From: [`summer2025/BriefIntro2Linux.md`](https://github.com/popgenDK/courses/blob/main/summer2025/BriefIntro2Linux.md) (2025-07-23)  
-Replaces 1 older copy:
-  - [`summer2024/BriefIntro2Linux.md`](https://github.com/popgenDK/courses/blob/main/summer2024/BriefIntro2Linux.md) (2024-07-04)
-
-**2. `intro_bash_linux.md`**  
-From: [`kenya2026/exercises/Day1/IntroToBash.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/IntroToBash.ipynb) (2026-08-18)  
-Replaces 1 older copy:
-  - [`kenya2026/exercises/post_course/day1_morning_bash_linux.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day1_morning_bash_linux.ipynb) (2026-08-25)
-
-
-### `shiny/`
-
-**9. `needleman_wunsch_dna.R`**  
-From: [`BSA/NW_DNA.R`](https://github.com/popgenDK/courses/blob/main/BSA/NW_DNA.R) (2025-09-02)  
-Replaces: nothing — this is the only copy
-
-**10. `needleman_wunsch_blosum50.R`**  
-From: [`BSA/needleman_wunsch_shiny_app_blosum_50.r`](https://github.com/popgenDK/courses/blob/main/BSA/needleman_wunsch_shiny_app_blosum_50.r) (2025-08-30)  
-Replaces: nothing — this is the only copy
-
-**11. `dotplot.R`**  
-From: [`BSA/dotplotShiny.R`](https://github.com/popgenDK/courses/blob/main/BSA/dotplotShiny.R) (2025-08-30)  
-Replaces: nothing — this is the only copy
-
-**3. `stats_binomial.R`**  
-From: [`stat_molbio/binom.R`](https://github.com/popgenDK/courses/blob/main/stat_molbio/binom.R) (2026-01-16)  
-Replaces: nothing — this is the only copy
-
-**4. `stats_normal.R`**  
-From: [`stat_molbio/normal.R`](https://github.com/popgenDK/courses/blob/main/stat_molbio/normal.R) (2026-01-16)  
-Replaces: nothing — this is the only copy
-
-
-### `em_algorithms/`
-
-**5. `em_algorithm.ipynb`**  
-From: [`advBinf/exercises/advBinf_EM_algorithm.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_EM_algorithm.ipynb) (2026-09-09)  
-Replaces: nothing — this is the only copy
-
-**6+7. `haplotype_frequencies.ipynb`**  
-From: [`advBinf/exercises/solution_haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/solution_haplotype_frequencies.ipynb) (2025-09-12)  
-Replaces 1 older copy:
-  - [`advBinf/exercises/haplotype_frequencies.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/haplotype_frequencies.ipynb) (2025-09-12) — the exercise half, which was too hard to work through
-
-**19. `pca_em_human.ipynb`**  
-From: [`advBinf/exercises/advBinf_PCA_EM.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA_EM.ipynb) (2026-09-16)  
-Replaces: nothing — this is the only copy
-
-**24. `admixture_em_human.ipynb`**  
-From: [`advBinf/exercises/advBinf_admixture_EM.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture_EM.ipynb) (2026-09-14)  
-Replaces: nothing — this is the only copy
-
-**37. `sfs_model.ipynb`**  
-From: [`advBinf/exercises/advBinf_SFSmodel.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_SFSmodel.ipynb) (2026-09-16)  
-Replaces 1 older copy:
-  - [`advBinf/exercises/SFS.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/SFS.md) (2024-09-20)
-
-
-### `ngs/`
-
-**12. `ngs_intro_human.ipynb`**  
-From: [`chinacourse2026/Day2_Morning_NGSintro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day2_Morning_NGSintro_human.ipynb) (2026-09-14)  
-Replaces 5 older copies:
-  - [`chinaCourse2025/Day2_Morning_NGSintro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day2_Morning_NGSintro_human.ipynb) (2025-08-04)
-  - [`summer2025/exercises/Day1_afternoon_NGSintro_human.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_afternoon_NGSintro_human.ipynb) (2025-08-04)
-  - [`summer2024/exercises/NGSintro.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/NGSintro.ipynb) (2024-08-19)
-  - [`bgi23/NGSintro.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/NGSintro.ipynb) (2023-10-30)
-  - [`summer2023/IntroNGS/introNGSexercises.md`](https://github.com/popgenDK/courses/blob/main/summer2023/IntroNGS/introNGSexercises.md) (2023-08-07)
-
-**13. `ngs_intro_animal.ipynb`**  
-From: [`kenya2026/exercises/Day1/Kenya2026_NGSintro.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day1/Kenya2026_NGSintro.ipynb) (2026-08-17)  
-Replaces 6 older copies:
-  - [`kenya2026/exercises/post_course/day1_afternoon_ngs_intro.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day1_afternoon_ngs_intro.ipynb) (2026-08-25)
-  - [`summer2025/exercises/Day1_afternoon_NGSintro_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_afternoon_NGSintro_animal.ipynb) (2025-08-04)
-  - [`chinaCourse2025/Day2_Morning_NGSintro_animal.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day2_Morning_NGSintro_animal.ipynb) (2025-08-04)
-  - [`kenya2024/exercises/day1_NGSintro/Day1_NGSintroV4.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day1_NGSintro/Day1_NGSintroV4.ipynb) (2024-08-07)
-  - [`kenya2024/exercises/day1_NGSintro/Day1_NGSintroV3.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day1_NGSintro/Day1_NGSintroV3.ipynb) (2024-07-26)
-  - [`kenya2024/exercises/day1_NGSintro/Day1_NGSintroV2.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day1_NGSintro/Day1_NGSintroV2.ipynb) (2024-07-15)
-
-**14. `ngs_inference_human.ipynb`**  
-From: [`summer2025/exercises/Day2_NGS_Inference.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day2_NGS_Inference.ipynb) (2025-08-04)  
-Replaces 2 older copies:
-  - [`summer2024/exercises/NGS_inference.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/NGS_inference.ipynb) (2024-08-19)
-  - [`summer2023/NGSinference/README.md`](https://github.com/popgenDK/courses/blob/main/summer2023/NGSinference/README.md) + `solutions.md` (2023-08-05)
-
-
-### `genotype_calling_imputation/`
-
-**15. `genotype_calling_and_imputation_human.ipynb`**  
-From: [`advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb) (2026-09-09)  
-Replaces 2 older copies:
-  - [`advBinf/exercises/genotype calling and haplotype Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/genotype%20calling%20and%20haplotype%20Imputation.ipynb) (2025-09-12)
-  - [`advBinf/exercises/SNPandGenotypeCalling.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/SNPandGenotypeCalling.md) (2024-09-13)
-
-**16. `imputation_human.ipynb`**  
-From: [`advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_genotype_calling_and_imputation.ipynb) (2026-09-09) for the imputation sections, plus [`chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day2_Afternoon_Genotype_Imputation.ipynb) (2026-09-09) for the three sections only it has  
-Replaces 5 older copies:
-  - [`summer2025/exercises/Day2_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day2_Imputation.ipynb) (2025-08-05)
-  - [`chinaCourse2025/Day2_Afternoon_QUILT_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day2_Afternoon_QUILT_Imputation.ipynb) (2025-07-28)
-  - [`bgi23/03.QUILT_Imputation_new.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/03.QUILT_Imputation_new.ipynb) (2023-11-09)
-  - [`bgi23/03.QUILT_Imputation.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/03.QUILT_Imputation.ipynb) (2023-11-09)
-  - [`bgi23/02.Minimac4_Imputaion.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/02.Minimac4_Imputaion.ipynb) (2023-11-09)
-
-
-### `pca/`
-
-**58. `pca_mds_and_svd.ipynb`**  
-From: extracted from [`advBinf/exercises/advBinf_PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA.ipynb) cells 2-25 (2026-09-16)  
-Replaces: nothing — this is the only copy
-
-**18. `pca_low_depth_human.ipynb`**  
-From: [`advBinf/exercises/advBinf_PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA.ipynb) (2026-09-16), from cell 26 on  
-Replaces 4 older copies:
-  - [`summer2025/exercises/Day5_PCA_1.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_1.ipynb) (2025-08-06)
-  - [`chinaCourse2025/Day4_Afternoon_PCA_main.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Afternoon_PCA_main.ipynb) (2025-07-28)
-  - [`advBinf/exercises/PCA.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/PCA.md) (2024-09-17)
-  - [`summer2024/exercises/summer2024-PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/summer2024-PCA.ipynb) (2024-08-20)
-
-**59. `pca_low_depth_selection_human.ipynb`**  
-From: [`chinacourse2026/Day4_Afternoon_PCA_1.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_Afternoon_PCA_1.ipynb) (2026-09-14), the **PC-based selection** half (from the `# PC-based selection` heading)  
-Replaces: nothing — this is the only copy
-
-**22. `pca_called_genotypes_human.ipynb`**  
-From: [`chinacourse2026/Day4_Afternoon_PCA_1.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_Afternoon_PCA_1.ipynb) (2026-09-14), the **first** half, up to the `# PC-based selection` heading  
-Replaces: nothing — this is the only copy
-
-**20. `pca_called_genotypes_animal.ipynb`**  
-From: [`advBinf/exercises/advBinf_PCA_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_PCA_bonus.ipynb) (2026-09-16)  
-Replaces 6 older copies:
-  - [`kenya2026/exercises/Day3/Kenya2026_PCA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Kenya2026_PCA.ipynb) (2026-08-17)
-  - [`kenya2026/exercises/post_course/day4_morning_pca.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day4_morning_pca.ipynb) (2026-08-25)
-  - [`summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_PCA_2.Call_genotype.ipynb) (2025-08-06)
-  - [`chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Afternoon_PCA_bonus.ipynb) (2025-07-28)
-  - [`summer2024/exercises/summer2024-PCA-CalledGenotypes.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/summer2024-PCA-CalledGenotypes.ipynb) (2024-08-20)
-  - [`kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_PCA-V2.ipynb) (2024-08-09)
-
-
-### `admixture/`
-
-**23. `admixture_low_depth_human.ipynb`**  
-From: [`advBinf/exercises/advBinf_admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture.ipynb) (2026-09-14), cells 5-70  
-Replaces 5 older copies:
-  - [`summer2025/exercises/Day3_Morning_Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_Morning_Admixture.ipynb) (2025-08-05)
-  - [`advBinf/exercises/admixture.md`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/admixture.md) (2024-09-16)
-  - [`summer2024/exercises/admixExercise_popgen24.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/admixExercise_popgen24.ipynb) (2024-08-19)
-  - [`bgi23/Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/Admixture.ipynb) (2023-11-02)
-  - [`summer2023/InfererPopStructure/admixExercise_popgen23.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/InfererPopStructure/admixExercise_popgen23.ipynb) (2023-08-08)
-
-**60. `admixture_reference_panel_human.ipynb`**  
-From: [`advBinf/exercises/advBinf_admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture.ipynb) (2026-09-14), cells 71-93  
-Replaces: nothing — this is the only copy
-
-**61. `admixture_called_genotypes_human.ipynb`**  
-From: [`chinacourse2026/Day4_admix_eval_LAI.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_admix_eval_LAI.ipynb) (2026-07-30), cells 2-54  
-Replaces 1 older copy:
-  - [`chinaCourse2025/Day4_Morning_admixture_genotype.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Morning_admixture_genotype.ipynb) — **no**, see #25
-
-**25. `admixture_called_genotypes_animal.ipynb`**  
-From: [`advBinf/exercises/advBinf_admixture_bonus.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/advBinf_admixture_bonus.ipynb) (2026-09-14)  
-Replaces 6 older copies:
-  - [`kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Exercises_Admixture_Kenya26_WoA.ipynb) (2026-08-21)
-  - [`kenya2026/exercises/post_course/day3_morning_admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day3_morning_admixture.ipynb) (2026-08-25)
-  - [`chinaCourse2025/Day4_Morning_admixture_genotype.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day4_Morning_admixture_genotype.ipynb) (2025-07-28)
-  - [`kenya2024/exercises/day3_PopulationStructure/Day3_AdmixtureV2.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_AdmixtureV2.ipynb) (2024-08-08)
-  - [`kenya2024/exercises/day3_PopulationStructure/Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Admixture.ipynb) (2024-08-07)
-  - [`kenya2024/exercises/day3_PopulationStructure/Day3_Admixture.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_Admixture.ipynb) (2024-07-28)
-
-**28. `local_ancestry_flare_mosaic_human.ipynb`**  
-From: [`summer2025/exercises/Day4_Morning_LocalAncestry.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_Morning_LocalAncestry.ipynb) (2025-08-06)  
-Replaces: nothing — this is the only copy
-
-**29. `local_ancestry_hapla_human.ipynb`**  
-From: [`advBinf/exercises/Hapla_LAI_exercise.ipynb`](https://github.com/popgenDK/courses/blob/main/advBinf/exercises/Hapla_LAI_exercise.ipynb) (2025-10-07)  
-Replaces 1 older copy:
-  - [`chinacourse2026/Day4_admix_eval_LAI.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day4_admix_eval_LAI.ipynb) cells 55-68 (2026-07-30) — a 14-cell "short look" at hapla/fatash using precomputed files, which this covers fully
-
-**30. `f_stats_human.ipynb`**  
-From: [`summer2025/exercises/Day3_f_stats.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day3_f_stats.ipynb) (2025-08-05)  
-Replaces 2 older copies:
-  - [`summer2024/exercises/f_stats.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/f_stats.ipynb) (2024-08-21)
-  - [`summer2023/DfFstats/popgen23_f_stats.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/DfFstats/popgen23_f_stats.ipynb) (2023-08-09)
-
-**31. `gene_flow_dstat_animal.ipynb`**  
-From: [`kenya2026/exercises/Day3/Geneflow&Dstat.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day3/Geneflow%26Dstat.ipynb) (2026-08-16)  
-Replaces 1 older copy:
-  - [`kenya2026/exercises/post_course/day3_afternoon_gene_flow_dstat.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day3_afternoon_gene_flow_dstat.ipynb) (2026-08-25)
-
-**32. `admixture_graphs_human.ipynb`**  
-From: [`summer2023/DfFstats/popgen23.Admixture_Graphs_Tutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/DfFstats/popgen23.Admixture_Graphs_Tutorial.ipynb) (2023-08-10)  
-Replaces: nothing — this is the only copy
-
-**33. `chromopainter_finestructure_human.ipynb`**  
-From: [`summer2024/exercises/ChromoPainterFineSTRUCTUREPractical.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/ChromoPainterFineSTRUCTUREPractical.ipynb) (2024-08-21)  
-Replaces: nothing — this is the only copy
-
-**34. `dating_admixture_human.ipynb`**  
-From: [`summer2024/exercises/DatingAdmixture.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/DatingAdmixture.ipynb) (2024-08-21)  
-Replaces: nothing — this is the only copy
-
-
-### `demography/`
-
-**35. `coalescence.ipynb`**  
-From: [`kenya2026/exercises/Day2/Coalescence_short_WoA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day2/Coalescence_short_WoA.ipynb) (2026-08-15)  
-Replaces 2 older copies:
-  - [`kenya2026/exercises/post_course/day2_morning_coalescence.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day2_morning_coalescence.ipynb) (2026-08-25)
-  - [`summer2025/exercises/Day1_morning_CoalTutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_morning_CoalTutorial.ipynb) (2025-08-03)
-
-**36. `wright_fisher.ipynb`**  
-From: [`summer2025/exercises/Day1_morning_WrightFisherTutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day1_morning_WrightFisherTutorial.ipynb) (2025-08-03)  
-Replaces: nothing — this is the only copy
-
-**38. `sfs_animal.ipynb`**  
-From: [`kenya2026/exercises/Day2/SFS_WoA.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day2/SFS_WoA.ipynb) (2026-08-15)  
-Replaces 1 older copy:
-  - [`kenya2026/exercises/post_course/day2_morning_sfs.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day2_morning_sfs.ipynb) (2026-08-25)
-
-**39. `psmc_demography_animal.ipynb`**  
-From: [`kenya2026/exercises/Day2/psmc_kenya2026.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day2/psmc_kenya2026.ipynb) (2026-08-19)  
-Replaces 1 older copy:
-  - [`kenya2026/exercises/post_course/day2_afternoon_psmc.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day2_afternoon_psmc.ipynb) (2026-08-25)
-
-**62. `psmc_demography_human.ipynb`**  
-From: [`summer2025/exercises/Day5_demography.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day5_demography.ipynb) (2025-08-07)  
-Replaces 3 older copies:
-  - [`summer2024/exercises/summer2024-PSMC_tutorial_2024.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/summer2024-PSMC_tutorial_2024.ipynb) (2024-08-23)
-  - [`bgi23/PSMC_tutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/PSMC_tutorial.ipynb) (2023-11-07)
-  - [`summer2023/DemographyInference/PSMC_tutorial.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2023/DemographyInference/PSMC_tutorial.ipynb) (2023-08-10)
-
-
-### `selection/`
-
-**63. `sfs_fst_pbs_human.ipynb`**  
-From: written for this set  
-Replaces 2 older copies:
-  - [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) cells 0-18 (2024-08-22) — the frequency-statistics half only. Its haplotype half is #66 and its PBS scan is #65
-  - [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 0-24 (2026-08-22) — the frequency-statistics half of that notebook, 49% similar to summer2024. Cells 25-37, the genome-wide PBS scan, are **not** covered by this exercise — see #65
-
-**66. `selection_haplotype_human.ipynb`**  
-From: [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) cells 19-35 (2024-08-22), "Exercise II: Haplotype-based methods"  
-Replaces: nothing — this is the only copy
-
-**65. `selection_pbs_scan_human.ipynb`**  
-From: [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 25-37 (2026-08-22), "Exercise II: Whole-genome PBS with 1000 Genomes"  
-Replaces 1 older copy:
-  - [`summer2024/exercises/SelectionScans.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2024/exercises/SelectionScans.ipynb) cells 36-48 (2024-08-22) — the same scan, older
-
-**40. `selection_scans_animal.ipynb`**  
-From: [`kenya2026/exercises/Day4/SelectionScans_22nd.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/SelectionScans_22nd.ipynb) cells 38-50 (2026-08-22)  
-Replaces 1 older copy:
-  - [`kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day4_afternoon_selection_scans.ipynb) (2026-08-25)
-
-**41. `selection_maize.ipynb`**  
-From: [`summer2025/exercises/Day4_SelectionPopGen2025.ipynb`](https://github.com/popgenDK/courses/blob/main/summer2025/exercises/Day4_SelectionPopGen2025.ipynb) (2025-08-06)  
-Replaces: nothing — this is the only copy
-
-
-### `relatedness_diversity/`
-
-**42. `fst_animal.ipynb`**  
-From: [`kenya2026/exercises/post_course/day4_morning_fst.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day4_morning_fst.ipynb) (2026-08-25)  
-Replaces 2 older copies:
-  - [`kenya2026/exercises/Day4/Fst_Kenya2026.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day4/Fst_Kenya2026.ipynb) (2026-08-23)
-  - [`kenya2024/exercises/day3_PopulationStructure/Day3_Fst_RH.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day3_PopulationStructure/Day3_Fst_RH.ipynb) (2024-08-09)
-
-**64. `relatedness_human.ipynb`**  
-From: written new (2026-09-16), by request, using the data and the `plink --genome` analysis from #46 `gwas_intro_human.ipynb`.  
-Replaces: nothing — this is the only copy
-
-**43. `relatedness_animal.ipynb`**  
-From: [`kenya2026/exercises/Day5/Related.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day5/Related.ipynb) (2026-08-23)  
-Replaces 1 older copy:
-  - [`kenya2026/exercises/post_course/day5_morning_relatedness.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day5_morning_relatedness.ipynb) (2026-08-25)
-
-**45. `heterozygosity_roh_animal.ipynb`**  
-From: [`kenya2026/exercises/post_course/day5_morning_heterozygosity_roh.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/post_course/day5_morning_heterozygosity_roh.ipynb) (2026-08-25)  
-Replaces 4 older copies:
-  - [`kenya2026/exercises/Day5/Day5_GeneticDiversity.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2026/exercises/Day5/Day5_GeneticDiversity.ipynb) (2026-08-23)
-  - [`kenya2024/exercises/day2/Day2_Inbreeding_ROH.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day2/Day2_Inbreeding_ROH.ipynb) (2024-08-08)
-  - [`kenya2024/exercises/day2/Inbreeding_ROH.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/day2/Inbreeding_ROH.ipynb) (2024-08-07)
-  - [`kenya2024/exercises/Day1_GeneticDiversity/Day1_GeneticDiversity.ipynb`](https://github.com/popgenDK/courses/blob/main/kenya2024/exercises/Day1_GeneticDiversity/Day1_GeneticDiversity.ipynb) (2024-08-06)
-
-
-### `gwas/`
-
-**46. `gwas_intro_human.ipynb`**  
-From: [`novCourse2024/1GWASIntro.ipynb`](https://github.com/popgenDK/courses/blob/main/novCourse2024/1GWASIntro.ipynb) (2025-07-08)  
-Replaces 1 older copy:
-  - [`bgi23/04.GWASintro_2023_SAIGE.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/04.GWASintro_2023_SAIGE.ipynb) (2023-11-09)
-
-**47. `gwas_sumstats_human.ipynb`**  
-From: [`novCourse2024/2GWASsumstats.ipynb`](https://github.com/popgenDK/courses/blob/main/novCourse2024/2GWASsumstats.ipynb) (2025-07-08)  
-Replaces: nothing — this is the only copy
-
-**48. `gwas_analysis_human.ipynb`**  
-From: [`chinaCourse2025/Day3_GWAS_Analysis_2025_Morning.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day3_GWAS_Analysis_2025_Morning.ipynb) (2025-07-26)  
-Replaces: nothing — this is the only copy
-
-**49. `gene_based_testing_human.ipynb`**  
-From: [`chinaCourse2025/Day3_Gene_Based_Testing_2025_Afternoon.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day3_Gene_Based_Testing_2025_Afternoon.ipynb) (2025-07-26)  
-Replaces: nothing — this is the only copy
-
-**50. `wes_famdiab_human.ipynb`**  
-From: [`novCourse2024/3WESfamdiab.ipynb`](https://github.com/popgenDK/courses/blob/main/novCourse2024/3WESfamdiab.ipynb) (2025-07-08)  
-Replaces: nothing — this is the only copy
-
-**51. `wes_fh_human.ipynb`**  
-From: [`novCourse2024/4WESfh.ipynb`](https://github.com/popgenDK/courses/blob/main/novCourse2024/4WESfh.ipynb) (2025-07-08)  
-Replaces: nothing — this is the only copy
-
-**52. `wes_diabetes_human.ipynb`**  
-From: [`novCourse2024/5WESdiab.ipynb`](https://github.com/popgenDK/courses/blob/main/novCourse2024/5WESdiab.ipynb) (2025-07-08)  
-Replaces: nothing — this is the only copy
-
-**53. `heritability_ldscore_human.ipynb`**  
-From: [`chinacourse2026/Day5_Morning_heribilty_and_ldscore.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day5_Morning_heribilty_and_ldscore.ipynb) (2026-08-07)  
-Replaces 2 older copies:
-  - [`chinaCourse2025/Day5_heritability_exercise.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day5_heritability_exercise.ipynb) (2025-07-26)
-  - [`chinaCourse2025/Day5_Afternoon_Genetic_correlation_Partitioned_Heritability.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day5_Afternoon_Genetic_correlation_Partitioned_Heritability.ipynb) (2025-07-26)
-
-**54. `prs_height_human.ipynb`**  
-From: [`chinaCourse2025/Day6_Morning1_PRS_height_pipeline.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day6_Morning1_PRS_height_pipeline.ipynb) (2025-07-26)  
-Replaces: nothing — this is the only copy
-
-**55. `mendelian_randomization_human.ipynb`**  
-From: [`chinaCourse2025/Day6_Morning2_MR.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day6_Morning2_MR.ipynb) (2025-07-26)  
-Replaces 2 older copies:
-  - [`bgi23/MR-exercise.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/MR-exercise.ipynb) (2023-11-10)
-  - [`bgi23/MR.real_data.exercise.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/MR.real_data.exercise.ipynb) (2023-11-10)
-
-**56. `proteomics_mr_human.ipynb`**  
-From: [`chinaCourse2025/Day6_Afternoon_Proteomics_MR.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day6_Afternoon_Proteomics_MR.ipynb) (2025-07-26)  
-Replaces: nothing — this is the only copy
+From [`novCourse2024/1GWASIntro.ipynb`](https://github.com/popgenDK/courses/blob/main/novCourse2024/1GWASIntro.ipynb) (2025-07-08)
+
+Replaces:
+
+- [`bgi23/04.GWASintro_2023_SAIGE.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/04.GWASintro_2023_SAIGE.ipynb) (2023-11-09)
+
+</details>
+
+**47 · [`gwas_sumstats_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_sumstats_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_sumstats_human.html)  
+Working with GWAS summary statistics. **Human**. **Summary statistics only** — no individual genotypes.  
+*From [`novCourse2024/2GWASsumstats.ipynb`](https://github.com/popgenDK/courses/blob/main/novCourse2024/2GWASsumstats.ipynb) (2025-07-08) — the only copy*
+
+**48 · [`gwas_analysis_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gwas_analysis_human.ipynb)** — solution _not rendered_  
+A GWAS end to end: first pass, QQ plot, QC, PCA and Tracy-Widom, regenie mixed model with and without PCs, gene-based tests, power. **Human**: simulated UK Biobank, standing height. **Called genotypes**. &#9888; Data missing &mdash; do not edit further.  
+*From [`chinaCourse2025/Day3_GWAS_Analysis_2025_Morning.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day3_GWAS_Analysis_2025_Morning.ipynb) (2025-07-26) — the only copy*
+
+**49 · [`gene_based_testing_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/gene_based_testing_human.ipynb)** — solution _not rendered_  
+Rare-variant gene-based testing with regenie: annotation, set list and mask files, then SKAT and ACAT. **Human**: whole-exome, Charcot-Marie-Tooth disease (binary trait). **Called genotypes**. &#9888; Data missing &mdash; do not edit further.  
+*From [`chinaCourse2025/Day3_Gene_Based_Testing_2025_Afternoon.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day3_Gene_Based_Testing_2025_Afternoon.ipynb) (2025-07-26) — the only copy*
+
+**50 · [`wes_famdiab_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_famdiab_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_famdiab_human.html)  
+A trio with MODY: read the VCF by eye, then annotate with Ensembl VEP. **Human**: 3 individuals, *HNF1A*. **Called genotypes**. &#9888; Data missing &mdash; added verbatim, unedited.  
+*From [`novCourse2024/3WESfamdiab.ipynb`](https://github.com/popgenDK/courses/blob/main/novCourse2024/3WESfamdiab.ipynb) (2025-07-08) — the only copy*
+
+**51 · [`wes_fh_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_fh_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_fh_human.html)  
+Rare recessive familial hypercholesterolemia: filter an exome on gnomAD frequency and predicted consequence. **Human**: a family of four with second-cousin parents. **Called genotypes** (annotated whole-exome).  
+*From [`novCourse2024/4WESfh.ipynb`](https://github.com/popgenDK/courses/blob/main/novCourse2024/4WESfh.ipynb) (2025-07-08) — the only copy*
+
+**52 · [`wes_diabetes_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_diabetes_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/wes_diabetes_human.html)  
+Four unrelated diabetes patients, four different genes &mdash; genetic heterogeneity, and why a GWAS finds none of them. **Human**: 4 unrelated individuals. **Called genotypes** (annotated whole-exome).  
+*From [`novCourse2024/5WESdiab.ipynb`](https://github.com/popgenDK/courses/blob/main/novCourse2024/5WESdiab.ipynb) (2025-07-08) — the only copy*
+
+**53 · [`heritability_ldscore_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/heritability_ldscore_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/heritability_ldscore_human.html)  
+Heritability twice over: GCTA REML on a genetic relationship matrix, and LD score regression on summary statistics. **Human**: a simulated family cohort (**called genotypes**) and Biobank Japan HDL/LDL (**summary statistics**, East Asian).  
+<details><summary>Where it comes from — replaces 2 older copies</summary>
+
+From [`chinacourse2026/Day5_Morning_heribilty_and_ldscore.ipynb`](https://github.com/popgenDK/courses/blob/main/chinacourse2026/Day5_Morning_heribilty_and_ldscore.ipynb) (2026-08-07)
+
+Replaces:
+
+- [`chinaCourse2025/Day5_heritability_exercise.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day5_heritability_exercise.ipynb) (2025-07-26)
+- [`chinaCourse2025/Day5_Afternoon_Genetic_correlation_Partitioned_Heritability.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day5_Afternoon_Genetic_correlation_Partitioned_Heritability.ipynb) (2025-07-26)
+
+</details>
+
+**54 · [`prs_height_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/prs_height_human.ipynb)** — solution _not rendered_  
+Three PGS Catalog scores (height, IGF-1, birth weight) computed with plink and compared with measured height and BMI. **Human**: UK Biobank, European ancestry. **Called genotypes** (array, not imputed). &#9888; Data missing &mdash; added verbatim, unedited.  
+*From [`chinaCourse2025/Day6_Morning1_PRS_height_pipeline.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day6_Morning1_PRS_height_pipeline.ipynb) (2025-07-26) — the only copy*
+
+**55 · [`mendelian_randomization_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/mendelian_randomization_human.ipynb)** — [solution](https://htmlpreview.github.io/?https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/mendelian_randomization_human.html)  
+Two-sample Mendelian randomization of BMI on coronary heart disease: harmonisation, the estimators, F-statistic, pleiotropy and heterogeneity. **Human**, European: GIANT BMI and CARDIoGRAMplusC4D CHD. **Summary statistics** only.  
+<details><summary>Where it comes from — replaces 2 older copies</summary>
+
+From [`chinaCourse2025/Day6_Morning2_MR.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day6_Morning2_MR.ipynb) (2025-07-26)
+
+Replaces:
+
+- [`bgi23/MR-exercise.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/MR-exercise.ipynb) (2023-11-10)
+- [`bgi23/MR.real_data.exercise.ipynb`](https://github.com/popgenDK/courses/blob/main/bgi23/MR.real_data.exercise.ipynb) (2023-11-10)
+
+</details>
+
+**56 · [`proteomics_mr_human.ipynb`](https://github.com/popgenDK/courses/blob/main/current_exercises/gwas/proteomics_mr_human.ipynb)** — solution _not rendered_  
+Proteome-wide MR of plasma proteins on ischaemic stroke, cis-pQTLs, colocalization and a UK Biobank cohort. **Human**, European. **Summary statistics** plus **called genotypes**. &#9888; Data missing &mdash; added verbatim, unedited.  
+*From [`chinaCourse2025/Day6_Afternoon_Proteomics_MR.ipynb`](https://github.com/popgenDK/courses/blob/main/chinaCourse2025/Day6_Afternoon_Proteomics_MR.ipynb) (2025-07-26) — the only copy*
 
 
 ## Status
@@ -530,8 +609,8 @@ exercise listed twice (#6+7 `haplotype_frequencies`, #21+22 `pca_bonus_animal`) 
 | | |
 |---|---|
 | Data consolidation | ✅ complete — `/course/data/` holds every dataset the exercises need |
-| Per-exercise data folders | `data/NGSintro/`, `data/NGSinference/` done; the rest still in bulk course folders |
-| Solution HTML | 🔄 39 of 51 rendered; 4 of the remaining 12 are blocked by missing data |
+| Per-exercise data folders | most exercises have their own folder under `data/current_data/`; a few still read from the bulk course folders |
+| Solution HTML | **47 of 51 rendered**; the 4 without one have no data on this server |
 
 ## Data
 
