@@ -1420,3 +1420,99 @@ be edited further.
 **A software gap is not a data gap.** #53 has all its data but no LDSC conda
 environment, so it was built normally, with a note at the two cells that cannot
 run and the pre-munged files shipped alongside.
+
+- **Placeholder fixed in `haplotype_frequencies.ipynb`: `????` hung the R kernel
+  (2026-09-16).** Found while rendering html. In R, `?` is a unary operator, so
+  `estFreqHap <- ????` is an **incomplete expression**: a Jupyter R kernel waits
+  indefinitely for the rest of it. A student running that cell gets a `[*]` that never
+  finishes and has to interrupt the kernel; headless execution hung for 10 minutes before
+  being killed. (Plain `Rscript` reports "unexpected end of input" instead, which is why
+  my earlier verification - which ran the *filled-in* copy - never saw it.)
+
+  All 16 code-cell blanks are now `FILL_IN`, and the prose says so. `FILL_IN` is an
+  undefined symbol, so R fails immediately with **`object 'FILL_IN' not found`** - a clean
+  error that names the blank rather than hanging. Tested: `x <- ????` hangs a kernel,
+  `x <- FILL_IN` errors at once, and `x <- NA  # FILL IN` would run silently and give a
+  student no signal at all, which is worse.
+
+  The `????` markers in `ngs_intro_human.ipynb` (16) and `ngs_intro_animal.ipynb` (4) are
+  **only in markdown question text** and are unaffected - that is the repo's established
+  style for questions, and it is safe there.
+
+- **html renders (2026-09-16).** Executed renders now sit beside their notebooks per R8,
+  produced with the recipe added to `agentGuide/RUN_DATA_NOTEBOOKS.md`: SoS notebooks
+  executed with `/opt/tljh/user/bin/python` (the only interpreter here with `sos`), the
+  maths pre-rendered to inline SVG with `mjpage`, and the quizzes **left live** rather than
+  stubbed, so they load their JSON in the reader's browser.
+
+  **Not rendered, data not on this server:** `gwas/proteomics_mr_human.ipynb`,
+  `gwas/prs_height_human.ipynb`, `gwas/gwas_analysis_human.ipynb` and
+  `gwas/gene_based_testing_human.ipynb`. The last two say so in their own first cell.
+
+  **Not rendered, by nature:** `em_algorithms/haplotype_frequencies.ipynb` is a scaffolded
+  exercise, so its executed output is 7 `object 'FILL_IN' not found` errors. A render of
+  the *filled-in* version would be a solution html, which is what the advBinf convention
+  does - worth deciding separately.
+
+- **Two notebook bugs found by rendering (2026-09-16).** Executing every notebook to make
+  its html surfaced two that cannot run as shipped. Both were built in the parallel
+  session, so they are recorded here rather than silently changed.
+
+  **`selection/selection_scans_animal.ipynb` - FIXED.** Cell 19 read
+  `data_dir = Path('{DATA}')` - an unsubstituted template placeholder, so it looked for a
+  directory literally named `{DATA}` and died with
+  `FileNotFoundError: '{DATA}/whole_genome.black_vs_b_etosha.fst.png'`. The fix is
+  provable rather than a guess: cell 3 of the same Python kernel already defines
+  `DATA` from `~/.selection_animal_data`, and both referenced PNGs exist under
+  `data/selection/wildebeest/`. Changed to `Path(DATA)`; re-rendered clean, 0 errors and
+  16 maths SVGs. Checked whether the slip was systemic - it was the only
+  `'{PLACEHOLDER}'` string in any code cell across all 51 notebooks.
+
+  **`admixture/admixture_reference_panel_human.ipynb` - STILL BROKEN, left alone.** Three
+  separate defects:
+  1. five cells begin `source env.sh`, but **nothing ever creates `env.sh`** - the setup
+     cell sets `DATA` and `WORK_DIR` and writes a marker file
+     `~/.admixture_refpanel_workdir`, but no `env.sh`, unlike every other notebook here;
+  2. `inputpath=` is **assigned nothing**, so every `${inputpath}/refPanel.txt` resolves
+     to `/refPanel.txt`;
+  3. **`$fastNGSadmix` is used six times and never defined** - which is the exit 127.
+     The program itself is fine, on PATH at `/usr/bin/fastNGSadmix`.
+
+  Three bash cells therefore fail with 127 and two R cells then fail reading `.qopt`
+  files that were never produced. Its render is excluded and no html is published for it.
+  Not fixed because defect 3 has two valid designs - add an `env.sh` block to the setup
+  cell, or drop the `source` lines and rely on the bash kernel's persistent state, which
+  is what the marker-file pattern suggests - and that is the author's call.
+
+- **Error triage for the renders.** A non-zero exit is not always a failure: several
+  notebooks deliberately run a bare command to show its options, e.g. `bwa mem` under the
+  comment "see options" in both ngs intro notebooks, which prints usage and exits 1. A
+  first version of the publish guard rejected those renders wholesale. There is now a
+  classifier (`classify.py` in the render scratch dir) that treats a **bare command which
+  printed output and exited 1/2/64** as a benign usage dump, and anything else - exit 127,
+  a Python or R traceback - as a real failure. It correctly passes both ngs notebooks and
+  correctly refuses `admixture_reference_panel_human`.
+
+- **My own bug in `heterozygosity_roh_animal.ipynb`, found by rendering and fixed
+  (2026-09-16).** Four R cells read
+  `read.table(file.path(DATA, file.path(DATA, "het.roh.tsv")))` - `file.path(DATA, ...)`
+  applied **twice**. My build script had two substitution rules for the same file names,
+  a specific one for `read.table("<file>"` and a general one for `"<file>"`, and both
+  fired, the second rewriting the string the first had just wrapped.
+
+  **Why my earlier verification missed it:** I ran that notebook by extracting only its
+  **bash** cells - which is where the expensive bcftools/plink pipeline is - and reported
+  it verified on that basis. The four broken cells are R. Extracting one kernel's cells
+  and calling the notebook verified was the mistake; executing the whole notebook, which
+  is what rendering does, caught it immediately.
+
+  Fixed to a single `file.path(DATA, "...")` in all four cells, checked for balanced
+  parentheses, and the paths confirmed to load: `het.roh.tsv` is 71 x 8 with the expected
+  `sampleID/het/map` columns and 7 wildebeest groups for the boxplot,
+  `heterozygosity_trag.txt` is 245 rows.
+
+- **`admixture/admixture_low_depth_human.ipynb` - broken, left alone (parallel session).**
+  Same class as `admixture_reference_panel_human`: **`$ANGSD` and `$NGSadmix` are used but
+  never defined** (exit 127), `find $BAMFOLDER | grep bam$` exits 1 because `BAMFOLDER` is
+  unset, `cat all.log` then fails, and an R cell fails on the missing `all.files`. Five
+  real failures; no html published for it.
